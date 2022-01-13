@@ -247,6 +247,15 @@ func (dev Device) getEndpoint(endpoint string) (string, error) {
 	return endpointURL, errors.New("target endpoint service not found")
 }
 
+func (dev Device) GetParam() DeviceParams {
+	return DeviceParams{
+		Xaddr:      dev.params.Xaddr,
+		Username:   dev.params.Username,
+		Password:   dev.params.Password,
+		HttpClient: nil,
+	}
+}
+
 //CallMethod functions call an method, defined <method> struct.
 //You should use Authenticate method to call authorized requests.
 func (dev Device) CallMethod(method interface{}) (*http.Response, error) {
