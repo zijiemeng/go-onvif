@@ -1,4 +1,4 @@
-module github.com/use-go/onvif
+module code.byted.org/videoarch/go-onvif
 
 go 1.15
 

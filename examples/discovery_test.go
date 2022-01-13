@@ -1,6 +1,7 @@
 package example
 
 import (
+	"code.byted.org/videoarch/go-onvif"
 	"encoding/json"
 	"io/ioutil"
 	"log"
@@ -9,10 +10,9 @@ import (
 	"strings"
 	"testing"
 
+	"code.byted.org/videoarch/go-onvif/device"
+	discover "code.byted.org/videoarch/go-onvif/ws-discovery"
 	"github.com/beevik/etree"
-	"github.com/use-go/onvif"
-	"github.com/use-go/onvif/device"
-	discover "github.com/use-go/onvif/ws-discovery"
 )
 
 func TestGetAvailableDevicesAtSpecificEthernetInterface(t *testing.T) {
@@ -21,7 +21,7 @@ func TestGetAvailableDevicesAtSpecificEthernetInterface(t *testing.T) {
 	// runDiscovery("en0")
 	s := onvif.GetAvailableDevicesAtSpecificEthernetInterface("en0")
 
-	log.Printf("%s", s)
+	log.Printf("%v", s)
 }
 
 func client() {

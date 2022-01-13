@@ -1,4 +1,4 @@
-package main
+package example
 
 import (
 	"fmt"
@@ -6,10 +6,10 @@ import (
 	"log"
 	"net/http"
 
-	goonvif "github.com/use-go/onvif"
-	"github.com/use-go/onvif/device"
-	"github.com/use-go/onvif/gosoap"
-	"github.com/use-go/onvif/xsd/onvif"
+	goonvif "code.byted.org/videoarch/go-onvif"
+	"code.byted.org/videoarch/go-onvif/device"
+	"code.byted.org/videoarch/go-onvif/gosoap"
+	"code.byted.org/videoarch/go-onvif/xsd/onvif"
 )
 
 const (
@@ -65,7 +65,7 @@ func main() {
 		log.Println(err)
 	} else {
 		/*
-			You could use https://github.com/use-go/onvif/gosoap for pretty printing response
+			You could use https://code.byted.org/videoarch/go-onvif/gosoap for pretty printing response
 		*/
 		fmt.Println(gosoap.SoapMessage(readResponse(createUserResponse)).StringIndent())
 	}
