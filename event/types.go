@@ -1,7 +1,7 @@
 package event
 
 import (
-	"github.com/use-go/onvif/xsd"
+	"code.byted.org/videoarch/go-onvif/xsd"
 )
 
 //Address Alias

@@ -11,11 +11,11 @@ import (
 	"strconv"
 	"strings"
 
+	"code.byted.org/videoarch/go-onvif/device"
+	"code.byted.org/videoarch/go-onvif/gosoap"
+	"code.byted.org/videoarch/go-onvif/networking"
+	wsdiscovery "code.byted.org/videoarch/go-onvif/ws-discovery"
 	"github.com/beevik/etree"
-	"github.com/use-go/onvif/device"
-	"github.com/use-go/onvif/gosoap"
-	"github.com/use-go/onvif/networking"
-	wsdiscovery "github.com/use-go/onvif/ws-discovery"
 )
 
 //Xlmns XML Scheam
