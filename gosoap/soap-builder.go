@@ -65,6 +65,22 @@ func (msg SoapMessage) Body() string {
 	return res
 }
 
+//BodyBytes return body bytes from Envelope
+func (msg SoapMessage) BodyBytes() []byte {
+	doc := etree.NewDocument()
+	if err := doc.ReadFromString(msg.String()); err != nil {
+		log.Println(err.Error())
+	}
+	bodyTag := doc.Root().SelectElement("Body").ChildElements()[0]
+	doc.SetRoot(bodyTag)
+	doc.IndentTabs()
+	res, err := doc.WriteToBytes()
+	if err != nil {
+		return nil
+	}
+	return res
+}
+
 //AddStringBodyContent for Envelope
 func (msg *SoapMessage) AddStringBodyContent(data string) {
 	doc := etree.NewDocument()
