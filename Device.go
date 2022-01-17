@@ -48,6 +48,11 @@ const (
 	NVT
 )
 
+var (
+	ErrOffline        = fmt.Errorf("device is offline")
+	ErrorUnauthorized = fmt.Errorf("device is unauthorized")
+)
+
 func (devType DeviceType) String() string {
 	stringRepresentation := []string{
 		"NetworkVideoDisplay",
@@ -183,8 +188,13 @@ func NewDevice(params DeviceParams) (*Device, error) {
 	getCapabilities := device.GetCapabilities{Category: "All"}
 
 	resp, err := dev.CallMethod(getCapabilities)
-
-	if err != nil || resp.StatusCode != http.StatusOK {
+	if err != nil {
+		return nil, ErrOffline
+	}
+	if resp.StatusCode == http.StatusUnauthorized {
+		return nil, ErrorUnauthorized
+	}
+	if resp.StatusCode != http.StatusOK {
 		return nil, errors.New("camera is not available at " + dev.params.Xaddr + " or it does not support ONVIF services")
 	}
 
