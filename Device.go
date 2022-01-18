@@ -49,8 +49,9 @@ const (
 )
 
 var (
-	ErrOffline        = fmt.Errorf("device is offline")
-	ErrorUnauthorized = fmt.Errorf("device is unauthorized")
+	ErrorOffline         = fmt.Errorf("device is offline")
+	ErrorUnauthorized    = fmt.Errorf("device is unauthorized")
+	ErrorServiceNotFound = fmt.Errorf("service not found")
 )
 
 func (devType DeviceType) String() string {
@@ -189,7 +190,7 @@ func NewDevice(params DeviceParams) (*Device, error) {
 
 	resp, err := dev.CallMethod(getCapabilities)
 	if err != nil {
-		return nil, ErrOffline
+		return nil, ErrorOffline
 	}
 	if resp.StatusCode == http.StatusUnauthorized {
 		return nil, ErrorUnauthorized
@@ -274,7 +275,7 @@ func (dev Device) CallMethod(method interface{}) (*http.Response, error) {
 
 	endpoint, err := dev.getEndpoint(pkg)
 	if err != nil {
-		return nil, err
+		return nil, ErrorServiceNotFound
 	}
 	return dev.callMethodDo(endpoint, method)
 }
@@ -299,5 +300,10 @@ func (dev Device) callMethodDo(endpoint string, method interface{}) (*http.Respo
 		soap.AddWSSecurity(dev.params.Username, dev.params.Password)
 	}
 
-	return networking.SendSoap(dev.params.HttpClient, endpoint, soap.String())
+	var resp *http.Response
+	resp, err = networking.SendSoap(dev.params.HttpClient, endpoint, soap.String())
+	if err != nil {
+		return resp, ErrorOffline
+	}
+	return resp, err
 }
