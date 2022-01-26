@@ -208,7 +208,7 @@ type GetPresetTours struct {
 }
 
 type GetPresetToursResponse struct {
-	PresetTour onvif.PresetTour
+	PresetTour []onvif.PresetTour
 }
 
 type GetPresetTour struct {
