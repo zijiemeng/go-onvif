@@ -139,12 +139,12 @@ type ImagingSettings struct {
 	Brightness            float64
 	ColorSaturation       float64
 	Contrast              float64
-	Exposure              Exposure
-	Focus                 FocusConfiguration
+	Exposure              *Exposure
+	Focus                 *FocusConfiguration
 	IrCutFilter           IrCutFilterMode
 	Sharpness             float64
-	WideDynamicRange      WideDynamicRange
-	WhiteBalance          WhiteBalance
+	WideDynamicRange      *WideDynamicRange
+	WhiteBalance          *WhiteBalance
 	Extension             ImagingSettingsExtension
 }
 
@@ -219,12 +219,12 @@ type ImagingSettings20 struct {
 	Brightness            float64                    `xml:"Brightness"`
 	ColorSaturation       float64                    `xml:"ColorSaturation"`
 	Contrast              float64                    `xml:"Contrast"`
-	Exposure              Exposure20                 `xml:"Exposure"`
-	Focus                 FocusConfiguration20       `xml:"Focus"`
+	Exposure              *Exposure20                `xml:"Exposure"`
+	Focus                 *FocusConfiguration20      `xml:"Focus"`
 	IrCutFilter           IrCutFilterMode            `xml:"IrCutFilter"`
 	Sharpness             float64                    `xml:"Sharpness"`
-	WideDynamicRange      WideDynamicRange20         `xml:"WideDynamicRange"`
-	WhiteBalance          WhiteBalance20             `xml:"WhiteBalance"`
+	WideDynamicRange      *WideDynamicRange20        `xml:"WideDynamicRange"`
+	WhiteBalance          *WhiteBalance20            `xml:"WhiteBalance"`
 	Extension             ImagingSettingsExtension20 `xml:"Extension"`
 }
 
@@ -1869,4 +1869,60 @@ type Date struct {
 	Year  xsd.Int `xml:"Year"`
 	Month xsd.Int `xml:"Month"`
 	Day   xsd.Int `xml:"Day"`
+}
+
+type Range struct {
+	Min float64 `xml:"Min"`
+	Max float64 `xml:"Max"`
+}
+
+type ExposureOpt struct {
+	Mode            []string `xml:"Mode"`
+	MinExposureTime Range    `xml:"MinExposureTime"`
+	MaxExposureTime Range    `xml:"MaxExposureTime"`
+	MinGain         Range    `xml:"MinGain"`
+	MaxGain         Range    `xml:"MaxGain"`
+	MinIris         Range    `xml:"MinIris"`
+	MaxIris         Range    `xml:"MaxIris"`
+	ExposureTime    Range    `xml:"ExposureTime"`
+	Gain            Range    `xml:"Gain"`
+	Iris            Range    `xml:"Iris"`
+}
+
+type FocusOpt struct {
+	AutoFocusModes []string `xml:"AutoFocusModes"`
+	DefaultSpeed   Range    `xml:"DefaultSpeed"`
+}
+
+type WhiteBalanceOpt struct {
+	Mode   []string `xml:"Mode"`
+	YrGain Range    `xml:"YrGain"`
+	YbGain Range    `xml:"YbGain"`
+}
+
+type WideDynamicRangeOpt struct {
+	Mode []string `xml:"Mode"`
+}
+
+type BacklightCompensationOpt struct {
+	Mode  []string `xml:"Mode"`
+	Level Range    `xml:"Level"`
+}
+
+type IrCutFilterModeOpt struct {
+	Mode []string `xml:"Mode"`
+}
+
+type ImagingOptions struct {
+	BacklightCompensation *BacklightCompensationOpt `xml:"BacklightCompensation"`
+	Brightness            *Range                    `xml:"Brightness"`
+	ColorSaturation       *Range                    `xml:"ColorSaturation"`
+	Contrast              *Range                    `xml:"Contrast"`
+	Exposure              *ExposureOpt              `xml:"Exposure"`
+	Focus                 *FocusOpt                 `xml:"Focus"`
+	Sharpness             *Range                    `xml:"Sharpness"`
+	WideDynamicRange      *WideDynamicRangeOpt      `xml:"WideDynamicRange"`
+	IrCutFilterMode       *IrCutFilterModeOpt       `xml:"IrCutFilterMode"`
+	WhiteBalance          *WhiteBalanceOpt          `xml:"WhiteBalance"`
+	Extension             xsd.AnyType               `xml:"Extension"`
 }

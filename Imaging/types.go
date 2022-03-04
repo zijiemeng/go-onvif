@@ -3,6 +3,7 @@ package imaging
 import (
 	"code.byted.org/videoarch/go-onvif/xsd"
 	"code.byted.org/videoarch/go-onvif/xsd/onvif"
+	"encoding/xml"
 )
 
 type GetServiceCapabilities struct {
@@ -12,6 +13,10 @@ type GetServiceCapabilities struct {
 type GetImagingSettings struct {
 	XMLName          string               `xml:"timg:GetImagingSettings"`
 	VideoSourceToken onvif.ReferenceToken `xml:"timg:VideoSourceToken"`
+}
+
+type GetImagingSettingsResponse struct {
+	ImagingSettings onvif.ImagingSettings
 }
 
 type SetImagingSettings struct {
@@ -61,4 +66,9 @@ type SetCurrentPreset struct {
 	XMLName          string               `xml:"timg:SetCurrentPreset"`
 	VideoSourceToken onvif.ReferenceToken `xml:"timg:VideoSourceToken"`
 	PresetToken      onvif.ReferenceToken `xml:"timg:PresetToken"`
+}
+
+type GetOptionsResponse struct {
+	XMLName        xml.Name             `xml:"GetOptionsResponse"`
+	ImagingOptions onvif.ImagingOptions `xml:"ImagingOptions"`
 }
