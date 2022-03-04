@@ -263,7 +263,7 @@ type GetVideoEncoderConfigurations struct {
 }
 
 type GetVideoEncoderConfigurationsResponse struct {
-	Configurations onvif.VideoEncoderConfiguration
+	Configurations []onvif.VideoEncoderConfiguration
 }
 
 type GetAudioSourceConfigurations struct {
