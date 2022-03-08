@@ -1921,3 +1921,11 @@ type ImagingOptions struct {
 	WhiteBalance          *WhiteBalanceOpt          `xml:"WhiteBalance"`
 	Extension             xsd.AnyType               `xml:"Extension"`
 }
+
+type MoveOptions struct {
+	Continuous *struct {
+		Speed FloatRange `xml:"Speed"`
+	} `xml:"Continuous"`
+	Absolute *struct{} `xml:"Absolute"`
+	Relative *struct{} `xml:"Relative"`
+}
