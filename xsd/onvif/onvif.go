@@ -1328,7 +1328,8 @@ type EventCapabilities struct {
 }
 
 type ImagingCapabilities struct {
-	XAddr xsd.AnyURI
+	XAddr              xsd.AnyURI
+	ImageStabilization bool `xml:"ImageStabilization,attr"`
 }
 
 type MediaCapabilities struct {
