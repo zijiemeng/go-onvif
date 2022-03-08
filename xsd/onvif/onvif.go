@@ -421,22 +421,22 @@ type AudioSourceConfiguration struct {
 
 type VideoEncoderConfiguration struct {
 	ConfigurationEntity
-	Encoding       VideoEncoding          `xml:"Encoding"`
-	Resolution     VideoResolution        `xml:"Resolution"`
-	Quality        float64                `xml:"Quality"`
-	RateControl    VideoRateControl       `xml:"RateControl"`
-	MPEG4          Mpeg4Configuration     `xml:"MPEG4"`
-	H264           H264Configuration      `xml:"H264"`
-	Multicast      MulticastConfiguration `xml:"Multicast"`
-	SessionTimeout xsd.Duration           `xml:"SessionTimeout"`
+	Encoding       VideoEncoding           `xml:"Encoding,omitempty"`
+	Resolution     *VideoResolution        `xml:"Resolution,omitempty"`
+	Quality        float64                 `xml:"Quality,omitempty"`
+	RateControl    *VideoRateControl       `xml:"RateControl,omitempty"`
+	MPEG4          *Mpeg4Configuration     `xml:"MPEG4,omitempty"`
+	H264           *H264Configuration      `xml:"H264,omitempty"`
+	Multicast      *MulticastConfiguration `xml:"Multicast,omitempty"`
+	SessionTimeout xsd.Duration            `xml:"SessionTimeout,omitempty"`
 }
 
 type VideoEncoding xsd.String
 
 type VideoRateControl struct {
-	FrameRateLimit   xsd.Int `xml:"FrameRateLimit"`
-	EncodingInterval xsd.Int `xml:"EncodingInterval"`
-	BitrateLimit     xsd.Int `xml:"BitrateLimit"`
+	FrameRateLimit   xsd.Int `xml:"FrameRateLimit,omitempty"`
+	EncodingInterval xsd.Int `xml:"EncodingInterval,omitempty"`
+	BitrateLimit     xsd.Int `xml:"BitrateLimit,omitempty"`
 }
 
 type Mpeg4Configuration struct {
@@ -454,7 +454,7 @@ type H264Configuration struct {
 type H264Profile xsd.String
 
 type MulticastConfiguration struct {
-	Address   IPAddress   `xml:"Address"`
+	Address   *IPAddress  `xml:"Address"`
 	Port      int         `xml:"Port"`
 	TTL       int         `xml:"TTL"`
 	AutoStart xsd.Boolean `xml:"AutoStart"`
@@ -476,19 +476,19 @@ type IPv6Address xsd.Token
 
 type AudioEncoderConfiguration struct {
 	ConfigurationEntity
-	Encoding       AudioEncoding          `xml:"Encoding"`
-	Bitrate        int                    `xml:"Bitrate"`
-	SampleRate     int                    `xml:"SampleRate"`
-	Multicast      MulticastConfiguration `xml:"Multicast"`
-	SessionTimeout xsd.Duration           `xml:"SessionTimeout"`
+	Encoding       AudioEncoding           `xml:"Encoding"`
+	Bitrate        int                     `xml:"Bitrate"`
+	SampleRate     int                     `xml:"SampleRate"`
+	Multicast      *MulticastConfiguration `xml:"Multicast"`
+	SessionTimeout xsd.Duration            `xml:"SessionTimeout"`
 }
 
 type AudioEncoding xsd.String
 
 type VideoAnalyticsConfiguration struct {
 	ConfigurationEntity
-	AnalyticsEngineConfiguration AnalyticsEngineConfiguration `xml:"AnalyticsEngineConfiguration"`
-	RuleEngineConfiguration      RuleEngineConfiguration      `xml:"RuleEngineConfiguration"`
+	AnalyticsEngineConfiguration *AnalyticsEngineConfiguration `xml:"AnalyticsEngineConfiguration"`
+	RuleEngineConfiguration      *RuleEngineConfiguration      `xml:"RuleEngineConfiguration"`
 }
 
 type AnalyticsEngineConfiguration struct {
@@ -612,12 +612,12 @@ type PTZConfigurationExtension2 xsd.AnyType
 type MetadataConfiguration struct {
 	ConfigurationEntity
 	CompressionType              string                         `xml:"CompressionType,attr"`
-	PTZStatus                    PTZFilter                      `xml:"PTZStatus"`
-	Events                       EventSubscription              `xml:"Events"`
+	PTZStatus                    *PTZFilter                     `xml:"PTZStatus"`
+	Events                       *EventSubscription             `xml:"Events"`
 	Analytics                    xsd.Boolean                    `xml:"Analytics"`
-	Multicast                    MulticastConfiguration         `xml:"Multicast"`
+	Multicast                    *MulticastConfiguration        `xml:"Multicast"`
 	SessionTimeout               xsd.Duration                   `xml:"SessionTimeout"`
-	AnalyticsEngineConfiguration AnalyticsEngineConfiguration   `xml:"AnalyticsEngineConfiguration"`
+	AnalyticsEngineConfiguration *AnalyticsEngineConfiguration  `xml:"AnalyticsEngineConfiguration"`
 	Extension                    MetadataConfigurationExtension `xml:"Extension"`
 }
 
@@ -685,55 +685,55 @@ type VideoSourceConfigurationOptionsExtension2 struct {
 }
 
 type VideoEncoderConfigurationOptions struct {
-	QualityRange IntRange
-	JPEG         JpegOptions
-	MPEG4        Mpeg4Options
-	H264         H264Options
-	Extension    VideoEncoderOptionsExtension
+	QualityRange *IntRange
+	JPEG         *JpegOptions
+	MPEG4        *Mpeg4Options
+	H264         *H264Options
+	Extension    *VideoEncoderOptionsExtension
 }
 
 type JpegOptions struct {
-	ResolutionsAvailable  VideoResolution
-	FrameRateRange        IntRange
-	EncodingIntervalRange IntRange
+	ResolutionsAvailable  *VideoResolution
+	FrameRateRange        *IntRange
+	EncodingIntervalRange *IntRange
 }
 
 type Mpeg4Options struct {
-	ResolutionsAvailable   VideoResolution
-	GovLengthRange         IntRange
-	FrameRateRange         IntRange
-	EncodingIntervalRange  IntRange
+	ResolutionsAvailable   *VideoResolution
+	GovLengthRange         *IntRange
+	FrameRateRange         *IntRange
+	EncodingIntervalRange  *IntRange
 	Mpeg4ProfilesSupported Mpeg4Profile
 }
 
 type H264Options struct {
-	ResolutionsAvailable  VideoResolution
-	GovLengthRange        IntRange
-	FrameRateRange        IntRange
-	EncodingIntervalRange IntRange
+	ResolutionsAvailable  *VideoResolution
+	GovLengthRange        *IntRange
+	FrameRateRange        *IntRange
+	EncodingIntervalRange *IntRange
 	H264ProfilesSupported H264Profile
 }
 
 type VideoEncoderOptionsExtension struct {
-	JPEG      JpegOptions2
-	MPEG4     Mpeg4Options2
-	H264      H264Options2
+	JPEG      *JpegOptions2
+	MPEG4     *Mpeg4Options2
+	H264      *H264Options2
 	Extension VideoEncoderOptionsExtension2
 }
 
 type JpegOptions2 struct {
 	JpegOptions
-	BitrateRange IntRange
+	BitrateRange *IntRange
 }
 
 type Mpeg4Options2 struct {
 	Mpeg4Options
-	BitrateRange IntRange
+	BitrateRange *IntRange
 }
 
 type H264Options2 struct {
 	H264Options
-	BitrateRange IntRange
+	BitrateRange *IntRange
 }
 
 type VideoEncoderOptionsExtension2 xsd.AnyType
@@ -746,18 +746,18 @@ type AudioSourceConfigurationOptions struct {
 type AudioSourceOptionsExtension xsd.AnyType
 
 type AudioEncoderConfigurationOptions struct {
-	Options AudioEncoderConfigurationOption
+	Options *AudioEncoderConfigurationOption
 }
 
 type AudioEncoderConfigurationOption struct {
 	Encoding       AudioEncoding
-	BitrateList    IntList
-	SampleRateList IntList
+	BitrateList    *IntList
+	SampleRateList *IntList
 }
 
 type MetadataConfigurationOptions struct {
-	PTZStatusFilterOptions PTZStatusFilterOptions
-	Extension              MetadataConfigurationOptionsExtension
+	PTZStatusFilterOptions *PTZStatusFilterOptions
+	Extension              *MetadataConfigurationOptionsExtension
 }
 
 type PTZStatusFilterOptions struct {
@@ -780,36 +780,36 @@ type MetadataConfigurationOptionsExtension2 xsd.AnyType
 type AudioOutputConfigurationOptions struct {
 	OutputTokensAvailable ReferenceToken
 	SendPrimacyOptions    xsd.AnyURI
-	OutputLevelRange      IntRange
+	OutputLevelRange      *IntRange
 }
 
 type AudioDecoderConfigurationOptions struct {
-	AACDecOptions  AACDecOptions
-	G711DecOptions G711DecOptions
-	G726DecOptions G726DecOptions
+	AACDecOptions  *AACDecOptions
+	G711DecOptions *G711DecOptions
+	G726DecOptions *G726DecOptions
 	Extension      AudioDecoderConfigurationOptionsExtension
 }
 
 type AACDecOptions struct {
-	Bitrate         IntList
-	SampleRateRange IntList
+	Bitrate         *IntList
+	SampleRateRange *IntList
 }
 
 type G711DecOptions struct {
-	Bitrate         IntList
-	SampleRateRange IntList
+	Bitrate         *IntList
+	SampleRateRange *IntList
 }
 
 type G726DecOptions struct {
-	Bitrate         IntList
-	SampleRateRange IntList
+	Bitrate         *IntList
+	SampleRateRange *IntList
 }
 
 type AudioDecoderConfigurationOptionsExtension xsd.AnyType
 
 type StreamSetup struct {
 	Stream    StreamType `xml:"Stream"`
-	Transport Transport  `xml:"Transport"`
+	Transport *Transport `xml:"Transport"`
 }
 
 type StreamType xsd.String
@@ -833,10 +833,10 @@ type VideoSourceMode struct {
 	Token         ReferenceToken `xml:"token,attr"`
 	Enabled       bool           `xml:"Enabled,attr"`
 	MaxFramerate  float64
-	MaxResolution VideoResolution
-	Encodings     EncodingTypes
+	MaxResolution *VideoResolution
+	Encodings     *EncodingTypes
 	Reboot        bool
-	Description   Description
+	Description   *Description
 	Extension     VideoSourceModeExtension
 }
 
@@ -851,11 +851,11 @@ type Description struct {
 type VideoSourceModeExtension xsd.AnyType
 
 type OSDConfigurationOptions struct {
-	MaximumNumberOfOSDs MaximumNumberOfOSDs
+	MaximumNumberOfOSDs *MaximumNumberOfOSDs
 	Type                OSDType
 	PositionOption      string
-	TextOption          OSDTextOptions
-	ImageOption         OSDImgOptions
+	TextOption          *OSDTextOptions
+	ImageOption         *OSDImgOptions
 	Extension           OSDConfigurationOptionsExtension
 }
 
@@ -873,26 +873,26 @@ type OSDTextOptions struct {
 	FontSizeRange   IntRange
 	DateFormat      string
 	TimeFormat      string
-	FontColor       OSDColorOptions
-	BackgroundColor OSDColorOptions
+	FontColor       *OSDColorOptions
+	BackgroundColor *OSDColorOptions
 	Extension       OSDTextOptionsExtension
 }
 
 type OSDColorOptions struct {
-	Color       ColorOptions
-	Transparent IntRange
+	Color       *ColorOptions
+	Transparent *IntRange
 	Extension   OSDColorOptionsExtension
 }
 
 type ColorOptions struct {
-	ColorList       Color
-	ColorspaceRange ColorspaceRange
+	ColorList       *Color
+	ColorspaceRange *ColorspaceRange
 }
 
 type ColorspaceRange struct {
-	X          FloatRange
-	Y          FloatRange
-	Z          FloatRange
+	X          *FloatRange
+	Y          *FloatRange
+	Z          *FloatRange
 	Colorspace xsd.AnyURI
 }
 
@@ -901,10 +901,10 @@ type OSDColorOptionsExtension xsd.AnyType
 type OSDTextOptionsExtension xsd.AnyType
 
 type OSDImgOptions struct {
-	FormatsSupported StringAttrList `xml:"FormatsSupported,attr"`
-	MaxSize          int            `xml:"MaxSize,attr"`
-	MaxWidth         int            `xml:"MaxWidth,attr"`
-	MaxHeight        int            `xml:"MaxHeight,attr"`
+	FormatsSupported *StringAttrList `xml:"FormatsSupported,attr"`
+	MaxSize          int             `xml:"MaxSize,attr"`
+	MaxWidth         int             `xml:"MaxWidth,attr"`
+	MaxHeight        int             `xml:"MaxHeight,attr"`
 
 	ImagePath xsd.AnyURI
 	Extension OSDImgOptionsExtension
@@ -925,22 +925,22 @@ type PTZNode struct {
 	FixedHomePosition      xsd.Boolean `xml:"FixedHomePosition,attr"`
 	GeoMove                xsd.Boolean `xml:"GeoMove,attr"`
 	Name                   Name
-	SupportedPTZSpaces     PTZSpaces
+	SupportedPTZSpaces     *PTZSpaces
 	MaximumNumberOfPresets int
 	HomeSupported          xsd.Boolean
 	AuxiliaryCommands      AuxiliaryData
-	Extension              PTZNodeExtension
+	Extension              *PTZNodeExtension
 }
 
 type PTZSpaces struct {
-	AbsolutePanTiltPositionSpace    Space2DDescription
-	AbsoluteZoomPositionSpace       Space1DDescription
-	RelativePanTiltTranslationSpace Space2DDescription
-	RelativeZoomTranslationSpace    Space1DDescription
-	ContinuousPanTiltVelocitySpace  Space2DDescription
-	ContinuousZoomVelocitySpace     Space1DDescription
-	PanTiltSpeedSpace               Space1DDescription
-	ZoomSpeedSpace                  Space1DDescription
+	AbsolutePanTiltPositionSpace    *Space2DDescription
+	AbsoluteZoomPositionSpace       *Space1DDescription
+	RelativePanTiltTranslationSpace *Space2DDescription
+	RelativeZoomTranslationSpace    *Space1DDescription
+	ContinuousPanTiltVelocitySpace  *Space2DDescription
+	ContinuousZoomVelocitySpace     *Space1DDescription
+	PanTiltSpeedSpace               *Space1DDescription
+	ZoomSpeedSpace                  *Space1DDescription
 	Extension                       PTZSpacesExtension
 }
 
@@ -950,7 +950,7 @@ type PTZSpacesExtension xsd.AnyType
 type AuxiliaryData xsd.String
 
 type PTZNodeExtension struct {
-	SupportedPresetTour PTZPresetTourSupported
+	SupportedPresetTour *PTZPresetTourSupported
 	Extension           PTZNodeExtension2
 }
 
@@ -966,10 +966,10 @@ type PTZPresetTourSupportedExtension xsd.AnyType
 type PTZNodeExtension2 xsd.AnyType
 
 type PTZConfigurationOptions struct {
-	PTZRamps           IntAttrList `xml:"PTZRamps,attr"`
-	Spaces             PTZSpaces
-	PTZTimeout         DurationRange
-	PTControlDirection PTControlDirectionOptions
+	PTZRamps           *IntAttrList `xml:"PTZRamps,attr"`
+	Spaces             *PTZSpaces
+	PTZTimeout         *DurationRange
+	PTControlDirection *PTControlDirectionOptions
 	Extension          PTZConfigurationOptions2
 }
 
@@ -983,8 +983,8 @@ type DurationRange struct {
 }
 
 type PTControlDirectionOptions struct {
-	EFlip     EFlipOptions
-	Reverse   ReverseOptions
+	EFlip     *EFlipOptions
+	Reverse   *ReverseOptions
 	Extension PTControlDirectionOptionsExtension
 }
 
@@ -1009,7 +1009,7 @@ type PTZConfigurationOptions2 xsd.AnyType
 type PTZPreset struct {
 	Token       ReferenceToken `xml:"token,attr"`
 	Name        Name
-	PTZPosition PTZVector
+	PTZPosition *PTZVector
 }
 
 type PTZVector struct {
@@ -1067,7 +1067,7 @@ type PTZPresetTourSpot struct {
 type PTZPresetTourPresetDetail struct {
 	PresetToken   ReferenceToken             `xml:"PresetToken"`
 	Home          xsd.Boolean                `xml:"Home"`
-	PTZPosition   PTZVector                  `xml:"PTZPosition"`
+	PTZPosition   *PTZVector                 `xml:"PTZPosition"`
 	TypeExtension PTZPresetTourTypeExtension `xml:"TypeExtension"`
 }
 
@@ -1810,10 +1810,10 @@ type LocationEntity struct {
 	GeoSource xsd.AnyURI     `xml:"GeoSource,attr"`
 	AutoGeo   xsd.Boolean    `xml:"AutoGeo,attr"`
 
-	GeoLocation      GeoLocation      `xml:"GeoLocation"`
-	GeoOrientation   GeoOrientation   `xml:"GeoOrientation"`
-	LocalLocation    LocalLocation    `xml:"LocalLocation"`
-	LocalOrientation LocalOrientation `xml:"LocalOrientation"`
+	GeoLocation      *GeoLocation      `xml:"GeoLocation"`
+	GeoOrientation   *GeoOrientation   `xml:"GeoOrientation"`
+	LocalLocation    *LocalLocation    `xml:"LocalLocation"`
+	LocalOrientation *LocalOrientation `xml:"LocalOrientation"`
 }
 
 type LocalOrientation struct {
@@ -1871,33 +1871,28 @@ type Date struct {
 	Day   xsd.Int `xml:"Day"`
 }
 
-type Range struct {
-	Min float64 `xml:"Min"`
-	Max float64 `xml:"Max"`
-}
-
 type ExposureOpt struct {
-	Mode            []string `xml:"Mode"`
-	MinExposureTime Range    `xml:"MinExposureTime"`
-	MaxExposureTime Range    `xml:"MaxExposureTime"`
-	MinGain         Range    `xml:"MinGain"`
-	MaxGain         Range    `xml:"MaxGain"`
-	MinIris         Range    `xml:"MinIris"`
-	MaxIris         Range    `xml:"MaxIris"`
-	ExposureTime    Range    `xml:"ExposureTime"`
-	Gain            Range    `xml:"Gain"`
-	Iris            Range    `xml:"Iris"`
+	Mode            []string    `xml:"Mode"`
+	MinExposureTime *FloatRange `xml:"MinExposureTime"`
+	MaxExposureTime *FloatRange `xml:"MaxExposureTime"`
+	MinGain         *FloatRange `xml:"MinGain"`
+	MaxGain         *FloatRange `xml:"MaxGain"`
+	MinIris         *FloatRange `xml:"MinIris"`
+	MaxIris         *FloatRange `xml:"MaxIris"`
+	ExposureTime    *FloatRange `xml:"ExposureTime"`
+	Gain            *FloatRange `xml:"Gain"`
+	Iris            *FloatRange `xml:"Iris"`
 }
 
 type FocusOpt struct {
-	AutoFocusModes []string `xml:"AutoFocusModes"`
-	DefaultSpeed   Range    `xml:"DefaultSpeed"`
+	AutoFocusModes []string    `xml:"AutoFocusModes"`
+	DefaultSpeed   *FloatRange `xml:"DefaultSpeed"`
 }
 
 type WhiteBalanceOpt struct {
-	Mode   []string `xml:"Mode"`
-	YrGain Range    `xml:"YrGain"`
-	YbGain Range    `xml:"YbGain"`
+	Mode   []string    `xml:"Mode"`
+	YrGain *FloatRange `xml:"YrGain"`
+	YbGain *FloatRange `xml:"YbGain"`
 }
 
 type WideDynamicRangeOpt struct {
@@ -1905,8 +1900,8 @@ type WideDynamicRangeOpt struct {
 }
 
 type BacklightCompensationOpt struct {
-	Mode  []string `xml:"Mode"`
-	Level Range    `xml:"Level"`
+	Mode  []string    `xml:"Mode"`
+	Level *FloatRange `xml:"Level"`
 }
 
 type IrCutFilterModeOpt struct {
@@ -1915,12 +1910,12 @@ type IrCutFilterModeOpt struct {
 
 type ImagingOptions struct {
 	BacklightCompensation *BacklightCompensationOpt `xml:"BacklightCompensation"`
-	Brightness            *Range                    `xml:"Brightness"`
-	ColorSaturation       *Range                    `xml:"ColorSaturation"`
-	Contrast              *Range                    `xml:"Contrast"`
+	Brightness            *FloatRange               `xml:"Brightness"`
+	ColorSaturation       *FloatRange               `xml:"ColorSaturation"`
+	Contrast              *FloatRange               `xml:"Contrast"`
 	Exposure              *ExposureOpt              `xml:"Exposure"`
 	Focus                 *FocusOpt                 `xml:"Focus"`
-	Sharpness             *Range                    `xml:"Sharpness"`
+	Sharpness             *FloatRange               `xml:"Sharpness"`
 	WideDynamicRange      *WideDynamicRangeOpt      `xml:"WideDynamicRange"`
 	IrCutFilterMode       *IrCutFilterModeOpt       `xml:"IrCutFilterMode"`
 	WhiteBalance          *WhiteBalanceOpt          `xml:"WhiteBalance"`
