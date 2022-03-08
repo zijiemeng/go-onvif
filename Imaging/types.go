@@ -72,3 +72,8 @@ type GetOptionsResponse struct {
 	XMLName        xml.Name             `xml:"GetOptionsResponse"`
 	ImagingOptions onvif.ImagingOptions `xml:"ImagingOptions"`
 }
+
+type GetMoveOptionsResponse struct {
+	XMLName     string            `xml:"GetMoveOptionsResponse"`
+	MoveOptions onvif.MoveOptions `xml:"MoveOptions"`
+}
