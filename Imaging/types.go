@@ -82,3 +82,8 @@ type GetServiceCapabilitiesResponse struct {
 	XMLName      string                    `xml:"GetServiceCapabilitiesResponse"`
 	Capabilities onvif.ImagingCapabilities `xml:"Capabilities"`
 }
+
+type GetStatusResponse struct {
+	XMLName       string              `xml:"GetStatusResponse"`
+	ImagingStatus onvif.ImagingStatus `xml:"Status"`
+}

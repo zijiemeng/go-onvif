@@ -1934,3 +1934,14 @@ type MoveOptions struct {
 		Distance FloatRange `xml:"Distance"`
 	} `xml:"Relative"`
 }
+
+type ImagingStatus struct {
+	FocusStatus20 *struct {
+		Position   float64 `xml:"Position"`
+		MoveStatus string  `xml:"MoveStatus"`
+	} `xml:"FocusStatus20"`
+	FocusStatus *struct {
+		Position   float64 `xml:"Position"`
+		MoveStatus string  `xml:"MoveStatus"`
+	} `xml:"FocusStatus"`
+}
