@@ -1927,6 +1927,10 @@ type MoveOptions struct {
 	Continuous *struct {
 		Speed FloatRange `xml:"Speed"`
 	} `xml:"Continuous"`
-	Absolute *struct{} `xml:"Absolute"`
-	Relative *struct{} `xml:"Relative"`
+	Absolute *struct {
+		Position FloatRange `xml:"Position"`
+	} `xml:"Absolute"`
+	Relative *struct {
+		Distance FloatRange `xml:"Distance"`
+	} `xml:"Relative"`
 }
