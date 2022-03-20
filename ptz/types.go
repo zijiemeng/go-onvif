@@ -28,7 +28,7 @@ type GetNodes struct {
 }
 
 type GetNodesResponse struct {
-	PTZNode []*onvif.PTZNode
+	PTZNode []onvif.PTZNode
 }
 
 type GetNode struct {
