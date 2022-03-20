@@ -35,7 +35,7 @@ type GetServiceCapabilities struct {
 }
 
 type GetServiceCapabilitiesResponse struct {
-	Capabilities Capabilities
+	Capabilities []Capabilities
 }
 
 type GetVideoSources struct {
@@ -43,7 +43,7 @@ type GetVideoSources struct {
 }
 
 type GetVideoSourcesResponse struct {
-	VideoSources onvif.VideoSource
+	VideoSources []onvif.VideoSource
 }
 
 type GetAudioSources struct {
@@ -51,7 +51,7 @@ type GetAudioSources struct {
 }
 
 type GetAudioSourcesResponse struct {
-	AudioSources onvif.AudioSource
+	AudioSources []onvif.AudioSource
 }
 
 type GetAudioOutputs struct {
@@ -59,7 +59,7 @@ type GetAudioOutputs struct {
 }
 
 type GetAudioOutputsResponse struct {
-	AudioOutputs onvif.AudioOutput
+	AudioOutputs []onvif.AudioOutput
 }
 
 type CreateProfile struct {
