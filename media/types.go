@@ -255,7 +255,7 @@ type GetVideoSourceConfigurations struct {
 }
 
 type GetVideoSourceConfigurationsResponse struct {
-	Configurations onvif.VideoSourceConfiguration
+	Configurations []onvif.VideoSourceConfiguration
 }
 
 type GetVideoEncoderConfigurations struct {
@@ -271,7 +271,7 @@ type GetAudioSourceConfigurations struct {
 }
 
 type GetAudioSourceConfigurationsResponse struct {
-	Configurations onvif.AudioSourceConfiguration
+	Configurations []onvif.AudioSourceConfiguration
 }
 
 type GetAudioEncoderConfigurations struct {
@@ -279,7 +279,7 @@ type GetAudioEncoderConfigurations struct {
 }
 
 type GetAudioEncoderConfigurationsResponse struct {
-	Configurations onvif.AudioEncoderConfiguration
+	Configurations []onvif.AudioEncoderConfiguration
 }
 
 type GetVideoAnalyticsConfigurations struct {
@@ -287,7 +287,7 @@ type GetVideoAnalyticsConfigurations struct {
 }
 
 type GetVideoAnalyticsConfigurationsResponse struct {
-	Configurations onvif.VideoAnalyticsConfiguration
+	Configurations []onvif.VideoAnalyticsConfiguration
 }
 
 type GetMetadataConfigurations struct {
@@ -295,7 +295,7 @@ type GetMetadataConfigurations struct {
 }
 
 type GetMetadataConfigurationsResponse struct {
-	Configurations onvif.MetadataConfiguration
+	Configurations []onvif.MetadataConfiguration
 }
 
 type GetAudioOutputConfigurations struct {
@@ -303,7 +303,7 @@ type GetAudioOutputConfigurations struct {
 }
 
 type GetAudioOutputConfigurationsResponse struct {
-	Configurations onvif.AudioOutputConfiguration
+	Configurations []onvif.AudioOutputConfiguration
 }
 
 type GetAudioDecoderConfigurations struct {
@@ -311,7 +311,7 @@ type GetAudioDecoderConfigurations struct {
 }
 
 type GetAudioDecoderConfigurationsResponse struct {
-	Configurations onvif.AudioDecoderConfiguration
+	Configurations []onvif.AudioDecoderConfiguration
 }
 
 type GetVideoSourceConfiguration struct {
@@ -392,7 +392,7 @@ type GetCompatibleVideoEncoderConfigurations struct {
 }
 
 type GetCompatibleVideoEncoderConfigurationsResponse struct {
-	Configurations onvif.VideoEncoderConfiguration
+	Configurations []onvif.VideoEncoderConfiguration
 }
 
 type GetCompatibleVideoSourceConfigurations struct {
@@ -401,7 +401,7 @@ type GetCompatibleVideoSourceConfigurations struct {
 }
 
 type GetCompatibleVideoSourceConfigurationsResponse struct {
-	Configurations onvif.VideoSourceConfiguration
+	Configurations []onvif.VideoSourceConfiguration
 }
 
 type GetCompatibleAudioEncoderConfigurations struct {
@@ -410,7 +410,7 @@ type GetCompatibleAudioEncoderConfigurations struct {
 }
 
 type GetCompatibleAudioEncoderConfigurationsResponse struct {
-	Configurations onvif.AudioEncoderConfiguration
+	Configurations []onvif.AudioEncoderConfiguration
 }
 
 type GetCompatibleAudioSourceConfigurations struct {
@@ -419,7 +419,7 @@ type GetCompatibleAudioSourceConfigurations struct {
 }
 
 type GetCompatibleAudioSourceConfigurationsResponse struct {
-	Configurations onvif.AudioSourceConfiguration
+	Configurations []onvif.AudioSourceConfiguration
 }
 
 type GetCompatibleVideoAnalyticsConfigurations struct {
@@ -428,7 +428,7 @@ type GetCompatibleVideoAnalyticsConfigurations struct {
 }
 
 type GetCompatibleVideoAnalyticsConfigurationsResponse struct {
-	Configurations onvif.VideoAnalyticsConfiguration
+	Configurations []onvif.VideoAnalyticsConfiguration
 }
 
 type GetCompatibleMetadataConfigurations struct {
@@ -437,7 +437,7 @@ type GetCompatibleMetadataConfigurations struct {
 }
 
 type GetCompatibleMetadataConfigurationsResponse struct {
-	Configurations onvif.MetadataConfiguration
+	Configurations []onvif.MetadataConfiguration
 }
 
 type GetCompatibleAudioOutputConfigurations struct {
@@ -446,7 +446,7 @@ type GetCompatibleAudioOutputConfigurations struct {
 }
 
 type GetCompatibleAudioOutputConfigurationsResponse struct {
-	Configurations onvif.AudioOutputConfiguration
+	Configurations []onvif.AudioOutputConfiguration
 }
 
 type GetCompatibleAudioDecoderConfigurations struct {
@@ -455,7 +455,7 @@ type GetCompatibleAudioDecoderConfigurations struct {
 }
 
 type GetCompatibleAudioDecoderConfigurationsResponse struct {
-	Configurations onvif.AudioDecoderConfiguration
+	Configurations []onvif.AudioDecoderConfiguration
 }
 
 type SetVideoSourceConfiguration struct {
