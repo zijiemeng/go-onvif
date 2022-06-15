@@ -9,6 +9,7 @@ import (
 	"regexp"
 	"strings"
 	"testing"
+	"time"
 
 	"code.byted.org/videoarch/go-onvif/device"
 	discover "code.byted.org/videoarch/go-onvif/ws-discovery"
@@ -19,9 +20,12 @@ func TestGetAvailableDevicesAtSpecificEthernetInterface(t *testing.T) {
 
 	// client()
 	// runDiscovery("en0")
-	s := onvif.GetAvailableDevicesAtSpecificEthernetInterface("en0")
 
-	log.Printf("%v", s)
+	for i := 0; i < 10; i++ {
+		s := onvif.GetAvailableDevicesAtSpecificEthernetInterface("en5")
+		log.Printf("%v", s)
+		time.Sleep(2 * time.Second)
+	}
 }
 
 func client() {

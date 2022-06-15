@@ -187,7 +187,6 @@ func NewDevice(params DeviceParams) (*Device, error) {
 	}
 
 	getCapabilities := device.GetCapabilities{Category: "All"}
-
 	resp, err := dev.CallMethod(getCapabilities)
 	if err != nil {
 		return nil, ErrorOffline
@@ -198,8 +197,27 @@ func NewDevice(params DeviceParams) (*Device, error) {
 	if resp.StatusCode != http.StatusOK {
 		return nil, errors.New("camera is not available at " + dev.params.Xaddr + " or it does not support ONVIF services")
 	}
-
 	dev.getSupportedServices(resp)
+	getDeviceInfo := device.GetDeviceInformation{}
+	resp, err = dev.CallMethod(getDeviceInfo)
+	if err != nil || resp.StatusCode != http.StatusOK {
+		return nil, fmt.Errorf("get device: %s info error: %v", params.Xaddr, err)
+	}
+	bResp := readResponse(resp)
+	soap := gosoap.SoapMessage(bResp)
+	fmt.Println(soap)
+	data := device.GetDeviceInformationResponse{}
+	err = xml.Unmarshal([]byte(soap.Body()), &data)
+	if err != nil {
+		return nil, fmt.Errorf("unmarshal device: %s info: %s err: %v", params.Xaddr, soap.Body(), err)
+	}
+	dev.info = DeviceInfo{
+		Manufacturer:    data.Manufacturer,
+		Model:           data.Model,
+		FirmwareVersion: data.FirmwareVersion,
+		SerialNumber:    data.SerialNumber,
+		HardwareId:      data.HardwareId,
+	}
 	return dev, nil
 }
 
