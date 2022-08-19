@@ -10,6 +10,7 @@ import (
 	"reflect"
 	"strconv"
 	"strings"
+	"time"
 
 	"code.byted.org/videoarch/go-onvif/device"
 	"code.byted.org/videoarch/go-onvif/gosoap"
@@ -182,10 +183,16 @@ func NewDevice(params DeviceParams) (*Device, error) {
 	dev.endpoints = make(map[string]string)
 	dev.addEndpoint("Device", "http://"+dev.params.Xaddr+"/onvif/device_service")
 
-	if dev.params.HttpClient == nil {
-		dev.params.HttpClient = new(http.Client)
+	client := loginClient
+	if client == nil {
+		client = defaultLoginClient
 	}
 
+	paramClient := dev.params.HttpClient
+	if paramClient == nil {
+		paramClient = new(http.Client)
+	}
+	dev.params.HttpClient = client
 	getCapabilities := device.GetCapabilities{Category: "All"}
 	resp, err := dev.CallMethod(getCapabilities)
 	if err != nil {
@@ -197,11 +204,18 @@ func NewDevice(params DeviceParams) (*Device, error) {
 	if resp.StatusCode != http.StatusOK {
 		return nil, errors.New("camera is not available at " + dev.params.Xaddr + " or it does not support ONVIF services")
 	}
+	dev.params.HttpClient = paramClient
 	dev.getSupportedServices(resp)
 	getDeviceInfo := device.GetDeviceInformation{}
 	resp, err = dev.CallMethod(getDeviceInfo)
-	if err != nil || resp.StatusCode != http.StatusOK {
-		return nil, fmt.Errorf("get device: %s info error: %v", params.Xaddr, err)
+	if err != nil {
+		return nil, ErrorOffline
+	}
+	if resp.StatusCode == http.StatusUnauthorized {
+		return nil, ErrorUnauthorized
+	}
+	if resp.StatusCode != http.StatusOK {
+		return nil, errors.New("camera is not available at " + dev.params.Xaddr + " or it does not support ONVIF services")
 	}
 	bResp := readResponse(resp)
 	soap := gosoap.SoapMessage(bResp)
@@ -324,4 +338,22 @@ func (dev Device) callMethodDo(endpoint string, method interface{}) (*http.Respo
 		return resp, ErrorOffline
 	}
 	return resp, err
+}
+
+var (
+	loginClient        *http.Client
+	defaultLoginClient *http.Client
+)
+
+func init() {
+	defaultLoginClient = &http.Client{Timeout: time.Second}
+	trans := http.DefaultTransport.(*http.Transport).Clone()
+	trans.MaxIdleConns = 100
+	trans.MaxConnsPerHost = 100
+	trans.MaxIdleConnsPerHost = 100
+	defaultLoginClient.Transport = trans
+}
+
+func SetLoginHttpClient(client *http.Client) {
+	loginClient = client
 }
