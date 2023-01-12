@@ -40,7 +40,7 @@ CERTAIN WRITTEN POLICIES OF THE CORPORATION.
      elementFormDefault="qualified"
      version="1.0">
       <xs:import namespace="http://www.onvif.org/ver10/pacs" schemaLocation="types.xsd"/>
-      <!--====== types ======-->
+      <!--====== common ======-->
       <xs:complexType name="ServiceCapabilities">
       <xs:annotation>
         <xs:documentation>

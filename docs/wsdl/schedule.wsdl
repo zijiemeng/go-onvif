@@ -32,7 +32,7 @@ CERTAIN WRITTEN POLICIES OF THE CORPORATION.
 		xmlns:xs="http://www.w3.org/2001/XMLSchema"
 		xmlns:tsc="http://www.onvif.org/ver10/schedule/wsdl" name="ScheduleService"
 		targetNamespace="http://www.onvif.org/ver10/schedule/wsdl">
-	<!-- The data types definition for the 'Schedule Service' -->
+	<!-- The data common definition for the 'Schedule Service' -->
 	<wsdl:types>
 		<xs:schema targetNamespace="http://www.onvif.org/ver10/schedule/wsdl"
 				   xmlns:xs="http://www.w3.org/2001/XMLSchema" xmlns:pt="http://www.onvif.org/ver10/pacs"

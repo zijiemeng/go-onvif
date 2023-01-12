@@ -13,7 +13,7 @@ type Capabilities struct {
 	StatusPosition              xsd.Boolean `xml:"StatusPosition,attr"`
 }
 
-//PTZ main types
+//PTZ main common
 
 type GetServiceCapabilities struct {
 	XMLName string `xml:"tptz:GetServiceCapabilities"`

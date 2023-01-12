@@ -100,7 +100,7 @@ type UserCredential struct {
 	Extension xsd.AnyType `xml:"tds:Extension"`
 }
 
-//Device main types
+//Device main common
 
 type GetServices struct {
 	XMLName           string      `xml:"tds:GetServices"`

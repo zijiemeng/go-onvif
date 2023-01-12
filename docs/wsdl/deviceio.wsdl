@@ -662,7 +662,7 @@ IN NO EVENT WILL THE CORPORATION OR ITS MEMBERS OR THEIR AFFILIATES BE LIABLE FO
 				</xs:complexType>
 			</xs:element>
 			<!--===============================-->
-			<!--==                Serial port types            ===-->
+			<!--==                Serial port common            ===-->
 			<!--===============================-->
 			<xs:complexType name="SerialData">
 				<xs:annotation>

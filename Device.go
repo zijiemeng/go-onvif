@@ -1,9 +1,11 @@
 package onvif
 
 import (
+	"code.byted.org/videoarch/go-onvif/onvif"
 	"encoding/xml"
 	"errors"
 	"fmt"
+	"io"
 	"io/ioutil"
 	"net/http"
 	"net/url"
@@ -87,6 +89,7 @@ type Device struct {
 	params    DeviceParams
 	endpoints map[string]string
 	info      DeviceInfo
+	*onvif.EndpointManager
 }
 
 type DeviceParams struct {
@@ -232,6 +235,7 @@ func NewDevice(params DeviceParams) (*Device, error) {
 		SerialNumber:    data.SerialNumber,
 		HardwareId:      data.HardwareId,
 	}
+	dev.EndpointManager = onvif.NewEndpointManager(dev.endpoints, dev)
 	return dev, nil
 }
 
@@ -310,6 +314,37 @@ func (dev Device) CallMethod(method interface{}) (*http.Response, error) {
 		return nil, ErrorServiceNotFound
 	}
 	return dev.callMethodDo(endpoint, method)
+}
+
+func (dev Device) CallMethodUnmarshal(endpoint string, method interface{}, result interface{}) error {
+	methodKind := reflect.ValueOf(method).Type().Kind()
+	resultKind := reflect.ValueOf(result).Type().Kind()
+	if (methodKind != reflect.Struct && (methodKind != reflect.Ptr || method == nil)) ||
+		resultKind != reflect.Ptr || result == nil {
+		return fmt.Errorf("param error, method: %#v, response: %#v", method, result)
+	}
+	response, err := dev.callMethodDo(endpoint, method)
+	if err != nil {
+		return err
+	}
+	if response.StatusCode != http.StatusOK {
+		return fmt.Errorf("http status code is not ok: %d", response.StatusCode)
+	}
+	defer func() {
+		_ = response.Body.Close()
+	}()
+	if err != nil {
+		return err
+	}
+	bResp, _ := io.ReadAll(response.Body)
+	soap := gosoap.SoapMessage(bResp)
+	b := soap.BodyBytes()
+	fmt.Println(string(b))
+	err = xml.Unmarshal(b, result)
+	if err != nil {
+		return err
+	}
+	return nil
 }
 
 //CallMethod functions call an method, defined <method> struct with authentication data

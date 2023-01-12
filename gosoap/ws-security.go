@@ -10,7 +10,7 @@ import (
 )
 
 /*************************
-	WS-Security types
+	WS-Security common
 *************************/
 const (
 	passwordType = "http://docs.oasis-open.org/wss/2004/01/oasis-200401-wss-username-token-profile-1.0#PasswordDigest"

@@ -12,7 +12,7 @@
 	<wsdl:types>
 		<xs:schema xmlns:xs="http://www.w3.org/2001/XMLSchema" elementFormDefault="qualified" targetNamespace="http://www.onvif.org/ver10/advancedsecurity/wsdl" version="16.10">
 			<!--===================================================-->
-			<!-- Data types used by the advanced security features -->
+			<!-- Data common used by the advanced security features -->
 			<!--===================================================-->
 			<xs:simpleType name="KeyID">
 				<xs:annotation>
@@ -573,7 +573,7 @@
 				<xs:anyAttribute processContents="lax"/>
 			</xs:complexType>
 			<!--==========================================-->
-			<!-- Begin Cert-based client auth data types  -->
+			<!-- Begin Cert-based client auth data common  -->
 			<!--==========================================-->
 			<xs:simpleType name="CRLID">
 				<xs:restriction base="xs:NCName">
@@ -642,7 +642,7 @@
 				</xs:sequence>
 			</xs:complexType>
 			<!--========================================-->
-			<!-- End Cert-based client auth data types-->
+			<!-- End Cert-based client auth data common-->
 			<!--========================================-->
 			<!--===============================-->
 			<xs:simpleType name="RSAKeyLengths">
@@ -1479,7 +1479,7 @@
 				</xs:complexType>
 			</xs:element>
 			<!--===============================================-->
-			<!-- Begin Cert-based client auth message types    -->
+			<!-- Begin Cert-based client auth message common    -->
 			<!--===============================================-->
 			<xs:element name="UploadCRL">
 				<xs:complexType>
@@ -1811,7 +1811,7 @@
 				</xs:complexType>
 			</xs:element>
 			<!--=============================================-->
-			<!-- Begin Cert-based client auth message types   -->
+			<!-- Begin Cert-based client auth message common   -->
 			<!--=============================================-->
 			<!--===============================-->
 			<xs:element name="AddDot1XConfiguration">

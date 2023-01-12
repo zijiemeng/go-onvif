@@ -28,7 +28,7 @@ type StreamingCapabilities struct {
 	NoRTSPStreaming     bool `xml:"NoRTSPStreaming,attr"`
 }
 
-//Media main types
+//Media main common
 
 type GetServiceCapabilities struct {
 	XMLName string `xml:"trt:GetServiceCapabilities"`
