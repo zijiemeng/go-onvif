@@ -2,6 +2,8 @@ package onvif
 
 import (
 	"code.byted.org/videoarch/go-onvif/onvif"
+	"code.byted.org/videoarch/go-onvif/onvif/common"
+	"code.byted.org/videoarch/go-onvif/onvif/v10/device"
 	"encoding/xml"
 	"errors"
 	"fmt"
@@ -14,7 +16,6 @@ import (
 	"strings"
 	"time"
 
-	"code.byted.org/videoarch/go-onvif/device"
 	"code.byted.org/videoarch/go-onvif/gosoap"
 	"code.byted.org/videoarch/go-onvif/networking"
 	wsdiscovery "code.byted.org/videoarch/go-onvif/ws-discovery"
@@ -188,19 +189,15 @@ func NewDevice(params DeviceParams) (*Device, error) {
 	dev := new(Device)
 	dev.params = params
 	dev.endpoints = make(map[string]string)
-	dev.addEndpoint("Device", "http://"+dev.params.Xaddr+"/onvif/device_service")
+	url := "http://" + dev.params.Xaddr + "/onvif/device_service"
+	dev.addEndpoint("Device", url)
 
 	client := loginClient
 	if client == nil {
 		client = defaultLoginClient
 	}
 
-	paramClient := dev.params.HttpClient
-	if paramClient == nil {
-		paramClient = new(http.Client)
-	}
-	dev.params.HttpClient = client
-	getCapabilities := device.GetCapabilities{Category: "All"}
+	getCapabilities := device.GetCapabilities{Category: []common.CapabilityCategory{"All"}}
 	resp, err := dev.CallMethod(getCapabilities)
 	if err != nil {
 		return nil, ErrorOffline
@@ -211,8 +208,8 @@ func NewDevice(params DeviceParams) (*Device, error) {
 	if resp.StatusCode != http.StatusOK {
 		return nil, errors.New("camera is not available at " + dev.params.Xaddr + " or it does not support ONVIF services")
 	}
-	dev.params.HttpClient = paramClient
 	dev.getSupportedServices(resp)
+
 	getDeviceInfo := device.GetDeviceInformation{}
 	resp, err = dev.CallMethod(getDeviceInfo)
 	if err != nil {

@@ -2,6 +2,7 @@ package onvif
 
 import (
 	"code.byted.org/videoarch/go-onvif/onvif/v10/device"
+	"code.byted.org/videoarch/go-onvif/onvif/v10/media"
 	"encoding/json"
 	"fmt"
 	"github.com/stretchr/testify/require"
@@ -38,6 +39,14 @@ func TestOnvif(t *testing.T) {
 	require.NoError(t, err)
 	require.NotNil(t, ntp)
 	printJson(ntp)
+
+	eptMedia := mgr.Media
+	if eptMedia != nil {
+		capabilities, err := eptMedia.Media.OptGetServiceCapabilities(media.GetServiceCapabilities{})
+		require.NoError(t, err)
+		require.NotNil(t, capabilities)
+		printJson(capabilities)
+	}
 }
 
 func printJson(source interface{}) {

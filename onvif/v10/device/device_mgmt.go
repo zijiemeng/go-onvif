@@ -370,7 +370,7 @@ type GetCACertificatesResponse struct {
 }
 
 type GetCapabilities struct {
-	Category []*common.CapabilityCategory `xml:"Category,omitempty" json:"Category,omitempty" yaml:"Category,omitempty"`
+	Category []common.CapabilityCategory `xml:"Category,omitempty" json:"Category,omitempty" yaml:"Category,omitempty"`
 }
 
 type GetCapabilitiesResponse struct {
