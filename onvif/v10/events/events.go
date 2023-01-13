@@ -1,4 +1,4 @@
-package event
+package events
 
 import (
 	"reflect"
@@ -8,14 +8,11 @@ import (
 
 var Namespace = "http://docs.oasis-open.org/wsrf/rw-2"
 
-// NewPausableSubscriptionManager creates an initializes a PausableSubscriptionManager.
-func NewPausableSubscriptionManager(endpoint string, cli common.Client) PausableSubscriptionManager {
+func NewPort(endpoint string, cli common.Client) Port {
 	return &pausableSubscriptionManager{cli: cli, Endpoint: endpoint}
 }
 
-// PausableSubscriptionManager was auto-generated from WSDL
-// and defines interface for the remote service. Useful for testing.
-type PausableSubscriptionManager interface {
+type Port interface {
 	OptAddEventBroker(AddEventBroker AddEventBroker) (*AddEventBrokerResponse, error)
 
 	OptCreatePullPoint(CreatePullPoint CreatePullPoint) (*CreatePullPointResponse, error)

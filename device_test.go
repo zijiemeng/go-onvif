@@ -2,6 +2,8 @@ package onvif
 
 import (
 	"code.byted.org/videoarch/go-onvif/onvif/v10/device"
+	"encoding/json"
+	"fmt"
 	"github.com/stretchr/testify/require"
 	"net/http"
 	"testing"
@@ -30,4 +32,15 @@ func TestOnvif(t *testing.T) {
 	capabilities, err := eptDevice.OptGetCapabilities(device.GetCapabilities{})
 	require.NoError(t, err)
 	require.NotNil(t, capabilities)
+	printJson(capabilities)
+
+	ntp, err := eptDevice.OptGetNTP(device.GetNTP{})
+	require.NoError(t, err)
+	require.NotNil(t, ntp)
+	printJson(ntp)
+}
+
+func printJson(source interface{}) {
+	b, _ := json.Marshal(source)
+	fmt.Println(string(b))
 }

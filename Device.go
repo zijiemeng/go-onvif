@@ -177,6 +177,10 @@ func (dev *Device) getSupportedServices(resp *http.Response) {
 	for _, j := range services {
 		dev.addEndpoint(j.Parent().Tag, j.Text())
 	}
+	services = doc.FindElements("./Envelope/Body/GetCapabilitiesResponse/Capabilities/Extension/*/XAddr")
+	for _, j := range services {
+		dev.addEndpoint(j.Parent().Tag, j.Text())
+	}
 }
 
 //NewDevice function construct a ONVIF Device entity
@@ -222,7 +226,6 @@ func NewDevice(params DeviceParams) (*Device, error) {
 	}
 	bResp := readResponse(resp)
 	soap := gosoap.SoapMessage(bResp)
-	fmt.Println(soap)
 	data := device.GetDeviceInformationResponse{}
 	err = xml.Unmarshal([]byte(soap.Body()), &data)
 	if err != nil {
@@ -339,7 +342,6 @@ func (dev Device) CallMethodUnmarshal(endpoint string, method interface{}, resul
 	bResp, _ := io.ReadAll(response.Body)
 	soap := gosoap.SoapMessage(bResp)
 	b := soap.BodyBytes()
-	fmt.Println(string(b))
 	err = xml.Unmarshal(b, result)
 	if err != nil {
 		return err
