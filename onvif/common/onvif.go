@@ -2156,6 +2156,7 @@ type ExtensibleDocumented interface{}
 // 	    Fault reporting structure
 type Fault struct {
 	error
+	ErrStr string       `xml:"-" json:"ErrStr,omitempty" yaml:"ErrStr,omitempty"`
 	Action string       `xml:"-" json:"Action,omitempty" yaml:"Action,omitempty"`
 	Code   *Faultcode   `xml:"Code,omitempty" json:"Code,omitempty" yaml:"Code,omitempty"`
 	Reason *Faultreason `xml:"Reason,omitempty" json:"Reason,omitempty" yaml:"Reason,omitempty"`
@@ -2180,9 +2181,13 @@ func (fault *Fault) SetErr(err error) {
 }
 
 func NewFault(err error) *Fault {
-	return &Fault{
+	fault := &Fault{
 		error: err,
 	}
+	if err != nil {
+		fault.ErrStr = err.Error()
+	}
+	return fault
 }
 
 type FileProgress struct {
