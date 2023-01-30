@@ -16,13 +16,13 @@ func NewUplinkPort(endpoint string, cli common.Client) UplinkPort {
 // UplinkPort was auto-generated from WSDL
 // and defines interface for the remote service. Useful for testing.
 type UplinkPort interface {
-	OptDeleteUplink(DeleteUplink DeleteUplink) (*DeleteUplinkResponse, error)
+	OptDeleteUplink(DeleteUplink DeleteUplink) (*DeleteUplinkResponse, *common.Fault)
 
-	OptGetServiceCapabilities(GetServiceCapabilities GetServiceCapabilities) (*GetServiceCapabilitiesResponse, error)
+	OptGetServiceCapabilities(GetServiceCapabilities GetServiceCapabilities) (*GetServiceCapabilitiesResponse, *common.Fault)
 
-	OptGetUplinks(GetUplinks GetUplinks) (*GetUplinksResponse, error)
+	OptGetUplinks(GetUplinks GetUplinks) (*GetUplinksResponse, *common.Fault)
 
-	OptSetUplink(SetUplink SetUplink) (*SetUplinkResponse, error)
+	OptSetUplink(SetUplink SetUplink) (*SetUplinkResponse, *common.Fault)
 }
 type ConnectionStatus string
 
@@ -83,7 +83,7 @@ type uplinkPort struct {
 	Endpoint string
 }
 
-func (p *uplinkPort) OptDeleteUplink(args DeleteUplink) (*DeleteUplinkResponse, error) {
+func (p *uplinkPort) OptDeleteUplink(args DeleteUplink) (*DeleteUplinkResponse, *common.Fault) {
 	req := struct {
 		XMLName      string `xml:"tup:DeleteUplink"`
 		DeleteUplink DeleteUplink
@@ -93,13 +93,13 @@ func (p *uplinkPort) OptDeleteUplink(args DeleteUplink) (*DeleteUplinkResponse, 
 
 	resp := DeleteUplinkResponse{}
 
-	if err := p.cli.CallMethodUnmarshal(p.Endpoint, req, &resp); err != nil {
-		return nil, err
+	if fault := p.cli.CallMethodUnmarshal(p.Endpoint, req, &resp); fault != nil {
+		return nil, fault
 	}
 	return &resp, nil
 }
 
-func (p *uplinkPort) OptGetServiceCapabilities(args GetServiceCapabilities) (*GetServiceCapabilitiesResponse, error) {
+func (p *uplinkPort) OptGetServiceCapabilities(args GetServiceCapabilities) (*GetServiceCapabilitiesResponse, *common.Fault) {
 	req := struct {
 		XMLName                string `xml:"tup:GetServiceCapabilities"`
 		GetServiceCapabilities GetServiceCapabilities
@@ -109,13 +109,13 @@ func (p *uplinkPort) OptGetServiceCapabilities(args GetServiceCapabilities) (*Ge
 
 	resp := GetServiceCapabilitiesResponse{}
 
-	if err := p.cli.CallMethodUnmarshal(p.Endpoint, req, &resp); err != nil {
-		return nil, err
+	if fault := p.cli.CallMethodUnmarshal(p.Endpoint, req, &resp); fault != nil {
+		return nil, fault
 	}
 	return &resp, nil
 }
 
-func (p *uplinkPort) OptGetUplinks(args GetUplinks) (*GetUplinksResponse, error) {
+func (p *uplinkPort) OptGetUplinks(args GetUplinks) (*GetUplinksResponse, *common.Fault) {
 	req := struct {
 		XMLName    string `xml:"tup:GetUplinks"`
 		GetUplinks GetUplinks
@@ -125,13 +125,13 @@ func (p *uplinkPort) OptGetUplinks(args GetUplinks) (*GetUplinksResponse, error)
 
 	resp := GetUplinksResponse{}
 
-	if err := p.cli.CallMethodUnmarshal(p.Endpoint, req, &resp); err != nil {
-		return nil, err
+	if fault := p.cli.CallMethodUnmarshal(p.Endpoint, req, &resp); fault != nil {
+		return nil, fault
 	}
 	return &resp, nil
 }
 
-func (p *uplinkPort) OptSetUplink(args SetUplink) (*SetUplinkResponse, error) {
+func (p *uplinkPort) OptSetUplink(args SetUplink) (*SetUplinkResponse, *common.Fault) {
 	req := struct {
 		XMLName   string `xml:"tup:SetUplink"`
 		SetUplink SetUplink
@@ -141,8 +141,8 @@ func (p *uplinkPort) OptSetUplink(args SetUplink) (*SetUplinkResponse, error) {
 
 	resp := SetUplinkResponse{}
 
-	if err := p.cli.CallMethodUnmarshal(p.Endpoint, req, &resp); err != nil {
-		return nil, err
+	if fault := p.cli.CallMethodUnmarshal(p.Endpoint, req, &resp); fault != nil {
+		return nil, fault
 	}
 	return &resp, nil
 }

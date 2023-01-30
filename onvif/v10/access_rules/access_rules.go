@@ -14,23 +14,23 @@ func NewAccessRulesPort(endpoint string, cli common.Client) AccessRulesPort {
 // AccessRulesPort was auto-generated from WSDL
 // and defines interface for the remote service. Useful for testing.
 type AccessRulesPort interface {
-	OptCreateAccessProfile(CreateAccessProfile CreateAccessProfile) (*CreateAccessProfileResponse, error)
+	OptCreateAccessProfile(CreateAccessProfile CreateAccessProfile) (*CreateAccessProfileResponse, *common.Fault)
 
-	OptDeleteAccessProfile(DeleteAccessProfile DeleteAccessProfile) (*DeleteAccessProfileResponse, error)
+	OptDeleteAccessProfile(DeleteAccessProfile DeleteAccessProfile) (*DeleteAccessProfileResponse, *common.Fault)
 
-	OptGetAccessProfileInfo(GetAccessProfileInfo GetAccessProfileInfo) (*GetAccessProfileInfoResponse, error)
+	OptGetAccessProfileInfo(GetAccessProfileInfo GetAccessProfileInfo) (*GetAccessProfileInfoResponse, *common.Fault)
 
-	OptGetAccessProfileInfoList(GetAccessProfileInfoList GetAccessProfileInfoList) (*GetAccessProfileInfoListResponse, error)
+	OptGetAccessProfileInfoList(GetAccessProfileInfoList GetAccessProfileInfoList) (*GetAccessProfileInfoListResponse, *common.Fault)
 
-	OptGetAccessProfileList(GetAccessProfileList GetAccessProfileList) (*GetAccessProfileListResponse, error)
+	OptGetAccessProfileList(GetAccessProfileList GetAccessProfileList) (*GetAccessProfileListResponse, *common.Fault)
 
-	OptGetAccessProfiles(GetAccessProfiles GetAccessProfiles) (*GetAccessProfilesResponse, error)
+	OptGetAccessProfiles(GetAccessProfiles GetAccessProfiles) (*GetAccessProfilesResponse, *common.Fault)
 
-	OptGetServiceCapabilities(GetServiceCapabilities GetServiceCapabilities) (*GetServiceCapabilitiesResponse, error)
+	OptGetServiceCapabilities(GetServiceCapabilities GetServiceCapabilities) (*GetServiceCapabilitiesResponse, *common.Fault)
 
-	OptModifyAccessProfile(ModifyAccessProfile ModifyAccessProfile) (*ModifyAccessProfileResponse, error)
+	OptModifyAccessProfile(ModifyAccessProfile ModifyAccessProfile) (*ModifyAccessProfileResponse, *common.Fault)
 
-	OptSetAccessProfile(SetAccessProfile SetAccessProfile) (*SetAccessProfileResponse, error)
+	OptSetAccessProfile(SetAccessProfile SetAccessProfile) (*SetAccessProfileResponse, *common.Fault)
 }
 type AccessPolicy struct {
 	ScheduleToken *common.ReferenceToken `xml:"ScheduleToken,omitempty" json:"ScheduleToken,omitempty" yaml:"ScheduleToken,omitempty"`
@@ -171,7 +171,7 @@ type accessRulesPort struct {
 	Endpoint string
 }
 
-func (p *accessRulesPort) OptCreateAccessProfile(args CreateAccessProfile) (*CreateAccessProfileResponse, error) {
+func (p *accessRulesPort) OptCreateAccessProfile(args CreateAccessProfile) (*CreateAccessProfileResponse, *common.Fault) {
 	req := struct {
 		XMLName             string `xml:"tar:CreateAccessProfile"`
 		CreateAccessProfile CreateAccessProfile
@@ -181,13 +181,13 @@ func (p *accessRulesPort) OptCreateAccessProfile(args CreateAccessProfile) (*Cre
 
 	resp := CreateAccessProfileResponse{}
 
-	if err := p.cli.CallMethodUnmarshal(p.Endpoint, req, &resp); err != nil {
-		return nil, err
+	if fault := p.cli.CallMethodUnmarshal(p.Endpoint, req, &resp); fault != nil {
+		return nil, fault
 	}
 	return &resp, nil
 }
 
-func (p *accessRulesPort) OptDeleteAccessProfile(args DeleteAccessProfile) (*DeleteAccessProfileResponse, error) {
+func (p *accessRulesPort) OptDeleteAccessProfile(args DeleteAccessProfile) (*DeleteAccessProfileResponse, *common.Fault) {
 	req := struct {
 		XMLName             string `xml:"tar:DeleteAccessProfile"`
 		DeleteAccessProfile DeleteAccessProfile
@@ -197,13 +197,13 @@ func (p *accessRulesPort) OptDeleteAccessProfile(args DeleteAccessProfile) (*Del
 
 	resp := DeleteAccessProfileResponse{}
 
-	if err := p.cli.CallMethodUnmarshal(p.Endpoint, req, &resp); err != nil {
-		return nil, err
+	if fault := p.cli.CallMethodUnmarshal(p.Endpoint, req, &resp); fault != nil {
+		return nil, fault
 	}
 	return &resp, nil
 }
 
-func (p *accessRulesPort) OptGetAccessProfileInfo(args GetAccessProfileInfo) (*GetAccessProfileInfoResponse, error) {
+func (p *accessRulesPort) OptGetAccessProfileInfo(args GetAccessProfileInfo) (*GetAccessProfileInfoResponse, *common.Fault) {
 	req := struct {
 		XMLName              string `xml:"tar:GetAccessProfileInfo"`
 		GetAccessProfileInfo GetAccessProfileInfo
@@ -213,13 +213,13 @@ func (p *accessRulesPort) OptGetAccessProfileInfo(args GetAccessProfileInfo) (*G
 
 	resp := GetAccessProfileInfoResponse{}
 
-	if err := p.cli.CallMethodUnmarshal(p.Endpoint, req, &resp); err != nil {
-		return nil, err
+	if fault := p.cli.CallMethodUnmarshal(p.Endpoint, req, &resp); fault != nil {
+		return nil, fault
 	}
 	return &resp, nil
 }
 
-func (p *accessRulesPort) OptGetAccessProfileInfoList(args GetAccessProfileInfoList) (*GetAccessProfileInfoListResponse, error) {
+func (p *accessRulesPort) OptGetAccessProfileInfoList(args GetAccessProfileInfoList) (*GetAccessProfileInfoListResponse, *common.Fault) {
 	req := struct {
 		XMLName                  string `xml:"tar:GetAccessProfileInfoList"`
 		GetAccessProfileInfoList GetAccessProfileInfoList
@@ -229,13 +229,13 @@ func (p *accessRulesPort) OptGetAccessProfileInfoList(args GetAccessProfileInfoL
 
 	resp := GetAccessProfileInfoListResponse{}
 
-	if err := p.cli.CallMethodUnmarshal(p.Endpoint, req, &resp); err != nil {
-		return nil, err
+	if fault := p.cli.CallMethodUnmarshal(p.Endpoint, req, &resp); fault != nil {
+		return nil, fault
 	}
 	return &resp, nil
 }
 
-func (p *accessRulesPort) OptGetAccessProfileList(args GetAccessProfileList) (*GetAccessProfileListResponse, error) {
+func (p *accessRulesPort) OptGetAccessProfileList(args GetAccessProfileList) (*GetAccessProfileListResponse, *common.Fault) {
 	req := struct {
 		XMLName              string `xml:"tar:GetAccessProfileList"`
 		GetAccessProfileList GetAccessProfileList
@@ -245,13 +245,13 @@ func (p *accessRulesPort) OptGetAccessProfileList(args GetAccessProfileList) (*G
 
 	resp := GetAccessProfileListResponse{}
 
-	if err := p.cli.CallMethodUnmarshal(p.Endpoint, req, &resp); err != nil {
-		return nil, err
+	if fault := p.cli.CallMethodUnmarshal(p.Endpoint, req, &resp); fault != nil {
+		return nil, fault
 	}
 	return &resp, nil
 }
 
-func (p *accessRulesPort) OptGetAccessProfiles(args GetAccessProfiles) (*GetAccessProfilesResponse, error) {
+func (p *accessRulesPort) OptGetAccessProfiles(args GetAccessProfiles) (*GetAccessProfilesResponse, *common.Fault) {
 	req := struct {
 		XMLName           string `xml:"tar:GetAccessProfiles"`
 		GetAccessProfiles GetAccessProfiles
@@ -261,13 +261,13 @@ func (p *accessRulesPort) OptGetAccessProfiles(args GetAccessProfiles) (*GetAcce
 
 	resp := GetAccessProfilesResponse{}
 
-	if err := p.cli.CallMethodUnmarshal(p.Endpoint, req, &resp); err != nil {
-		return nil, err
+	if fault := p.cli.CallMethodUnmarshal(p.Endpoint, req, &resp); fault != nil {
+		return nil, fault
 	}
 	return &resp, nil
 }
 
-func (p *accessRulesPort) OptGetServiceCapabilities(args GetServiceCapabilities) (*GetServiceCapabilitiesResponse, error) {
+func (p *accessRulesPort) OptGetServiceCapabilities(args GetServiceCapabilities) (*GetServiceCapabilitiesResponse, *common.Fault) {
 	req := struct {
 		XMLName                string `xml:"tar:GetServiceCapabilities"`
 		GetServiceCapabilities GetServiceCapabilities
@@ -277,13 +277,13 @@ func (p *accessRulesPort) OptGetServiceCapabilities(args GetServiceCapabilities)
 
 	resp := GetServiceCapabilitiesResponse{}
 
-	if err := p.cli.CallMethodUnmarshal(p.Endpoint, req, &resp); err != nil {
-		return nil, err
+	if fault := p.cli.CallMethodUnmarshal(p.Endpoint, req, &resp); fault != nil {
+		return nil, fault
 	}
 	return &resp, nil
 }
 
-func (p *accessRulesPort) OptModifyAccessProfile(args ModifyAccessProfile) (*ModifyAccessProfileResponse, error) {
+func (p *accessRulesPort) OptModifyAccessProfile(args ModifyAccessProfile) (*ModifyAccessProfileResponse, *common.Fault) {
 	req := struct {
 		XMLName             string `xml:"tar:ModifyAccessProfile"`
 		ModifyAccessProfile ModifyAccessProfile
@@ -293,13 +293,13 @@ func (p *accessRulesPort) OptModifyAccessProfile(args ModifyAccessProfile) (*Mod
 
 	resp := ModifyAccessProfileResponse{}
 
-	if err := p.cli.CallMethodUnmarshal(p.Endpoint, req, &resp); err != nil {
-		return nil, err
+	if fault := p.cli.CallMethodUnmarshal(p.Endpoint, req, &resp); fault != nil {
+		return nil, fault
 	}
 	return &resp, nil
 }
 
-func (p *accessRulesPort) OptSetAccessProfile(args SetAccessProfile) (*SetAccessProfileResponse, error) {
+func (p *accessRulesPort) OptSetAccessProfile(args SetAccessProfile) (*SetAccessProfileResponse, *common.Fault) {
 	req := struct {
 		XMLName          string `xml:"tar:SetAccessProfile"`
 		SetAccessProfile SetAccessProfile
@@ -309,8 +309,8 @@ func (p *accessRulesPort) OptSetAccessProfile(args SetAccessProfile) (*SetAccess
 
 	resp := SetAccessProfileResponse{}
 
-	if err := p.cli.CallMethodUnmarshal(p.Endpoint, req, &resp); err != nil {
-		return nil, err
+	if fault := p.cli.CallMethodUnmarshal(p.Endpoint, req, &resp); fault != nil {
+		return nil, fault
 	}
 	return &resp, nil
 }

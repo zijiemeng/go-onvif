@@ -14,61 +14,61 @@ func NewCredentialPort(endpoint string, cli common.Client) CredentialPort {
 // CredentialPort was auto-generated from WSDL
 // and defines interface for the remote service. Useful for testing.
 type CredentialPort interface {
-	OptAddToBlacklist(AddToBlacklist AddToBlacklist) (*AddToBlacklistResponse, error)
+	OptAddToBlacklist(AddToBlacklist AddToBlacklist) (*AddToBlacklistResponse, *common.Fault)
 
-	OptAddToWhitelist(AddToWhitelist AddToWhitelist) (*AddToWhitelistResponse, error)
+	OptAddToWhitelist(AddToWhitelist AddToWhitelist) (*AddToWhitelistResponse, *common.Fault)
 
-	OptCreateCredential(CreateCredential CreateCredential) (*CreateCredentialResponse, error)
+	OptCreateCredential(CreateCredential CreateCredential) (*CreateCredentialResponse, *common.Fault)
 
-	OptDeleteBlacklist(DeleteBlacklist DeleteBlacklist) (*DeleteBlacklistResponse, error)
+	OptDeleteBlacklist(DeleteBlacklist DeleteBlacklist) (*DeleteBlacklistResponse, *common.Fault)
 
-	OptDeleteCredential(DeleteCredential DeleteCredential) (*DeleteCredentialResponse, error)
+	OptDeleteCredential(DeleteCredential DeleteCredential) (*DeleteCredentialResponse, *common.Fault)
 
-	OptDeleteCredentialAccessProfiles(DeleteCredentialAccessProfiles DeleteCredentialAccessProfiles) (*DeleteCredentialAccessProfilesResponse, error)
+	OptDeleteCredentialAccessProfiles(DeleteCredentialAccessProfiles DeleteCredentialAccessProfiles) (*DeleteCredentialAccessProfilesResponse, *common.Fault)
 
-	OptDeleteCredentialIdentifier(DeleteCredentialIdentifier DeleteCredentialIdentifier) (*DeleteCredentialIdentifierResponse, error)
+	OptDeleteCredentialIdentifier(DeleteCredentialIdentifier DeleteCredentialIdentifier) (*DeleteCredentialIdentifierResponse, *common.Fault)
 
-	OptDeleteWhitelist(DeleteWhitelist DeleteWhitelist) (*DeleteWhitelistResponse, error)
+	OptDeleteWhitelist(DeleteWhitelist DeleteWhitelist) (*DeleteWhitelistResponse, *common.Fault)
 
-	OptDisableCredential(DisableCredential DisableCredential) (*DisableCredentialResponse, error)
+	OptDisableCredential(DisableCredential DisableCredential) (*DisableCredentialResponse, *common.Fault)
 
-	OptEnableCredential(EnableCredential EnableCredential) (*EnableCredentialResponse, error)
+	OptEnableCredential(EnableCredential EnableCredential) (*EnableCredentialResponse, *common.Fault)
 
-	OptGetBlacklist(GetBlacklist GetBlacklist) (*GetBlacklistResponse, error)
+	OptGetBlacklist(GetBlacklist GetBlacklist) (*GetBlacklistResponse, *common.Fault)
 
-	OptGetCredentialAccessProfiles(GetCredentialAccessProfiles GetCredentialAccessProfiles) (*GetCredentialAccessProfilesResponse, error)
+	OptGetCredentialAccessProfiles(GetCredentialAccessProfiles GetCredentialAccessProfiles) (*GetCredentialAccessProfilesResponse, *common.Fault)
 
-	OptGetCredentialIdentifiers(GetCredentialIdentifiers GetCredentialIdentifiers) (*GetCredentialIdentifiersResponse, error)
+	OptGetCredentialIdentifiers(GetCredentialIdentifiers GetCredentialIdentifiers) (*GetCredentialIdentifiersResponse, *common.Fault)
 
-	OptGetCredentialInfo(GetCredentialInfo GetCredentialInfo) (*GetCredentialInfoResponse, error)
+	OptGetCredentialInfo(GetCredentialInfo GetCredentialInfo) (*GetCredentialInfoResponse, *common.Fault)
 
-	OptGetCredentialInfoList(GetCredentialInfoList GetCredentialInfoList) (*GetCredentialInfoListResponse, error)
+	OptGetCredentialInfoList(GetCredentialInfoList GetCredentialInfoList) (*GetCredentialInfoListResponse, *common.Fault)
 
-	OptGetCredentialList(GetCredentialList GetCredentialList) (*GetCredentialListResponse, error)
+	OptGetCredentialList(GetCredentialList GetCredentialList) (*GetCredentialListResponse, *common.Fault)
 
-	OptGetCredentialState(GetCredentialState GetCredentialState) (*GetCredentialStateResponse, error)
+	OptGetCredentialState(GetCredentialState GetCredentialState) (*GetCredentialStateResponse, *common.Fault)
 
-	OptGetCredentials(GetCredentials GetCredentials) (*GetCredentialsResponse, error)
+	OptGetCredentials(GetCredentials GetCredentials) (*GetCredentialsResponse, *common.Fault)
 
-	OptGetServiceCapabilities(GetServiceCapabilities GetServiceCapabilities) (*GetServiceCapabilitiesResponse, error)
+	OptGetServiceCapabilities(GetServiceCapabilities GetServiceCapabilities) (*GetServiceCapabilitiesResponse, *common.Fault)
 
-	OptGetSupportedFormatTypes(GetSupportedFormatTypes GetSupportedFormatTypes) (*GetSupportedFormatTypesResponse, error)
+	OptGetSupportedFormatTypes(GetSupportedFormatTypes GetSupportedFormatTypes) (*GetSupportedFormatTypesResponse, *common.Fault)
 
-	OptGetWhitelist(GetWhitelist GetWhitelist) (*GetWhitelistResponse, error)
+	OptGetWhitelist(GetWhitelist GetWhitelist) (*GetWhitelistResponse, *common.Fault)
 
-	OptModifyCredential(ModifyCredential ModifyCredential) (*ModifyCredentialResponse, error)
+	OptModifyCredential(ModifyCredential ModifyCredential) (*ModifyCredentialResponse, *common.Fault)
 
-	OptRemoveFromBlacklist(RemoveFromBlacklist RemoveFromBlacklist) (*RemoveFromBlacklistResponse, error)
+	OptRemoveFromBlacklist(RemoveFromBlacklist RemoveFromBlacklist) (*RemoveFromBlacklistResponse, *common.Fault)
 
-	OptRemoveFromWhitelist(RemoveFromWhitelist RemoveFromWhitelist) (*RemoveFromWhitelistResponse, error)
+	OptRemoveFromWhitelist(RemoveFromWhitelist RemoveFromWhitelist) (*RemoveFromWhitelistResponse, *common.Fault)
 
-	OptResetAntipassbackViolation(ResetAntipassbackViolation ResetAntipassbackViolation) (*ResetAntipassbackViolationResponse, error)
+	OptResetAntipassbackViolation(ResetAntipassbackViolation ResetAntipassbackViolation) (*ResetAntipassbackViolationResponse, *common.Fault)
 
-	OptSetCredential(SetCredential SetCredential) (*SetCredentialResponse, error)
+	OptSetCredential(SetCredential SetCredential) (*SetCredentialResponse, *common.Fault)
 
-	OptSetCredentialAccessProfiles(SetCredentialAccessProfiles SetCredentialAccessProfiles) (*SetCredentialAccessProfilesResponse, error)
+	OptSetCredentialAccessProfiles(SetCredentialAccessProfiles SetCredentialAccessProfiles) (*SetCredentialAccessProfilesResponse, *common.Fault)
 
-	OptSetCredentialIdentifier(SetCredentialIdentifier SetCredentialIdentifier) (*SetCredentialIdentifierResponse, error)
+	OptSetCredentialIdentifier(SetCredentialIdentifier SetCredentialIdentifier) (*SetCredentialIdentifierResponse, *common.Fault)
 }
 type DateTime string
 
@@ -442,7 +442,7 @@ type credentialPort struct {
 	Endpoint string
 }
 
-func (p *credentialPort) OptAddToBlacklist(args AddToBlacklist) (*AddToBlacklistResponse, error) {
+func (p *credentialPort) OptAddToBlacklist(args AddToBlacklist) (*AddToBlacklistResponse, *common.Fault) {
 	req := struct {
 		XMLName        string `xml:"tcr:AddToBlacklist"`
 		AddToBlacklist AddToBlacklist
@@ -452,13 +452,13 @@ func (p *credentialPort) OptAddToBlacklist(args AddToBlacklist) (*AddToBlacklist
 
 	resp := AddToBlacklistResponse{}
 
-	if err := p.cli.CallMethodUnmarshal(p.Endpoint, req, &resp); err != nil {
-		return nil, err
+	if fault := p.cli.CallMethodUnmarshal(p.Endpoint, req, &resp); fault != nil {
+		return nil, fault
 	}
 	return &resp, nil
 }
 
-func (p *credentialPort) OptAddToWhitelist(args AddToWhitelist) (*AddToWhitelistResponse, error) {
+func (p *credentialPort) OptAddToWhitelist(args AddToWhitelist) (*AddToWhitelistResponse, *common.Fault) {
 	req := struct {
 		XMLName        string `xml:"tcr:AddToWhitelist"`
 		AddToWhitelist AddToWhitelist
@@ -468,13 +468,13 @@ func (p *credentialPort) OptAddToWhitelist(args AddToWhitelist) (*AddToWhitelist
 
 	resp := AddToWhitelistResponse{}
 
-	if err := p.cli.CallMethodUnmarshal(p.Endpoint, req, &resp); err != nil {
-		return nil, err
+	if fault := p.cli.CallMethodUnmarshal(p.Endpoint, req, &resp); fault != nil {
+		return nil, fault
 	}
 	return &resp, nil
 }
 
-func (p *credentialPort) OptCreateCredential(args CreateCredential) (*CreateCredentialResponse, error) {
+func (p *credentialPort) OptCreateCredential(args CreateCredential) (*CreateCredentialResponse, *common.Fault) {
 	req := struct {
 		XMLName          string `xml:"tcr:CreateCredential"`
 		CreateCredential CreateCredential
@@ -484,13 +484,13 @@ func (p *credentialPort) OptCreateCredential(args CreateCredential) (*CreateCred
 
 	resp := CreateCredentialResponse{}
 
-	if err := p.cli.CallMethodUnmarshal(p.Endpoint, req, &resp); err != nil {
-		return nil, err
+	if fault := p.cli.CallMethodUnmarshal(p.Endpoint, req, &resp); fault != nil {
+		return nil, fault
 	}
 	return &resp, nil
 }
 
-func (p *credentialPort) OptDeleteBlacklist(args DeleteBlacklist) (*DeleteBlacklistResponse, error) {
+func (p *credentialPort) OptDeleteBlacklist(args DeleteBlacklist) (*DeleteBlacklistResponse, *common.Fault) {
 	req := struct {
 		XMLName         string `xml:"tcr:DeleteBlacklist"`
 		DeleteBlacklist DeleteBlacklist
@@ -500,13 +500,13 @@ func (p *credentialPort) OptDeleteBlacklist(args DeleteBlacklist) (*DeleteBlackl
 
 	resp := DeleteBlacklistResponse{}
 
-	if err := p.cli.CallMethodUnmarshal(p.Endpoint, req, &resp); err != nil {
-		return nil, err
+	if fault := p.cli.CallMethodUnmarshal(p.Endpoint, req, &resp); fault != nil {
+		return nil, fault
 	}
 	return &resp, nil
 }
 
-func (p *credentialPort) OptDeleteCredential(args DeleteCredential) (*DeleteCredentialResponse, error) {
+func (p *credentialPort) OptDeleteCredential(args DeleteCredential) (*DeleteCredentialResponse, *common.Fault) {
 	req := struct {
 		XMLName          string `xml:"tcr:DeleteCredential"`
 		DeleteCredential DeleteCredential
@@ -516,13 +516,13 @@ func (p *credentialPort) OptDeleteCredential(args DeleteCredential) (*DeleteCred
 
 	resp := DeleteCredentialResponse{}
 
-	if err := p.cli.CallMethodUnmarshal(p.Endpoint, req, &resp); err != nil {
-		return nil, err
+	if fault := p.cli.CallMethodUnmarshal(p.Endpoint, req, &resp); fault != nil {
+		return nil, fault
 	}
 	return &resp, nil
 }
 
-func (p *credentialPort) OptDeleteCredentialAccessProfiles(args DeleteCredentialAccessProfiles) (*DeleteCredentialAccessProfilesResponse, error) {
+func (p *credentialPort) OptDeleteCredentialAccessProfiles(args DeleteCredentialAccessProfiles) (*DeleteCredentialAccessProfilesResponse, *common.Fault) {
 	req := struct {
 		XMLName                        string `xml:"tcr:DeleteCredentialAccessProfiles"`
 		DeleteCredentialAccessProfiles DeleteCredentialAccessProfiles
@@ -532,13 +532,13 @@ func (p *credentialPort) OptDeleteCredentialAccessProfiles(args DeleteCredential
 
 	resp := DeleteCredentialAccessProfilesResponse{}
 
-	if err := p.cli.CallMethodUnmarshal(p.Endpoint, req, &resp); err != nil {
-		return nil, err
+	if fault := p.cli.CallMethodUnmarshal(p.Endpoint, req, &resp); fault != nil {
+		return nil, fault
 	}
 	return &resp, nil
 }
 
-func (p *credentialPort) OptDeleteCredentialIdentifier(args DeleteCredentialIdentifier) (*DeleteCredentialIdentifierResponse, error) {
+func (p *credentialPort) OptDeleteCredentialIdentifier(args DeleteCredentialIdentifier) (*DeleteCredentialIdentifierResponse, *common.Fault) {
 	req := struct {
 		XMLName                    string `xml:"tcr:DeleteCredentialIdentifier"`
 		DeleteCredentialIdentifier DeleteCredentialIdentifier
@@ -548,13 +548,13 @@ func (p *credentialPort) OptDeleteCredentialIdentifier(args DeleteCredentialIden
 
 	resp := DeleteCredentialIdentifierResponse{}
 
-	if err := p.cli.CallMethodUnmarshal(p.Endpoint, req, &resp); err != nil {
-		return nil, err
+	if fault := p.cli.CallMethodUnmarshal(p.Endpoint, req, &resp); fault != nil {
+		return nil, fault
 	}
 	return &resp, nil
 }
 
-func (p *credentialPort) OptDeleteWhitelist(args DeleteWhitelist) (*DeleteWhitelistResponse, error) {
+func (p *credentialPort) OptDeleteWhitelist(args DeleteWhitelist) (*DeleteWhitelistResponse, *common.Fault) {
 	req := struct {
 		XMLName         string `xml:"tcr:DeleteWhitelist"`
 		DeleteWhitelist DeleteWhitelist
@@ -564,13 +564,13 @@ func (p *credentialPort) OptDeleteWhitelist(args DeleteWhitelist) (*DeleteWhitel
 
 	resp := DeleteWhitelistResponse{}
 
-	if err := p.cli.CallMethodUnmarshal(p.Endpoint, req, &resp); err != nil {
-		return nil, err
+	if fault := p.cli.CallMethodUnmarshal(p.Endpoint, req, &resp); fault != nil {
+		return nil, fault
 	}
 	return &resp, nil
 }
 
-func (p *credentialPort) OptDisableCredential(args DisableCredential) (*DisableCredentialResponse, error) {
+func (p *credentialPort) OptDisableCredential(args DisableCredential) (*DisableCredentialResponse, *common.Fault) {
 	req := struct {
 		XMLName           string `xml:"tcr:DisableCredential"`
 		DisableCredential DisableCredential
@@ -580,13 +580,13 @@ func (p *credentialPort) OptDisableCredential(args DisableCredential) (*DisableC
 
 	resp := DisableCredentialResponse{}
 
-	if err := p.cli.CallMethodUnmarshal(p.Endpoint, req, &resp); err != nil {
-		return nil, err
+	if fault := p.cli.CallMethodUnmarshal(p.Endpoint, req, &resp); fault != nil {
+		return nil, fault
 	}
 	return &resp, nil
 }
 
-func (p *credentialPort) OptEnableCredential(args EnableCredential) (*EnableCredentialResponse, error) {
+func (p *credentialPort) OptEnableCredential(args EnableCredential) (*EnableCredentialResponse, *common.Fault) {
 	req := struct {
 		XMLName          string `xml:"tcr:EnableCredential"`
 		EnableCredential EnableCredential
@@ -596,13 +596,13 @@ func (p *credentialPort) OptEnableCredential(args EnableCredential) (*EnableCred
 
 	resp := EnableCredentialResponse{}
 
-	if err := p.cli.CallMethodUnmarshal(p.Endpoint, req, &resp); err != nil {
-		return nil, err
+	if fault := p.cli.CallMethodUnmarshal(p.Endpoint, req, &resp); fault != nil {
+		return nil, fault
 	}
 	return &resp, nil
 }
 
-func (p *credentialPort) OptGetBlacklist(args GetBlacklist) (*GetBlacklistResponse, error) {
+func (p *credentialPort) OptGetBlacklist(args GetBlacklist) (*GetBlacklistResponse, *common.Fault) {
 	req := struct {
 		XMLName      string `xml:"tcr:GetBlacklist"`
 		GetBlacklist GetBlacklist
@@ -612,13 +612,13 @@ func (p *credentialPort) OptGetBlacklist(args GetBlacklist) (*GetBlacklistRespon
 
 	resp := GetBlacklistResponse{}
 
-	if err := p.cli.CallMethodUnmarshal(p.Endpoint, req, &resp); err != nil {
-		return nil, err
+	if fault := p.cli.CallMethodUnmarshal(p.Endpoint, req, &resp); fault != nil {
+		return nil, fault
 	}
 	return &resp, nil
 }
 
-func (p *credentialPort) OptGetCredentialAccessProfiles(args GetCredentialAccessProfiles) (*GetCredentialAccessProfilesResponse, error) {
+func (p *credentialPort) OptGetCredentialAccessProfiles(args GetCredentialAccessProfiles) (*GetCredentialAccessProfilesResponse, *common.Fault) {
 	req := struct {
 		XMLName                     string `xml:"tcr:GetCredentialAccessProfiles"`
 		GetCredentialAccessProfiles GetCredentialAccessProfiles
@@ -628,13 +628,13 @@ func (p *credentialPort) OptGetCredentialAccessProfiles(args GetCredentialAccess
 
 	resp := GetCredentialAccessProfilesResponse{}
 
-	if err := p.cli.CallMethodUnmarshal(p.Endpoint, req, &resp); err != nil {
-		return nil, err
+	if fault := p.cli.CallMethodUnmarshal(p.Endpoint, req, &resp); fault != nil {
+		return nil, fault
 	}
 	return &resp, nil
 }
 
-func (p *credentialPort) OptGetCredentialIdentifiers(args GetCredentialIdentifiers) (*GetCredentialIdentifiersResponse, error) {
+func (p *credentialPort) OptGetCredentialIdentifiers(args GetCredentialIdentifiers) (*GetCredentialIdentifiersResponse, *common.Fault) {
 	req := struct {
 		XMLName                  string `xml:"tcr:GetCredentialIdentifiers"`
 		GetCredentialIdentifiers GetCredentialIdentifiers
@@ -644,13 +644,13 @@ func (p *credentialPort) OptGetCredentialIdentifiers(args GetCredentialIdentifie
 
 	resp := GetCredentialIdentifiersResponse{}
 
-	if err := p.cli.CallMethodUnmarshal(p.Endpoint, req, &resp); err != nil {
-		return nil, err
+	if fault := p.cli.CallMethodUnmarshal(p.Endpoint, req, &resp); fault != nil {
+		return nil, fault
 	}
 	return &resp, nil
 }
 
-func (p *credentialPort) OptGetCredentialInfo(args GetCredentialInfo) (*GetCredentialInfoResponse, error) {
+func (p *credentialPort) OptGetCredentialInfo(args GetCredentialInfo) (*GetCredentialInfoResponse, *common.Fault) {
 	req := struct {
 		XMLName           string `xml:"tcr:GetCredentialInfo"`
 		GetCredentialInfo GetCredentialInfo
@@ -660,13 +660,13 @@ func (p *credentialPort) OptGetCredentialInfo(args GetCredentialInfo) (*GetCrede
 
 	resp := GetCredentialInfoResponse{}
 
-	if err := p.cli.CallMethodUnmarshal(p.Endpoint, req, &resp); err != nil {
-		return nil, err
+	if fault := p.cli.CallMethodUnmarshal(p.Endpoint, req, &resp); fault != nil {
+		return nil, fault
 	}
 	return &resp, nil
 }
 
-func (p *credentialPort) OptGetCredentialInfoList(args GetCredentialInfoList) (*GetCredentialInfoListResponse, error) {
+func (p *credentialPort) OptGetCredentialInfoList(args GetCredentialInfoList) (*GetCredentialInfoListResponse, *common.Fault) {
 	req := struct {
 		XMLName               string `xml:"tcr:GetCredentialInfoList"`
 		GetCredentialInfoList GetCredentialInfoList
@@ -676,13 +676,13 @@ func (p *credentialPort) OptGetCredentialInfoList(args GetCredentialInfoList) (*
 
 	resp := GetCredentialInfoListResponse{}
 
-	if err := p.cli.CallMethodUnmarshal(p.Endpoint, req, &resp); err != nil {
-		return nil, err
+	if fault := p.cli.CallMethodUnmarshal(p.Endpoint, req, &resp); fault != nil {
+		return nil, fault
 	}
 	return &resp, nil
 }
 
-func (p *credentialPort) OptGetCredentialList(args GetCredentialList) (*GetCredentialListResponse, error) {
+func (p *credentialPort) OptGetCredentialList(args GetCredentialList) (*GetCredentialListResponse, *common.Fault) {
 	req := struct {
 		XMLName           string `xml:"tcr:GetCredentialList"`
 		GetCredentialList GetCredentialList
@@ -692,13 +692,13 @@ func (p *credentialPort) OptGetCredentialList(args GetCredentialList) (*GetCrede
 
 	resp := GetCredentialListResponse{}
 
-	if err := p.cli.CallMethodUnmarshal(p.Endpoint, req, &resp); err != nil {
-		return nil, err
+	if fault := p.cli.CallMethodUnmarshal(p.Endpoint, req, &resp); fault != nil {
+		return nil, fault
 	}
 	return &resp, nil
 }
 
-func (p *credentialPort) OptGetCredentialState(args GetCredentialState) (*GetCredentialStateResponse, error) {
+func (p *credentialPort) OptGetCredentialState(args GetCredentialState) (*GetCredentialStateResponse, *common.Fault) {
 	req := struct {
 		XMLName            string `xml:"tcr:GetCredentialState"`
 		GetCredentialState GetCredentialState
@@ -708,13 +708,13 @@ func (p *credentialPort) OptGetCredentialState(args GetCredentialState) (*GetCre
 
 	resp := GetCredentialStateResponse{}
 
-	if err := p.cli.CallMethodUnmarshal(p.Endpoint, req, &resp); err != nil {
-		return nil, err
+	if fault := p.cli.CallMethodUnmarshal(p.Endpoint, req, &resp); fault != nil {
+		return nil, fault
 	}
 	return &resp, nil
 }
 
-func (p *credentialPort) OptGetCredentials(args GetCredentials) (*GetCredentialsResponse, error) {
+func (p *credentialPort) OptGetCredentials(args GetCredentials) (*GetCredentialsResponse, *common.Fault) {
 	req := struct {
 		XMLName        string `xml:"tcr:GetCredentials"`
 		GetCredentials GetCredentials
@@ -724,13 +724,13 @@ func (p *credentialPort) OptGetCredentials(args GetCredentials) (*GetCredentials
 
 	resp := GetCredentialsResponse{}
 
-	if err := p.cli.CallMethodUnmarshal(p.Endpoint, req, &resp); err != nil {
-		return nil, err
+	if fault := p.cli.CallMethodUnmarshal(p.Endpoint, req, &resp); fault != nil {
+		return nil, fault
 	}
 	return &resp, nil
 }
 
-func (p *credentialPort) OptGetServiceCapabilities(args GetServiceCapabilities) (*GetServiceCapabilitiesResponse, error) {
+func (p *credentialPort) OptGetServiceCapabilities(args GetServiceCapabilities) (*GetServiceCapabilitiesResponse, *common.Fault) {
 	req := struct {
 		XMLName                string `xml:"tcr:GetServiceCapabilities"`
 		GetServiceCapabilities GetServiceCapabilities
@@ -740,13 +740,13 @@ func (p *credentialPort) OptGetServiceCapabilities(args GetServiceCapabilities) 
 
 	resp := GetServiceCapabilitiesResponse{}
 
-	if err := p.cli.CallMethodUnmarshal(p.Endpoint, req, &resp); err != nil {
-		return nil, err
+	if fault := p.cli.CallMethodUnmarshal(p.Endpoint, req, &resp); fault != nil {
+		return nil, fault
 	}
 	return &resp, nil
 }
 
-func (p *credentialPort) OptGetSupportedFormatTypes(args GetSupportedFormatTypes) (*GetSupportedFormatTypesResponse, error) {
+func (p *credentialPort) OptGetSupportedFormatTypes(args GetSupportedFormatTypes) (*GetSupportedFormatTypesResponse, *common.Fault) {
 	req := struct {
 		XMLName                 string `xml:"tcr:GetSupportedFormatTypes"`
 		GetSupportedFormatTypes GetSupportedFormatTypes
@@ -756,13 +756,13 @@ func (p *credentialPort) OptGetSupportedFormatTypes(args GetSupportedFormatTypes
 
 	resp := GetSupportedFormatTypesResponse{}
 
-	if err := p.cli.CallMethodUnmarshal(p.Endpoint, req, &resp); err != nil {
-		return nil, err
+	if fault := p.cli.CallMethodUnmarshal(p.Endpoint, req, &resp); fault != nil {
+		return nil, fault
 	}
 	return &resp, nil
 }
 
-func (p *credentialPort) OptGetWhitelist(args GetWhitelist) (*GetWhitelistResponse, error) {
+func (p *credentialPort) OptGetWhitelist(args GetWhitelist) (*GetWhitelistResponse, *common.Fault) {
 	req := struct {
 		XMLName      string `xml:"tcr:GetWhitelist"`
 		GetWhitelist GetWhitelist
@@ -772,13 +772,13 @@ func (p *credentialPort) OptGetWhitelist(args GetWhitelist) (*GetWhitelistRespon
 
 	resp := GetWhitelistResponse{}
 
-	if err := p.cli.CallMethodUnmarshal(p.Endpoint, req, &resp); err != nil {
-		return nil, err
+	if fault := p.cli.CallMethodUnmarshal(p.Endpoint, req, &resp); fault != nil {
+		return nil, fault
 	}
 	return &resp, nil
 }
 
-func (p *credentialPort) OptModifyCredential(args ModifyCredential) (*ModifyCredentialResponse, error) {
+func (p *credentialPort) OptModifyCredential(args ModifyCredential) (*ModifyCredentialResponse, *common.Fault) {
 	req := struct {
 		XMLName          string `xml:"tcr:ModifyCredential"`
 		ModifyCredential ModifyCredential
@@ -788,13 +788,13 @@ func (p *credentialPort) OptModifyCredential(args ModifyCredential) (*ModifyCred
 
 	resp := ModifyCredentialResponse{}
 
-	if err := p.cli.CallMethodUnmarshal(p.Endpoint, req, &resp); err != nil {
-		return nil, err
+	if fault := p.cli.CallMethodUnmarshal(p.Endpoint, req, &resp); fault != nil {
+		return nil, fault
 	}
 	return &resp, nil
 }
 
-func (p *credentialPort) OptRemoveFromBlacklist(args RemoveFromBlacklist) (*RemoveFromBlacklistResponse, error) {
+func (p *credentialPort) OptRemoveFromBlacklist(args RemoveFromBlacklist) (*RemoveFromBlacklistResponse, *common.Fault) {
 	req := struct {
 		XMLName             string `xml:"tcr:RemoveFromBlacklist"`
 		RemoveFromBlacklist RemoveFromBlacklist
@@ -804,13 +804,13 @@ func (p *credentialPort) OptRemoveFromBlacklist(args RemoveFromBlacklist) (*Remo
 
 	resp := RemoveFromBlacklistResponse{}
 
-	if err := p.cli.CallMethodUnmarshal(p.Endpoint, req, &resp); err != nil {
-		return nil, err
+	if fault := p.cli.CallMethodUnmarshal(p.Endpoint, req, &resp); fault != nil {
+		return nil, fault
 	}
 	return &resp, nil
 }
 
-func (p *credentialPort) OptRemoveFromWhitelist(args RemoveFromWhitelist) (*RemoveFromWhitelistResponse, error) {
+func (p *credentialPort) OptRemoveFromWhitelist(args RemoveFromWhitelist) (*RemoveFromWhitelistResponse, *common.Fault) {
 	req := struct {
 		XMLName             string `xml:"tcr:RemoveFromWhitelist"`
 		RemoveFromWhitelist RemoveFromWhitelist
@@ -820,13 +820,13 @@ func (p *credentialPort) OptRemoveFromWhitelist(args RemoveFromWhitelist) (*Remo
 
 	resp := RemoveFromWhitelistResponse{}
 
-	if err := p.cli.CallMethodUnmarshal(p.Endpoint, req, &resp); err != nil {
-		return nil, err
+	if fault := p.cli.CallMethodUnmarshal(p.Endpoint, req, &resp); fault != nil {
+		return nil, fault
 	}
 	return &resp, nil
 }
 
-func (p *credentialPort) OptResetAntipassbackViolation(args ResetAntipassbackViolation) (*ResetAntipassbackViolationResponse, error) {
+func (p *credentialPort) OptResetAntipassbackViolation(args ResetAntipassbackViolation) (*ResetAntipassbackViolationResponse, *common.Fault) {
 	req := struct {
 		XMLName                    string `xml:"tcr:ResetAntipassbackViolation"`
 		ResetAntipassbackViolation ResetAntipassbackViolation
@@ -836,13 +836,13 @@ func (p *credentialPort) OptResetAntipassbackViolation(args ResetAntipassbackVio
 
 	resp := ResetAntipassbackViolationResponse{}
 
-	if err := p.cli.CallMethodUnmarshal(p.Endpoint, req, &resp); err != nil {
-		return nil, err
+	if fault := p.cli.CallMethodUnmarshal(p.Endpoint, req, &resp); fault != nil {
+		return nil, fault
 	}
 	return &resp, nil
 }
 
-func (p *credentialPort) OptSetCredential(args SetCredential) (*SetCredentialResponse, error) {
+func (p *credentialPort) OptSetCredential(args SetCredential) (*SetCredentialResponse, *common.Fault) {
 	req := struct {
 		XMLName       string `xml:"tcr:SetCredential"`
 		SetCredential SetCredential
@@ -852,13 +852,13 @@ func (p *credentialPort) OptSetCredential(args SetCredential) (*SetCredentialRes
 
 	resp := SetCredentialResponse{}
 
-	if err := p.cli.CallMethodUnmarshal(p.Endpoint, req, &resp); err != nil {
-		return nil, err
+	if fault := p.cli.CallMethodUnmarshal(p.Endpoint, req, &resp); fault != nil {
+		return nil, fault
 	}
 	return &resp, nil
 }
 
-func (p *credentialPort) OptSetCredentialAccessProfiles(args SetCredentialAccessProfiles) (*SetCredentialAccessProfilesResponse, error) {
+func (p *credentialPort) OptSetCredentialAccessProfiles(args SetCredentialAccessProfiles) (*SetCredentialAccessProfilesResponse, *common.Fault) {
 	req := struct {
 		XMLName                     string `xml:"tcr:SetCredentialAccessProfiles"`
 		SetCredentialAccessProfiles SetCredentialAccessProfiles
@@ -868,13 +868,13 @@ func (p *credentialPort) OptSetCredentialAccessProfiles(args SetCredentialAccess
 
 	resp := SetCredentialAccessProfilesResponse{}
 
-	if err := p.cli.CallMethodUnmarshal(p.Endpoint, req, &resp); err != nil {
-		return nil, err
+	if fault := p.cli.CallMethodUnmarshal(p.Endpoint, req, &resp); fault != nil {
+		return nil, fault
 	}
 	return &resp, nil
 }
 
-func (p *credentialPort) OptSetCredentialIdentifier(args SetCredentialIdentifier) (*SetCredentialIdentifierResponse, error) {
+func (p *credentialPort) OptSetCredentialIdentifier(args SetCredentialIdentifier) (*SetCredentialIdentifierResponse, *common.Fault) {
 	req := struct {
 		XMLName                 string `xml:"tcr:SetCredentialIdentifier"`
 		SetCredentialIdentifier SetCredentialIdentifier
@@ -884,8 +884,8 @@ func (p *credentialPort) OptSetCredentialIdentifier(args SetCredentialIdentifier
 
 	resp := SetCredentialIdentifierResponse{}
 
-	if err := p.cli.CallMethodUnmarshal(p.Endpoint, req, &resp); err != nil {
-		return nil, err
+	if fault := p.cli.CallMethodUnmarshal(p.Endpoint, req, &resp); fault != nil {
+		return nil, fault
 	}
 	return &resp, nil
 }

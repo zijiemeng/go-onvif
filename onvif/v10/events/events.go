@@ -13,43 +13,43 @@ func NewPort(endpoint string, cli common.Client) Port {
 }
 
 type Port interface {
-	OptAddEventBroker(AddEventBroker AddEventBroker) (*AddEventBrokerResponse, error)
+	OptAddEventBroker(AddEventBroker AddEventBroker) (*AddEventBrokerResponse, *common.Fault)
 
-	OptCreatePullPoint(CreatePullPoint CreatePullPoint) (*CreatePullPointResponse, error)
+	OptCreatePullPoint(CreatePullPoint CreatePullPoint) (*CreatePullPointResponse, *common.Fault)
 
-	OptCreatePullPointSubscription(CreatePullPointSubscription CreatePullPointSubscription) (*CreatePullPointSubscriptionResponse, error)
+	OptCreatePullPointSubscription(CreatePullPointSubscription CreatePullPointSubscription) (*CreatePullPointSubscriptionResponse, *common.Fault)
 
-	OptDeleteEventBroker(DeleteEventBroker DeleteEventBroker) (*DeleteEventBrokerResponse, error)
+	OptDeleteEventBroker(DeleteEventBroker DeleteEventBroker) (*DeleteEventBrokerResponse, *common.Fault)
 
-	OptDestroyPullPoint(DestroyPullPoint DestroyPullPoint) (*DestroyPullPointResponse, error)
+	OptDestroyPullPoint(DestroyPullPoint DestroyPullPoint) (*DestroyPullPointResponse, *common.Fault)
 
-	OptGetCurrentMessage(GetCurrentMessage GetCurrentMessage) (*GetCurrentMessageResponse, error)
+	OptGetCurrentMessage(GetCurrentMessage GetCurrentMessage) (*GetCurrentMessageResponse, *common.Fault)
 
-	OptGetEventBrokers(GetEventBrokers GetEventBrokers) (*GetEventBrokersResponse, error)
+	OptGetEventBrokers(GetEventBrokers GetEventBrokers) (*GetEventBrokersResponse, *common.Fault)
 
-	OptGetEventProperties(GetEventProperties GetEventProperties) (*GetEventPropertiesResponse, error)
+	OptGetEventProperties(GetEventProperties GetEventProperties) (*GetEventPropertiesResponse, *common.Fault)
 
-	OptGetMessages(GetMessages GetMessages) (*GetMessagesResponse, error)
+	OptGetMessages(GetMessages GetMessages) (*GetMessagesResponse, *common.Fault)
 
-	OptGetServiceCapabilities(GetServiceCapabilities GetServiceCapabilities) (*GetServiceCapabilitiesResponse, error)
+	OptGetServiceCapabilities(GetServiceCapabilities GetServiceCapabilities) (*GetServiceCapabilitiesResponse, *common.Fault)
 
 	OptNotify(Notify Notify) error
 
-	OptPauseSubscription(PauseSubscription PauseSubscription) (*PauseSubscriptionResponse, error)
+	OptPauseSubscription(PauseSubscription PauseSubscription) (*PauseSubscriptionResponse, *common.Fault)
 
-	OptPullMessages(PullMessages PullMessages) (*PullMessagesResponse, error)
+	OptPullMessages(PullMessages PullMessages) (*PullMessagesResponse, *common.Fault)
 
-	OptRenew(Renew Renew) (*RenewResponse, error)
+	OptRenew(Renew Renew) (*RenewResponse, *common.Fault)
 
-	OptResumeSubscription(ResumeSubscription ResumeSubscription) (*ResumeSubscriptionResponse, error)
+	OptResumeSubscription(ResumeSubscription ResumeSubscription) (*ResumeSubscriptionResponse, *common.Fault)
 
-	OptSeek(Seek Seek) (*SeekResponse, error)
+	OptSeek(Seek Seek) (*SeekResponse, *common.Fault)
 
-	OptSetSynchronizationPoint(SetSynchronizationPoint SetSynchronizationPoint) (*SetSynchronizationPointResponse, error)
+	OptSetSynchronizationPoint(SetSynchronizationPoint SetSynchronizationPoint) (*SetSynchronizationPointResponse, *common.Fault)
 
-	OptSubscribe(Subscribe Subscribe) (*SubscribeResponse, error)
+	OptSubscribe(Subscribe Subscribe) (*SubscribeResponse, *common.Fault)
 
-	OptUnsubscribe(Unsubscribe Unsubscribe) (*UnsubscribeResponse, error)
+	OptUnsubscribe(Unsubscribe Unsubscribe) (*UnsubscribeResponse, *common.Fault)
 }
 type DateTime string
 
@@ -1033,7 +1033,7 @@ type pausableSubscriptionManager struct {
 	Endpoint string
 }
 
-func (p *pausableSubscriptionManager) OptAddEventBroker(args AddEventBroker) (*AddEventBrokerResponse, error) {
+func (p *pausableSubscriptionManager) OptAddEventBroker(args AddEventBroker) (*AddEventBrokerResponse, *common.Fault) {
 	req := struct {
 		XMLName        string `xml:"tev:AddEventBroker"`
 		AddEventBroker AddEventBroker
@@ -1043,13 +1043,13 @@ func (p *pausableSubscriptionManager) OptAddEventBroker(args AddEventBroker) (*A
 
 	resp := AddEventBrokerResponse{}
 
-	if err := p.cli.CallMethodUnmarshal(p.Endpoint, req, &resp); err != nil {
-		return nil, err
+	if fault := p.cli.CallMethodUnmarshal(p.Endpoint, req, &resp); fault != nil {
+		return nil, fault
 	}
 	return &resp, nil
 }
 
-func (p *pausableSubscriptionManager) OptCreatePullPoint(args CreatePullPoint) (*CreatePullPointResponse, error) {
+func (p *pausableSubscriptionManager) OptCreatePullPoint(args CreatePullPoint) (*CreatePullPointResponse, *common.Fault) {
 	req := struct {
 		XMLName         string `xml:"wsntw:CreatePullPoint"`
 		CreatePullPoint CreatePullPoint
@@ -1059,13 +1059,13 @@ func (p *pausableSubscriptionManager) OptCreatePullPoint(args CreatePullPoint) (
 
 	resp := CreatePullPointResponse{}
 
-	if err := p.cli.CallMethodUnmarshal(p.Endpoint, req, &resp); err != nil {
-		return nil, err
+	if fault := p.cli.CallMethodUnmarshal(p.Endpoint, req, &resp); fault != nil {
+		return nil, fault
 	}
 	return &resp, nil
 }
 
-func (p *pausableSubscriptionManager) OptCreatePullPointSubscription(args CreatePullPointSubscription) (*CreatePullPointSubscriptionResponse, error) {
+func (p *pausableSubscriptionManager) OptCreatePullPointSubscription(args CreatePullPointSubscription) (*CreatePullPointSubscriptionResponse, *common.Fault) {
 	req := struct {
 		XMLName                     string `xml:"tev:CreatePullPointSubscription"`
 		CreatePullPointSubscription CreatePullPointSubscription
@@ -1075,13 +1075,13 @@ func (p *pausableSubscriptionManager) OptCreatePullPointSubscription(args Create
 
 	resp := CreatePullPointSubscriptionResponse{}
 
-	if err := p.cli.CallMethodUnmarshal(p.Endpoint, req, &resp); err != nil {
-		return nil, err
+	if fault := p.cli.CallMethodUnmarshal(p.Endpoint, req, &resp); fault != nil {
+		return nil, fault
 	}
 	return &resp, nil
 }
 
-func (p *pausableSubscriptionManager) OptDeleteEventBroker(args DeleteEventBroker) (*DeleteEventBrokerResponse, error) {
+func (p *pausableSubscriptionManager) OptDeleteEventBroker(args DeleteEventBroker) (*DeleteEventBrokerResponse, *common.Fault) {
 	req := struct {
 		XMLName           string `xml:"tev:DeleteEventBroker"`
 		DeleteEventBroker DeleteEventBroker
@@ -1091,13 +1091,13 @@ func (p *pausableSubscriptionManager) OptDeleteEventBroker(args DeleteEventBroke
 
 	resp := DeleteEventBrokerResponse{}
 
-	if err := p.cli.CallMethodUnmarshal(p.Endpoint, req, &resp); err != nil {
-		return nil, err
+	if fault := p.cli.CallMethodUnmarshal(p.Endpoint, req, &resp); fault != nil {
+		return nil, fault
 	}
 	return &resp, nil
 }
 
-func (p *pausableSubscriptionManager) OptDestroyPullPoint(args DestroyPullPoint) (*DestroyPullPointResponse, error) {
+func (p *pausableSubscriptionManager) OptDestroyPullPoint(args DestroyPullPoint) (*DestroyPullPointResponse, *common.Fault) {
 	req := struct {
 		XMLName          string `xml:"wsntw:DestroyPullPoint"`
 		DestroyPullPoint DestroyPullPoint
@@ -1107,13 +1107,13 @@ func (p *pausableSubscriptionManager) OptDestroyPullPoint(args DestroyPullPoint)
 
 	resp := DestroyPullPointResponse{}
 
-	if err := p.cli.CallMethodUnmarshal(p.Endpoint, req, &resp); err != nil {
-		return nil, err
+	if fault := p.cli.CallMethodUnmarshal(p.Endpoint, req, &resp); fault != nil {
+		return nil, fault
 	}
 	return &resp, nil
 }
 
-func (p *pausableSubscriptionManager) OptGetCurrentMessage(args GetCurrentMessage) (*GetCurrentMessageResponse, error) {
+func (p *pausableSubscriptionManager) OptGetCurrentMessage(args GetCurrentMessage) (*GetCurrentMessageResponse, *common.Fault) {
 	req := struct {
 		XMLName           string `xml:"wsntw:GetCurrentMessage"`
 		GetCurrentMessage GetCurrentMessage
@@ -1123,13 +1123,13 @@ func (p *pausableSubscriptionManager) OptGetCurrentMessage(args GetCurrentMessag
 
 	resp := GetCurrentMessageResponse{}
 
-	if err := p.cli.CallMethodUnmarshal(p.Endpoint, req, &resp); err != nil {
-		return nil, err
+	if fault := p.cli.CallMethodUnmarshal(p.Endpoint, req, &resp); fault != nil {
+		return nil, fault
 	}
 	return &resp, nil
 }
 
-func (p *pausableSubscriptionManager) OptGetEventBrokers(args GetEventBrokers) (*GetEventBrokersResponse, error) {
+func (p *pausableSubscriptionManager) OptGetEventBrokers(args GetEventBrokers) (*GetEventBrokersResponse, *common.Fault) {
 	req := struct {
 		XMLName         string `xml:"tev:GetEventBrokers"`
 		GetEventBrokers GetEventBrokers
@@ -1139,13 +1139,13 @@ func (p *pausableSubscriptionManager) OptGetEventBrokers(args GetEventBrokers) (
 
 	resp := GetEventBrokersResponse{}
 
-	if err := p.cli.CallMethodUnmarshal(p.Endpoint, req, &resp); err != nil {
-		return nil, err
+	if fault := p.cli.CallMethodUnmarshal(p.Endpoint, req, &resp); fault != nil {
+		return nil, fault
 	}
 	return &resp, nil
 }
 
-func (p *pausableSubscriptionManager) OptGetEventProperties(args GetEventProperties) (*GetEventPropertiesResponse, error) {
+func (p *pausableSubscriptionManager) OptGetEventProperties(args GetEventProperties) (*GetEventPropertiesResponse, *common.Fault) {
 	req := struct {
 		XMLName            string `xml:"tev:GetEventProperties"`
 		GetEventProperties GetEventProperties
@@ -1155,13 +1155,13 @@ func (p *pausableSubscriptionManager) OptGetEventProperties(args GetEventPropert
 
 	resp := GetEventPropertiesResponse{}
 
-	if err := p.cli.CallMethodUnmarshal(p.Endpoint, req, &resp); err != nil {
-		return nil, err
+	if fault := p.cli.CallMethodUnmarshal(p.Endpoint, req, &resp); fault != nil {
+		return nil, fault
 	}
 	return &resp, nil
 }
 
-func (p *pausableSubscriptionManager) OptGetMessages(args GetMessages) (*GetMessagesResponse, error) {
+func (p *pausableSubscriptionManager) OptGetMessages(args GetMessages) (*GetMessagesResponse, *common.Fault) {
 	req := struct {
 		XMLName     string `xml:"wsntw:GetMessages"`
 		GetMessages GetMessages
@@ -1171,13 +1171,13 @@ func (p *pausableSubscriptionManager) OptGetMessages(args GetMessages) (*GetMess
 
 	resp := GetMessagesResponse{}
 
-	if err := p.cli.CallMethodUnmarshal(p.Endpoint, req, &resp); err != nil {
-		return nil, err
+	if fault := p.cli.CallMethodUnmarshal(p.Endpoint, req, &resp); fault != nil {
+		return nil, fault
 	}
 	return &resp, nil
 }
 
-func (p *pausableSubscriptionManager) OptGetServiceCapabilities(args GetServiceCapabilities) (*GetServiceCapabilitiesResponse, error) {
+func (p *pausableSubscriptionManager) OptGetServiceCapabilities(args GetServiceCapabilities) (*GetServiceCapabilitiesResponse, *common.Fault) {
 	req := struct {
 		XMLName                string `xml:"tev:GetServiceCapabilities"`
 		GetServiceCapabilities GetServiceCapabilities
@@ -1187,8 +1187,8 @@ func (p *pausableSubscriptionManager) OptGetServiceCapabilities(args GetServiceC
 
 	resp := GetServiceCapabilitiesResponse{}
 
-	if err := p.cli.CallMethodUnmarshal(p.Endpoint, req, &resp); err != nil {
-		return nil, err
+	if fault := p.cli.CallMethodUnmarshal(p.Endpoint, req, &resp); fault != nil {
+		return nil, fault
 	}
 	return &resp, nil
 }
@@ -1209,7 +1209,7 @@ func (p *pausableSubscriptionManager) OptNotify(args Notify) error {
 	return nil
 }
 
-func (p *pausableSubscriptionManager) OptPauseSubscription(args PauseSubscription) (*PauseSubscriptionResponse, error) {
+func (p *pausableSubscriptionManager) OptPauseSubscription(args PauseSubscription) (*PauseSubscriptionResponse, *common.Fault) {
 	req := struct {
 		XMLName           string `xml:"wsntw:PauseSubscription"`
 		PauseSubscription PauseSubscription
@@ -1219,13 +1219,13 @@ func (p *pausableSubscriptionManager) OptPauseSubscription(args PauseSubscriptio
 
 	resp := PauseSubscriptionResponse{}
 
-	if err := p.cli.CallMethodUnmarshal(p.Endpoint, req, &resp); err != nil {
-		return nil, err
+	if fault := p.cli.CallMethodUnmarshal(p.Endpoint, req, &resp); fault != nil {
+		return nil, fault
 	}
 	return &resp, nil
 }
 
-func (p *pausableSubscriptionManager) OptPullMessages(args PullMessages) (*PullMessagesResponse, error) {
+func (p *pausableSubscriptionManager) OptPullMessages(args PullMessages) (*PullMessagesResponse, *common.Fault) {
 	req := struct {
 		XMLName      string `xml:"tev:PullMessages"`
 		PullMessages PullMessages
@@ -1235,13 +1235,13 @@ func (p *pausableSubscriptionManager) OptPullMessages(args PullMessages) (*PullM
 
 	resp := PullMessagesResponse{}
 
-	if err := p.cli.CallMethodUnmarshal(p.Endpoint, req, &resp); err != nil {
-		return nil, err
+	if fault := p.cli.CallMethodUnmarshal(p.Endpoint, req, &resp); fault != nil {
+		return nil, fault
 	}
 	return &resp, nil
 }
 
-func (p *pausableSubscriptionManager) OptRenew(args Renew) (*RenewResponse, error) {
+func (p *pausableSubscriptionManager) OptRenew(args Renew) (*RenewResponse, *common.Fault) {
 	req := struct {
 		XMLName string `xml:"wsntw:Renew"`
 		Renew   Renew
@@ -1251,13 +1251,13 @@ func (p *pausableSubscriptionManager) OptRenew(args Renew) (*RenewResponse, erro
 
 	resp := RenewResponse{}
 
-	if err := p.cli.CallMethodUnmarshal(p.Endpoint, req, &resp); err != nil {
-		return nil, err
+	if fault := p.cli.CallMethodUnmarshal(p.Endpoint, req, &resp); fault != nil {
+		return nil, fault
 	}
 	return &resp, nil
 }
 
-func (p *pausableSubscriptionManager) OptResumeSubscription(args ResumeSubscription) (*ResumeSubscriptionResponse, error) {
+func (p *pausableSubscriptionManager) OptResumeSubscription(args ResumeSubscription) (*ResumeSubscriptionResponse, *common.Fault) {
 	req := struct {
 		XMLName            string `xml:"wsntw:ResumeSubscription"`
 		ResumeSubscription ResumeSubscription
@@ -1267,13 +1267,13 @@ func (p *pausableSubscriptionManager) OptResumeSubscription(args ResumeSubscript
 
 	resp := ResumeSubscriptionResponse{}
 
-	if err := p.cli.CallMethodUnmarshal(p.Endpoint, req, &resp); err != nil {
-		return nil, err
+	if fault := p.cli.CallMethodUnmarshal(p.Endpoint, req, &resp); fault != nil {
+		return nil, fault
 	}
 	return &resp, nil
 }
 
-func (p *pausableSubscriptionManager) OptSeek(args Seek) (*SeekResponse, error) {
+func (p *pausableSubscriptionManager) OptSeek(args Seek) (*SeekResponse, *common.Fault) {
 	req := struct {
 		XMLName string `xml:"tev:Seek"`
 		Seek    Seek
@@ -1283,13 +1283,13 @@ func (p *pausableSubscriptionManager) OptSeek(args Seek) (*SeekResponse, error) 
 
 	resp := SeekResponse{}
 
-	if err := p.cli.CallMethodUnmarshal(p.Endpoint, req, &resp); err != nil {
-		return nil, err
+	if fault := p.cli.CallMethodUnmarshal(p.Endpoint, req, &resp); fault != nil {
+		return nil, fault
 	}
 	return &resp, nil
 }
 
-func (p *pausableSubscriptionManager) OptSetSynchronizationPoint(args SetSynchronizationPoint) (*SetSynchronizationPointResponse, error) {
+func (p *pausableSubscriptionManager) OptSetSynchronizationPoint(args SetSynchronizationPoint) (*SetSynchronizationPointResponse, *common.Fault) {
 	req := struct {
 		XMLName                 string `xml:"tev:SetSynchronizationPoint"`
 		SetSynchronizationPoint SetSynchronizationPoint
@@ -1299,13 +1299,13 @@ func (p *pausableSubscriptionManager) OptSetSynchronizationPoint(args SetSynchro
 
 	resp := SetSynchronizationPointResponse{}
 
-	if err := p.cli.CallMethodUnmarshal(p.Endpoint, req, &resp); err != nil {
-		return nil, err
+	if fault := p.cli.CallMethodUnmarshal(p.Endpoint, req, &resp); fault != nil {
+		return nil, fault
 	}
 	return &resp, nil
 }
 
-func (p *pausableSubscriptionManager) OptSubscribe(args Subscribe) (*SubscribeResponse, error) {
+func (p *pausableSubscriptionManager) OptSubscribe(args Subscribe) (*SubscribeResponse, *common.Fault) {
 	req := struct {
 		XMLName   string `xml:"wsntw:Subscribe"`
 		Subscribe Subscribe
@@ -1315,13 +1315,13 @@ func (p *pausableSubscriptionManager) OptSubscribe(args Subscribe) (*SubscribeRe
 
 	resp := SubscribeResponse{}
 
-	if err := p.cli.CallMethodUnmarshal(p.Endpoint, req, &resp); err != nil {
-		return nil, err
+	if fault := p.cli.CallMethodUnmarshal(p.Endpoint, req, &resp); fault != nil {
+		return nil, fault
 	}
 	return &resp, nil
 }
 
-func (p *pausableSubscriptionManager) OptUnsubscribe(args Unsubscribe) (*UnsubscribeResponse, error) {
+func (p *pausableSubscriptionManager) OptUnsubscribe(args Unsubscribe) (*UnsubscribeResponse, *common.Fault) {
 	req := struct {
 		XMLName     string `xml:"wsntw:Unsubscribe"`
 		Unsubscribe Unsubscribe
@@ -1331,8 +1331,8 @@ func (p *pausableSubscriptionManager) OptUnsubscribe(args Unsubscribe) (*Unsubsc
 
 	resp := UnsubscribeResponse{}
 
-	if err := p.cli.CallMethodUnmarshal(p.Endpoint, req, &resp); err != nil {
-		return nil, err
+	if fault := p.cli.CallMethodUnmarshal(p.Endpoint, req, &resp); fault != nil {
+		return nil, fault
 	}
 	return &resp, nil
 }

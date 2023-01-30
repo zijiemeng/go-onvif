@@ -14,33 +14,33 @@ func NewAnalyticsEnginePort(endpoint string, cli common.Client) AnalyticsEngineP
 // AnalyticsEnginePort was auto-generated from WSDL
 // and defines interface for the remote service. Useful for testing.
 type AnalyticsEnginePort interface {
-	OptCreateAnalyticsModules(CreateAnalyticsModules CreateAnalyticsModules) (*CreateAnalyticsModulesResponse, error)
+	OptCreateAnalyticsModules(CreateAnalyticsModules CreateAnalyticsModules) (*CreateAnalyticsModulesResponse, *common.Fault)
 
-	OptCreateRules(CreateRules CreateRules) (*CreateRulesResponse, error)
+	OptCreateRules(CreateRules CreateRules) (*CreateRulesResponse, *common.Fault)
 
-	OptDeleteAnalyticsModules(DeleteAnalyticsModules DeleteAnalyticsModules) (*DeleteAnalyticsModulesResponse, error)
+	OptDeleteAnalyticsModules(DeleteAnalyticsModules DeleteAnalyticsModules) (*DeleteAnalyticsModulesResponse, *common.Fault)
 
-	OptDeleteRules(DeleteRules DeleteRules) (*DeleteRulesResponse, error)
+	OptDeleteRules(DeleteRules DeleteRules) (*DeleteRulesResponse, *common.Fault)
 
-	OptGetAnalyticsModuleOptions(GetAnalyticsModuleOptions GetAnalyticsModuleOptions) (*GetAnalyticsModuleOptionsResponse, error)
+	OptGetAnalyticsModuleOptions(GetAnalyticsModuleOptions GetAnalyticsModuleOptions) (*GetAnalyticsModuleOptionsResponse, *common.Fault)
 
-	OptGetAnalyticsModules(GetAnalyticsModules GetAnalyticsModules) (*GetAnalyticsModulesResponse, error)
+	OptGetAnalyticsModules(GetAnalyticsModules GetAnalyticsModules) (*GetAnalyticsModulesResponse, *common.Fault)
 
-	OptGetRuleOptions(GetRuleOptions GetRuleOptions) (*GetRuleOptionsResponse, error)
+	OptGetRuleOptions(GetRuleOptions GetRuleOptions) (*GetRuleOptionsResponse, *common.Fault)
 
-	OptGetRules(GetRules GetRules) (*GetRulesResponse, error)
+	OptGetRules(GetRules GetRules) (*GetRulesResponse, *common.Fault)
 
-	OptGetServiceCapabilities(GetServiceCapabilities GetServiceCapabilities) (*GetServiceCapabilitiesResponse, error)
+	OptGetServiceCapabilities(GetServiceCapabilities GetServiceCapabilities) (*GetServiceCapabilitiesResponse, *common.Fault)
 
-	OptGetSupportedAnalyticsModules(GetSupportedAnalyticsModules GetSupportedAnalyticsModules) (*GetSupportedAnalyticsModulesResponse, error)
+	OptGetSupportedAnalyticsModules(GetSupportedAnalyticsModules GetSupportedAnalyticsModules) (*GetSupportedAnalyticsModulesResponse, *common.Fault)
 
-	OptGetSupportedMetadata(GetSupportedMetadata GetSupportedMetadata) (*GetSupportedMetadataResponse, error)
+	OptGetSupportedMetadata(GetSupportedMetadata GetSupportedMetadata) (*GetSupportedMetadataResponse, *common.Fault)
 
-	OptGetSupportedRules(GetSupportedRules GetSupportedRules) (*GetSupportedRulesResponse, error)
+	OptGetSupportedRules(GetSupportedRules GetSupportedRules) (*GetSupportedRulesResponse, *common.Fault)
 
-	OptModifyAnalyticsModules(ModifyAnalyticsModules ModifyAnalyticsModules) (*ModifyAnalyticsModulesResponse, error)
+	OptModifyAnalyticsModules(ModifyAnalyticsModules ModifyAnalyticsModules) (*ModifyAnalyticsModulesResponse, *common.Fault)
 
-	OptModifyRules(ModifyRules ModifyRules) (*ModifyRulesResponse, error)
+	OptModifyRules(ModifyRules ModifyRules) (*ModifyRulesResponse, *common.Fault)
 }
 type DateTime string
 
@@ -225,7 +225,7 @@ type analyticsEnginePort struct {
 	Endpoint string
 }
 
-func (p *analyticsEnginePort) OptCreateAnalyticsModules(args CreateAnalyticsModules) (*CreateAnalyticsModulesResponse, error) {
+func (p *analyticsEnginePort) OptCreateAnalyticsModules(args CreateAnalyticsModules) (*CreateAnalyticsModulesResponse, *common.Fault) {
 	req := struct {
 		XMLName                string `xml:"tan:CreateAnalyticsModules"`
 		CreateAnalyticsModules CreateAnalyticsModules
@@ -235,13 +235,13 @@ func (p *analyticsEnginePort) OptCreateAnalyticsModules(args CreateAnalyticsModu
 
 	resp := CreateAnalyticsModulesResponse{}
 
-	if err := p.cli.CallMethodUnmarshal(p.Endpoint, req, &resp); err != nil {
-		return nil, err
+	if fault := p.cli.CallMethodUnmarshal(p.Endpoint, req, &resp); fault != nil {
+		return nil, fault
 	}
 	return &resp, nil
 }
 
-func (p *analyticsEnginePort) OptCreateRules(args CreateRules) (*CreateRulesResponse, error) {
+func (p *analyticsEnginePort) OptCreateRules(args CreateRules) (*CreateRulesResponse, *common.Fault) {
 	req := struct {
 		XMLName     string `xml:"tan:CreateRules"`
 		CreateRules CreateRules
@@ -251,13 +251,13 @@ func (p *analyticsEnginePort) OptCreateRules(args CreateRules) (*CreateRulesResp
 
 	resp := CreateRulesResponse{}
 
-	if err := p.cli.CallMethodUnmarshal(p.Endpoint, req, &resp); err != nil {
-		return nil, err
+	if fault := p.cli.CallMethodUnmarshal(p.Endpoint, req, &resp); fault != nil {
+		return nil, fault
 	}
 	return &resp, nil
 }
 
-func (p *analyticsEnginePort) OptDeleteAnalyticsModules(args DeleteAnalyticsModules) (*DeleteAnalyticsModulesResponse, error) {
+func (p *analyticsEnginePort) OptDeleteAnalyticsModules(args DeleteAnalyticsModules) (*DeleteAnalyticsModulesResponse, *common.Fault) {
 	req := struct {
 		XMLName                string `xml:"tan:DeleteAnalyticsModules"`
 		DeleteAnalyticsModules DeleteAnalyticsModules
@@ -267,13 +267,13 @@ func (p *analyticsEnginePort) OptDeleteAnalyticsModules(args DeleteAnalyticsModu
 
 	resp := DeleteAnalyticsModulesResponse{}
 
-	if err := p.cli.CallMethodUnmarshal(p.Endpoint, req, &resp); err != nil {
-		return nil, err
+	if fault := p.cli.CallMethodUnmarshal(p.Endpoint, req, &resp); fault != nil {
+		return nil, fault
 	}
 	return &resp, nil
 }
 
-func (p *analyticsEnginePort) OptDeleteRules(args DeleteRules) (*DeleteRulesResponse, error) {
+func (p *analyticsEnginePort) OptDeleteRules(args DeleteRules) (*DeleteRulesResponse, *common.Fault) {
 	req := struct {
 		XMLName     string `xml:"tan:DeleteRules"`
 		DeleteRules DeleteRules
@@ -283,13 +283,13 @@ func (p *analyticsEnginePort) OptDeleteRules(args DeleteRules) (*DeleteRulesResp
 
 	resp := DeleteRulesResponse{}
 
-	if err := p.cli.CallMethodUnmarshal(p.Endpoint, req, &resp); err != nil {
-		return nil, err
+	if fault := p.cli.CallMethodUnmarshal(p.Endpoint, req, &resp); fault != nil {
+		return nil, fault
 	}
 	return &resp, nil
 }
 
-func (p *analyticsEnginePort) OptGetAnalyticsModuleOptions(args GetAnalyticsModuleOptions) (*GetAnalyticsModuleOptionsResponse, error) {
+func (p *analyticsEnginePort) OptGetAnalyticsModuleOptions(args GetAnalyticsModuleOptions) (*GetAnalyticsModuleOptionsResponse, *common.Fault) {
 	req := struct {
 		XMLName                   string `xml:"tan:GetAnalyticsModuleOptions"`
 		GetAnalyticsModuleOptions GetAnalyticsModuleOptions
@@ -299,13 +299,13 @@ func (p *analyticsEnginePort) OptGetAnalyticsModuleOptions(args GetAnalyticsModu
 
 	resp := GetAnalyticsModuleOptionsResponse{}
 
-	if err := p.cli.CallMethodUnmarshal(p.Endpoint, req, &resp); err != nil {
-		return nil, err
+	if fault := p.cli.CallMethodUnmarshal(p.Endpoint, req, &resp); fault != nil {
+		return nil, fault
 	}
 	return &resp, nil
 }
 
-func (p *analyticsEnginePort) OptGetAnalyticsModules(args GetAnalyticsModules) (*GetAnalyticsModulesResponse, error) {
+func (p *analyticsEnginePort) OptGetAnalyticsModules(args GetAnalyticsModules) (*GetAnalyticsModulesResponse, *common.Fault) {
 	req := struct {
 		XMLName             string `xml:"tan:GetAnalyticsModules"`
 		GetAnalyticsModules GetAnalyticsModules
@@ -315,13 +315,13 @@ func (p *analyticsEnginePort) OptGetAnalyticsModules(args GetAnalyticsModules) (
 
 	resp := GetAnalyticsModulesResponse{}
 
-	if err := p.cli.CallMethodUnmarshal(p.Endpoint, req, &resp); err != nil {
-		return nil, err
+	if fault := p.cli.CallMethodUnmarshal(p.Endpoint, req, &resp); fault != nil {
+		return nil, fault
 	}
 	return &resp, nil
 }
 
-func (p *analyticsEnginePort) OptGetRuleOptions(args GetRuleOptions) (*GetRuleOptionsResponse, error) {
+func (p *analyticsEnginePort) OptGetRuleOptions(args GetRuleOptions) (*GetRuleOptionsResponse, *common.Fault) {
 	req := struct {
 		XMLName        string `xml:"tan:GetRuleOptions"`
 		GetRuleOptions GetRuleOptions
@@ -331,13 +331,13 @@ func (p *analyticsEnginePort) OptGetRuleOptions(args GetRuleOptions) (*GetRuleOp
 
 	resp := GetRuleOptionsResponse{}
 
-	if err := p.cli.CallMethodUnmarshal(p.Endpoint, req, &resp); err != nil {
-		return nil, err
+	if fault := p.cli.CallMethodUnmarshal(p.Endpoint, req, &resp); fault != nil {
+		return nil, fault
 	}
 	return &resp, nil
 }
 
-func (p *analyticsEnginePort) OptGetRules(args GetRules) (*GetRulesResponse, error) {
+func (p *analyticsEnginePort) OptGetRules(args GetRules) (*GetRulesResponse, *common.Fault) {
 	req := struct {
 		XMLName  string `xml:"tan:GetRules"`
 		GetRules GetRules
@@ -347,13 +347,13 @@ func (p *analyticsEnginePort) OptGetRules(args GetRules) (*GetRulesResponse, err
 
 	resp := GetRulesResponse{}
 
-	if err := p.cli.CallMethodUnmarshal(p.Endpoint, req, &resp); err != nil {
-		return nil, err
+	if fault := p.cli.CallMethodUnmarshal(p.Endpoint, req, &resp); fault != nil {
+		return nil, fault
 	}
 	return &resp, nil
 }
 
-func (p *analyticsEnginePort) OptGetServiceCapabilities(args GetServiceCapabilities) (*GetServiceCapabilitiesResponse, error) {
+func (p *analyticsEnginePort) OptGetServiceCapabilities(args GetServiceCapabilities) (*GetServiceCapabilitiesResponse, *common.Fault) {
 	req := struct {
 		XMLName                string `xml:"tan:GetServiceCapabilities"`
 		GetServiceCapabilities GetServiceCapabilities
@@ -363,13 +363,13 @@ func (p *analyticsEnginePort) OptGetServiceCapabilities(args GetServiceCapabilit
 
 	resp := GetServiceCapabilitiesResponse{}
 
-	if err := p.cli.CallMethodUnmarshal(p.Endpoint, req, &resp); err != nil {
-		return nil, err
+	if fault := p.cli.CallMethodUnmarshal(p.Endpoint, req, &resp); fault != nil {
+		return nil, fault
 	}
 	return &resp, nil
 }
 
-func (p *analyticsEnginePort) OptGetSupportedAnalyticsModules(args GetSupportedAnalyticsModules) (*GetSupportedAnalyticsModulesResponse, error) {
+func (p *analyticsEnginePort) OptGetSupportedAnalyticsModules(args GetSupportedAnalyticsModules) (*GetSupportedAnalyticsModulesResponse, *common.Fault) {
 	req := struct {
 		XMLName                      string `xml:"tan:GetSupportedAnalyticsModules"`
 		GetSupportedAnalyticsModules GetSupportedAnalyticsModules
@@ -379,13 +379,13 @@ func (p *analyticsEnginePort) OptGetSupportedAnalyticsModules(args GetSupportedA
 
 	resp := GetSupportedAnalyticsModulesResponse{}
 
-	if err := p.cli.CallMethodUnmarshal(p.Endpoint, req, &resp); err != nil {
-		return nil, err
+	if fault := p.cli.CallMethodUnmarshal(p.Endpoint, req, &resp); fault != nil {
+		return nil, fault
 	}
 	return &resp, nil
 }
 
-func (p *analyticsEnginePort) OptGetSupportedMetadata(args GetSupportedMetadata) (*GetSupportedMetadataResponse, error) {
+func (p *analyticsEnginePort) OptGetSupportedMetadata(args GetSupportedMetadata) (*GetSupportedMetadataResponse, *common.Fault) {
 	req := struct {
 		XMLName              string `xml:"tan:GetSupportedMetadata"`
 		GetSupportedMetadata GetSupportedMetadata
@@ -395,13 +395,13 @@ func (p *analyticsEnginePort) OptGetSupportedMetadata(args GetSupportedMetadata)
 
 	resp := GetSupportedMetadataResponse{}
 
-	if err := p.cli.CallMethodUnmarshal(p.Endpoint, req, &resp); err != nil {
-		return nil, err
+	if fault := p.cli.CallMethodUnmarshal(p.Endpoint, req, &resp); fault != nil {
+		return nil, fault
 	}
 	return &resp, nil
 }
 
-func (p *analyticsEnginePort) OptGetSupportedRules(args GetSupportedRules) (*GetSupportedRulesResponse, error) {
+func (p *analyticsEnginePort) OptGetSupportedRules(args GetSupportedRules) (*GetSupportedRulesResponse, *common.Fault) {
 	req := struct {
 		XMLName           string `xml:"tan:GetSupportedRules"`
 		GetSupportedRules GetSupportedRules
@@ -411,13 +411,13 @@ func (p *analyticsEnginePort) OptGetSupportedRules(args GetSupportedRules) (*Get
 
 	resp := GetSupportedRulesResponse{}
 
-	if err := p.cli.CallMethodUnmarshal(p.Endpoint, req, &resp); err != nil {
-		return nil, err
+	if fault := p.cli.CallMethodUnmarshal(p.Endpoint, req, &resp); fault != nil {
+		return nil, fault
 	}
 	return &resp, nil
 }
 
-func (p *analyticsEnginePort) OptModifyAnalyticsModules(args ModifyAnalyticsModules) (*ModifyAnalyticsModulesResponse, error) {
+func (p *analyticsEnginePort) OptModifyAnalyticsModules(args ModifyAnalyticsModules) (*ModifyAnalyticsModulesResponse, *common.Fault) {
 	req := struct {
 		XMLName                string `xml:"tan:ModifyAnalyticsModules"`
 		ModifyAnalyticsModules ModifyAnalyticsModules
@@ -427,13 +427,13 @@ func (p *analyticsEnginePort) OptModifyAnalyticsModules(args ModifyAnalyticsModu
 
 	resp := ModifyAnalyticsModulesResponse{}
 
-	if err := p.cli.CallMethodUnmarshal(p.Endpoint, req, &resp); err != nil {
-		return nil, err
+	if fault := p.cli.CallMethodUnmarshal(p.Endpoint, req, &resp); fault != nil {
+		return nil, fault
 	}
 	return &resp, nil
 }
 
-func (p *analyticsEnginePort) OptModifyRules(args ModifyRules) (*ModifyRulesResponse, error) {
+func (p *analyticsEnginePort) OptModifyRules(args ModifyRules) (*ModifyRulesResponse, *common.Fault) {
 	req := struct {
 		XMLName     string `xml:"tan:ModifyRules"`
 		ModifyRules ModifyRules
@@ -443,8 +443,8 @@ func (p *analyticsEnginePort) OptModifyRules(args ModifyRules) (*ModifyRulesResp
 
 	resp := ModifyRulesResponse{}
 
-	if err := p.cli.CallMethodUnmarshal(p.Endpoint, req, &resp); err != nil {
-		return nil, err
+	if fault := p.cli.CallMethodUnmarshal(p.Endpoint, req, &resp); fault != nil {
+		return nil, fault
 	}
 	return &resp, nil
 }

@@ -316,32 +316,34 @@ func (dev Device) CallMethod(method interface{}) (*http.Response, error) {
 	return dev.callMethodDo(endpoint, method)
 }
 
-func (dev Device) CallMethodUnmarshal(endpoint string, method interface{}, result interface{}) error {
+func (dev Device) CallMethodUnmarshal(endpoint string, method interface{}, result interface{}) *common.Fault {
 	methodKind := reflect.ValueOf(method).Type().Kind()
 	resultKind := reflect.ValueOf(result).Type().Kind()
 	if (methodKind != reflect.Struct && (methodKind != reflect.Ptr || method == nil)) ||
 		resultKind != reflect.Ptr || result == nil {
-		return fmt.Errorf("param error, method: %#v, response: %#v", method, result)
+		return common.NewFault(fmt.Errorf("param error, method: %#v, response: %#v", method, result))
 	}
 	response, err := dev.callMethodDo(endpoint, method)
 	if err != nil {
-		return err
-	}
-	if response.StatusCode != http.StatusOK {
-		return fmt.Errorf("http status code is not ok: %d", response.StatusCode)
+		return common.NewFault(err)
 	}
 	defer func() {
 		_ = response.Body.Close()
 	}()
 	if err != nil {
-		return err
+		return common.NewFault(err)
 	}
 	bResp, _ := io.ReadAll(response.Body)
 	soap := gosoap.SoapMessage(bResp)
 	b := soap.BodyBytes()
+	if response.StatusCode != http.StatusOK {
+		fault := common.NewFault(fmt.Errorf("http status code is not ok: %d", response.StatusCode))
+		_ = xml.Unmarshal(b, fault)
+		return fault
+	}
 	err = xml.Unmarshal(b, result)
 	if err != nil {
-		return err
+		return common.NewFault(err)
 	}
 	return nil
 }

@@ -16,21 +16,21 @@ func NewThermalPort(endpoint string, cli common.Client) ThermalPort {
 // ThermalPort was auto-generated from WSDL
 // and defines interface for the remote service. Useful for testing.
 type ThermalPort interface {
-	OptGetConfiguration(GetConfiguration GetConfiguration) (*GetConfigurationResponse, error)
+	OptGetConfiguration(GetConfiguration GetConfiguration) (*GetConfigurationResponse, *common.Fault)
 
-	OptGetConfigurationOptions(GetConfigurationOptions GetConfigurationOptions) (*GetConfigurationOptionsResponse, error)
+	OptGetConfigurationOptions(GetConfigurationOptions GetConfigurationOptions) (*GetConfigurationOptionsResponse, *common.Fault)
 
-	OptGetConfigurations(GetConfigurations GetConfigurations) (*GetConfigurationsResponse, error)
+	OptGetConfigurations(GetConfigurations GetConfigurations) (*GetConfigurationsResponse, *common.Fault)
 
-	OptGetRadiometryConfiguration(GetRadiometryConfiguration GetRadiometryConfiguration) (*GetRadiometryConfigurationResponse, error)
+	OptGetRadiometryConfiguration(GetRadiometryConfiguration GetRadiometryConfiguration) (*GetRadiometryConfigurationResponse, *common.Fault)
 
-	OptGetRadiometryConfigurationOptions(GetRadiometryConfigurationOptions GetRadiometryConfigurationOptions) (*GetRadiometryConfigurationOptionsResponse, error)
+	OptGetRadiometryConfigurationOptions(GetRadiometryConfigurationOptions GetRadiometryConfigurationOptions) (*GetRadiometryConfigurationOptionsResponse, *common.Fault)
 
-	OptGetServiceCapabilities(GetServiceCapabilities GetServiceCapabilities) (*GetServiceCapabilitiesResponse, error)
+	OptGetServiceCapabilities(GetServiceCapabilities GetServiceCapabilities) (*GetServiceCapabilitiesResponse, *common.Fault)
 
-	OptSetConfiguration(SetConfiguration SetConfiguration) (*SetConfigurationResponse, error)
+	OptSetConfiguration(SetConfiguration SetConfiguration) (*SetConfigurationResponse, *common.Fault)
 
-	OptSetRadiometryConfiguration(SetRadiometryConfiguration SetRadiometryConfiguration) (*SetRadiometryConfigurationResponse, error)
+	OptSetRadiometryConfiguration(SetRadiometryConfiguration SetRadiometryConfiguration) (*SetRadiometryConfigurationResponse, *common.Fault)
 }
 type ColorPaletteType string
 
@@ -208,7 +208,7 @@ type thermalPort struct {
 	Endpoint string
 }
 
-func (p *thermalPort) OptGetConfiguration(args GetConfiguration) (*GetConfigurationResponse, error) {
+func (p *thermalPort) OptGetConfiguration(args GetConfiguration) (*GetConfigurationResponse, *common.Fault) {
 	req := struct {
 		XMLName          string `xml:"tth:GetConfiguration"`
 		GetConfiguration GetConfiguration
@@ -218,13 +218,13 @@ func (p *thermalPort) OptGetConfiguration(args GetConfiguration) (*GetConfigurat
 
 	resp := GetConfigurationResponse{}
 
-	if err := p.cli.CallMethodUnmarshal(p.Endpoint, req, &resp); err != nil {
-		return nil, err
+	if fault := p.cli.CallMethodUnmarshal(p.Endpoint, req, &resp); fault != nil {
+		return nil, fault
 	}
 	return &resp, nil
 }
 
-func (p *thermalPort) OptGetConfigurationOptions(args GetConfigurationOptions) (*GetConfigurationOptionsResponse, error) {
+func (p *thermalPort) OptGetConfigurationOptions(args GetConfigurationOptions) (*GetConfigurationOptionsResponse, *common.Fault) {
 	req := struct {
 		XMLName                 string `xml:"tth:GetConfigurationOptions"`
 		GetConfigurationOptions GetConfigurationOptions
@@ -234,13 +234,13 @@ func (p *thermalPort) OptGetConfigurationOptions(args GetConfigurationOptions) (
 
 	resp := GetConfigurationOptionsResponse{}
 
-	if err := p.cli.CallMethodUnmarshal(p.Endpoint, req, &resp); err != nil {
-		return nil, err
+	if fault := p.cli.CallMethodUnmarshal(p.Endpoint, req, &resp); fault != nil {
+		return nil, fault
 	}
 	return &resp, nil
 }
 
-func (p *thermalPort) OptGetConfigurations(args GetConfigurations) (*GetConfigurationsResponse, error) {
+func (p *thermalPort) OptGetConfigurations(args GetConfigurations) (*GetConfigurationsResponse, *common.Fault) {
 	req := struct {
 		XMLName           string `xml:"tth:GetConfigurations"`
 		GetConfigurations GetConfigurations
@@ -250,13 +250,13 @@ func (p *thermalPort) OptGetConfigurations(args GetConfigurations) (*GetConfigur
 
 	resp := GetConfigurationsResponse{}
 
-	if err := p.cli.CallMethodUnmarshal(p.Endpoint, req, &resp); err != nil {
-		return nil, err
+	if fault := p.cli.CallMethodUnmarshal(p.Endpoint, req, &resp); fault != nil {
+		return nil, fault
 	}
 	return &resp, nil
 }
 
-func (p *thermalPort) OptGetRadiometryConfiguration(args GetRadiometryConfiguration) (*GetRadiometryConfigurationResponse, error) {
+func (p *thermalPort) OptGetRadiometryConfiguration(args GetRadiometryConfiguration) (*GetRadiometryConfigurationResponse, *common.Fault) {
 	req := struct {
 		XMLName                    string `xml:"tth:GetRadiometryConfiguration"`
 		GetRadiometryConfiguration GetRadiometryConfiguration
@@ -266,13 +266,13 @@ func (p *thermalPort) OptGetRadiometryConfiguration(args GetRadiometryConfigurat
 
 	resp := GetRadiometryConfigurationResponse{}
 
-	if err := p.cli.CallMethodUnmarshal(p.Endpoint, req, &resp); err != nil {
-		return nil, err
+	if fault := p.cli.CallMethodUnmarshal(p.Endpoint, req, &resp); fault != nil {
+		return nil, fault
 	}
 	return &resp, nil
 }
 
-func (p *thermalPort) OptGetRadiometryConfigurationOptions(args GetRadiometryConfigurationOptions) (*GetRadiometryConfigurationOptionsResponse, error) {
+func (p *thermalPort) OptGetRadiometryConfigurationOptions(args GetRadiometryConfigurationOptions) (*GetRadiometryConfigurationOptionsResponse, *common.Fault) {
 	req := struct {
 		XMLName                           string `xml:"tth:GetRadiometryConfigurationOptions"`
 		GetRadiometryConfigurationOptions GetRadiometryConfigurationOptions
@@ -282,13 +282,13 @@ func (p *thermalPort) OptGetRadiometryConfigurationOptions(args GetRadiometryCon
 
 	resp := GetRadiometryConfigurationOptionsResponse{}
 
-	if err := p.cli.CallMethodUnmarshal(p.Endpoint, req, &resp); err != nil {
-		return nil, err
+	if fault := p.cli.CallMethodUnmarshal(p.Endpoint, req, &resp); fault != nil {
+		return nil, fault
 	}
 	return &resp, nil
 }
 
-func (p *thermalPort) OptGetServiceCapabilities(args GetServiceCapabilities) (*GetServiceCapabilitiesResponse, error) {
+func (p *thermalPort) OptGetServiceCapabilities(args GetServiceCapabilities) (*GetServiceCapabilitiesResponse, *common.Fault) {
 	req := struct {
 		XMLName                string `xml:"tth:GetServiceCapabilities"`
 		GetServiceCapabilities GetServiceCapabilities
@@ -298,13 +298,13 @@ func (p *thermalPort) OptGetServiceCapabilities(args GetServiceCapabilities) (*G
 
 	resp := GetServiceCapabilitiesResponse{}
 
-	if err := p.cli.CallMethodUnmarshal(p.Endpoint, req, &resp); err != nil {
-		return nil, err
+	if fault := p.cli.CallMethodUnmarshal(p.Endpoint, req, &resp); fault != nil {
+		return nil, fault
 	}
 	return &resp, nil
 }
 
-func (p *thermalPort) OptSetConfiguration(args SetConfiguration) (*SetConfigurationResponse, error) {
+func (p *thermalPort) OptSetConfiguration(args SetConfiguration) (*SetConfigurationResponse, *common.Fault) {
 	req := struct {
 		XMLName          string `xml:"tth:SetConfiguration"`
 		SetConfiguration SetConfiguration
@@ -314,13 +314,13 @@ func (p *thermalPort) OptSetConfiguration(args SetConfiguration) (*SetConfigurat
 
 	resp := SetConfigurationResponse{}
 
-	if err := p.cli.CallMethodUnmarshal(p.Endpoint, req, &resp); err != nil {
-		return nil, err
+	if fault := p.cli.CallMethodUnmarshal(p.Endpoint, req, &resp); fault != nil {
+		return nil, fault
 	}
 	return &resp, nil
 }
 
-func (p *thermalPort) OptSetRadiometryConfiguration(args SetRadiometryConfiguration) (*SetRadiometryConfigurationResponse, error) {
+func (p *thermalPort) OptSetRadiometryConfiguration(args SetRadiometryConfiguration) (*SetRadiometryConfigurationResponse, *common.Fault) {
 	req := struct {
 		XMLName                    string `xml:"tth:SetRadiometryConfiguration"`
 		SetRadiometryConfiguration SetRadiometryConfiguration
@@ -330,8 +330,8 @@ func (p *thermalPort) OptSetRadiometryConfiguration(args SetRadiometryConfigurat
 
 	resp := SetRadiometryConfigurationResponse{}
 
-	if err := p.cli.CallMethodUnmarshal(p.Endpoint, req, &resp); err != nil {
-		return nil, err
+	if fault := p.cli.CallMethodUnmarshal(p.Endpoint, req, &resp); fault != nil {
+		return nil, fault
 	}
 	return &resp, nil
 }

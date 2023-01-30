@@ -14,47 +14,47 @@ func NewRecordingPort(endpoint string, cli common.Client) RecordingPort {
 // RecordingPort was auto-generated from WSDL
 // and defines interface for the remote service. Useful for testing.
 type RecordingPort interface {
-	OptCreateRecording(CreateRecording CreateRecording) (*CreateRecordingResponse, error)
+	OptCreateRecording(CreateRecording CreateRecording) (*CreateRecordingResponse, *common.Fault)
 
-	OptCreateRecordingJob(CreateRecordingJob CreateRecordingJob) (*CreateRecordingJobResponse, error)
+	OptCreateRecordingJob(CreateRecordingJob CreateRecordingJob) (*CreateRecordingJobResponse, *common.Fault)
 
-	OptCreateTrack(CreateTrack CreateTrack) (*CreateTrackResponse, error)
+	OptCreateTrack(CreateTrack CreateTrack) (*CreateTrackResponse, *common.Fault)
 
-	OptDeleteRecording(DeleteRecording DeleteRecording) (*DeleteRecordingResponse, error)
+	OptDeleteRecording(DeleteRecording DeleteRecording) (*DeleteRecordingResponse, *common.Fault)
 
-	OptDeleteRecordingJob(DeleteRecordingJob DeleteRecordingJob) (*DeleteRecordingJobResponse, error)
+	OptDeleteRecordingJob(DeleteRecordingJob DeleteRecordingJob) (*DeleteRecordingJobResponse, *common.Fault)
 
-	OptDeleteTrack(DeleteTrack DeleteTrack) (*DeleteTrackResponse, error)
+	OptDeleteTrack(DeleteTrack DeleteTrack) (*DeleteTrackResponse, *common.Fault)
 
-	OptExportRecordedData(ExportRecordedData ExportRecordedData) (*ExportRecordedDataResponse, error)
+	OptExportRecordedData(ExportRecordedData ExportRecordedData) (*ExportRecordedDataResponse, *common.Fault)
 
-	OptGetExportRecordedDataState(GetExportRecordedDataState GetExportRecordedDataState) (*GetExportRecordedDataStateResponse, error)
+	OptGetExportRecordedDataState(GetExportRecordedDataState GetExportRecordedDataState) (*GetExportRecordedDataStateResponse, *common.Fault)
 
-	OptGetRecordingConfiguration(GetRecordingConfiguration GetRecordingConfiguration) (*GetRecordingConfigurationResponse, error)
+	OptGetRecordingConfiguration(GetRecordingConfiguration GetRecordingConfiguration) (*GetRecordingConfigurationResponse, *common.Fault)
 
-	OptGetRecordingJobConfiguration(GetRecordingJobConfiguration GetRecordingJobConfiguration) (*GetRecordingJobConfigurationResponse, error)
+	OptGetRecordingJobConfiguration(GetRecordingJobConfiguration GetRecordingJobConfiguration) (*GetRecordingJobConfigurationResponse, *common.Fault)
 
-	OptGetRecordingJobState(GetRecordingJobState GetRecordingJobState) (*GetRecordingJobStateResponse, error)
+	OptGetRecordingJobState(GetRecordingJobState GetRecordingJobState) (*GetRecordingJobStateResponse, *common.Fault)
 
-	OptGetRecordingJobs(GetRecordingJobs GetRecordingJobs) (*GetRecordingJobsResponse, error)
+	OptGetRecordingJobs(GetRecordingJobs GetRecordingJobs) (*GetRecordingJobsResponse, *common.Fault)
 
-	OptGetRecordingOptions(GetRecordingOptions GetRecordingOptions) (*GetRecordingOptionsResponse, error)
+	OptGetRecordingOptions(GetRecordingOptions GetRecordingOptions) (*GetRecordingOptionsResponse, *common.Fault)
 
-	OptGetRecordings(GetRecordings GetRecordings) (*GetRecordingsResponse, error)
+	OptGetRecordings(GetRecordings GetRecordings) (*GetRecordingsResponse, *common.Fault)
 
-	OptGetServiceCapabilities(GetServiceCapabilities GetServiceCapabilities) (*GetServiceCapabilitiesResponse, error)
+	OptGetServiceCapabilities(GetServiceCapabilities GetServiceCapabilities) (*GetServiceCapabilitiesResponse, *common.Fault)
 
-	OptGetTrackConfiguration(GetTrackConfiguration GetTrackConfiguration) (*GetTrackConfigurationResponse, error)
+	OptGetTrackConfiguration(GetTrackConfiguration GetTrackConfiguration) (*GetTrackConfigurationResponse, *common.Fault)
 
-	OptSetRecordingConfiguration(SetRecordingConfiguration SetRecordingConfiguration) (*SetRecordingConfigurationResponse, error)
+	OptSetRecordingConfiguration(SetRecordingConfiguration SetRecordingConfiguration) (*SetRecordingConfigurationResponse, *common.Fault)
 
-	OptSetRecordingJobConfiguration(SetRecordingJobConfiguration SetRecordingJobConfiguration) (*SetRecordingJobConfigurationResponse, error)
+	OptSetRecordingJobConfiguration(SetRecordingJobConfiguration SetRecordingJobConfiguration) (*SetRecordingJobConfigurationResponse, *common.Fault)
 
-	OptSetRecordingJobMode(SetRecordingJobMode SetRecordingJobMode) (*SetRecordingJobModeResponse, error)
+	OptSetRecordingJobMode(SetRecordingJobMode SetRecordingJobMode) (*SetRecordingJobModeResponse, *common.Fault)
 
-	OptSetTrackConfiguration(SetTrackConfiguration SetTrackConfiguration) (*SetTrackConfigurationResponse, error)
+	OptSetTrackConfiguration(SetTrackConfiguration SetTrackConfiguration) (*SetTrackConfigurationResponse, *common.Fault)
 
-	OptStopExportRecordedData(StopExportRecordedData StopExportRecordedData) (*StopExportRecordedDataResponse, error)
+	OptStopExportRecordedData(StopExportRecordedData StopExportRecordedData) (*StopExportRecordedDataResponse, *common.Fault)
 }
 type DateTime string
 
@@ -259,7 +259,7 @@ type recordingPort struct {
 	Endpoint string
 }
 
-func (p *recordingPort) OptCreateRecording(args CreateRecording) (*CreateRecordingResponse, error) {
+func (p *recordingPort) OptCreateRecording(args CreateRecording) (*CreateRecordingResponse, *common.Fault) {
 	req := struct {
 		XMLName         string `xml:"trc:CreateRecording"`
 		CreateRecording CreateRecording
@@ -269,13 +269,13 @@ func (p *recordingPort) OptCreateRecording(args CreateRecording) (*CreateRecordi
 
 	resp := CreateRecordingResponse{}
 
-	if err := p.cli.CallMethodUnmarshal(p.Endpoint, req, &resp); err != nil {
-		return nil, err
+	if fault := p.cli.CallMethodUnmarshal(p.Endpoint, req, &resp); fault != nil {
+		return nil, fault
 	}
 	return &resp, nil
 }
 
-func (p *recordingPort) OptCreateRecordingJob(args CreateRecordingJob) (*CreateRecordingJobResponse, error) {
+func (p *recordingPort) OptCreateRecordingJob(args CreateRecordingJob) (*CreateRecordingJobResponse, *common.Fault) {
 	req := struct {
 		XMLName            string `xml:"trc:CreateRecordingJob"`
 		CreateRecordingJob CreateRecordingJob
@@ -285,13 +285,13 @@ func (p *recordingPort) OptCreateRecordingJob(args CreateRecordingJob) (*CreateR
 
 	resp := CreateRecordingJobResponse{}
 
-	if err := p.cli.CallMethodUnmarshal(p.Endpoint, req, &resp); err != nil {
-		return nil, err
+	if fault := p.cli.CallMethodUnmarshal(p.Endpoint, req, &resp); fault != nil {
+		return nil, fault
 	}
 	return &resp, nil
 }
 
-func (p *recordingPort) OptCreateTrack(args CreateTrack) (*CreateTrackResponse, error) {
+func (p *recordingPort) OptCreateTrack(args CreateTrack) (*CreateTrackResponse, *common.Fault) {
 	req := struct {
 		XMLName     string `xml:"trc:CreateTrack"`
 		CreateTrack CreateTrack
@@ -301,13 +301,13 @@ func (p *recordingPort) OptCreateTrack(args CreateTrack) (*CreateTrackResponse, 
 
 	resp := CreateTrackResponse{}
 
-	if err := p.cli.CallMethodUnmarshal(p.Endpoint, req, &resp); err != nil {
-		return nil, err
+	if fault := p.cli.CallMethodUnmarshal(p.Endpoint, req, &resp); fault != nil {
+		return nil, fault
 	}
 	return &resp, nil
 }
 
-func (p *recordingPort) OptDeleteRecording(args DeleteRecording) (*DeleteRecordingResponse, error) {
+func (p *recordingPort) OptDeleteRecording(args DeleteRecording) (*DeleteRecordingResponse, *common.Fault) {
 	req := struct {
 		XMLName         string `xml:"trc:DeleteRecording"`
 		DeleteRecording DeleteRecording
@@ -317,13 +317,13 @@ func (p *recordingPort) OptDeleteRecording(args DeleteRecording) (*DeleteRecordi
 
 	resp := DeleteRecordingResponse{}
 
-	if err := p.cli.CallMethodUnmarshal(p.Endpoint, req, &resp); err != nil {
-		return nil, err
+	if fault := p.cli.CallMethodUnmarshal(p.Endpoint, req, &resp); fault != nil {
+		return nil, fault
 	}
 	return &resp, nil
 }
 
-func (p *recordingPort) OptDeleteRecordingJob(args DeleteRecordingJob) (*DeleteRecordingJobResponse, error) {
+func (p *recordingPort) OptDeleteRecordingJob(args DeleteRecordingJob) (*DeleteRecordingJobResponse, *common.Fault) {
 	req := struct {
 		XMLName            string `xml:"trc:DeleteRecordingJob"`
 		DeleteRecordingJob DeleteRecordingJob
@@ -333,13 +333,13 @@ func (p *recordingPort) OptDeleteRecordingJob(args DeleteRecordingJob) (*DeleteR
 
 	resp := DeleteRecordingJobResponse{}
 
-	if err := p.cli.CallMethodUnmarshal(p.Endpoint, req, &resp); err != nil {
-		return nil, err
+	if fault := p.cli.CallMethodUnmarshal(p.Endpoint, req, &resp); fault != nil {
+		return nil, fault
 	}
 	return &resp, nil
 }
 
-func (p *recordingPort) OptDeleteTrack(args DeleteTrack) (*DeleteTrackResponse, error) {
+func (p *recordingPort) OptDeleteTrack(args DeleteTrack) (*DeleteTrackResponse, *common.Fault) {
 	req := struct {
 		XMLName     string `xml:"trc:DeleteTrack"`
 		DeleteTrack DeleteTrack
@@ -349,13 +349,13 @@ func (p *recordingPort) OptDeleteTrack(args DeleteTrack) (*DeleteTrackResponse, 
 
 	resp := DeleteTrackResponse{}
 
-	if err := p.cli.CallMethodUnmarshal(p.Endpoint, req, &resp); err != nil {
-		return nil, err
+	if fault := p.cli.CallMethodUnmarshal(p.Endpoint, req, &resp); fault != nil {
+		return nil, fault
 	}
 	return &resp, nil
 }
 
-func (p *recordingPort) OptExportRecordedData(args ExportRecordedData) (*ExportRecordedDataResponse, error) {
+func (p *recordingPort) OptExportRecordedData(args ExportRecordedData) (*ExportRecordedDataResponse, *common.Fault) {
 	req := struct {
 		XMLName            string `xml:"trc:ExportRecordedData"`
 		ExportRecordedData ExportRecordedData
@@ -365,13 +365,13 @@ func (p *recordingPort) OptExportRecordedData(args ExportRecordedData) (*ExportR
 
 	resp := ExportRecordedDataResponse{}
 
-	if err := p.cli.CallMethodUnmarshal(p.Endpoint, req, &resp); err != nil {
-		return nil, err
+	if fault := p.cli.CallMethodUnmarshal(p.Endpoint, req, &resp); fault != nil {
+		return nil, fault
 	}
 	return &resp, nil
 }
 
-func (p *recordingPort) OptGetExportRecordedDataState(args GetExportRecordedDataState) (*GetExportRecordedDataStateResponse, error) {
+func (p *recordingPort) OptGetExportRecordedDataState(args GetExportRecordedDataState) (*GetExportRecordedDataStateResponse, *common.Fault) {
 	req := struct {
 		XMLName                    string `xml:"trc:GetExportRecordedDataState"`
 		GetExportRecordedDataState GetExportRecordedDataState
@@ -381,13 +381,13 @@ func (p *recordingPort) OptGetExportRecordedDataState(args GetExportRecordedData
 
 	resp := GetExportRecordedDataStateResponse{}
 
-	if err := p.cli.CallMethodUnmarshal(p.Endpoint, req, &resp); err != nil {
-		return nil, err
+	if fault := p.cli.CallMethodUnmarshal(p.Endpoint, req, &resp); fault != nil {
+		return nil, fault
 	}
 	return &resp, nil
 }
 
-func (p *recordingPort) OptGetRecordingConfiguration(args GetRecordingConfiguration) (*GetRecordingConfigurationResponse, error) {
+func (p *recordingPort) OptGetRecordingConfiguration(args GetRecordingConfiguration) (*GetRecordingConfigurationResponse, *common.Fault) {
 	req := struct {
 		XMLName                   string `xml:"trc:GetRecordingConfiguration"`
 		GetRecordingConfiguration GetRecordingConfiguration
@@ -397,13 +397,13 @@ func (p *recordingPort) OptGetRecordingConfiguration(args GetRecordingConfigurat
 
 	resp := GetRecordingConfigurationResponse{}
 
-	if err := p.cli.CallMethodUnmarshal(p.Endpoint, req, &resp); err != nil {
-		return nil, err
+	if fault := p.cli.CallMethodUnmarshal(p.Endpoint, req, &resp); fault != nil {
+		return nil, fault
 	}
 	return &resp, nil
 }
 
-func (p *recordingPort) OptGetRecordingJobConfiguration(args GetRecordingJobConfiguration) (*GetRecordingJobConfigurationResponse, error) {
+func (p *recordingPort) OptGetRecordingJobConfiguration(args GetRecordingJobConfiguration) (*GetRecordingJobConfigurationResponse, *common.Fault) {
 	req := struct {
 		XMLName                      string `xml:"trc:GetRecordingJobConfiguration"`
 		GetRecordingJobConfiguration GetRecordingJobConfiguration
@@ -413,13 +413,13 @@ func (p *recordingPort) OptGetRecordingJobConfiguration(args GetRecordingJobConf
 
 	resp := GetRecordingJobConfigurationResponse{}
 
-	if err := p.cli.CallMethodUnmarshal(p.Endpoint, req, &resp); err != nil {
-		return nil, err
+	if fault := p.cli.CallMethodUnmarshal(p.Endpoint, req, &resp); fault != nil {
+		return nil, fault
 	}
 	return &resp, nil
 }
 
-func (p *recordingPort) OptGetRecordingJobState(args GetRecordingJobState) (*GetRecordingJobStateResponse, error) {
+func (p *recordingPort) OptGetRecordingJobState(args GetRecordingJobState) (*GetRecordingJobStateResponse, *common.Fault) {
 	req := struct {
 		XMLName              string `xml:"trc:GetRecordingJobState"`
 		GetRecordingJobState GetRecordingJobState
@@ -429,13 +429,13 @@ func (p *recordingPort) OptGetRecordingJobState(args GetRecordingJobState) (*Get
 
 	resp := GetRecordingJobStateResponse{}
 
-	if err := p.cli.CallMethodUnmarshal(p.Endpoint, req, &resp); err != nil {
-		return nil, err
+	if fault := p.cli.CallMethodUnmarshal(p.Endpoint, req, &resp); fault != nil {
+		return nil, fault
 	}
 	return &resp, nil
 }
 
-func (p *recordingPort) OptGetRecordingJobs(args GetRecordingJobs) (*GetRecordingJobsResponse, error) {
+func (p *recordingPort) OptGetRecordingJobs(args GetRecordingJobs) (*GetRecordingJobsResponse, *common.Fault) {
 	req := struct {
 		XMLName          string `xml:"trc:GetRecordingJobs"`
 		GetRecordingJobs GetRecordingJobs
@@ -445,13 +445,13 @@ func (p *recordingPort) OptGetRecordingJobs(args GetRecordingJobs) (*GetRecordin
 
 	resp := GetRecordingJobsResponse{}
 
-	if err := p.cli.CallMethodUnmarshal(p.Endpoint, req, &resp); err != nil {
-		return nil, err
+	if fault := p.cli.CallMethodUnmarshal(p.Endpoint, req, &resp); fault != nil {
+		return nil, fault
 	}
 	return &resp, nil
 }
 
-func (p *recordingPort) OptGetRecordingOptions(args GetRecordingOptions) (*GetRecordingOptionsResponse, error) {
+func (p *recordingPort) OptGetRecordingOptions(args GetRecordingOptions) (*GetRecordingOptionsResponse, *common.Fault) {
 	req := struct {
 		XMLName             string `xml:"trc:GetRecordingOptions"`
 		GetRecordingOptions GetRecordingOptions
@@ -461,13 +461,13 @@ func (p *recordingPort) OptGetRecordingOptions(args GetRecordingOptions) (*GetRe
 
 	resp := GetRecordingOptionsResponse{}
 
-	if err := p.cli.CallMethodUnmarshal(p.Endpoint, req, &resp); err != nil {
-		return nil, err
+	if fault := p.cli.CallMethodUnmarshal(p.Endpoint, req, &resp); fault != nil {
+		return nil, fault
 	}
 	return &resp, nil
 }
 
-func (p *recordingPort) OptGetRecordings(args GetRecordings) (*GetRecordingsResponse, error) {
+func (p *recordingPort) OptGetRecordings(args GetRecordings) (*GetRecordingsResponse, *common.Fault) {
 	req := struct {
 		XMLName       string `xml:"trc:GetRecordings"`
 		GetRecordings GetRecordings
@@ -477,13 +477,13 @@ func (p *recordingPort) OptGetRecordings(args GetRecordings) (*GetRecordingsResp
 
 	resp := GetRecordingsResponse{}
 
-	if err := p.cli.CallMethodUnmarshal(p.Endpoint, req, &resp); err != nil {
-		return nil, err
+	if fault := p.cli.CallMethodUnmarshal(p.Endpoint, req, &resp); fault != nil {
+		return nil, fault
 	}
 	return &resp, nil
 }
 
-func (p *recordingPort) OptGetServiceCapabilities(args GetServiceCapabilities) (*GetServiceCapabilitiesResponse, error) {
+func (p *recordingPort) OptGetServiceCapabilities(args GetServiceCapabilities) (*GetServiceCapabilitiesResponse, *common.Fault) {
 	req := struct {
 		XMLName                string `xml:"trc:GetServiceCapabilities"`
 		GetServiceCapabilities GetServiceCapabilities
@@ -493,13 +493,13 @@ func (p *recordingPort) OptGetServiceCapabilities(args GetServiceCapabilities) (
 
 	resp := GetServiceCapabilitiesResponse{}
 
-	if err := p.cli.CallMethodUnmarshal(p.Endpoint, req, &resp); err != nil {
-		return nil, err
+	if fault := p.cli.CallMethodUnmarshal(p.Endpoint, req, &resp); fault != nil {
+		return nil, fault
 	}
 	return &resp, nil
 }
 
-func (p *recordingPort) OptGetTrackConfiguration(args GetTrackConfiguration) (*GetTrackConfigurationResponse, error) {
+func (p *recordingPort) OptGetTrackConfiguration(args GetTrackConfiguration) (*GetTrackConfigurationResponse, *common.Fault) {
 	req := struct {
 		XMLName               string `xml:"trc:GetTrackConfiguration"`
 		GetTrackConfiguration GetTrackConfiguration
@@ -509,13 +509,13 @@ func (p *recordingPort) OptGetTrackConfiguration(args GetTrackConfiguration) (*G
 
 	resp := GetTrackConfigurationResponse{}
 
-	if err := p.cli.CallMethodUnmarshal(p.Endpoint, req, &resp); err != nil {
-		return nil, err
+	if fault := p.cli.CallMethodUnmarshal(p.Endpoint, req, &resp); fault != nil {
+		return nil, fault
 	}
 	return &resp, nil
 }
 
-func (p *recordingPort) OptSetRecordingConfiguration(args SetRecordingConfiguration) (*SetRecordingConfigurationResponse, error) {
+func (p *recordingPort) OptSetRecordingConfiguration(args SetRecordingConfiguration) (*SetRecordingConfigurationResponse, *common.Fault) {
 	req := struct {
 		XMLName                   string `xml:"trc:SetRecordingConfiguration"`
 		SetRecordingConfiguration SetRecordingConfiguration
@@ -525,13 +525,13 @@ func (p *recordingPort) OptSetRecordingConfiguration(args SetRecordingConfigurat
 
 	resp := SetRecordingConfigurationResponse{}
 
-	if err := p.cli.CallMethodUnmarshal(p.Endpoint, req, &resp); err != nil {
-		return nil, err
+	if fault := p.cli.CallMethodUnmarshal(p.Endpoint, req, &resp); fault != nil {
+		return nil, fault
 	}
 	return &resp, nil
 }
 
-func (p *recordingPort) OptSetRecordingJobConfiguration(args SetRecordingJobConfiguration) (*SetRecordingJobConfigurationResponse, error) {
+func (p *recordingPort) OptSetRecordingJobConfiguration(args SetRecordingJobConfiguration) (*SetRecordingJobConfigurationResponse, *common.Fault) {
 	req := struct {
 		XMLName                      string `xml:"trc:SetRecordingJobConfiguration"`
 		SetRecordingJobConfiguration SetRecordingJobConfiguration
@@ -541,13 +541,13 @@ func (p *recordingPort) OptSetRecordingJobConfiguration(args SetRecordingJobConf
 
 	resp := SetRecordingJobConfigurationResponse{}
 
-	if err := p.cli.CallMethodUnmarshal(p.Endpoint, req, &resp); err != nil {
-		return nil, err
+	if fault := p.cli.CallMethodUnmarshal(p.Endpoint, req, &resp); fault != nil {
+		return nil, fault
 	}
 	return &resp, nil
 }
 
-func (p *recordingPort) OptSetRecordingJobMode(args SetRecordingJobMode) (*SetRecordingJobModeResponse, error) {
+func (p *recordingPort) OptSetRecordingJobMode(args SetRecordingJobMode) (*SetRecordingJobModeResponse, *common.Fault) {
 	req := struct {
 		XMLName             string `xml:"trc:SetRecordingJobMode"`
 		SetRecordingJobMode SetRecordingJobMode
@@ -557,13 +557,13 @@ func (p *recordingPort) OptSetRecordingJobMode(args SetRecordingJobMode) (*SetRe
 
 	resp := SetRecordingJobModeResponse{}
 
-	if err := p.cli.CallMethodUnmarshal(p.Endpoint, req, &resp); err != nil {
-		return nil, err
+	if fault := p.cli.CallMethodUnmarshal(p.Endpoint, req, &resp); fault != nil {
+		return nil, fault
 	}
 	return &resp, nil
 }
 
-func (p *recordingPort) OptSetTrackConfiguration(args SetTrackConfiguration) (*SetTrackConfigurationResponse, error) {
+func (p *recordingPort) OptSetTrackConfiguration(args SetTrackConfiguration) (*SetTrackConfigurationResponse, *common.Fault) {
 	req := struct {
 		XMLName               string `xml:"trc:SetTrackConfiguration"`
 		SetTrackConfiguration SetTrackConfiguration
@@ -573,13 +573,13 @@ func (p *recordingPort) OptSetTrackConfiguration(args SetTrackConfiguration) (*S
 
 	resp := SetTrackConfigurationResponse{}
 
-	if err := p.cli.CallMethodUnmarshal(p.Endpoint, req, &resp); err != nil {
-		return nil, err
+	if fault := p.cli.CallMethodUnmarshal(p.Endpoint, req, &resp); fault != nil {
+		return nil, fault
 	}
 	return &resp, nil
 }
 
-func (p *recordingPort) OptStopExportRecordedData(args StopExportRecordedData) (*StopExportRecordedDataResponse, error) {
+func (p *recordingPort) OptStopExportRecordedData(args StopExportRecordedData) (*StopExportRecordedDataResponse, *common.Fault) {
 	req := struct {
 		XMLName                string `xml:"trc:StopExportRecordedData"`
 		StopExportRecordedData StopExportRecordedData
@@ -589,8 +589,8 @@ func (p *recordingPort) OptStopExportRecordedData(args StopExportRecordedData) (
 
 	resp := StopExportRecordedDataResponse{}
 
-	if err := p.cli.CallMethodUnmarshal(p.Endpoint, req, &resp); err != nil {
-		return nil, err
+	if fault := p.cli.CallMethodUnmarshal(p.Endpoint, req, &resp); fault != nil {
+		return nil, fault
 	}
 	return &resp, nil
 }

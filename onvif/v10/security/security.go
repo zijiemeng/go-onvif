@@ -16,105 +16,105 @@ func NewDot1X(endpoint string, cli common.Client) Dot1X {
 // Dot1X was auto-generated from WSDL
 // and defines interface for the remote service. Useful for testing.
 type Dot1X interface {
-	OptAddCertPathValidationPolicyAssignment(AddCertPathValidationPolicyAssignment AddCertPathValidationPolicyAssignment) (*AddCertPathValidationPolicyAssignmentResponse, error)
+	OptAddCertPathValidationPolicyAssignment(AddCertPathValidationPolicyAssignment AddCertPathValidationPolicyAssignment) (*AddCertPathValidationPolicyAssignmentResponse, *common.Fault)
 
-	OptAddDot1XConfiguration(AddDot1XConfiguration AddDot1XConfiguration) (*AddDot1XConfigurationResponse, error)
+	OptAddDot1XConfiguration(AddDot1XConfiguration AddDot1XConfiguration) (*AddDot1XConfigurationResponse, *common.Fault)
 
-	OptAddServerCertificateAssignment(AddServerCertificateAssignment AddServerCertificateAssignment) (*AddServerCertificateAssignmentResponse, error)
+	OptAddServerCertificateAssignment(AddServerCertificateAssignment AddServerCertificateAssignment) (*AddServerCertificateAssignmentResponse, *common.Fault)
 
-	OptCreateCertPathValidationPolicy(CreateCertPathValidationPolicy CreateCertPathValidationPolicy) (*CreateCertPathValidationPolicyResponse, error)
+	OptCreateCertPathValidationPolicy(CreateCertPathValidationPolicy CreateCertPathValidationPolicy) (*CreateCertPathValidationPolicyResponse, *common.Fault)
 
-	OptCreateCertificationPath(CreateCertificationPath CreateCertificationPath) (*CreateCertificationPathResponse, error)
+	OptCreateCertificationPath(CreateCertificationPath CreateCertificationPath) (*CreateCertificationPathResponse, *common.Fault)
 
-	OptCreatePKCS10CSR(CreatePKCS10CSR CreatePKCS10CSR) (*CreatePKCS10CSRResponse, error)
+	OptCreatePKCS10CSR(CreatePKCS10CSR CreatePKCS10CSR) (*CreatePKCS10CSRResponse, *common.Fault)
 
-	OptCreateRSAKeyPair(CreateRSAKeyPair CreateRSAKeyPair) (*CreateRSAKeyPairResponse, error)
+	OptCreateRSAKeyPair(CreateRSAKeyPair CreateRSAKeyPair) (*CreateRSAKeyPairResponse, *common.Fault)
 
-	OptCreateSelfSignedCertificate(CreateSelfSignedCertificate CreateSelfSignedCertificate) (*CreateSelfSignedCertificateResponse, error)
+	OptCreateSelfSignedCertificate(CreateSelfSignedCertificate CreateSelfSignedCertificate) (*CreateSelfSignedCertificateResponse, *common.Fault)
 
-	OptDeleteCRL(DeleteCRL DeleteCRL) (*DeleteCRLResponse, error)
+	OptDeleteCRL(DeleteCRL DeleteCRL) (*DeleteCRLResponse, *common.Fault)
 
-	OptDeleteCertPathValidationPolicy(DeleteCertPathValidationPolicy DeleteCertPathValidationPolicy) (*DeleteCertPathValidationPolicyResponse, error)
+	OptDeleteCertPathValidationPolicy(DeleteCertPathValidationPolicy DeleteCertPathValidationPolicy) (*DeleteCertPathValidationPolicyResponse, *common.Fault)
 
-	OptDeleteCertificate(DeleteCertificate DeleteCertificate) (*DeleteCertificateResponse, error)
+	OptDeleteCertificate(DeleteCertificate DeleteCertificate) (*DeleteCertificateResponse, *common.Fault)
 
-	OptDeleteCertificationPath(DeleteCertificationPath DeleteCertificationPath) (*DeleteCertificationPathResponse, error)
+	OptDeleteCertificationPath(DeleteCertificationPath DeleteCertificationPath) (*DeleteCertificationPathResponse, *common.Fault)
 
-	OptDeleteDot1XConfiguration(DeleteDot1XConfiguration DeleteDot1XConfiguration) (*DeleteDot1XConfigurationResponse, error)
+	OptDeleteDot1XConfiguration(DeleteDot1XConfiguration DeleteDot1XConfiguration) (*DeleteDot1XConfigurationResponse, *common.Fault)
 
-	OptDeleteKey(DeleteKey DeleteKey) (*DeleteKeyResponse, error)
+	OptDeleteKey(DeleteKey DeleteKey) (*DeleteKeyResponse, *common.Fault)
 
-	OptDeleteNetworkInterfaceDot1XConfiguration(DeleteNetworkInterfaceDot1XConfiguration DeleteNetworkInterfaceDot1XConfiguration) (*DeleteNetworkInterfaceDot1XConfigurationResponse, error)
+	OptDeleteNetworkInterfaceDot1XConfiguration(DeleteNetworkInterfaceDot1XConfiguration DeleteNetworkInterfaceDot1XConfiguration) (*DeleteNetworkInterfaceDot1XConfigurationResponse, *common.Fault)
 
-	OptDeletePassphrase(DeletePassphrase DeletePassphrase) (*DeletePassphraseResponse, error)
+	OptDeletePassphrase(DeletePassphrase DeletePassphrase) (*DeletePassphraseResponse, *common.Fault)
 
-	OptGetAllCRLs(GetAllCRLs GetAllCRLs) (*GetAllCRLsResponse, error)
+	OptGetAllCRLs(GetAllCRLs GetAllCRLs) (*GetAllCRLsResponse, *common.Fault)
 
-	OptGetAllCertPathValidationPolicies(GetAllCertPathValidationPolicies GetAllCertPathValidationPolicies) (*GetAllCertPathValidationPoliciesResponse, error)
+	OptGetAllCertPathValidationPolicies(GetAllCertPathValidationPolicies GetAllCertPathValidationPolicies) (*GetAllCertPathValidationPoliciesResponse, *common.Fault)
 
-	OptGetAllCertificates(GetAllCertificates GetAllCertificates) (*GetAllCertificatesResponse, error)
+	OptGetAllCertificates(GetAllCertificates GetAllCertificates) (*GetAllCertificatesResponse, *common.Fault)
 
-	OptGetAllCertificationPaths(GetAllCertificationPaths GetAllCertificationPaths) (*GetAllCertificationPathsResponse, error)
+	OptGetAllCertificationPaths(GetAllCertificationPaths GetAllCertificationPaths) (*GetAllCertificationPathsResponse, *common.Fault)
 
-	OptGetAllDot1XConfigurations(GetAllDot1XConfigurations GetAllDot1XConfigurations) (*GetAllDot1XConfigurationsResponse, error)
+	OptGetAllDot1XConfigurations(GetAllDot1XConfigurations GetAllDot1XConfigurations) (*GetAllDot1XConfigurationsResponse, *common.Fault)
 
-	OptGetAllKeys(GetAllKeys GetAllKeys) (*GetAllKeysResponse, error)
+	OptGetAllKeys(GetAllKeys GetAllKeys) (*GetAllKeysResponse, *common.Fault)
 
-	OptGetAllPassphrases(GetAllPassphrases GetAllPassphrases) (*GetAllPassphrasesResponse, error)
+	OptGetAllPassphrases(GetAllPassphrases GetAllPassphrases) (*GetAllPassphrasesResponse, *common.Fault)
 
-	OptGetAssignedCertPathValidationPolicies(GetAssignedCertPathValidationPolicies GetAssignedCertPathValidationPolicies) (*GetAssignedCertPathValidationPoliciesResponse, error)
+	OptGetAssignedCertPathValidationPolicies(GetAssignedCertPathValidationPolicies GetAssignedCertPathValidationPolicies) (*GetAssignedCertPathValidationPoliciesResponse, *common.Fault)
 
-	OptGetAssignedServerCertificates(GetAssignedServerCertificates GetAssignedServerCertificates) (*GetAssignedServerCertificatesResponse, error)
+	OptGetAssignedServerCertificates(GetAssignedServerCertificates GetAssignedServerCertificates) (*GetAssignedServerCertificatesResponse, *common.Fault)
 
-	OptGetCRL(GetCRL GetCRL) (*GetCRLResponse, error)
+	OptGetCRL(GetCRL GetCRL) (*GetCRLResponse, *common.Fault)
 
-	OptGetCertPathValidationPolicy(GetCertPathValidationPolicy GetCertPathValidationPolicy) (*GetCertPathValidationPolicyResponse, error)
+	OptGetCertPathValidationPolicy(GetCertPathValidationPolicy GetCertPathValidationPolicy) (*GetCertPathValidationPolicyResponse, *common.Fault)
 
-	OptGetCertificate(GetCertificate GetCertificate) (*GetCertificateResponse, error)
+	OptGetCertificate(GetCertificate GetCertificate) (*GetCertificateResponse, *common.Fault)
 
-	OptGetCertificationPath(GetCertificationPath GetCertificationPath) (*GetCertificationPathResponse, error)
+	OptGetCertificationPath(GetCertificationPath GetCertificationPath) (*GetCertificationPathResponse, *common.Fault)
 
-	OptGetClientAuthenticationRequired(GetClientAuthenticationRequired GetClientAuthenticationRequired) (*GetClientAuthenticationRequiredResponse, error)
+	OptGetClientAuthenticationRequired(GetClientAuthenticationRequired GetClientAuthenticationRequired) (*GetClientAuthenticationRequiredResponse, *common.Fault)
 
-	OptGetCnMapsToUser(GetCnMapsToUser GetCnMapsToUser) (*GetCnMapsToUserResponse, error)
+	OptGetCnMapsToUser(GetCnMapsToUser GetCnMapsToUser) (*GetCnMapsToUserResponse, *common.Fault)
 
-	OptGetDot1XConfiguration(GetDot1XConfiguration GetDot1XConfiguration) (*GetDot1XConfigurationResponse, error)
+	OptGetDot1XConfiguration(GetDot1XConfiguration GetDot1XConfiguration) (*GetDot1XConfigurationResponse, *common.Fault)
 
-	OptGetEnabledTLSVersions(GetEnabledTLSVersions GetEnabledTLSVersions) (*GetEnabledTLSVersionsResponse, error)
+	OptGetEnabledTLSVersions(GetEnabledTLSVersions GetEnabledTLSVersions) (*GetEnabledTLSVersionsResponse, *common.Fault)
 
-	OptGetKeyStatus(GetKeyStatus GetKeyStatus) (*GetKeyStatusResponse, error)
+	OptGetKeyStatus(GetKeyStatus GetKeyStatus) (*GetKeyStatusResponse, *common.Fault)
 
-	OptGetNetworkInterfaceDot1XConfiguration(GetNetworkInterfaceDot1XConfiguration GetNetworkInterfaceDot1XConfiguration) (*GetNetworkInterfaceDot1XConfigurationResponse, error)
+	OptGetNetworkInterfaceDot1XConfiguration(GetNetworkInterfaceDot1XConfiguration GetNetworkInterfaceDot1XConfiguration) (*GetNetworkInterfaceDot1XConfigurationResponse, *common.Fault)
 
-	OptGetPrivateKeyStatus(GetPrivateKeyStatus GetPrivateKeyStatus) (*GetPrivateKeyStatusResponse, error)
+	OptGetPrivateKeyStatus(GetPrivateKeyStatus GetPrivateKeyStatus) (*GetPrivateKeyStatusResponse, *common.Fault)
 
-	OptGetServiceCapabilities(GetServiceCapabilities GetServiceCapabilities) (*GetServiceCapabilitiesResponse, error)
+	OptGetServiceCapabilities(GetServiceCapabilities GetServiceCapabilities) (*GetServiceCapabilitiesResponse, *common.Fault)
 
-	OptRemoveCertPathValidationPolicyAssignment(RemoveCertPathValidationPolicyAssignment RemoveCertPathValidationPolicyAssignment) (*RemoveCertPathValidationPolicyAssignmentResponse, error)
+	OptRemoveCertPathValidationPolicyAssignment(RemoveCertPathValidationPolicyAssignment RemoveCertPathValidationPolicyAssignment) (*RemoveCertPathValidationPolicyAssignmentResponse, *common.Fault)
 
-	OptRemoveServerCertificateAssignment(RemoveServerCertificateAssignment RemoveServerCertificateAssignment) (*RemoveServerCertificateAssignmentResponse, error)
+	OptRemoveServerCertificateAssignment(RemoveServerCertificateAssignment RemoveServerCertificateAssignment) (*RemoveServerCertificateAssignmentResponse, *common.Fault)
 
-	OptReplaceCertPathValidationPolicyAssignment(ReplaceCertPathValidationPolicyAssignment ReplaceCertPathValidationPolicyAssignment) (*ReplaceCertPathValidationPolicyAssignmentResponse, error)
+	OptReplaceCertPathValidationPolicyAssignment(ReplaceCertPathValidationPolicyAssignment ReplaceCertPathValidationPolicyAssignment) (*ReplaceCertPathValidationPolicyAssignmentResponse, *common.Fault)
 
-	OptReplaceServerCertificateAssignment(ReplaceServerCertificateAssignment ReplaceServerCertificateAssignment) (*ReplaceServerCertificateAssignmentResponse, error)
+	OptReplaceServerCertificateAssignment(ReplaceServerCertificateAssignment ReplaceServerCertificateAssignment) (*ReplaceServerCertificateAssignmentResponse, *common.Fault)
 
-	OptSetClientAuthenticationRequired(SetClientAuthenticationRequired SetClientAuthenticationRequired) (*SetClientAuthenticationRequiredResponse, error)
+	OptSetClientAuthenticationRequired(SetClientAuthenticationRequired SetClientAuthenticationRequired) (*SetClientAuthenticationRequiredResponse, *common.Fault)
 
-	OptSetCnMapsToUser(SetCnMapsToUser SetCnMapsToUser) (*SetCnMapsToUserResponse, error)
+	OptSetCnMapsToUser(SetCnMapsToUser SetCnMapsToUser) (*SetCnMapsToUserResponse, *common.Fault)
 
-	OptSetEnabledTLSVersions(SetEnabledTLSVersions SetEnabledTLSVersions) (*SetEnabledTLSVersionsResponse, error)
+	OptSetEnabledTLSVersions(SetEnabledTLSVersions SetEnabledTLSVersions) (*SetEnabledTLSVersionsResponse, *common.Fault)
 
-	OptSetNetworkInterfaceDot1XConfiguration(SetNetworkInterfaceDot1XConfiguration SetNetworkInterfaceDot1XConfiguration) (*SetNetworkInterfaceDot1XConfigurationResponse, error)
+	OptSetNetworkInterfaceDot1XConfiguration(SetNetworkInterfaceDot1XConfiguration SetNetworkInterfaceDot1XConfiguration) (*SetNetworkInterfaceDot1XConfigurationResponse, *common.Fault)
 
-	OptUploadCRL(UploadCRL UploadCRL) (*UploadCRLResponse, error)
+	OptUploadCRL(UploadCRL UploadCRL) (*UploadCRLResponse, *common.Fault)
 
-	OptUploadCertificate(UploadCertificate UploadCertificate) (*UploadCertificateResponse, error)
+	OptUploadCertificate(UploadCertificate UploadCertificate) (*UploadCertificateResponse, *common.Fault)
 
-	OptUploadCertificateWithPrivateKeyInPKCS12(UploadCertificateWithPrivateKeyInPKCS12 UploadCertificateWithPrivateKeyInPKCS12) (*UploadCertificateWithPrivateKeyInPKCS12Response, error)
+	OptUploadCertificateWithPrivateKeyInPKCS12(UploadCertificateWithPrivateKeyInPKCS12 UploadCertificateWithPrivateKeyInPKCS12) (*UploadCertificateWithPrivateKeyInPKCS12Response, *common.Fault)
 
-	OptUploadKeyPairInPKCS8(UploadKeyPairInPKCS8 UploadKeyPairInPKCS8) (*UploadKeyPairInPKCS8Response, error)
+	OptUploadKeyPairInPKCS8(UploadKeyPairInPKCS8 UploadKeyPairInPKCS8) (*UploadKeyPairInPKCS8Response, *common.Fault)
 
-	OptUploadPassphrase(UploadPassphrase UploadPassphrase) (*UploadPassphraseResponse, error)
+	OptUploadPassphrase(UploadPassphrase UploadPassphrase) (*UploadPassphraseResponse, *common.Fault)
 }
 type DateTime string
 
@@ -731,7 +731,7 @@ type dot1X struct {
 	Endpoint string
 }
 
-func (p *dot1X) OptAddCertPathValidationPolicyAssignment(args AddCertPathValidationPolicyAssignment) (*AddCertPathValidationPolicyAssignmentResponse, error) {
+func (p *dot1X) OptAddCertPathValidationPolicyAssignment(args AddCertPathValidationPolicyAssignment) (*AddCertPathValidationPolicyAssignmentResponse, *common.Fault) {
 	req := struct {
 		XMLName                               string `xml:"tas:AddCertPathValidationPolicyAssignment"`
 		AddCertPathValidationPolicyAssignment AddCertPathValidationPolicyAssignment
@@ -741,13 +741,13 @@ func (p *dot1X) OptAddCertPathValidationPolicyAssignment(args AddCertPathValidat
 
 	resp := AddCertPathValidationPolicyAssignmentResponse{}
 
-	if err := p.cli.CallMethodUnmarshal(p.Endpoint, req, &resp); err != nil {
-		return nil, err
+	if fault := p.cli.CallMethodUnmarshal(p.Endpoint, req, &resp); fault != nil {
+		return nil, fault
 	}
 	return &resp, nil
 }
 
-func (p *dot1X) OptAddDot1XConfiguration(args AddDot1XConfiguration) (*AddDot1XConfigurationResponse, error) {
+func (p *dot1X) OptAddDot1XConfiguration(args AddDot1XConfiguration) (*AddDot1XConfigurationResponse, *common.Fault) {
 	req := struct {
 		XMLName               string `xml:"tas:AddDot1XConfiguration"`
 		AddDot1XConfiguration AddDot1XConfiguration
@@ -757,13 +757,13 @@ func (p *dot1X) OptAddDot1XConfiguration(args AddDot1XConfiguration) (*AddDot1XC
 
 	resp := AddDot1XConfigurationResponse{}
 
-	if err := p.cli.CallMethodUnmarshal(p.Endpoint, req, &resp); err != nil {
-		return nil, err
+	if fault := p.cli.CallMethodUnmarshal(p.Endpoint, req, &resp); fault != nil {
+		return nil, fault
 	}
 	return &resp, nil
 }
 
-func (p *dot1X) OptAddServerCertificateAssignment(args AddServerCertificateAssignment) (*AddServerCertificateAssignmentResponse, error) {
+func (p *dot1X) OptAddServerCertificateAssignment(args AddServerCertificateAssignment) (*AddServerCertificateAssignmentResponse, *common.Fault) {
 	req := struct {
 		XMLName                        string `xml:"tas:AddServerCertificateAssignment"`
 		AddServerCertificateAssignment AddServerCertificateAssignment
@@ -773,13 +773,13 @@ func (p *dot1X) OptAddServerCertificateAssignment(args AddServerCertificateAssig
 
 	resp := AddServerCertificateAssignmentResponse{}
 
-	if err := p.cli.CallMethodUnmarshal(p.Endpoint, req, &resp); err != nil {
-		return nil, err
+	if fault := p.cli.CallMethodUnmarshal(p.Endpoint, req, &resp); fault != nil {
+		return nil, fault
 	}
 	return &resp, nil
 }
 
-func (p *dot1X) OptCreateCertPathValidationPolicy(args CreateCertPathValidationPolicy) (*CreateCertPathValidationPolicyResponse, error) {
+func (p *dot1X) OptCreateCertPathValidationPolicy(args CreateCertPathValidationPolicy) (*CreateCertPathValidationPolicyResponse, *common.Fault) {
 	req := struct {
 		XMLName                        string `xml:"tas:CreateCertPathValidationPolicy"`
 		CreateCertPathValidationPolicy CreateCertPathValidationPolicy
@@ -789,13 +789,13 @@ func (p *dot1X) OptCreateCertPathValidationPolicy(args CreateCertPathValidationP
 
 	resp := CreateCertPathValidationPolicyResponse{}
 
-	if err := p.cli.CallMethodUnmarshal(p.Endpoint, req, &resp); err != nil {
-		return nil, err
+	if fault := p.cli.CallMethodUnmarshal(p.Endpoint, req, &resp); fault != nil {
+		return nil, fault
 	}
 	return &resp, nil
 }
 
-func (p *dot1X) OptCreateCertificationPath(args CreateCertificationPath) (*CreateCertificationPathResponse, error) {
+func (p *dot1X) OptCreateCertificationPath(args CreateCertificationPath) (*CreateCertificationPathResponse, *common.Fault) {
 	req := struct {
 		XMLName                 string `xml:"tas:CreateCertificationPath"`
 		CreateCertificationPath CreateCertificationPath
@@ -805,13 +805,13 @@ func (p *dot1X) OptCreateCertificationPath(args CreateCertificationPath) (*Creat
 
 	resp := CreateCertificationPathResponse{}
 
-	if err := p.cli.CallMethodUnmarshal(p.Endpoint, req, &resp); err != nil {
-		return nil, err
+	if fault := p.cli.CallMethodUnmarshal(p.Endpoint, req, &resp); fault != nil {
+		return nil, fault
 	}
 	return &resp, nil
 }
 
-func (p *dot1X) OptCreatePKCS10CSR(args CreatePKCS10CSR) (*CreatePKCS10CSRResponse, error) {
+func (p *dot1X) OptCreatePKCS10CSR(args CreatePKCS10CSR) (*CreatePKCS10CSRResponse, *common.Fault) {
 	req := struct {
 		XMLName         string `xml:"tas:CreatePKCS10CSR"`
 		CreatePKCS10CSR CreatePKCS10CSR
@@ -821,13 +821,13 @@ func (p *dot1X) OptCreatePKCS10CSR(args CreatePKCS10CSR) (*CreatePKCS10CSRRespon
 
 	resp := CreatePKCS10CSRResponse{}
 
-	if err := p.cli.CallMethodUnmarshal(p.Endpoint, req, &resp); err != nil {
-		return nil, err
+	if fault := p.cli.CallMethodUnmarshal(p.Endpoint, req, &resp); fault != nil {
+		return nil, fault
 	}
 	return &resp, nil
 }
 
-func (p *dot1X) OptCreateRSAKeyPair(args CreateRSAKeyPair) (*CreateRSAKeyPairResponse, error) {
+func (p *dot1X) OptCreateRSAKeyPair(args CreateRSAKeyPair) (*CreateRSAKeyPairResponse, *common.Fault) {
 	req := struct {
 		XMLName          string `xml:"tas:CreateRSAKeyPair"`
 		CreateRSAKeyPair CreateRSAKeyPair
@@ -837,13 +837,13 @@ func (p *dot1X) OptCreateRSAKeyPair(args CreateRSAKeyPair) (*CreateRSAKeyPairRes
 
 	resp := CreateRSAKeyPairResponse{}
 
-	if err := p.cli.CallMethodUnmarshal(p.Endpoint, req, &resp); err != nil {
-		return nil, err
+	if fault := p.cli.CallMethodUnmarshal(p.Endpoint, req, &resp); fault != nil {
+		return nil, fault
 	}
 	return &resp, nil
 }
 
-func (p *dot1X) OptCreateSelfSignedCertificate(args CreateSelfSignedCertificate) (*CreateSelfSignedCertificateResponse, error) {
+func (p *dot1X) OptCreateSelfSignedCertificate(args CreateSelfSignedCertificate) (*CreateSelfSignedCertificateResponse, *common.Fault) {
 	req := struct {
 		XMLName                     string `xml:"tas:CreateSelfSignedCertificate"`
 		CreateSelfSignedCertificate CreateSelfSignedCertificate
@@ -853,13 +853,13 @@ func (p *dot1X) OptCreateSelfSignedCertificate(args CreateSelfSignedCertificate)
 
 	resp := CreateSelfSignedCertificateResponse{}
 
-	if err := p.cli.CallMethodUnmarshal(p.Endpoint, req, &resp); err != nil {
-		return nil, err
+	if fault := p.cli.CallMethodUnmarshal(p.Endpoint, req, &resp); fault != nil {
+		return nil, fault
 	}
 	return &resp, nil
 }
 
-func (p *dot1X) OptDeleteCRL(args DeleteCRL) (*DeleteCRLResponse, error) {
+func (p *dot1X) OptDeleteCRL(args DeleteCRL) (*DeleteCRLResponse, *common.Fault) {
 	req := struct {
 		XMLName   string `xml:"tas:DeleteCRL"`
 		DeleteCRL DeleteCRL
@@ -869,13 +869,13 @@ func (p *dot1X) OptDeleteCRL(args DeleteCRL) (*DeleteCRLResponse, error) {
 
 	resp := DeleteCRLResponse{}
 
-	if err := p.cli.CallMethodUnmarshal(p.Endpoint, req, &resp); err != nil {
-		return nil, err
+	if fault := p.cli.CallMethodUnmarshal(p.Endpoint, req, &resp); fault != nil {
+		return nil, fault
 	}
 	return &resp, nil
 }
 
-func (p *dot1X) OptDeleteCertPathValidationPolicy(args DeleteCertPathValidationPolicy) (*DeleteCertPathValidationPolicyResponse, error) {
+func (p *dot1X) OptDeleteCertPathValidationPolicy(args DeleteCertPathValidationPolicy) (*DeleteCertPathValidationPolicyResponse, *common.Fault) {
 	req := struct {
 		XMLName                        string `xml:"tas:DeleteCertPathValidationPolicy"`
 		DeleteCertPathValidationPolicy DeleteCertPathValidationPolicy
@@ -885,13 +885,13 @@ func (p *dot1X) OptDeleteCertPathValidationPolicy(args DeleteCertPathValidationP
 
 	resp := DeleteCertPathValidationPolicyResponse{}
 
-	if err := p.cli.CallMethodUnmarshal(p.Endpoint, req, &resp); err != nil {
-		return nil, err
+	if fault := p.cli.CallMethodUnmarshal(p.Endpoint, req, &resp); fault != nil {
+		return nil, fault
 	}
 	return &resp, nil
 }
 
-func (p *dot1X) OptDeleteCertificate(args DeleteCertificate) (*DeleteCertificateResponse, error) {
+func (p *dot1X) OptDeleteCertificate(args DeleteCertificate) (*DeleteCertificateResponse, *common.Fault) {
 	req := struct {
 		XMLName           string `xml:"tas:DeleteCertificate"`
 		DeleteCertificate DeleteCertificate
@@ -901,13 +901,13 @@ func (p *dot1X) OptDeleteCertificate(args DeleteCertificate) (*DeleteCertificate
 
 	resp := DeleteCertificateResponse{}
 
-	if err := p.cli.CallMethodUnmarshal(p.Endpoint, req, &resp); err != nil {
-		return nil, err
+	if fault := p.cli.CallMethodUnmarshal(p.Endpoint, req, &resp); fault != nil {
+		return nil, fault
 	}
 	return &resp, nil
 }
 
-func (p *dot1X) OptDeleteCertificationPath(args DeleteCertificationPath) (*DeleteCertificationPathResponse, error) {
+func (p *dot1X) OptDeleteCertificationPath(args DeleteCertificationPath) (*DeleteCertificationPathResponse, *common.Fault) {
 	req := struct {
 		XMLName                 string `xml:"tas:DeleteCertificationPath"`
 		DeleteCertificationPath DeleteCertificationPath
@@ -917,13 +917,13 @@ func (p *dot1X) OptDeleteCertificationPath(args DeleteCertificationPath) (*Delet
 
 	resp := DeleteCertificationPathResponse{}
 
-	if err := p.cli.CallMethodUnmarshal(p.Endpoint, req, &resp); err != nil {
-		return nil, err
+	if fault := p.cli.CallMethodUnmarshal(p.Endpoint, req, &resp); fault != nil {
+		return nil, fault
 	}
 	return &resp, nil
 }
 
-func (p *dot1X) OptDeleteDot1XConfiguration(args DeleteDot1XConfiguration) (*DeleteDot1XConfigurationResponse, error) {
+func (p *dot1X) OptDeleteDot1XConfiguration(args DeleteDot1XConfiguration) (*DeleteDot1XConfigurationResponse, *common.Fault) {
 	req := struct {
 		XMLName                  string `xml:"tas:DeleteDot1XConfiguration"`
 		DeleteDot1XConfiguration DeleteDot1XConfiguration
@@ -933,13 +933,13 @@ func (p *dot1X) OptDeleteDot1XConfiguration(args DeleteDot1XConfiguration) (*Del
 
 	resp := DeleteDot1XConfigurationResponse{}
 
-	if err := p.cli.CallMethodUnmarshal(p.Endpoint, req, &resp); err != nil {
-		return nil, err
+	if fault := p.cli.CallMethodUnmarshal(p.Endpoint, req, &resp); fault != nil {
+		return nil, fault
 	}
 	return &resp, nil
 }
 
-func (p *dot1X) OptDeleteKey(args DeleteKey) (*DeleteKeyResponse, error) {
+func (p *dot1X) OptDeleteKey(args DeleteKey) (*DeleteKeyResponse, *common.Fault) {
 	req := struct {
 		XMLName   string `xml:"tas:DeleteKey"`
 		DeleteKey DeleteKey
@@ -949,13 +949,13 @@ func (p *dot1X) OptDeleteKey(args DeleteKey) (*DeleteKeyResponse, error) {
 
 	resp := DeleteKeyResponse{}
 
-	if err := p.cli.CallMethodUnmarshal(p.Endpoint, req, &resp); err != nil {
-		return nil, err
+	if fault := p.cli.CallMethodUnmarshal(p.Endpoint, req, &resp); fault != nil {
+		return nil, fault
 	}
 	return &resp, nil
 }
 
-func (p *dot1X) OptDeleteNetworkInterfaceDot1XConfiguration(args DeleteNetworkInterfaceDot1XConfiguration) (*DeleteNetworkInterfaceDot1XConfigurationResponse, error) {
+func (p *dot1X) OptDeleteNetworkInterfaceDot1XConfiguration(args DeleteNetworkInterfaceDot1XConfiguration) (*DeleteNetworkInterfaceDot1XConfigurationResponse, *common.Fault) {
 	req := struct {
 		XMLName                                  string `xml:"tas:DeleteNetworkInterfaceDot1XConfiguration"`
 		DeleteNetworkInterfaceDot1XConfiguration DeleteNetworkInterfaceDot1XConfiguration
@@ -965,13 +965,13 @@ func (p *dot1X) OptDeleteNetworkInterfaceDot1XConfiguration(args DeleteNetworkIn
 
 	resp := DeleteNetworkInterfaceDot1XConfigurationResponse{}
 
-	if err := p.cli.CallMethodUnmarshal(p.Endpoint, req, &resp); err != nil {
-		return nil, err
+	if fault := p.cli.CallMethodUnmarshal(p.Endpoint, req, &resp); fault != nil {
+		return nil, fault
 	}
 	return &resp, nil
 }
 
-func (p *dot1X) OptDeletePassphrase(args DeletePassphrase) (*DeletePassphraseResponse, error) {
+func (p *dot1X) OptDeletePassphrase(args DeletePassphrase) (*DeletePassphraseResponse, *common.Fault) {
 	req := struct {
 		XMLName          string `xml:"tas:DeletePassphrase"`
 		DeletePassphrase DeletePassphrase
@@ -981,13 +981,13 @@ func (p *dot1X) OptDeletePassphrase(args DeletePassphrase) (*DeletePassphraseRes
 
 	resp := DeletePassphraseResponse{}
 
-	if err := p.cli.CallMethodUnmarshal(p.Endpoint, req, &resp); err != nil {
-		return nil, err
+	if fault := p.cli.CallMethodUnmarshal(p.Endpoint, req, &resp); fault != nil {
+		return nil, fault
 	}
 	return &resp, nil
 }
 
-func (p *dot1X) OptGetAllCRLs(args GetAllCRLs) (*GetAllCRLsResponse, error) {
+func (p *dot1X) OptGetAllCRLs(args GetAllCRLs) (*GetAllCRLsResponse, *common.Fault) {
 	req := struct {
 		XMLName    string `xml:"tas:GetAllCRLs"`
 		GetAllCRLs GetAllCRLs
@@ -997,13 +997,13 @@ func (p *dot1X) OptGetAllCRLs(args GetAllCRLs) (*GetAllCRLsResponse, error) {
 
 	resp := GetAllCRLsResponse{}
 
-	if err := p.cli.CallMethodUnmarshal(p.Endpoint, req, &resp); err != nil {
-		return nil, err
+	if fault := p.cli.CallMethodUnmarshal(p.Endpoint, req, &resp); fault != nil {
+		return nil, fault
 	}
 	return &resp, nil
 }
 
-func (p *dot1X) OptGetAllCertPathValidationPolicies(args GetAllCertPathValidationPolicies) (*GetAllCertPathValidationPoliciesResponse, error) {
+func (p *dot1X) OptGetAllCertPathValidationPolicies(args GetAllCertPathValidationPolicies) (*GetAllCertPathValidationPoliciesResponse, *common.Fault) {
 	req := struct {
 		XMLName                          string `xml:"tas:GetAllCertPathValidationPolicies"`
 		GetAllCertPathValidationPolicies GetAllCertPathValidationPolicies
@@ -1013,13 +1013,13 @@ func (p *dot1X) OptGetAllCertPathValidationPolicies(args GetAllCertPathValidatio
 
 	resp := GetAllCertPathValidationPoliciesResponse{}
 
-	if err := p.cli.CallMethodUnmarshal(p.Endpoint, req, &resp); err != nil {
-		return nil, err
+	if fault := p.cli.CallMethodUnmarshal(p.Endpoint, req, &resp); fault != nil {
+		return nil, fault
 	}
 	return &resp, nil
 }
 
-func (p *dot1X) OptGetAllCertificates(args GetAllCertificates) (*GetAllCertificatesResponse, error) {
+func (p *dot1X) OptGetAllCertificates(args GetAllCertificates) (*GetAllCertificatesResponse, *common.Fault) {
 	req := struct {
 		XMLName            string `xml:"tas:GetAllCertificates"`
 		GetAllCertificates GetAllCertificates
@@ -1029,13 +1029,13 @@ func (p *dot1X) OptGetAllCertificates(args GetAllCertificates) (*GetAllCertifica
 
 	resp := GetAllCertificatesResponse{}
 
-	if err := p.cli.CallMethodUnmarshal(p.Endpoint, req, &resp); err != nil {
-		return nil, err
+	if fault := p.cli.CallMethodUnmarshal(p.Endpoint, req, &resp); fault != nil {
+		return nil, fault
 	}
 	return &resp, nil
 }
 
-func (p *dot1X) OptGetAllCertificationPaths(args GetAllCertificationPaths) (*GetAllCertificationPathsResponse, error) {
+func (p *dot1X) OptGetAllCertificationPaths(args GetAllCertificationPaths) (*GetAllCertificationPathsResponse, *common.Fault) {
 	req := struct {
 		XMLName                  string `xml:"tas:GetAllCertificationPaths"`
 		GetAllCertificationPaths GetAllCertificationPaths
@@ -1045,13 +1045,13 @@ func (p *dot1X) OptGetAllCertificationPaths(args GetAllCertificationPaths) (*Get
 
 	resp := GetAllCertificationPathsResponse{}
 
-	if err := p.cli.CallMethodUnmarshal(p.Endpoint, req, &resp); err != nil {
-		return nil, err
+	if fault := p.cli.CallMethodUnmarshal(p.Endpoint, req, &resp); fault != nil {
+		return nil, fault
 	}
 	return &resp, nil
 }
 
-func (p *dot1X) OptGetAllDot1XConfigurations(args GetAllDot1XConfigurations) (*GetAllDot1XConfigurationsResponse, error) {
+func (p *dot1X) OptGetAllDot1XConfigurations(args GetAllDot1XConfigurations) (*GetAllDot1XConfigurationsResponse, *common.Fault) {
 	req := struct {
 		XMLName                   string `xml:"tas:GetAllDot1XConfigurations"`
 		GetAllDot1XConfigurations GetAllDot1XConfigurations
@@ -1061,13 +1061,13 @@ func (p *dot1X) OptGetAllDot1XConfigurations(args GetAllDot1XConfigurations) (*G
 
 	resp := GetAllDot1XConfigurationsResponse{}
 
-	if err := p.cli.CallMethodUnmarshal(p.Endpoint, req, &resp); err != nil {
-		return nil, err
+	if fault := p.cli.CallMethodUnmarshal(p.Endpoint, req, &resp); fault != nil {
+		return nil, fault
 	}
 	return &resp, nil
 }
 
-func (p *dot1X) OptGetAllKeys(args GetAllKeys) (*GetAllKeysResponse, error) {
+func (p *dot1X) OptGetAllKeys(args GetAllKeys) (*GetAllKeysResponse, *common.Fault) {
 	req := struct {
 		XMLName    string `xml:"tas:GetAllKeys"`
 		GetAllKeys GetAllKeys
@@ -1077,13 +1077,13 @@ func (p *dot1X) OptGetAllKeys(args GetAllKeys) (*GetAllKeysResponse, error) {
 
 	resp := GetAllKeysResponse{}
 
-	if err := p.cli.CallMethodUnmarshal(p.Endpoint, req, &resp); err != nil {
-		return nil, err
+	if fault := p.cli.CallMethodUnmarshal(p.Endpoint, req, &resp); fault != nil {
+		return nil, fault
 	}
 	return &resp, nil
 }
 
-func (p *dot1X) OptGetAllPassphrases(args GetAllPassphrases) (*GetAllPassphrasesResponse, error) {
+func (p *dot1X) OptGetAllPassphrases(args GetAllPassphrases) (*GetAllPassphrasesResponse, *common.Fault) {
 	req := struct {
 		XMLName           string `xml:"tas:GetAllPassphrases"`
 		GetAllPassphrases GetAllPassphrases
@@ -1093,13 +1093,13 @@ func (p *dot1X) OptGetAllPassphrases(args GetAllPassphrases) (*GetAllPassphrases
 
 	resp := GetAllPassphrasesResponse{}
 
-	if err := p.cli.CallMethodUnmarshal(p.Endpoint, req, &resp); err != nil {
-		return nil, err
+	if fault := p.cli.CallMethodUnmarshal(p.Endpoint, req, &resp); fault != nil {
+		return nil, fault
 	}
 	return &resp, nil
 }
 
-func (p *dot1X) OptGetAssignedCertPathValidationPolicies(args GetAssignedCertPathValidationPolicies) (*GetAssignedCertPathValidationPoliciesResponse, error) {
+func (p *dot1X) OptGetAssignedCertPathValidationPolicies(args GetAssignedCertPathValidationPolicies) (*GetAssignedCertPathValidationPoliciesResponse, *common.Fault) {
 	req := struct {
 		XMLName                               string `xml:"tas:GetAssignedCertPathValidationPolicies"`
 		GetAssignedCertPathValidationPolicies GetAssignedCertPathValidationPolicies
@@ -1109,13 +1109,13 @@ func (p *dot1X) OptGetAssignedCertPathValidationPolicies(args GetAssignedCertPat
 
 	resp := GetAssignedCertPathValidationPoliciesResponse{}
 
-	if err := p.cli.CallMethodUnmarshal(p.Endpoint, req, &resp); err != nil {
-		return nil, err
+	if fault := p.cli.CallMethodUnmarshal(p.Endpoint, req, &resp); fault != nil {
+		return nil, fault
 	}
 	return &resp, nil
 }
 
-func (p *dot1X) OptGetAssignedServerCertificates(args GetAssignedServerCertificates) (*GetAssignedServerCertificatesResponse, error) {
+func (p *dot1X) OptGetAssignedServerCertificates(args GetAssignedServerCertificates) (*GetAssignedServerCertificatesResponse, *common.Fault) {
 	req := struct {
 		XMLName                       string `xml:"tas:GetAssignedServerCertificates"`
 		GetAssignedServerCertificates GetAssignedServerCertificates
@@ -1125,13 +1125,13 @@ func (p *dot1X) OptGetAssignedServerCertificates(args GetAssignedServerCertifica
 
 	resp := GetAssignedServerCertificatesResponse{}
 
-	if err := p.cli.CallMethodUnmarshal(p.Endpoint, req, &resp); err != nil {
-		return nil, err
+	if fault := p.cli.CallMethodUnmarshal(p.Endpoint, req, &resp); fault != nil {
+		return nil, fault
 	}
 	return &resp, nil
 }
 
-func (p *dot1X) OptGetCRL(args GetCRL) (*GetCRLResponse, error) {
+func (p *dot1X) OptGetCRL(args GetCRL) (*GetCRLResponse, *common.Fault) {
 	req := struct {
 		XMLName string `xml:"tas:GetCRL"`
 		GetCRL  GetCRL
@@ -1141,13 +1141,13 @@ func (p *dot1X) OptGetCRL(args GetCRL) (*GetCRLResponse, error) {
 
 	resp := GetCRLResponse{}
 
-	if err := p.cli.CallMethodUnmarshal(p.Endpoint, req, &resp); err != nil {
-		return nil, err
+	if fault := p.cli.CallMethodUnmarshal(p.Endpoint, req, &resp); fault != nil {
+		return nil, fault
 	}
 	return &resp, nil
 }
 
-func (p *dot1X) OptGetCertPathValidationPolicy(args GetCertPathValidationPolicy) (*GetCertPathValidationPolicyResponse, error) {
+func (p *dot1X) OptGetCertPathValidationPolicy(args GetCertPathValidationPolicy) (*GetCertPathValidationPolicyResponse, *common.Fault) {
 	req := struct {
 		XMLName                     string `xml:"tas:GetCertPathValidationPolicy"`
 		GetCertPathValidationPolicy GetCertPathValidationPolicy
@@ -1157,13 +1157,13 @@ func (p *dot1X) OptGetCertPathValidationPolicy(args GetCertPathValidationPolicy)
 
 	resp := GetCertPathValidationPolicyResponse{}
 
-	if err := p.cli.CallMethodUnmarshal(p.Endpoint, req, &resp); err != nil {
-		return nil, err
+	if fault := p.cli.CallMethodUnmarshal(p.Endpoint, req, &resp); fault != nil {
+		return nil, fault
 	}
 	return &resp, nil
 }
 
-func (p *dot1X) OptGetCertificate(args GetCertificate) (*GetCertificateResponse, error) {
+func (p *dot1X) OptGetCertificate(args GetCertificate) (*GetCertificateResponse, *common.Fault) {
 	req := struct {
 		XMLName        string `xml:"tas:GetCertificate"`
 		GetCertificate GetCertificate
@@ -1173,13 +1173,13 @@ func (p *dot1X) OptGetCertificate(args GetCertificate) (*GetCertificateResponse,
 
 	resp := GetCertificateResponse{}
 
-	if err := p.cli.CallMethodUnmarshal(p.Endpoint, req, &resp); err != nil {
-		return nil, err
+	if fault := p.cli.CallMethodUnmarshal(p.Endpoint, req, &resp); fault != nil {
+		return nil, fault
 	}
 	return &resp, nil
 }
 
-func (p *dot1X) OptGetCertificationPath(args GetCertificationPath) (*GetCertificationPathResponse, error) {
+func (p *dot1X) OptGetCertificationPath(args GetCertificationPath) (*GetCertificationPathResponse, *common.Fault) {
 	req := struct {
 		XMLName              string `xml:"tas:GetCertificationPath"`
 		GetCertificationPath GetCertificationPath
@@ -1189,13 +1189,13 @@ func (p *dot1X) OptGetCertificationPath(args GetCertificationPath) (*GetCertific
 
 	resp := GetCertificationPathResponse{}
 
-	if err := p.cli.CallMethodUnmarshal(p.Endpoint, req, &resp); err != nil {
-		return nil, err
+	if fault := p.cli.CallMethodUnmarshal(p.Endpoint, req, &resp); fault != nil {
+		return nil, fault
 	}
 	return &resp, nil
 }
 
-func (p *dot1X) OptGetClientAuthenticationRequired(args GetClientAuthenticationRequired) (*GetClientAuthenticationRequiredResponse, error) {
+func (p *dot1X) OptGetClientAuthenticationRequired(args GetClientAuthenticationRequired) (*GetClientAuthenticationRequiredResponse, *common.Fault) {
 	req := struct {
 		XMLName                         string `xml:"tas:GetClientAuthenticationRequired"`
 		GetClientAuthenticationRequired GetClientAuthenticationRequired
@@ -1205,13 +1205,13 @@ func (p *dot1X) OptGetClientAuthenticationRequired(args GetClientAuthenticationR
 
 	resp := GetClientAuthenticationRequiredResponse{}
 
-	if err := p.cli.CallMethodUnmarshal(p.Endpoint, req, &resp); err != nil {
-		return nil, err
+	if fault := p.cli.CallMethodUnmarshal(p.Endpoint, req, &resp); fault != nil {
+		return nil, fault
 	}
 	return &resp, nil
 }
 
-func (p *dot1X) OptGetCnMapsToUser(args GetCnMapsToUser) (*GetCnMapsToUserResponse, error) {
+func (p *dot1X) OptGetCnMapsToUser(args GetCnMapsToUser) (*GetCnMapsToUserResponse, *common.Fault) {
 	req := struct {
 		XMLName         string `xml:"tas:GetCnMapsToUser"`
 		GetCnMapsToUser GetCnMapsToUser
@@ -1221,13 +1221,13 @@ func (p *dot1X) OptGetCnMapsToUser(args GetCnMapsToUser) (*GetCnMapsToUserRespon
 
 	resp := GetCnMapsToUserResponse{}
 
-	if err := p.cli.CallMethodUnmarshal(p.Endpoint, req, &resp); err != nil {
-		return nil, err
+	if fault := p.cli.CallMethodUnmarshal(p.Endpoint, req, &resp); fault != nil {
+		return nil, fault
 	}
 	return &resp, nil
 }
 
-func (p *dot1X) OptGetDot1XConfiguration(args GetDot1XConfiguration) (*GetDot1XConfigurationResponse, error) {
+func (p *dot1X) OptGetDot1XConfiguration(args GetDot1XConfiguration) (*GetDot1XConfigurationResponse, *common.Fault) {
 	req := struct {
 		XMLName               string `xml:"tas:GetDot1XConfiguration"`
 		GetDot1XConfiguration GetDot1XConfiguration
@@ -1237,13 +1237,13 @@ func (p *dot1X) OptGetDot1XConfiguration(args GetDot1XConfiguration) (*GetDot1XC
 
 	resp := GetDot1XConfigurationResponse{}
 
-	if err := p.cli.CallMethodUnmarshal(p.Endpoint, req, &resp); err != nil {
-		return nil, err
+	if fault := p.cli.CallMethodUnmarshal(p.Endpoint, req, &resp); fault != nil {
+		return nil, fault
 	}
 	return &resp, nil
 }
 
-func (p *dot1X) OptGetEnabledTLSVersions(args GetEnabledTLSVersions) (*GetEnabledTLSVersionsResponse, error) {
+func (p *dot1X) OptGetEnabledTLSVersions(args GetEnabledTLSVersions) (*GetEnabledTLSVersionsResponse, *common.Fault) {
 	req := struct {
 		XMLName               string `xml:"tas:GetEnabledTLSVersions"`
 		GetEnabledTLSVersions GetEnabledTLSVersions
@@ -1253,13 +1253,13 @@ func (p *dot1X) OptGetEnabledTLSVersions(args GetEnabledTLSVersions) (*GetEnable
 
 	resp := GetEnabledTLSVersionsResponse{}
 
-	if err := p.cli.CallMethodUnmarshal(p.Endpoint, req, &resp); err != nil {
-		return nil, err
+	if fault := p.cli.CallMethodUnmarshal(p.Endpoint, req, &resp); fault != nil {
+		return nil, fault
 	}
 	return &resp, nil
 }
 
-func (p *dot1X) OptGetKeyStatus(args GetKeyStatus) (*GetKeyStatusResponse, error) {
+func (p *dot1X) OptGetKeyStatus(args GetKeyStatus) (*GetKeyStatusResponse, *common.Fault) {
 	req := struct {
 		XMLName      string `xml:"tas:GetKeyStatus"`
 		GetKeyStatus GetKeyStatus
@@ -1269,13 +1269,13 @@ func (p *dot1X) OptGetKeyStatus(args GetKeyStatus) (*GetKeyStatusResponse, error
 
 	resp := GetKeyStatusResponse{}
 
-	if err := p.cli.CallMethodUnmarshal(p.Endpoint, req, &resp); err != nil {
-		return nil, err
+	if fault := p.cli.CallMethodUnmarshal(p.Endpoint, req, &resp); fault != nil {
+		return nil, fault
 	}
 	return &resp, nil
 }
 
-func (p *dot1X) OptGetNetworkInterfaceDot1XConfiguration(args GetNetworkInterfaceDot1XConfiguration) (*GetNetworkInterfaceDot1XConfigurationResponse, error) {
+func (p *dot1X) OptGetNetworkInterfaceDot1XConfiguration(args GetNetworkInterfaceDot1XConfiguration) (*GetNetworkInterfaceDot1XConfigurationResponse, *common.Fault) {
 	req := struct {
 		XMLName                               string `xml:"tas:GetNetworkInterfaceDot1XConfiguration"`
 		GetNetworkInterfaceDot1XConfiguration GetNetworkInterfaceDot1XConfiguration
@@ -1285,13 +1285,13 @@ func (p *dot1X) OptGetNetworkInterfaceDot1XConfiguration(args GetNetworkInterfac
 
 	resp := GetNetworkInterfaceDot1XConfigurationResponse{}
 
-	if err := p.cli.CallMethodUnmarshal(p.Endpoint, req, &resp); err != nil {
-		return nil, err
+	if fault := p.cli.CallMethodUnmarshal(p.Endpoint, req, &resp); fault != nil {
+		return nil, fault
 	}
 	return &resp, nil
 }
 
-func (p *dot1X) OptGetPrivateKeyStatus(args GetPrivateKeyStatus) (*GetPrivateKeyStatusResponse, error) {
+func (p *dot1X) OptGetPrivateKeyStatus(args GetPrivateKeyStatus) (*GetPrivateKeyStatusResponse, *common.Fault) {
 	req := struct {
 		XMLName             string `xml:"tas:GetPrivateKeyStatus"`
 		GetPrivateKeyStatus GetPrivateKeyStatus
@@ -1301,13 +1301,13 @@ func (p *dot1X) OptGetPrivateKeyStatus(args GetPrivateKeyStatus) (*GetPrivateKey
 
 	resp := GetPrivateKeyStatusResponse{}
 
-	if err := p.cli.CallMethodUnmarshal(p.Endpoint, req, &resp); err != nil {
-		return nil, err
+	if fault := p.cli.CallMethodUnmarshal(p.Endpoint, req, &resp); fault != nil {
+		return nil, fault
 	}
 	return &resp, nil
 }
 
-func (p *dot1X) OptGetServiceCapabilities(args GetServiceCapabilities) (*GetServiceCapabilitiesResponse, error) {
+func (p *dot1X) OptGetServiceCapabilities(args GetServiceCapabilities) (*GetServiceCapabilitiesResponse, *common.Fault) {
 	req := struct {
 		XMLName                string `xml:"tas:GetServiceCapabilities"`
 		GetServiceCapabilities GetServiceCapabilities
@@ -1317,13 +1317,13 @@ func (p *dot1X) OptGetServiceCapabilities(args GetServiceCapabilities) (*GetServ
 
 	resp := GetServiceCapabilitiesResponse{}
 
-	if err := p.cli.CallMethodUnmarshal(p.Endpoint, req, &resp); err != nil {
-		return nil, err
+	if fault := p.cli.CallMethodUnmarshal(p.Endpoint, req, &resp); fault != nil {
+		return nil, fault
 	}
 	return &resp, nil
 }
 
-func (p *dot1X) OptRemoveCertPathValidationPolicyAssignment(args RemoveCertPathValidationPolicyAssignment) (*RemoveCertPathValidationPolicyAssignmentResponse, error) {
+func (p *dot1X) OptRemoveCertPathValidationPolicyAssignment(args RemoveCertPathValidationPolicyAssignment) (*RemoveCertPathValidationPolicyAssignmentResponse, *common.Fault) {
 	req := struct {
 		XMLName                                  string `xml:"tas:RemoveCertPathValidationPolicyAssignment"`
 		RemoveCertPathValidationPolicyAssignment RemoveCertPathValidationPolicyAssignment
@@ -1333,13 +1333,13 @@ func (p *dot1X) OptRemoveCertPathValidationPolicyAssignment(args RemoveCertPathV
 
 	resp := RemoveCertPathValidationPolicyAssignmentResponse{}
 
-	if err := p.cli.CallMethodUnmarshal(p.Endpoint, req, &resp); err != nil {
-		return nil, err
+	if fault := p.cli.CallMethodUnmarshal(p.Endpoint, req, &resp); fault != nil {
+		return nil, fault
 	}
 	return &resp, nil
 }
 
-func (p *dot1X) OptRemoveServerCertificateAssignment(args RemoveServerCertificateAssignment) (*RemoveServerCertificateAssignmentResponse, error) {
+func (p *dot1X) OptRemoveServerCertificateAssignment(args RemoveServerCertificateAssignment) (*RemoveServerCertificateAssignmentResponse, *common.Fault) {
 	req := struct {
 		XMLName                           string `xml:"tas:RemoveServerCertificateAssignment"`
 		RemoveServerCertificateAssignment RemoveServerCertificateAssignment
@@ -1349,13 +1349,13 @@ func (p *dot1X) OptRemoveServerCertificateAssignment(args RemoveServerCertificat
 
 	resp := RemoveServerCertificateAssignmentResponse{}
 
-	if err := p.cli.CallMethodUnmarshal(p.Endpoint, req, &resp); err != nil {
-		return nil, err
+	if fault := p.cli.CallMethodUnmarshal(p.Endpoint, req, &resp); fault != nil {
+		return nil, fault
 	}
 	return &resp, nil
 }
 
-func (p *dot1X) OptReplaceCertPathValidationPolicyAssignment(args ReplaceCertPathValidationPolicyAssignment) (*ReplaceCertPathValidationPolicyAssignmentResponse, error) {
+func (p *dot1X) OptReplaceCertPathValidationPolicyAssignment(args ReplaceCertPathValidationPolicyAssignment) (*ReplaceCertPathValidationPolicyAssignmentResponse, *common.Fault) {
 	req := struct {
 		XMLName                                   string `xml:"tas:ReplaceCertPathValidationPolicyAssignment"`
 		ReplaceCertPathValidationPolicyAssignment ReplaceCertPathValidationPolicyAssignment
@@ -1365,13 +1365,13 @@ func (p *dot1X) OptReplaceCertPathValidationPolicyAssignment(args ReplaceCertPat
 
 	resp := ReplaceCertPathValidationPolicyAssignmentResponse{}
 
-	if err := p.cli.CallMethodUnmarshal(p.Endpoint, req, &resp); err != nil {
-		return nil, err
+	if fault := p.cli.CallMethodUnmarshal(p.Endpoint, req, &resp); fault != nil {
+		return nil, fault
 	}
 	return &resp, nil
 }
 
-func (p *dot1X) OptReplaceServerCertificateAssignment(args ReplaceServerCertificateAssignment) (*ReplaceServerCertificateAssignmentResponse, error) {
+func (p *dot1X) OptReplaceServerCertificateAssignment(args ReplaceServerCertificateAssignment) (*ReplaceServerCertificateAssignmentResponse, *common.Fault) {
 	req := struct {
 		XMLName                            string `xml:"tas:ReplaceServerCertificateAssignment"`
 		ReplaceServerCertificateAssignment ReplaceServerCertificateAssignment
@@ -1381,13 +1381,13 @@ func (p *dot1X) OptReplaceServerCertificateAssignment(args ReplaceServerCertific
 
 	resp := ReplaceServerCertificateAssignmentResponse{}
 
-	if err := p.cli.CallMethodUnmarshal(p.Endpoint, req, &resp); err != nil {
-		return nil, err
+	if fault := p.cli.CallMethodUnmarshal(p.Endpoint, req, &resp); fault != nil {
+		return nil, fault
 	}
 	return &resp, nil
 }
 
-func (p *dot1X) OptSetClientAuthenticationRequired(args SetClientAuthenticationRequired) (*SetClientAuthenticationRequiredResponse, error) {
+func (p *dot1X) OptSetClientAuthenticationRequired(args SetClientAuthenticationRequired) (*SetClientAuthenticationRequiredResponse, *common.Fault) {
 	req := struct {
 		XMLName                         string `xml:"tas:SetClientAuthenticationRequired"`
 		SetClientAuthenticationRequired SetClientAuthenticationRequired
@@ -1397,13 +1397,13 @@ func (p *dot1X) OptSetClientAuthenticationRequired(args SetClientAuthenticationR
 
 	resp := SetClientAuthenticationRequiredResponse{}
 
-	if err := p.cli.CallMethodUnmarshal(p.Endpoint, req, &resp); err != nil {
-		return nil, err
+	if fault := p.cli.CallMethodUnmarshal(p.Endpoint, req, &resp); fault != nil {
+		return nil, fault
 	}
 	return &resp, nil
 }
 
-func (p *dot1X) OptSetCnMapsToUser(args SetCnMapsToUser) (*SetCnMapsToUserResponse, error) {
+func (p *dot1X) OptSetCnMapsToUser(args SetCnMapsToUser) (*SetCnMapsToUserResponse, *common.Fault) {
 	req := struct {
 		XMLName         string `xml:"tas:SetCnMapsToUser"`
 		SetCnMapsToUser SetCnMapsToUser
@@ -1413,13 +1413,13 @@ func (p *dot1X) OptSetCnMapsToUser(args SetCnMapsToUser) (*SetCnMapsToUserRespon
 
 	resp := SetCnMapsToUserResponse{}
 
-	if err := p.cli.CallMethodUnmarshal(p.Endpoint, req, &resp); err != nil {
-		return nil, err
+	if fault := p.cli.CallMethodUnmarshal(p.Endpoint, req, &resp); fault != nil {
+		return nil, fault
 	}
 	return &resp, nil
 }
 
-func (p *dot1X) OptSetEnabledTLSVersions(args SetEnabledTLSVersions) (*SetEnabledTLSVersionsResponse, error) {
+func (p *dot1X) OptSetEnabledTLSVersions(args SetEnabledTLSVersions) (*SetEnabledTLSVersionsResponse, *common.Fault) {
 	req := struct {
 		XMLName               string `xml:"tas:SetEnabledTLSVersions"`
 		SetEnabledTLSVersions SetEnabledTLSVersions
@@ -1429,13 +1429,13 @@ func (p *dot1X) OptSetEnabledTLSVersions(args SetEnabledTLSVersions) (*SetEnable
 
 	resp := SetEnabledTLSVersionsResponse{}
 
-	if err := p.cli.CallMethodUnmarshal(p.Endpoint, req, &resp); err != nil {
-		return nil, err
+	if fault := p.cli.CallMethodUnmarshal(p.Endpoint, req, &resp); fault != nil {
+		return nil, fault
 	}
 	return &resp, nil
 }
 
-func (p *dot1X) OptSetNetworkInterfaceDot1XConfiguration(args SetNetworkInterfaceDot1XConfiguration) (*SetNetworkInterfaceDot1XConfigurationResponse, error) {
+func (p *dot1X) OptSetNetworkInterfaceDot1XConfiguration(args SetNetworkInterfaceDot1XConfiguration) (*SetNetworkInterfaceDot1XConfigurationResponse, *common.Fault) {
 	req := struct {
 		XMLName                               string `xml:"tas:SetNetworkInterfaceDot1XConfiguration"`
 		SetNetworkInterfaceDot1XConfiguration SetNetworkInterfaceDot1XConfiguration
@@ -1445,13 +1445,13 @@ func (p *dot1X) OptSetNetworkInterfaceDot1XConfiguration(args SetNetworkInterfac
 
 	resp := SetNetworkInterfaceDot1XConfigurationResponse{}
 
-	if err := p.cli.CallMethodUnmarshal(p.Endpoint, req, &resp); err != nil {
-		return nil, err
+	if fault := p.cli.CallMethodUnmarshal(p.Endpoint, req, &resp); fault != nil {
+		return nil, fault
 	}
 	return &resp, nil
 }
 
-func (p *dot1X) OptUploadCRL(args UploadCRL) (*UploadCRLResponse, error) {
+func (p *dot1X) OptUploadCRL(args UploadCRL) (*UploadCRLResponse, *common.Fault) {
 	req := struct {
 		XMLName   string `xml:"tas:UploadCRL"`
 		UploadCRL UploadCRL
@@ -1461,13 +1461,13 @@ func (p *dot1X) OptUploadCRL(args UploadCRL) (*UploadCRLResponse, error) {
 
 	resp := UploadCRLResponse{}
 
-	if err := p.cli.CallMethodUnmarshal(p.Endpoint, req, &resp); err != nil {
-		return nil, err
+	if fault := p.cli.CallMethodUnmarshal(p.Endpoint, req, &resp); fault != nil {
+		return nil, fault
 	}
 	return &resp, nil
 }
 
-func (p *dot1X) OptUploadCertificate(args UploadCertificate) (*UploadCertificateResponse, error) {
+func (p *dot1X) OptUploadCertificate(args UploadCertificate) (*UploadCertificateResponse, *common.Fault) {
 	req := struct {
 		XMLName           string `xml:"tas:UploadCertificate"`
 		UploadCertificate UploadCertificate
@@ -1477,13 +1477,13 @@ func (p *dot1X) OptUploadCertificate(args UploadCertificate) (*UploadCertificate
 
 	resp := UploadCertificateResponse{}
 
-	if err := p.cli.CallMethodUnmarshal(p.Endpoint, req, &resp); err != nil {
-		return nil, err
+	if fault := p.cli.CallMethodUnmarshal(p.Endpoint, req, &resp); fault != nil {
+		return nil, fault
 	}
 	return &resp, nil
 }
 
-func (p *dot1X) OptUploadCertificateWithPrivateKeyInPKCS12(args UploadCertificateWithPrivateKeyInPKCS12) (*UploadCertificateWithPrivateKeyInPKCS12Response, error) {
+func (p *dot1X) OptUploadCertificateWithPrivateKeyInPKCS12(args UploadCertificateWithPrivateKeyInPKCS12) (*UploadCertificateWithPrivateKeyInPKCS12Response, *common.Fault) {
 	req := struct {
 		XMLName                                 string `xml:"tas:UploadCertificateWithPrivateKeyInPKCS12"`
 		UploadCertificateWithPrivateKeyInPKCS12 UploadCertificateWithPrivateKeyInPKCS12
@@ -1493,13 +1493,13 @@ func (p *dot1X) OptUploadCertificateWithPrivateKeyInPKCS12(args UploadCertificat
 
 	resp := UploadCertificateWithPrivateKeyInPKCS12Response{}
 
-	if err := p.cli.CallMethodUnmarshal(p.Endpoint, req, &resp); err != nil {
-		return nil, err
+	if fault := p.cli.CallMethodUnmarshal(p.Endpoint, req, &resp); fault != nil {
+		return nil, fault
 	}
 	return &resp, nil
 }
 
-func (p *dot1X) OptUploadKeyPairInPKCS8(args UploadKeyPairInPKCS8) (*UploadKeyPairInPKCS8Response, error) {
+func (p *dot1X) OptUploadKeyPairInPKCS8(args UploadKeyPairInPKCS8) (*UploadKeyPairInPKCS8Response, *common.Fault) {
 	req := struct {
 		XMLName              string `xml:"tas:UploadKeyPairInPKCS8"`
 		UploadKeyPairInPKCS8 UploadKeyPairInPKCS8
@@ -1509,13 +1509,13 @@ func (p *dot1X) OptUploadKeyPairInPKCS8(args UploadKeyPairInPKCS8) (*UploadKeyPa
 
 	resp := UploadKeyPairInPKCS8Response{}
 
-	if err := p.cli.CallMethodUnmarshal(p.Endpoint, req, &resp); err != nil {
-		return nil, err
+	if fault := p.cli.CallMethodUnmarshal(p.Endpoint, req, &resp); fault != nil {
+		return nil, fault
 	}
 	return &resp, nil
 }
 
-func (p *dot1X) OptUploadPassphrase(args UploadPassphrase) (*UploadPassphraseResponse, error) {
+func (p *dot1X) OptUploadPassphrase(args UploadPassphrase) (*UploadPassphraseResponse, *common.Fault) {
 	req := struct {
 		XMLName          string `xml:"tas:UploadPassphrase"`
 		UploadPassphrase UploadPassphrase
@@ -1525,8 +1525,8 @@ func (p *dot1X) OptUploadPassphrase(args UploadPassphrase) (*UploadPassphraseRes
 
 	resp := UploadPassphraseResponse{}
 
-	if err := p.cli.CallMethodUnmarshal(p.Endpoint, req, &resp); err != nil {
-		return nil, err
+	if fault := p.cli.CallMethodUnmarshal(p.Endpoint, req, &resp); fault != nil {
+		return nil, fault
 	}
 	return &resp, nil
 }

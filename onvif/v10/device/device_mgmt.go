@@ -16,203 +16,203 @@ func NewDevice(endpoint string, cli common.Client) Device {
 // Device was auto-generated from WSDL
 // and defines interface for the remote service. Useful for testing.
 type Device interface {
-	OptAddIPAddressFilter(AddIPAddressFilter AddIPAddressFilter) (*AddIPAddressFilterResponse, error)
+	OptAddIPAddressFilter(AddIPAddressFilter AddIPAddressFilter) (*AddIPAddressFilterResponse, *common.Fault)
 
-	OptAddScopes(AddScopes AddScopes) (*AddScopesResponse, error)
+	OptAddScopes(AddScopes AddScopes) (*AddScopesResponse, *common.Fault)
 
-	OptCreateCertificate(CreateCertificate CreateCertificate) (*CreateCertificateResponse, error)
+	OptCreateCertificate(CreateCertificate CreateCertificate) (*CreateCertificateResponse, *common.Fault)
 
-	OptCreateDot1XConfiguration(CreateDot1XConfiguration CreateDot1XConfiguration) (*CreateDot1XConfigurationResponse, error)
+	OptCreateDot1XConfiguration(CreateDot1XConfiguration CreateDot1XConfiguration) (*CreateDot1XConfigurationResponse, *common.Fault)
 
-	OptCreateStorageConfiguration(CreateStorageConfiguration CreateStorageConfiguration) (*CreateStorageConfigurationResponse, error)
+	OptCreateStorageConfiguration(CreateStorageConfiguration CreateStorageConfiguration) (*CreateStorageConfigurationResponse, *common.Fault)
 
-	OptCreateUsers(CreateUsers CreateUsers) (*CreateUsersResponse, error)
+	OptCreateUsers(CreateUsers CreateUsers) (*CreateUsersResponse, *common.Fault)
 
-	OptDeleteCertificates(DeleteCertificates DeleteCertificates) (*DeleteCertificatesResponse, error)
+	OptDeleteCertificates(DeleteCertificates DeleteCertificates) (*DeleteCertificatesResponse, *common.Fault)
 
-	OptDeleteDot1XConfiguration(DeleteDot1XConfiguration DeleteDot1XConfiguration) (*DeleteDot1XConfigurationResponse, error)
+	OptDeleteDot1XConfiguration(DeleteDot1XConfiguration DeleteDot1XConfiguration) (*DeleteDot1XConfigurationResponse, *common.Fault)
 
-	OptDeleteGeoLocation(DeleteGeoLocation DeleteGeoLocation) (*DeleteGeoLocationResponse, error)
+	OptDeleteGeoLocation(DeleteGeoLocation DeleteGeoLocation) (*DeleteGeoLocationResponse, *common.Fault)
 
-	OptDeleteStorageConfiguration(DeleteStorageConfiguration DeleteStorageConfiguration) (*DeleteStorageConfigurationResponse, error)
+	OptDeleteStorageConfiguration(DeleteStorageConfiguration DeleteStorageConfiguration) (*DeleteStorageConfigurationResponse, *common.Fault)
 
-	OptDeleteUsers(DeleteUsers DeleteUsers) (*DeleteUsersResponse, error)
+	OptDeleteUsers(DeleteUsers DeleteUsers) (*DeleteUsersResponse, *common.Fault)
 
-	OptGetAccessPolicy(GetAccessPolicy GetAccessPolicy) (*GetAccessPolicyResponse, error)
+	OptGetAccessPolicy(GetAccessPolicy GetAccessPolicy) (*GetAccessPolicyResponse, *common.Fault)
 
-	OptGetAuthFailureWarningConfiguration(GetAuthFailureWarningConfiguration GetAuthFailureWarningConfiguration) (*GetAuthFailureWarningConfigurationResponse, error)
+	OptGetAuthFailureWarningConfiguration(GetAuthFailureWarningConfiguration GetAuthFailureWarningConfiguration) (*GetAuthFailureWarningConfigurationResponse, *common.Fault)
 
-	OptGetAuthFailureWarningOptions(GetAuthFailureWarningOptions GetAuthFailureWarningOptions) (*GetAuthFailureWarningOptionsResponse, error)
+	OptGetAuthFailureWarningOptions(GetAuthFailureWarningOptions GetAuthFailureWarningOptions) (*GetAuthFailureWarningOptionsResponse, *common.Fault)
 
-	OptGetCACertificates(GetCACertificates GetCACertificates) (*GetCACertificatesResponse, error)
+	OptGetCACertificates(GetCACertificates GetCACertificates) (*GetCACertificatesResponse, *common.Fault)
 
-	OptGetCapabilities(GetCapabilities GetCapabilities) (*GetCapabilitiesResponse, error)
+	OptGetCapabilities(GetCapabilities GetCapabilities) (*GetCapabilitiesResponse, *common.Fault)
 
-	OptGetCertificateInformation(GetCertificateInformation GetCertificateInformation) (*GetCertificateInformationResponse, error)
+	OptGetCertificateInformation(GetCertificateInformation GetCertificateInformation) (*GetCertificateInformationResponse, *common.Fault)
 
-	OptGetCertificates(GetCertificates GetCertificates) (*GetCertificatesResponse, error)
+	OptGetCertificates(GetCertificates GetCertificates) (*GetCertificatesResponse, *common.Fault)
 
-	OptGetCertificatesStatus(GetCertificatesStatus GetCertificatesStatus) (*GetCertificatesStatusResponse, error)
+	OptGetCertificatesStatus(GetCertificatesStatus GetCertificatesStatus) (*GetCertificatesStatusResponse, *common.Fault)
 
-	OptGetClientCertificateMode(GetClientCertificateMode GetClientCertificateMode) (*GetClientCertificateModeResponse, error)
+	OptGetClientCertificateMode(GetClientCertificateMode GetClientCertificateMode) (*GetClientCertificateModeResponse, *common.Fault)
 
-	OptGetDNS(GetDNS GetDNS) (*GetDNSResponse, error)
+	OptGetDNS(GetDNS GetDNS) (*GetDNSResponse, *common.Fault)
 
-	OptGetDPAddresses(GetDPAddresses GetDPAddresses) (*GetDPAddressesResponse, error)
+	OptGetDPAddresses(GetDPAddresses GetDPAddresses) (*GetDPAddressesResponse, *common.Fault)
 
-	OptGetDeviceInformation(GetDeviceInformation GetDeviceInformation) (*GetDeviceInformationResponse, error)
+	OptGetDeviceInformation(GetDeviceInformation GetDeviceInformation) (*GetDeviceInformationResponse, *common.Fault)
 
-	OptGetDiscoveryMode(GetDiscoveryMode GetDiscoveryMode) (*GetDiscoveryModeResponse, error)
+	OptGetDiscoveryMode(GetDiscoveryMode GetDiscoveryMode) (*GetDiscoveryModeResponse, *common.Fault)
 
-	OptGetDot11Capabilities(GetDot11Capabilities GetDot11Capabilities) (*GetDot11CapabilitiesResponse, error)
+	OptGetDot11Capabilities(GetDot11Capabilities GetDot11Capabilities) (*GetDot11CapabilitiesResponse, *common.Fault)
 
-	OptGetDot11Status(GetDot11Status GetDot11Status) (*GetDot11StatusResponse, error)
+	OptGetDot11Status(GetDot11Status GetDot11Status) (*GetDot11StatusResponse, *common.Fault)
 
-	OptGetDot1XConfiguration(GetDot1XConfiguration GetDot1XConfiguration) (*GetDot1XConfigurationResponse, error)
+	OptGetDot1XConfiguration(GetDot1XConfiguration GetDot1XConfiguration) (*GetDot1XConfigurationResponse, *common.Fault)
 
-	OptGetDot1XConfigurations(GetDot1XConfigurations GetDot1XConfigurations) (*GetDot1XConfigurationsResponse, error)
+	OptGetDot1XConfigurations(GetDot1XConfigurations GetDot1XConfigurations) (*GetDot1XConfigurationsResponse, *common.Fault)
 
-	OptGetDynamicDNS(GetDynamicDNS GetDynamicDNS) (*GetDynamicDNSResponse, error)
+	OptGetDynamicDNS(GetDynamicDNS GetDynamicDNS) (*GetDynamicDNSResponse, *common.Fault)
 
-	OptGetEndpointReference(GetEndpointReference GetEndpointReference) (*GetEndpointReferenceResponse, error)
+	OptGetEndpointReference(GetEndpointReference GetEndpointReference) (*GetEndpointReferenceResponse, *common.Fault)
 
-	OptGetGeoLocation(GetGeoLocation GetGeoLocation) (*GetGeoLocationResponse, error)
+	OptGetGeoLocation(GetGeoLocation GetGeoLocation) (*GetGeoLocationResponse, *common.Fault)
 
-	OptGetHostname(GetHostname GetHostname) (*GetHostnameResponse, error)
+	OptGetHostname(GetHostname GetHostname) (*GetHostnameResponse, *common.Fault)
 
-	OptGetIPAddressFilter(GetIPAddressFilter GetIPAddressFilter) (*GetIPAddressFilterResponse, error)
+	OptGetIPAddressFilter(GetIPAddressFilter GetIPAddressFilter) (*GetIPAddressFilterResponse, *common.Fault)
 
-	OptGetNTP(GetNTP GetNTP) (*GetNTPResponse, error)
+	OptGetNTP(GetNTP GetNTP) (*GetNTPResponse, *common.Fault)
 
-	OptGetNetworkDefaultGateway(GetNetworkDefaultGateway GetNetworkDefaultGateway) (*GetNetworkDefaultGatewayResponse, error)
+	OptGetNetworkDefaultGateway(GetNetworkDefaultGateway GetNetworkDefaultGateway) (*GetNetworkDefaultGatewayResponse, *common.Fault)
 
-	OptGetNetworkInterfaces(GetNetworkInterfaces GetNetworkInterfaces) (*GetNetworkInterfacesResponse, error)
+	OptGetNetworkInterfaces(GetNetworkInterfaces GetNetworkInterfaces) (*GetNetworkInterfacesResponse, *common.Fault)
 
-	OptGetNetworkProtocols(GetNetworkProtocols GetNetworkProtocols) (*GetNetworkProtocolsResponse, error)
+	OptGetNetworkProtocols(GetNetworkProtocols GetNetworkProtocols) (*GetNetworkProtocolsResponse, *common.Fault)
 
-	OptGetPasswordComplexityConfiguration(GetPasswordComplexityConfiguration GetPasswordComplexityConfiguration) (*GetPasswordComplexityConfigurationResponse, error)
+	OptGetPasswordComplexityConfiguration(GetPasswordComplexityConfiguration GetPasswordComplexityConfiguration) (*GetPasswordComplexityConfigurationResponse, *common.Fault)
 
-	OptGetPasswordComplexityOptions(GetPasswordComplexityOptions GetPasswordComplexityOptions) (*GetPasswordComplexityOptionsResponse, error)
+	OptGetPasswordComplexityOptions(GetPasswordComplexityOptions GetPasswordComplexityOptions) (*GetPasswordComplexityOptionsResponse, *common.Fault)
 
-	OptGetPasswordHistoryConfiguration(GetPasswordHistoryConfiguration GetPasswordHistoryConfiguration) (*GetPasswordHistoryConfigurationResponse, error)
+	OptGetPasswordHistoryConfiguration(GetPasswordHistoryConfiguration GetPasswordHistoryConfiguration) (*GetPasswordHistoryConfigurationResponse, *common.Fault)
 
-	OptGetPkcs10Request(GetPkcs10Request GetPkcs10Request) (*GetPkcs10RequestResponse, error)
+	OptGetPkcs10Request(GetPkcs10Request GetPkcs10Request) (*GetPkcs10RequestResponse, *common.Fault)
 
-	OptGetRelayOutputs(GetRelayOutputs GetRelayOutputs) (*GetRelayOutputsResponse, error)
+	OptGetRelayOutputs(GetRelayOutputs GetRelayOutputs) (*GetRelayOutputsResponse, *common.Fault)
 
-	OptGetRemoteDiscoveryMode(GetRemoteDiscoveryMode GetRemoteDiscoveryMode) (*GetRemoteDiscoveryModeResponse, error)
+	OptGetRemoteDiscoveryMode(GetRemoteDiscoveryMode GetRemoteDiscoveryMode) (*GetRemoteDiscoveryModeResponse, *common.Fault)
 
-	OptGetRemoteUser(GetRemoteUser GetRemoteUser) (*GetRemoteUserResponse, error)
+	OptGetRemoteUser(GetRemoteUser GetRemoteUser) (*GetRemoteUserResponse, *common.Fault)
 
-	OptGetScopes(GetScopes GetScopes) (*GetScopesResponse, error)
+	OptGetScopes(GetScopes GetScopes) (*GetScopesResponse, *common.Fault)
 
-	OptGetServiceCapabilities(GetServiceCapabilities GetServiceCapabilities) (*GetServiceCapabilitiesResponse, error)
+	OptGetServiceCapabilities(GetServiceCapabilities GetServiceCapabilities) (*GetServiceCapabilitiesResponse, *common.Fault)
 
-	OptGetServices(GetServices GetServices) (*GetServicesResponse, error)
+	OptGetServices(GetServices GetServices) (*GetServicesResponse, *common.Fault)
 
-	OptGetStorageConfiguration(GetStorageConfiguration GetStorageConfiguration) (*GetStorageConfigurationResponse, error)
+	OptGetStorageConfiguration(GetStorageConfiguration GetStorageConfiguration) (*GetStorageConfigurationResponse, *common.Fault)
 
-	OptGetStorageConfigurations(GetStorageConfigurations GetStorageConfigurations) (*GetStorageConfigurationsResponse, error)
+	OptGetStorageConfigurations(GetStorageConfigurations GetStorageConfigurations) (*GetStorageConfigurationsResponse, *common.Fault)
 
-	OptGetSystemBackup(GetSystemBackup GetSystemBackup) (*GetSystemBackupResponse, error)
+	OptGetSystemBackup(GetSystemBackup GetSystemBackup) (*GetSystemBackupResponse, *common.Fault)
 
-	OptGetSystemDateAndTime(GetSystemDateAndTime GetSystemDateAndTime) (*GetSystemDateAndTimeResponse, error)
+	OptGetSystemDateAndTime(GetSystemDateAndTime GetSystemDateAndTime) (*GetSystemDateAndTimeResponse, *common.Fault)
 
-	OptGetSystemLog(GetSystemLog GetSystemLog) (*GetSystemLogResponse, error)
+	OptGetSystemLog(GetSystemLog GetSystemLog) (*GetSystemLogResponse, *common.Fault)
 
-	OptGetSystemSupportInformation(GetSystemSupportInformation GetSystemSupportInformation) (*GetSystemSupportInformationResponse, error)
+	OptGetSystemSupportInformation(GetSystemSupportInformation GetSystemSupportInformation) (*GetSystemSupportInformationResponse, *common.Fault)
 
-	OptGetSystemUris(GetSystemUris GetSystemUris) (*GetSystemUrisResponse, error)
+	OptGetSystemUris(GetSystemUris GetSystemUris) (*GetSystemUrisResponse, *common.Fault)
 
-	OptGetUsers(GetUsers GetUsers) (*GetUsersResponse, error)
+	OptGetUsers(GetUsers GetUsers) (*GetUsersResponse, *common.Fault)
 
-	OptGetWsdlUrl(GetWsdlUrl GetWsdlUrl) (*GetWsdlUrlResponse, error)
+	OptGetWsdlUrl(GetWsdlUrl GetWsdlUrl) (*GetWsdlUrlResponse, *common.Fault)
 
-	OptGetZeroConfiguration(GetZeroConfiguration GetZeroConfiguration) (*GetZeroConfigurationResponse, error)
+	OptGetZeroConfiguration(GetZeroConfiguration GetZeroConfiguration) (*GetZeroConfigurationResponse, *common.Fault)
 
-	OptLoadCACertificates(LoadCACertificates LoadCACertificates) (*LoadCACertificatesResponse, error)
+	OptLoadCACertificates(LoadCACertificates LoadCACertificates) (*LoadCACertificatesResponse, *common.Fault)
 
-	OptLoadCertificateWithPrivateKey(LoadCertificateWithPrivateKey LoadCertificateWithPrivateKey) (*LoadCertificateWithPrivateKeyResponse, error)
+	OptLoadCertificateWithPrivateKey(LoadCertificateWithPrivateKey LoadCertificateWithPrivateKey) (*LoadCertificateWithPrivateKeyResponse, *common.Fault)
 
-	OptLoadCertificates(LoadCertificates LoadCertificates) (*LoadCertificatesResponse, error)
+	OptLoadCertificates(LoadCertificates LoadCertificates) (*LoadCertificatesResponse, *common.Fault)
 
-	OptRemoveIPAddressFilter(RemoveIPAddressFilter RemoveIPAddressFilter) (*RemoveIPAddressFilterResponse, error)
+	OptRemoveIPAddressFilter(RemoveIPAddressFilter RemoveIPAddressFilter) (*RemoveIPAddressFilterResponse, *common.Fault)
 
-	OptRemoveScopes(RemoveScopes RemoveScopes) (*RemoveScopesResponse, error)
+	OptRemoveScopes(RemoveScopes RemoveScopes) (*RemoveScopesResponse, *common.Fault)
 
-	OptRestoreSystem(RestoreSystem RestoreSystem) (*RestoreSystemResponse, error)
+	OptRestoreSystem(RestoreSystem RestoreSystem) (*RestoreSystemResponse, *common.Fault)
 
-	OptScanAvailableDot11Networks(ScanAvailableDot11Networks ScanAvailableDot11Networks) (*ScanAvailableDot11NetworksResponse, error)
+	OptScanAvailableDot11Networks(ScanAvailableDot11Networks ScanAvailableDot11Networks) (*ScanAvailableDot11NetworksResponse, *common.Fault)
 
-	OptSendAuxiliaryCommand(SendAuxiliaryCommand SendAuxiliaryCommand) (*SendAuxiliaryCommandResponse, error)
+	OptSendAuxiliaryCommand(SendAuxiliaryCommand SendAuxiliaryCommand) (*SendAuxiliaryCommandResponse, *common.Fault)
 
-	OptSetAccessPolicy(SetAccessPolicy SetAccessPolicy) (*SetAccessPolicyResponse, error)
+	OptSetAccessPolicy(SetAccessPolicy SetAccessPolicy) (*SetAccessPolicyResponse, *common.Fault)
 
-	OptSetAuthFailureWarningConfiguration(SetAuthFailureWarningConfiguration SetAuthFailureWarningConfiguration) (*SetAuthFailureWarningConfigurationResponse, error)
+	OptSetAuthFailureWarningConfiguration(SetAuthFailureWarningConfiguration SetAuthFailureWarningConfiguration) (*SetAuthFailureWarningConfigurationResponse, *common.Fault)
 
-	OptSetCertificatesStatus(SetCertificatesStatus SetCertificatesStatus) (*SetCertificatesStatusResponse, error)
+	OptSetCertificatesStatus(SetCertificatesStatus SetCertificatesStatus) (*SetCertificatesStatusResponse, *common.Fault)
 
-	OptSetClientCertificateMode(SetClientCertificateMode SetClientCertificateMode) (*SetClientCertificateModeResponse, error)
+	OptSetClientCertificateMode(SetClientCertificateMode SetClientCertificateMode) (*SetClientCertificateModeResponse, *common.Fault)
 
-	OptSetDNS(SetDNS SetDNS) (*SetDNSResponse, error)
+	OptSetDNS(SetDNS SetDNS) (*SetDNSResponse, *common.Fault)
 
-	OptSetDPAddresses(SetDPAddresses SetDPAddresses) (*SetDPAddressesResponse, error)
+	OptSetDPAddresses(SetDPAddresses SetDPAddresses) (*SetDPAddressesResponse, *common.Fault)
 
-	OptSetDiscoveryMode(SetDiscoveryMode SetDiscoveryMode) (*SetDiscoveryModeResponse, error)
+	OptSetDiscoveryMode(SetDiscoveryMode SetDiscoveryMode) (*SetDiscoveryModeResponse, *common.Fault)
 
-	OptSetDot1XConfiguration(SetDot1XConfiguration SetDot1XConfiguration) (*SetDot1XConfigurationResponse, error)
+	OptSetDot1XConfiguration(SetDot1XConfiguration SetDot1XConfiguration) (*SetDot1XConfigurationResponse, *common.Fault)
 
-	OptSetDynamicDNS(SetDynamicDNS SetDynamicDNS) (*SetDynamicDNSResponse, error)
+	OptSetDynamicDNS(SetDynamicDNS SetDynamicDNS) (*SetDynamicDNSResponse, *common.Fault)
 
-	OptSetGeoLocation(SetGeoLocation SetGeoLocation) (*SetGeoLocationResponse, error)
+	OptSetGeoLocation(SetGeoLocation SetGeoLocation) (*SetGeoLocationResponse, *common.Fault)
 
-	OptSetHashingAlgorithm(SetHashingAlgorithm SetHashingAlgorithm) (*SetHashingAlgorithmResponse, error)
+	OptSetHashingAlgorithm(SetHashingAlgorithm SetHashingAlgorithm) (*SetHashingAlgorithmResponse, *common.Fault)
 
-	OptSetHostname(SetHostname SetHostname) (*SetHostnameResponse, error)
+	OptSetHostname(SetHostname SetHostname) (*SetHostnameResponse, *common.Fault)
 
-	OptSetHostnameFromDHCP(SetHostnameFromDHCP SetHostnameFromDHCP) (*SetHostnameFromDHCPResponse, error)
+	OptSetHostnameFromDHCP(SetHostnameFromDHCP SetHostnameFromDHCP) (*SetHostnameFromDHCPResponse, *common.Fault)
 
-	OptSetIPAddressFilter(SetIPAddressFilter SetIPAddressFilter) (*SetIPAddressFilterResponse, error)
+	OptSetIPAddressFilter(SetIPAddressFilter SetIPAddressFilter) (*SetIPAddressFilterResponse, *common.Fault)
 
-	OptSetNTP(SetNTP SetNTP) (*SetNTPResponse, error)
+	OptSetNTP(SetNTP SetNTP) (*SetNTPResponse, *common.Fault)
 
-	OptSetNetworkDefaultGateway(SetNetworkDefaultGateway SetNetworkDefaultGateway) (*SetNetworkDefaultGatewayResponse, error)
+	OptSetNetworkDefaultGateway(SetNetworkDefaultGateway SetNetworkDefaultGateway) (*SetNetworkDefaultGatewayResponse, *common.Fault)
 
-	OptSetNetworkInterfaces(SetNetworkInterfaces SetNetworkInterfaces) (*SetNetworkInterfacesResponse, error)
+	OptSetNetworkInterfaces(SetNetworkInterfaces SetNetworkInterfaces) (*SetNetworkInterfacesResponse, *common.Fault)
 
-	OptSetNetworkProtocols(SetNetworkProtocols SetNetworkProtocols) (*SetNetworkProtocolsResponse, error)
+	OptSetNetworkProtocols(SetNetworkProtocols SetNetworkProtocols) (*SetNetworkProtocolsResponse, *common.Fault)
 
-	OptSetPasswordComplexityConfiguration(SetPasswordComplexityConfiguration SetPasswordComplexityConfiguration) (*SetPasswordComplexityConfigurationResponse, error)
+	OptSetPasswordComplexityConfiguration(SetPasswordComplexityConfiguration SetPasswordComplexityConfiguration) (*SetPasswordComplexityConfigurationResponse, *common.Fault)
 
-	OptSetPasswordHistoryConfiguration(SetPasswordHistoryConfiguration SetPasswordHistoryConfiguration) (*SetPasswordHistoryConfigurationResponse, error)
+	OptSetPasswordHistoryConfiguration(SetPasswordHistoryConfiguration SetPasswordHistoryConfiguration) (*SetPasswordHistoryConfigurationResponse, *common.Fault)
 
-	OptSetRelayOutputSettings(SetRelayOutputSettings SetRelayOutputSettings) (*SetRelayOutputSettingsResponse, error)
+	OptSetRelayOutputSettings(SetRelayOutputSettings SetRelayOutputSettings) (*SetRelayOutputSettingsResponse, *common.Fault)
 
-	OptSetRelayOutputState(SetRelayOutputState SetRelayOutputState) (*SetRelayOutputStateResponse, error)
+	OptSetRelayOutputState(SetRelayOutputState SetRelayOutputState) (*SetRelayOutputStateResponse, *common.Fault)
 
-	OptSetRemoteDiscoveryMode(SetRemoteDiscoveryMode SetRemoteDiscoveryMode) (*SetRemoteDiscoveryModeResponse, error)
+	OptSetRemoteDiscoveryMode(SetRemoteDiscoveryMode SetRemoteDiscoveryMode) (*SetRemoteDiscoveryModeResponse, *common.Fault)
 
-	OptSetRemoteUser(SetRemoteUser SetRemoteUser) (*SetRemoteUserResponse, error)
+	OptSetRemoteUser(SetRemoteUser SetRemoteUser) (*SetRemoteUserResponse, *common.Fault)
 
-	OptSetScopes(SetScopes SetScopes) (*SetScopesResponse, error)
+	OptSetScopes(SetScopes SetScopes) (*SetScopesResponse, *common.Fault)
 
-	OptSetStorageConfiguration(SetStorageConfiguration SetStorageConfiguration) (*SetStorageConfigurationResponse, error)
+	OptSetStorageConfiguration(SetStorageConfiguration SetStorageConfiguration) (*SetStorageConfigurationResponse, *common.Fault)
 
-	OptSetSystemDateAndTime(SetSystemDateAndTime SetSystemDateAndTime) (*SetSystemDateAndTimeResponse, error)
+	OptSetSystemDateAndTime(SetSystemDateAndTime SetSystemDateAndTime) (*SetSystemDateAndTimeResponse, *common.Fault)
 
-	OptSetSystemFactoryDefault(SetSystemFactoryDefault SetSystemFactoryDefault) (*SetSystemFactoryDefaultResponse, error)
+	OptSetSystemFactoryDefault(SetSystemFactoryDefault SetSystemFactoryDefault) (*SetSystemFactoryDefaultResponse, *common.Fault)
 
-	OptSetUser(SetUser SetUser) (*SetUserResponse, error)
+	OptSetUser(SetUser SetUser) (*SetUserResponse, *common.Fault)
 
-	OptSetZeroConfiguration(SetZeroConfiguration SetZeroConfiguration) (*SetZeroConfigurationResponse, error)
+	OptSetZeroConfiguration(SetZeroConfiguration SetZeroConfiguration) (*SetZeroConfigurationResponse, *common.Fault)
 
-	OptStartFirmwareUpgrade(StartFirmwareUpgrade StartFirmwareUpgrade) (*StartFirmwareUpgradeResponse, error)
+	OptStartFirmwareUpgrade(StartFirmwareUpgrade StartFirmwareUpgrade) (*StartFirmwareUpgradeResponse, *common.Fault)
 
-	OptStartSystemRestore(StartSystemRestore StartSystemRestore) (*StartSystemRestoreResponse, error)
+	OptStartSystemRestore(StartSystemRestore StartSystemRestore) (*StartSystemRestoreResponse, *common.Fault)
 
-	OptSystemReboot(SystemReboot SystemReboot) (*SystemRebootResponse, error)
+	OptSystemReboot(SystemReboot SystemReboot) (*SystemRebootResponse, *common.Fault)
 
-	OptUpgradeSystemFirmware(UpgradeSystemFirmware UpgradeSystemFirmware) (*UpgradeSystemFirmwareResponse, error)
+	OptUpgradeSystemFirmware(UpgradeSystemFirmware UpgradeSystemFirmware) (*UpgradeSystemFirmwareResponse, *common.Fault)
 }
 type DateTime string
 
@@ -1125,7 +1125,7 @@ type device struct {
 	Endpoint string
 }
 
-func (p *device) OptAddIPAddressFilter(args AddIPAddressFilter) (*AddIPAddressFilterResponse, error) {
+func (p *device) OptAddIPAddressFilter(args AddIPAddressFilter) (*AddIPAddressFilterResponse, *common.Fault) {
 	req := struct {
 		XMLName            string `xml:"tds:AddIPAddressFilter"`
 		AddIPAddressFilter AddIPAddressFilter
@@ -1135,13 +1135,13 @@ func (p *device) OptAddIPAddressFilter(args AddIPAddressFilter) (*AddIPAddressFi
 
 	resp := AddIPAddressFilterResponse{}
 
-	if err := p.cli.CallMethodUnmarshal(p.Endpoint, req, &resp); err != nil {
-		return nil, err
+	if fault := p.cli.CallMethodUnmarshal(p.Endpoint, req, &resp); fault != nil {
+		return nil, fault
 	}
 	return &resp, nil
 }
 
-func (p *device) OptAddScopes(args AddScopes) (*AddScopesResponse, error) {
+func (p *device) OptAddScopes(args AddScopes) (*AddScopesResponse, *common.Fault) {
 	req := struct {
 		XMLName   string `xml:"tds:AddScopes"`
 		AddScopes AddScopes
@@ -1151,13 +1151,13 @@ func (p *device) OptAddScopes(args AddScopes) (*AddScopesResponse, error) {
 
 	resp := AddScopesResponse{}
 
-	if err := p.cli.CallMethodUnmarshal(p.Endpoint, req, &resp); err != nil {
-		return nil, err
+	if fault := p.cli.CallMethodUnmarshal(p.Endpoint, req, &resp); fault != nil {
+		return nil, fault
 	}
 	return &resp, nil
 }
 
-func (p *device) OptCreateCertificate(args CreateCertificate) (*CreateCertificateResponse, error) {
+func (p *device) OptCreateCertificate(args CreateCertificate) (*CreateCertificateResponse, *common.Fault) {
 	req := struct {
 		XMLName           string `xml:"tds:CreateCertificate"`
 		CreateCertificate CreateCertificate
@@ -1167,13 +1167,13 @@ func (p *device) OptCreateCertificate(args CreateCertificate) (*CreateCertificat
 
 	resp := CreateCertificateResponse{}
 
-	if err := p.cli.CallMethodUnmarshal(p.Endpoint, req, &resp); err != nil {
-		return nil, err
+	if fault := p.cli.CallMethodUnmarshal(p.Endpoint, req, &resp); fault != nil {
+		return nil, fault
 	}
 	return &resp, nil
 }
 
-func (p *device) OptCreateDot1XConfiguration(args CreateDot1XConfiguration) (*CreateDot1XConfigurationResponse, error) {
+func (p *device) OptCreateDot1XConfiguration(args CreateDot1XConfiguration) (*CreateDot1XConfigurationResponse, *common.Fault) {
 	req := struct {
 		XMLName                  string `xml:"tds:CreateDot1XConfiguration"`
 		CreateDot1XConfiguration CreateDot1XConfiguration
@@ -1183,13 +1183,13 @@ func (p *device) OptCreateDot1XConfiguration(args CreateDot1XConfiguration) (*Cr
 
 	resp := CreateDot1XConfigurationResponse{}
 
-	if err := p.cli.CallMethodUnmarshal(p.Endpoint, req, &resp); err != nil {
-		return nil, err
+	if fault := p.cli.CallMethodUnmarshal(p.Endpoint, req, &resp); fault != nil {
+		return nil, fault
 	}
 	return &resp, nil
 }
 
-func (p *device) OptCreateStorageConfiguration(args CreateStorageConfiguration) (*CreateStorageConfigurationResponse, error) {
+func (p *device) OptCreateStorageConfiguration(args CreateStorageConfiguration) (*CreateStorageConfigurationResponse, *common.Fault) {
 	req := struct {
 		XMLName                    string `xml:"tds:CreateStorageConfiguration"`
 		CreateStorageConfiguration CreateStorageConfiguration
@@ -1199,13 +1199,13 @@ func (p *device) OptCreateStorageConfiguration(args CreateStorageConfiguration) 
 
 	resp := CreateStorageConfigurationResponse{}
 
-	if err := p.cli.CallMethodUnmarshal(p.Endpoint, req, &resp); err != nil {
-		return nil, err
+	if fault := p.cli.CallMethodUnmarshal(p.Endpoint, req, &resp); fault != nil {
+		return nil, fault
 	}
 	return &resp, nil
 }
 
-func (p *device) OptCreateUsers(args CreateUsers) (*CreateUsersResponse, error) {
+func (p *device) OptCreateUsers(args CreateUsers) (*CreateUsersResponse, *common.Fault) {
 	req := struct {
 		XMLName     string `xml:"tds:CreateUsers"`
 		CreateUsers CreateUsers
@@ -1215,13 +1215,13 @@ func (p *device) OptCreateUsers(args CreateUsers) (*CreateUsersResponse, error) 
 
 	resp := CreateUsersResponse{}
 
-	if err := p.cli.CallMethodUnmarshal(p.Endpoint, req, &resp); err != nil {
-		return nil, err
+	if fault := p.cli.CallMethodUnmarshal(p.Endpoint, req, &resp); fault != nil {
+		return nil, fault
 	}
 	return &resp, nil
 }
 
-func (p *device) OptDeleteCertificates(args DeleteCertificates) (*DeleteCertificatesResponse, error) {
+func (p *device) OptDeleteCertificates(args DeleteCertificates) (*DeleteCertificatesResponse, *common.Fault) {
 	req := struct {
 		XMLName            string `xml:"tds:DeleteCertificates"`
 		DeleteCertificates DeleteCertificates
@@ -1231,13 +1231,13 @@ func (p *device) OptDeleteCertificates(args DeleteCertificates) (*DeleteCertific
 
 	resp := DeleteCertificatesResponse{}
 
-	if err := p.cli.CallMethodUnmarshal(p.Endpoint, req, &resp); err != nil {
-		return nil, err
+	if fault := p.cli.CallMethodUnmarshal(p.Endpoint, req, &resp); fault != nil {
+		return nil, fault
 	}
 	return &resp, nil
 }
 
-func (p *device) OptDeleteDot1XConfiguration(args DeleteDot1XConfiguration) (*DeleteDot1XConfigurationResponse, error) {
+func (p *device) OptDeleteDot1XConfiguration(args DeleteDot1XConfiguration) (*DeleteDot1XConfigurationResponse, *common.Fault) {
 	req := struct {
 		XMLName                  string `xml:"tds:DeleteDot1XConfiguration"`
 		DeleteDot1XConfiguration DeleteDot1XConfiguration
@@ -1247,13 +1247,13 @@ func (p *device) OptDeleteDot1XConfiguration(args DeleteDot1XConfiguration) (*De
 
 	resp := DeleteDot1XConfigurationResponse{}
 
-	if err := p.cli.CallMethodUnmarshal(p.Endpoint, req, &resp); err != nil {
-		return nil, err
+	if fault := p.cli.CallMethodUnmarshal(p.Endpoint, req, &resp); fault != nil {
+		return nil, fault
 	}
 	return &resp, nil
 }
 
-func (p *device) OptDeleteGeoLocation(args DeleteGeoLocation) (*DeleteGeoLocationResponse, error) {
+func (p *device) OptDeleteGeoLocation(args DeleteGeoLocation) (*DeleteGeoLocationResponse, *common.Fault) {
 	req := struct {
 		XMLName           string `xml:"tds:DeleteGeoLocation"`
 		DeleteGeoLocation DeleteGeoLocation
@@ -1263,13 +1263,13 @@ func (p *device) OptDeleteGeoLocation(args DeleteGeoLocation) (*DeleteGeoLocatio
 
 	resp := DeleteGeoLocationResponse{}
 
-	if err := p.cli.CallMethodUnmarshal(p.Endpoint, req, &resp); err != nil {
-		return nil, err
+	if fault := p.cli.CallMethodUnmarshal(p.Endpoint, req, &resp); fault != nil {
+		return nil, fault
 	}
 	return &resp, nil
 }
 
-func (p *device) OptDeleteStorageConfiguration(args DeleteStorageConfiguration) (*DeleteStorageConfigurationResponse, error) {
+func (p *device) OptDeleteStorageConfiguration(args DeleteStorageConfiguration) (*DeleteStorageConfigurationResponse, *common.Fault) {
 	req := struct {
 		XMLName                    string `xml:"tds:DeleteStorageConfiguration"`
 		DeleteStorageConfiguration DeleteStorageConfiguration
@@ -1279,13 +1279,13 @@ func (p *device) OptDeleteStorageConfiguration(args DeleteStorageConfiguration) 
 
 	resp := DeleteStorageConfigurationResponse{}
 
-	if err := p.cli.CallMethodUnmarshal(p.Endpoint, req, &resp); err != nil {
-		return nil, err
+	if fault := p.cli.CallMethodUnmarshal(p.Endpoint, req, &resp); fault != nil {
+		return nil, fault
 	}
 	return &resp, nil
 }
 
-func (p *device) OptDeleteUsers(args DeleteUsers) (*DeleteUsersResponse, error) {
+func (p *device) OptDeleteUsers(args DeleteUsers) (*DeleteUsersResponse, *common.Fault) {
 	req := struct {
 		XMLName     string `xml:"tds:DeleteUsers"`
 		DeleteUsers DeleteUsers
@@ -1295,13 +1295,13 @@ func (p *device) OptDeleteUsers(args DeleteUsers) (*DeleteUsersResponse, error) 
 
 	resp := DeleteUsersResponse{}
 
-	if err := p.cli.CallMethodUnmarshal(p.Endpoint, req, &resp); err != nil {
-		return nil, err
+	if fault := p.cli.CallMethodUnmarshal(p.Endpoint, req, &resp); fault != nil {
+		return nil, fault
 	}
 	return &resp, nil
 }
 
-func (p *device) OptGetAccessPolicy(args GetAccessPolicy) (*GetAccessPolicyResponse, error) {
+func (p *device) OptGetAccessPolicy(args GetAccessPolicy) (*GetAccessPolicyResponse, *common.Fault) {
 	req := struct {
 		XMLName         string `xml:"tds:GetAccessPolicy"`
 		GetAccessPolicy GetAccessPolicy
@@ -1311,13 +1311,13 @@ func (p *device) OptGetAccessPolicy(args GetAccessPolicy) (*GetAccessPolicyRespo
 
 	resp := GetAccessPolicyResponse{}
 
-	if err := p.cli.CallMethodUnmarshal(p.Endpoint, req, &resp); err != nil {
-		return nil, err
+	if fault := p.cli.CallMethodUnmarshal(p.Endpoint, req, &resp); fault != nil {
+		return nil, fault
 	}
 	return &resp, nil
 }
 
-func (p *device) OptGetAuthFailureWarningConfiguration(args GetAuthFailureWarningConfiguration) (*GetAuthFailureWarningConfigurationResponse, error) {
+func (p *device) OptGetAuthFailureWarningConfiguration(args GetAuthFailureWarningConfiguration) (*GetAuthFailureWarningConfigurationResponse, *common.Fault) {
 	req := struct {
 		XMLName                            string `xml:"tds:GetAuthFailureWarningConfiguration"`
 		GetAuthFailureWarningConfiguration GetAuthFailureWarningConfiguration
@@ -1327,13 +1327,13 @@ func (p *device) OptGetAuthFailureWarningConfiguration(args GetAuthFailureWarnin
 
 	resp := GetAuthFailureWarningConfigurationResponse{}
 
-	if err := p.cli.CallMethodUnmarshal(p.Endpoint, req, &resp); err != nil {
-		return nil, err
+	if fault := p.cli.CallMethodUnmarshal(p.Endpoint, req, &resp); fault != nil {
+		return nil, fault
 	}
 	return &resp, nil
 }
 
-func (p *device) OptGetAuthFailureWarningOptions(args GetAuthFailureWarningOptions) (*GetAuthFailureWarningOptionsResponse, error) {
+func (p *device) OptGetAuthFailureWarningOptions(args GetAuthFailureWarningOptions) (*GetAuthFailureWarningOptionsResponse, *common.Fault) {
 	req := struct {
 		XMLName                      string `xml:"tds:GetAuthFailureWarningOptions"`
 		GetAuthFailureWarningOptions GetAuthFailureWarningOptions
@@ -1343,13 +1343,13 @@ func (p *device) OptGetAuthFailureWarningOptions(args GetAuthFailureWarningOptio
 
 	resp := GetAuthFailureWarningOptionsResponse{}
 
-	if err := p.cli.CallMethodUnmarshal(p.Endpoint, req, &resp); err != nil {
-		return nil, err
+	if fault := p.cli.CallMethodUnmarshal(p.Endpoint, req, &resp); fault != nil {
+		return nil, fault
 	}
 	return &resp, nil
 }
 
-func (p *device) OptGetCACertificates(args GetCACertificates) (*GetCACertificatesResponse, error) {
+func (p *device) OptGetCACertificates(args GetCACertificates) (*GetCACertificatesResponse, *common.Fault) {
 	req := struct {
 		XMLName           string `xml:"tds:GetCACertificates"`
 		GetCACertificates GetCACertificates
@@ -1359,13 +1359,13 @@ func (p *device) OptGetCACertificates(args GetCACertificates) (*GetCACertificate
 
 	resp := GetCACertificatesResponse{}
 
-	if err := p.cli.CallMethodUnmarshal(p.Endpoint, req, &resp); err != nil {
-		return nil, err
+	if fault := p.cli.CallMethodUnmarshal(p.Endpoint, req, &resp); fault != nil {
+		return nil, fault
 	}
 	return &resp, nil
 }
 
-func (p *device) OptGetCapabilities(args GetCapabilities) (*GetCapabilitiesResponse, error) {
+func (p *device) OptGetCapabilities(args GetCapabilities) (*GetCapabilitiesResponse, *common.Fault) {
 	req := struct {
 		XMLName         string `xml:"tds:GetCapabilities"`
 		GetCapabilities GetCapabilities
@@ -1375,13 +1375,13 @@ func (p *device) OptGetCapabilities(args GetCapabilities) (*GetCapabilitiesRespo
 
 	resp := GetCapabilitiesResponse{}
 
-	if err := p.cli.CallMethodUnmarshal(p.Endpoint, req, &resp); err != nil {
-		return nil, err
+	if fault := p.cli.CallMethodUnmarshal(p.Endpoint, req, &resp); fault != nil {
+		return nil, fault
 	}
 	return &resp, nil
 }
 
-func (p *device) OptGetCertificateInformation(args GetCertificateInformation) (*GetCertificateInformationResponse, error) {
+func (p *device) OptGetCertificateInformation(args GetCertificateInformation) (*GetCertificateInformationResponse, *common.Fault) {
 	req := struct {
 		XMLName                   string `xml:"tds:GetCertificateInformation"`
 		GetCertificateInformation GetCertificateInformation
@@ -1391,13 +1391,13 @@ func (p *device) OptGetCertificateInformation(args GetCertificateInformation) (*
 
 	resp := GetCertificateInformationResponse{}
 
-	if err := p.cli.CallMethodUnmarshal(p.Endpoint, req, &resp); err != nil {
-		return nil, err
+	if fault := p.cli.CallMethodUnmarshal(p.Endpoint, req, &resp); fault != nil {
+		return nil, fault
 	}
 	return &resp, nil
 }
 
-func (p *device) OptGetCertificates(args GetCertificates) (*GetCertificatesResponse, error) {
+func (p *device) OptGetCertificates(args GetCertificates) (*GetCertificatesResponse, *common.Fault) {
 	req := struct {
 		XMLName         string `xml:"tds:GetCertificates"`
 		GetCertificates GetCertificates
@@ -1407,13 +1407,13 @@ func (p *device) OptGetCertificates(args GetCertificates) (*GetCertificatesRespo
 
 	resp := GetCertificatesResponse{}
 
-	if err := p.cli.CallMethodUnmarshal(p.Endpoint, req, &resp); err != nil {
-		return nil, err
+	if fault := p.cli.CallMethodUnmarshal(p.Endpoint, req, &resp); fault != nil {
+		return nil, fault
 	}
 	return &resp, nil
 }
 
-func (p *device) OptGetCertificatesStatus(args GetCertificatesStatus) (*GetCertificatesStatusResponse, error) {
+func (p *device) OptGetCertificatesStatus(args GetCertificatesStatus) (*GetCertificatesStatusResponse, *common.Fault) {
 	req := struct {
 		XMLName               string `xml:"tds:GetCertificatesStatus"`
 		GetCertificatesStatus GetCertificatesStatus
@@ -1423,13 +1423,13 @@ func (p *device) OptGetCertificatesStatus(args GetCertificatesStatus) (*GetCerti
 
 	resp := GetCertificatesStatusResponse{}
 
-	if err := p.cli.CallMethodUnmarshal(p.Endpoint, req, &resp); err != nil {
-		return nil, err
+	if fault := p.cli.CallMethodUnmarshal(p.Endpoint, req, &resp); fault != nil {
+		return nil, fault
 	}
 	return &resp, nil
 }
 
-func (p *device) OptGetClientCertificateMode(args GetClientCertificateMode) (*GetClientCertificateModeResponse, error) {
+func (p *device) OptGetClientCertificateMode(args GetClientCertificateMode) (*GetClientCertificateModeResponse, *common.Fault) {
 	req := struct {
 		XMLName                  string `xml:"tds:GetClientCertificateMode"`
 		GetClientCertificateMode GetClientCertificateMode
@@ -1439,13 +1439,13 @@ func (p *device) OptGetClientCertificateMode(args GetClientCertificateMode) (*Ge
 
 	resp := GetClientCertificateModeResponse{}
 
-	if err := p.cli.CallMethodUnmarshal(p.Endpoint, req, &resp); err != nil {
-		return nil, err
+	if fault := p.cli.CallMethodUnmarshal(p.Endpoint, req, &resp); fault != nil {
+		return nil, fault
 	}
 	return &resp, nil
 }
 
-func (p *device) OptGetDNS(args GetDNS) (*GetDNSResponse, error) {
+func (p *device) OptGetDNS(args GetDNS) (*GetDNSResponse, *common.Fault) {
 	req := struct {
 		XMLName string `xml:"tds:GetDNS"`
 		GetDNS  GetDNS
@@ -1455,13 +1455,13 @@ func (p *device) OptGetDNS(args GetDNS) (*GetDNSResponse, error) {
 
 	resp := GetDNSResponse{}
 
-	if err := p.cli.CallMethodUnmarshal(p.Endpoint, req, &resp); err != nil {
-		return nil, err
+	if fault := p.cli.CallMethodUnmarshal(p.Endpoint, req, &resp); fault != nil {
+		return nil, fault
 	}
 	return &resp, nil
 }
 
-func (p *device) OptGetDPAddresses(args GetDPAddresses) (*GetDPAddressesResponse, error) {
+func (p *device) OptGetDPAddresses(args GetDPAddresses) (*GetDPAddressesResponse, *common.Fault) {
 	req := struct {
 		XMLName        string `xml:"tds:GetDPAddresses"`
 		GetDPAddresses GetDPAddresses
@@ -1471,13 +1471,13 @@ func (p *device) OptGetDPAddresses(args GetDPAddresses) (*GetDPAddressesResponse
 
 	resp := GetDPAddressesResponse{}
 
-	if err := p.cli.CallMethodUnmarshal(p.Endpoint, req, &resp); err != nil {
-		return nil, err
+	if fault := p.cli.CallMethodUnmarshal(p.Endpoint, req, &resp); fault != nil {
+		return nil, fault
 	}
 	return &resp, nil
 }
 
-func (p *device) OptGetDeviceInformation(args GetDeviceInformation) (*GetDeviceInformationResponse, error) {
+func (p *device) OptGetDeviceInformation(args GetDeviceInformation) (*GetDeviceInformationResponse, *common.Fault) {
 	req := struct {
 		XMLName              string `xml:"tds:GetDeviceInformation"`
 		GetDeviceInformation GetDeviceInformation
@@ -1487,13 +1487,13 @@ func (p *device) OptGetDeviceInformation(args GetDeviceInformation) (*GetDeviceI
 
 	resp := GetDeviceInformationResponse{}
 
-	if err := p.cli.CallMethodUnmarshal(p.Endpoint, req, &resp); err != nil {
-		return nil, err
+	if fault := p.cli.CallMethodUnmarshal(p.Endpoint, req, &resp); fault != nil {
+		return nil, fault
 	}
 	return &resp, nil
 }
 
-func (p *device) OptGetDiscoveryMode(args GetDiscoveryMode) (*GetDiscoveryModeResponse, error) {
+func (p *device) OptGetDiscoveryMode(args GetDiscoveryMode) (*GetDiscoveryModeResponse, *common.Fault) {
 	req := struct {
 		XMLName          string `xml:"tds:GetDiscoveryMode"`
 		GetDiscoveryMode GetDiscoveryMode
@@ -1503,13 +1503,13 @@ func (p *device) OptGetDiscoveryMode(args GetDiscoveryMode) (*GetDiscoveryModeRe
 
 	resp := GetDiscoveryModeResponse{}
 
-	if err := p.cli.CallMethodUnmarshal(p.Endpoint, req, &resp); err != nil {
-		return nil, err
+	if fault := p.cli.CallMethodUnmarshal(p.Endpoint, req, &resp); fault != nil {
+		return nil, fault
 	}
 	return &resp, nil
 }
 
-func (p *device) OptGetDot11Capabilities(args GetDot11Capabilities) (*GetDot11CapabilitiesResponse, error) {
+func (p *device) OptGetDot11Capabilities(args GetDot11Capabilities) (*GetDot11CapabilitiesResponse, *common.Fault) {
 	req := struct {
 		XMLName              string `xml:"tds:GetDot11Capabilities"`
 		GetDot11Capabilities GetDot11Capabilities
@@ -1519,13 +1519,13 @@ func (p *device) OptGetDot11Capabilities(args GetDot11Capabilities) (*GetDot11Ca
 
 	resp := GetDot11CapabilitiesResponse{}
 
-	if err := p.cli.CallMethodUnmarshal(p.Endpoint, req, &resp); err != nil {
-		return nil, err
+	if fault := p.cli.CallMethodUnmarshal(p.Endpoint, req, &resp); fault != nil {
+		return nil, fault
 	}
 	return &resp, nil
 }
 
-func (p *device) OptGetDot11Status(args GetDot11Status) (*GetDot11StatusResponse, error) {
+func (p *device) OptGetDot11Status(args GetDot11Status) (*GetDot11StatusResponse, *common.Fault) {
 	req := struct {
 		XMLName        string `xml:"tds:GetDot11Status"`
 		GetDot11Status GetDot11Status
@@ -1535,13 +1535,13 @@ func (p *device) OptGetDot11Status(args GetDot11Status) (*GetDot11StatusResponse
 
 	resp := GetDot11StatusResponse{}
 
-	if err := p.cli.CallMethodUnmarshal(p.Endpoint, req, &resp); err != nil {
-		return nil, err
+	if fault := p.cli.CallMethodUnmarshal(p.Endpoint, req, &resp); fault != nil {
+		return nil, fault
 	}
 	return &resp, nil
 }
 
-func (p *device) OptGetDot1XConfiguration(args GetDot1XConfiguration) (*GetDot1XConfigurationResponse, error) {
+func (p *device) OptGetDot1XConfiguration(args GetDot1XConfiguration) (*GetDot1XConfigurationResponse, *common.Fault) {
 	req := struct {
 		XMLName               string `xml:"tds:GetDot1XConfiguration"`
 		GetDot1XConfiguration GetDot1XConfiguration
@@ -1551,13 +1551,13 @@ func (p *device) OptGetDot1XConfiguration(args GetDot1XConfiguration) (*GetDot1X
 
 	resp := GetDot1XConfigurationResponse{}
 
-	if err := p.cli.CallMethodUnmarshal(p.Endpoint, req, &resp); err != nil {
-		return nil, err
+	if fault := p.cli.CallMethodUnmarshal(p.Endpoint, req, &resp); fault != nil {
+		return nil, fault
 	}
 	return &resp, nil
 }
 
-func (p *device) OptGetDot1XConfigurations(args GetDot1XConfigurations) (*GetDot1XConfigurationsResponse, error) {
+func (p *device) OptGetDot1XConfigurations(args GetDot1XConfigurations) (*GetDot1XConfigurationsResponse, *common.Fault) {
 	req := struct {
 		XMLName                string `xml:"tds:GetDot1XConfigurations"`
 		GetDot1XConfigurations GetDot1XConfigurations
@@ -1567,13 +1567,13 @@ func (p *device) OptGetDot1XConfigurations(args GetDot1XConfigurations) (*GetDot
 
 	resp := GetDot1XConfigurationsResponse{}
 
-	if err := p.cli.CallMethodUnmarshal(p.Endpoint, req, &resp); err != nil {
-		return nil, err
+	if fault := p.cli.CallMethodUnmarshal(p.Endpoint, req, &resp); fault != nil {
+		return nil, fault
 	}
 	return &resp, nil
 }
 
-func (p *device) OptGetDynamicDNS(args GetDynamicDNS) (*GetDynamicDNSResponse, error) {
+func (p *device) OptGetDynamicDNS(args GetDynamicDNS) (*GetDynamicDNSResponse, *common.Fault) {
 	req := struct {
 		XMLName       string `xml:"tds:GetDynamicDNS"`
 		GetDynamicDNS GetDynamicDNS
@@ -1583,13 +1583,13 @@ func (p *device) OptGetDynamicDNS(args GetDynamicDNS) (*GetDynamicDNSResponse, e
 
 	resp := GetDynamicDNSResponse{}
 
-	if err := p.cli.CallMethodUnmarshal(p.Endpoint, req, &resp); err != nil {
-		return nil, err
+	if fault := p.cli.CallMethodUnmarshal(p.Endpoint, req, &resp); fault != nil {
+		return nil, fault
 	}
 	return &resp, nil
 }
 
-func (p *device) OptGetEndpointReference(args GetEndpointReference) (*GetEndpointReferenceResponse, error) {
+func (p *device) OptGetEndpointReference(args GetEndpointReference) (*GetEndpointReferenceResponse, *common.Fault) {
 	req := struct {
 		XMLName              string `xml:"tds:GetEndpointReference"`
 		GetEndpointReference GetEndpointReference
@@ -1599,13 +1599,13 @@ func (p *device) OptGetEndpointReference(args GetEndpointReference) (*GetEndpoin
 
 	resp := GetEndpointReferenceResponse{}
 
-	if err := p.cli.CallMethodUnmarshal(p.Endpoint, req, &resp); err != nil {
-		return nil, err
+	if fault := p.cli.CallMethodUnmarshal(p.Endpoint, req, &resp); fault != nil {
+		return nil, fault
 	}
 	return &resp, nil
 }
 
-func (p *device) OptGetGeoLocation(args GetGeoLocation) (*GetGeoLocationResponse, error) {
+func (p *device) OptGetGeoLocation(args GetGeoLocation) (*GetGeoLocationResponse, *common.Fault) {
 	req := struct {
 		XMLName        string `xml:"tds:GetGeoLocation"`
 		GetGeoLocation GetGeoLocation
@@ -1615,13 +1615,13 @@ func (p *device) OptGetGeoLocation(args GetGeoLocation) (*GetGeoLocationResponse
 
 	resp := GetGeoLocationResponse{}
 
-	if err := p.cli.CallMethodUnmarshal(p.Endpoint, req, &resp); err != nil {
-		return nil, err
+	if fault := p.cli.CallMethodUnmarshal(p.Endpoint, req, &resp); fault != nil {
+		return nil, fault
 	}
 	return &resp, nil
 }
 
-func (p *device) OptGetHostname(args GetHostname) (*GetHostnameResponse, error) {
+func (p *device) OptGetHostname(args GetHostname) (*GetHostnameResponse, *common.Fault) {
 	req := struct {
 		XMLName     string `xml:"tds:GetHostname"`
 		GetHostname GetHostname
@@ -1631,13 +1631,13 @@ func (p *device) OptGetHostname(args GetHostname) (*GetHostnameResponse, error) 
 
 	resp := GetHostnameResponse{}
 
-	if err := p.cli.CallMethodUnmarshal(p.Endpoint, req, &resp); err != nil {
-		return nil, err
+	if fault := p.cli.CallMethodUnmarshal(p.Endpoint, req, &resp); fault != nil {
+		return nil, fault
 	}
 	return &resp, nil
 }
 
-func (p *device) OptGetIPAddressFilter(args GetIPAddressFilter) (*GetIPAddressFilterResponse, error) {
+func (p *device) OptGetIPAddressFilter(args GetIPAddressFilter) (*GetIPAddressFilterResponse, *common.Fault) {
 	req := struct {
 		XMLName            string `xml:"tds:GetIPAddressFilter"`
 		GetIPAddressFilter GetIPAddressFilter
@@ -1647,13 +1647,13 @@ func (p *device) OptGetIPAddressFilter(args GetIPAddressFilter) (*GetIPAddressFi
 
 	resp := GetIPAddressFilterResponse{}
 
-	if err := p.cli.CallMethodUnmarshal(p.Endpoint, req, &resp); err != nil {
-		return nil, err
+	if fault := p.cli.CallMethodUnmarshal(p.Endpoint, req, &resp); fault != nil {
+		return nil, fault
 	}
 	return &resp, nil
 }
 
-func (p *device) OptGetNTP(args GetNTP) (*GetNTPResponse, error) {
+func (p *device) OptGetNTP(args GetNTP) (*GetNTPResponse, *common.Fault) {
 	req := struct {
 		XMLName string `xml:"tds:GetNTP"`
 		GetNTP  GetNTP
@@ -1663,13 +1663,13 @@ func (p *device) OptGetNTP(args GetNTP) (*GetNTPResponse, error) {
 
 	resp := GetNTPResponse{}
 
-	if err := p.cli.CallMethodUnmarshal(p.Endpoint, req, &resp); err != nil {
-		return nil, err
+	if fault := p.cli.CallMethodUnmarshal(p.Endpoint, req, &resp); fault != nil {
+		return nil, fault
 	}
 	return &resp, nil
 }
 
-func (p *device) OptGetNetworkDefaultGateway(args GetNetworkDefaultGateway) (*GetNetworkDefaultGatewayResponse, error) {
+func (p *device) OptGetNetworkDefaultGateway(args GetNetworkDefaultGateway) (*GetNetworkDefaultGatewayResponse, *common.Fault) {
 	req := struct {
 		XMLName                  string `xml:"tds:GetNetworkDefaultGateway"`
 		GetNetworkDefaultGateway GetNetworkDefaultGateway
@@ -1679,13 +1679,13 @@ func (p *device) OptGetNetworkDefaultGateway(args GetNetworkDefaultGateway) (*Ge
 
 	resp := GetNetworkDefaultGatewayResponse{}
 
-	if err := p.cli.CallMethodUnmarshal(p.Endpoint, req, &resp); err != nil {
-		return nil, err
+	if fault := p.cli.CallMethodUnmarshal(p.Endpoint, req, &resp); fault != nil {
+		return nil, fault
 	}
 	return &resp, nil
 }
 
-func (p *device) OptGetNetworkInterfaces(args GetNetworkInterfaces) (*GetNetworkInterfacesResponse, error) {
+func (p *device) OptGetNetworkInterfaces(args GetNetworkInterfaces) (*GetNetworkInterfacesResponse, *common.Fault) {
 	req := struct {
 		XMLName              string `xml:"tds:GetNetworkInterfaces"`
 		GetNetworkInterfaces GetNetworkInterfaces
@@ -1695,13 +1695,13 @@ func (p *device) OptGetNetworkInterfaces(args GetNetworkInterfaces) (*GetNetwork
 
 	resp := GetNetworkInterfacesResponse{}
 
-	if err := p.cli.CallMethodUnmarshal(p.Endpoint, req, &resp); err != nil {
-		return nil, err
+	if fault := p.cli.CallMethodUnmarshal(p.Endpoint, req, &resp); fault != nil {
+		return nil, fault
 	}
 	return &resp, nil
 }
 
-func (p *device) OptGetNetworkProtocols(args GetNetworkProtocols) (*GetNetworkProtocolsResponse, error) {
+func (p *device) OptGetNetworkProtocols(args GetNetworkProtocols) (*GetNetworkProtocolsResponse, *common.Fault) {
 	req := struct {
 		XMLName             string `xml:"tds:GetNetworkProtocols"`
 		GetNetworkProtocols GetNetworkProtocols
@@ -1711,13 +1711,13 @@ func (p *device) OptGetNetworkProtocols(args GetNetworkProtocols) (*GetNetworkPr
 
 	resp := GetNetworkProtocolsResponse{}
 
-	if err := p.cli.CallMethodUnmarshal(p.Endpoint, req, &resp); err != nil {
-		return nil, err
+	if fault := p.cli.CallMethodUnmarshal(p.Endpoint, req, &resp); fault != nil {
+		return nil, fault
 	}
 	return &resp, nil
 }
 
-func (p *device) OptGetPasswordComplexityConfiguration(args GetPasswordComplexityConfiguration) (*GetPasswordComplexityConfigurationResponse, error) {
+func (p *device) OptGetPasswordComplexityConfiguration(args GetPasswordComplexityConfiguration) (*GetPasswordComplexityConfigurationResponse, *common.Fault) {
 	req := struct {
 		XMLName                            string `xml:"tds:GetPasswordComplexityConfiguration"`
 		GetPasswordComplexityConfiguration GetPasswordComplexityConfiguration
@@ -1727,13 +1727,13 @@ func (p *device) OptGetPasswordComplexityConfiguration(args GetPasswordComplexit
 
 	resp := GetPasswordComplexityConfigurationResponse{}
 
-	if err := p.cli.CallMethodUnmarshal(p.Endpoint, req, &resp); err != nil {
-		return nil, err
+	if fault := p.cli.CallMethodUnmarshal(p.Endpoint, req, &resp); fault != nil {
+		return nil, fault
 	}
 	return &resp, nil
 }
 
-func (p *device) OptGetPasswordComplexityOptions(args GetPasswordComplexityOptions) (*GetPasswordComplexityOptionsResponse, error) {
+func (p *device) OptGetPasswordComplexityOptions(args GetPasswordComplexityOptions) (*GetPasswordComplexityOptionsResponse, *common.Fault) {
 	req := struct {
 		XMLName                      string `xml:"tds:GetPasswordComplexityOptions"`
 		GetPasswordComplexityOptions GetPasswordComplexityOptions
@@ -1743,13 +1743,13 @@ func (p *device) OptGetPasswordComplexityOptions(args GetPasswordComplexityOptio
 
 	resp := GetPasswordComplexityOptionsResponse{}
 
-	if err := p.cli.CallMethodUnmarshal(p.Endpoint, req, &resp); err != nil {
-		return nil, err
+	if fault := p.cli.CallMethodUnmarshal(p.Endpoint, req, &resp); fault != nil {
+		return nil, fault
 	}
 	return &resp, nil
 }
 
-func (p *device) OptGetPasswordHistoryConfiguration(args GetPasswordHistoryConfiguration) (*GetPasswordHistoryConfigurationResponse, error) {
+func (p *device) OptGetPasswordHistoryConfiguration(args GetPasswordHistoryConfiguration) (*GetPasswordHistoryConfigurationResponse, *common.Fault) {
 	req := struct {
 		XMLName                         string `xml:"tds:GetPasswordHistoryConfiguration"`
 		GetPasswordHistoryConfiguration GetPasswordHistoryConfiguration
@@ -1759,13 +1759,13 @@ func (p *device) OptGetPasswordHistoryConfiguration(args GetPasswordHistoryConfi
 
 	resp := GetPasswordHistoryConfigurationResponse{}
 
-	if err := p.cli.CallMethodUnmarshal(p.Endpoint, req, &resp); err != nil {
-		return nil, err
+	if fault := p.cli.CallMethodUnmarshal(p.Endpoint, req, &resp); fault != nil {
+		return nil, fault
 	}
 	return &resp, nil
 }
 
-func (p *device) OptGetPkcs10Request(args GetPkcs10Request) (*GetPkcs10RequestResponse, error) {
+func (p *device) OptGetPkcs10Request(args GetPkcs10Request) (*GetPkcs10RequestResponse, *common.Fault) {
 	req := struct {
 		XMLName          string `xml:"tds:GetPkcs10Request"`
 		GetPkcs10Request GetPkcs10Request
@@ -1775,13 +1775,13 @@ func (p *device) OptGetPkcs10Request(args GetPkcs10Request) (*GetPkcs10RequestRe
 
 	resp := GetPkcs10RequestResponse{}
 
-	if err := p.cli.CallMethodUnmarshal(p.Endpoint, req, &resp); err != nil {
-		return nil, err
+	if fault := p.cli.CallMethodUnmarshal(p.Endpoint, req, &resp); fault != nil {
+		return nil, fault
 	}
 	return &resp, nil
 }
 
-func (p *device) OptGetRelayOutputs(args GetRelayOutputs) (*GetRelayOutputsResponse, error) {
+func (p *device) OptGetRelayOutputs(args GetRelayOutputs) (*GetRelayOutputsResponse, *common.Fault) {
 	req := struct {
 		XMLName         string `xml:"tds:GetRelayOutputs"`
 		GetRelayOutputs GetRelayOutputs
@@ -1791,13 +1791,13 @@ func (p *device) OptGetRelayOutputs(args GetRelayOutputs) (*GetRelayOutputsRespo
 
 	resp := GetRelayOutputsResponse{}
 
-	if err := p.cli.CallMethodUnmarshal(p.Endpoint, req, &resp); err != nil {
-		return nil, err
+	if fault := p.cli.CallMethodUnmarshal(p.Endpoint, req, &resp); fault != nil {
+		return nil, fault
 	}
 	return &resp, nil
 }
 
-func (p *device) OptGetRemoteDiscoveryMode(args GetRemoteDiscoveryMode) (*GetRemoteDiscoveryModeResponse, error) {
+func (p *device) OptGetRemoteDiscoveryMode(args GetRemoteDiscoveryMode) (*GetRemoteDiscoveryModeResponse, *common.Fault) {
 	req := struct {
 		XMLName                string `xml:"tds:GetRemoteDiscoveryMode"`
 		GetRemoteDiscoveryMode GetRemoteDiscoveryMode
@@ -1807,13 +1807,13 @@ func (p *device) OptGetRemoteDiscoveryMode(args GetRemoteDiscoveryMode) (*GetRem
 
 	resp := GetRemoteDiscoveryModeResponse{}
 
-	if err := p.cli.CallMethodUnmarshal(p.Endpoint, req, &resp); err != nil {
-		return nil, err
+	if fault := p.cli.CallMethodUnmarshal(p.Endpoint, req, &resp); fault != nil {
+		return nil, fault
 	}
 	return &resp, nil
 }
 
-func (p *device) OptGetRemoteUser(args GetRemoteUser) (*GetRemoteUserResponse, error) {
+func (p *device) OptGetRemoteUser(args GetRemoteUser) (*GetRemoteUserResponse, *common.Fault) {
 	req := struct {
 		XMLName       string `xml:"tds:GetRemoteUser"`
 		GetRemoteUser GetRemoteUser
@@ -1823,13 +1823,13 @@ func (p *device) OptGetRemoteUser(args GetRemoteUser) (*GetRemoteUserResponse, e
 
 	resp := GetRemoteUserResponse{}
 
-	if err := p.cli.CallMethodUnmarshal(p.Endpoint, req, &resp); err != nil {
-		return nil, err
+	if fault := p.cli.CallMethodUnmarshal(p.Endpoint, req, &resp); fault != nil {
+		return nil, fault
 	}
 	return &resp, nil
 }
 
-func (p *device) OptGetScopes(args GetScopes) (*GetScopesResponse, error) {
+func (p *device) OptGetScopes(args GetScopes) (*GetScopesResponse, *common.Fault) {
 	req := struct {
 		XMLName   string `xml:"tds:GetScopes"`
 		GetScopes GetScopes
@@ -1839,13 +1839,13 @@ func (p *device) OptGetScopes(args GetScopes) (*GetScopesResponse, error) {
 
 	resp := GetScopesResponse{}
 
-	if err := p.cli.CallMethodUnmarshal(p.Endpoint, req, &resp); err != nil {
-		return nil, err
+	if fault := p.cli.CallMethodUnmarshal(p.Endpoint, req, &resp); fault != nil {
+		return nil, fault
 	}
 	return &resp, nil
 }
 
-func (p *device) OptGetServiceCapabilities(args GetServiceCapabilities) (*GetServiceCapabilitiesResponse, error) {
+func (p *device) OptGetServiceCapabilities(args GetServiceCapabilities) (*GetServiceCapabilitiesResponse, *common.Fault) {
 	req := struct {
 		XMLName                string `xml:"tds:GetServiceCapabilities"`
 		GetServiceCapabilities GetServiceCapabilities
@@ -1855,13 +1855,13 @@ func (p *device) OptGetServiceCapabilities(args GetServiceCapabilities) (*GetSer
 
 	resp := GetServiceCapabilitiesResponse{}
 
-	if err := p.cli.CallMethodUnmarshal(p.Endpoint, req, &resp); err != nil {
-		return nil, err
+	if fault := p.cli.CallMethodUnmarshal(p.Endpoint, req, &resp); fault != nil {
+		return nil, fault
 	}
 	return &resp, nil
 }
 
-func (p *device) OptGetServices(args GetServices) (*GetServicesResponse, error) {
+func (p *device) OptGetServices(args GetServices) (*GetServicesResponse, *common.Fault) {
 	req := struct {
 		XMLName     string `xml:"tds:GetServices"`
 		GetServices GetServices
@@ -1871,13 +1871,13 @@ func (p *device) OptGetServices(args GetServices) (*GetServicesResponse, error) 
 
 	resp := GetServicesResponse{}
 
-	if err := p.cli.CallMethodUnmarshal(p.Endpoint, req, &resp); err != nil {
-		return nil, err
+	if fault := p.cli.CallMethodUnmarshal(p.Endpoint, req, &resp); fault != nil {
+		return nil, fault
 	}
 	return &resp, nil
 }
 
-func (p *device) OptGetStorageConfiguration(args GetStorageConfiguration) (*GetStorageConfigurationResponse, error) {
+func (p *device) OptGetStorageConfiguration(args GetStorageConfiguration) (*GetStorageConfigurationResponse, *common.Fault) {
 	req := struct {
 		XMLName                 string `xml:"tds:GetStorageConfiguration"`
 		GetStorageConfiguration GetStorageConfiguration
@@ -1887,13 +1887,13 @@ func (p *device) OptGetStorageConfiguration(args GetStorageConfiguration) (*GetS
 
 	resp := GetStorageConfigurationResponse{}
 
-	if err := p.cli.CallMethodUnmarshal(p.Endpoint, req, &resp); err != nil {
-		return nil, err
+	if fault := p.cli.CallMethodUnmarshal(p.Endpoint, req, &resp); fault != nil {
+		return nil, fault
 	}
 	return &resp, nil
 }
 
-func (p *device) OptGetStorageConfigurations(args GetStorageConfigurations) (*GetStorageConfigurationsResponse, error) {
+func (p *device) OptGetStorageConfigurations(args GetStorageConfigurations) (*GetStorageConfigurationsResponse, *common.Fault) {
 	req := struct {
 		XMLName                  string `xml:"tds:GetStorageConfigurations"`
 		GetStorageConfigurations GetStorageConfigurations
@@ -1903,13 +1903,13 @@ func (p *device) OptGetStorageConfigurations(args GetStorageConfigurations) (*Ge
 
 	resp := GetStorageConfigurationsResponse{}
 
-	if err := p.cli.CallMethodUnmarshal(p.Endpoint, req, &resp); err != nil {
-		return nil, err
+	if fault := p.cli.CallMethodUnmarshal(p.Endpoint, req, &resp); fault != nil {
+		return nil, fault
 	}
 	return &resp, nil
 }
 
-func (p *device) OptGetSystemBackup(args GetSystemBackup) (*GetSystemBackupResponse, error) {
+func (p *device) OptGetSystemBackup(args GetSystemBackup) (*GetSystemBackupResponse, *common.Fault) {
 	req := struct {
 		XMLName         string `xml:"tds:GetSystemBackup"`
 		GetSystemBackup GetSystemBackup
@@ -1919,13 +1919,13 @@ func (p *device) OptGetSystemBackup(args GetSystemBackup) (*GetSystemBackupRespo
 
 	resp := GetSystemBackupResponse{}
 
-	if err := p.cli.CallMethodUnmarshal(p.Endpoint, req, &resp); err != nil {
-		return nil, err
+	if fault := p.cli.CallMethodUnmarshal(p.Endpoint, req, &resp); fault != nil {
+		return nil, fault
 	}
 	return &resp, nil
 }
 
-func (p *device) OptGetSystemDateAndTime(args GetSystemDateAndTime) (*GetSystemDateAndTimeResponse, error) {
+func (p *device) OptGetSystemDateAndTime(args GetSystemDateAndTime) (*GetSystemDateAndTimeResponse, *common.Fault) {
 	req := struct {
 		XMLName              string `xml:"tds:GetSystemDateAndTime"`
 		GetSystemDateAndTime GetSystemDateAndTime
@@ -1935,13 +1935,13 @@ func (p *device) OptGetSystemDateAndTime(args GetSystemDateAndTime) (*GetSystemD
 
 	resp := GetSystemDateAndTimeResponse{}
 
-	if err := p.cli.CallMethodUnmarshal(p.Endpoint, req, &resp); err != nil {
-		return nil, err
+	if fault := p.cli.CallMethodUnmarshal(p.Endpoint, req, &resp); fault != nil {
+		return nil, fault
 	}
 	return &resp, nil
 }
 
-func (p *device) OptGetSystemLog(args GetSystemLog) (*GetSystemLogResponse, error) {
+func (p *device) OptGetSystemLog(args GetSystemLog) (*GetSystemLogResponse, *common.Fault) {
 	req := struct {
 		XMLName      string `xml:"tds:GetSystemLog"`
 		GetSystemLog GetSystemLog
@@ -1951,13 +1951,13 @@ func (p *device) OptGetSystemLog(args GetSystemLog) (*GetSystemLogResponse, erro
 
 	resp := GetSystemLogResponse{}
 
-	if err := p.cli.CallMethodUnmarshal(p.Endpoint, req, &resp); err != nil {
-		return nil, err
+	if fault := p.cli.CallMethodUnmarshal(p.Endpoint, req, &resp); fault != nil {
+		return nil, fault
 	}
 	return &resp, nil
 }
 
-func (p *device) OptGetSystemSupportInformation(args GetSystemSupportInformation) (*GetSystemSupportInformationResponse, error) {
+func (p *device) OptGetSystemSupportInformation(args GetSystemSupportInformation) (*GetSystemSupportInformationResponse, *common.Fault) {
 	req := struct {
 		XMLName                     string `xml:"tds:GetSystemSupportInformation"`
 		GetSystemSupportInformation GetSystemSupportInformation
@@ -1967,13 +1967,13 @@ func (p *device) OptGetSystemSupportInformation(args GetSystemSupportInformation
 
 	resp := GetSystemSupportInformationResponse{}
 
-	if err := p.cli.CallMethodUnmarshal(p.Endpoint, req, &resp); err != nil {
-		return nil, err
+	if fault := p.cli.CallMethodUnmarshal(p.Endpoint, req, &resp); fault != nil {
+		return nil, fault
 	}
 	return &resp, nil
 }
 
-func (p *device) OptGetSystemUris(args GetSystemUris) (*GetSystemUrisResponse, error) {
+func (p *device) OptGetSystemUris(args GetSystemUris) (*GetSystemUrisResponse, *common.Fault) {
 	req := struct {
 		XMLName       string `xml:"tds:GetSystemUris"`
 		GetSystemUris GetSystemUris
@@ -1983,13 +1983,13 @@ func (p *device) OptGetSystemUris(args GetSystemUris) (*GetSystemUrisResponse, e
 
 	resp := GetSystemUrisResponse{}
 
-	if err := p.cli.CallMethodUnmarshal(p.Endpoint, req, &resp); err != nil {
-		return nil, err
+	if fault := p.cli.CallMethodUnmarshal(p.Endpoint, req, &resp); fault != nil {
+		return nil, fault
 	}
 	return &resp, nil
 }
 
-func (p *device) OptGetUsers(args GetUsers) (*GetUsersResponse, error) {
+func (p *device) OptGetUsers(args GetUsers) (*GetUsersResponse, *common.Fault) {
 	req := struct {
 		XMLName  string `xml:"tds:GetUsers"`
 		GetUsers GetUsers
@@ -1999,13 +1999,13 @@ func (p *device) OptGetUsers(args GetUsers) (*GetUsersResponse, error) {
 
 	resp := GetUsersResponse{}
 
-	if err := p.cli.CallMethodUnmarshal(p.Endpoint, req, &resp); err != nil {
-		return nil, err
+	if fault := p.cli.CallMethodUnmarshal(p.Endpoint, req, &resp); fault != nil {
+		return nil, fault
 	}
 	return &resp, nil
 }
 
-func (p *device) OptGetWsdlUrl(args GetWsdlUrl) (*GetWsdlUrlResponse, error) {
+func (p *device) OptGetWsdlUrl(args GetWsdlUrl) (*GetWsdlUrlResponse, *common.Fault) {
 	req := struct {
 		XMLName    string `xml:"tds:GetWsdlUrl"`
 		GetWsdlUrl GetWsdlUrl
@@ -2015,13 +2015,13 @@ func (p *device) OptGetWsdlUrl(args GetWsdlUrl) (*GetWsdlUrlResponse, error) {
 
 	resp := GetWsdlUrlResponse{}
 
-	if err := p.cli.CallMethodUnmarshal(p.Endpoint, req, &resp); err != nil {
-		return nil, err
+	if fault := p.cli.CallMethodUnmarshal(p.Endpoint, req, &resp); fault != nil {
+		return nil, fault
 	}
 	return &resp, nil
 }
 
-func (p *device) OptGetZeroConfiguration(args GetZeroConfiguration) (*GetZeroConfigurationResponse, error) {
+func (p *device) OptGetZeroConfiguration(args GetZeroConfiguration) (*GetZeroConfigurationResponse, *common.Fault) {
 	req := struct {
 		XMLName              string `xml:"tds:GetZeroConfiguration"`
 		GetZeroConfiguration GetZeroConfiguration
@@ -2031,13 +2031,13 @@ func (p *device) OptGetZeroConfiguration(args GetZeroConfiguration) (*GetZeroCon
 
 	resp := GetZeroConfigurationResponse{}
 
-	if err := p.cli.CallMethodUnmarshal(p.Endpoint, req, &resp); err != nil {
-		return nil, err
+	if fault := p.cli.CallMethodUnmarshal(p.Endpoint, req, &resp); fault != nil {
+		return nil, fault
 	}
 	return &resp, nil
 }
 
-func (p *device) OptLoadCACertificates(args LoadCACertificates) (*LoadCACertificatesResponse, error) {
+func (p *device) OptLoadCACertificates(args LoadCACertificates) (*LoadCACertificatesResponse, *common.Fault) {
 	req := struct {
 		XMLName            string `xml:"tds:LoadCACertificates"`
 		LoadCACertificates LoadCACertificates
@@ -2047,13 +2047,13 @@ func (p *device) OptLoadCACertificates(args LoadCACertificates) (*LoadCACertific
 
 	resp := LoadCACertificatesResponse{}
 
-	if err := p.cli.CallMethodUnmarshal(p.Endpoint, req, &resp); err != nil {
-		return nil, err
+	if fault := p.cli.CallMethodUnmarshal(p.Endpoint, req, &resp); fault != nil {
+		return nil, fault
 	}
 	return &resp, nil
 }
 
-func (p *device) OptLoadCertificateWithPrivateKey(args LoadCertificateWithPrivateKey) (*LoadCertificateWithPrivateKeyResponse, error) {
+func (p *device) OptLoadCertificateWithPrivateKey(args LoadCertificateWithPrivateKey) (*LoadCertificateWithPrivateKeyResponse, *common.Fault) {
 	req := struct {
 		XMLName                       string `xml:"tds:LoadCertificateWithPrivateKey"`
 		LoadCertificateWithPrivateKey LoadCertificateWithPrivateKey
@@ -2063,13 +2063,13 @@ func (p *device) OptLoadCertificateWithPrivateKey(args LoadCertificateWithPrivat
 
 	resp := LoadCertificateWithPrivateKeyResponse{}
 
-	if err := p.cli.CallMethodUnmarshal(p.Endpoint, req, &resp); err != nil {
-		return nil, err
+	if fault := p.cli.CallMethodUnmarshal(p.Endpoint, req, &resp); fault != nil {
+		return nil, fault
 	}
 	return &resp, nil
 }
 
-func (p *device) OptLoadCertificates(args LoadCertificates) (*LoadCertificatesResponse, error) {
+func (p *device) OptLoadCertificates(args LoadCertificates) (*LoadCertificatesResponse, *common.Fault) {
 	req := struct {
 		XMLName          string `xml:"tds:LoadCertificates"`
 		LoadCertificates LoadCertificates
@@ -2079,13 +2079,13 @@ func (p *device) OptLoadCertificates(args LoadCertificates) (*LoadCertificatesRe
 
 	resp := LoadCertificatesResponse{}
 
-	if err := p.cli.CallMethodUnmarshal(p.Endpoint, req, &resp); err != nil {
-		return nil, err
+	if fault := p.cli.CallMethodUnmarshal(p.Endpoint, req, &resp); fault != nil {
+		return nil, fault
 	}
 	return &resp, nil
 }
 
-func (p *device) OptRemoveIPAddressFilter(args RemoveIPAddressFilter) (*RemoveIPAddressFilterResponse, error) {
+func (p *device) OptRemoveIPAddressFilter(args RemoveIPAddressFilter) (*RemoveIPAddressFilterResponse, *common.Fault) {
 	req := struct {
 		XMLName               string `xml:"tds:RemoveIPAddressFilter"`
 		RemoveIPAddressFilter RemoveIPAddressFilter
@@ -2095,13 +2095,13 @@ func (p *device) OptRemoveIPAddressFilter(args RemoveIPAddressFilter) (*RemoveIP
 
 	resp := RemoveIPAddressFilterResponse{}
 
-	if err := p.cli.CallMethodUnmarshal(p.Endpoint, req, &resp); err != nil {
-		return nil, err
+	if fault := p.cli.CallMethodUnmarshal(p.Endpoint, req, &resp); fault != nil {
+		return nil, fault
 	}
 	return &resp, nil
 }
 
-func (p *device) OptRemoveScopes(args RemoveScopes) (*RemoveScopesResponse, error) {
+func (p *device) OptRemoveScopes(args RemoveScopes) (*RemoveScopesResponse, *common.Fault) {
 	req := struct {
 		XMLName      string `xml:"tds:RemoveScopes"`
 		RemoveScopes RemoveScopes
@@ -2111,13 +2111,13 @@ func (p *device) OptRemoveScopes(args RemoveScopes) (*RemoveScopesResponse, erro
 
 	resp := RemoveScopesResponse{}
 
-	if err := p.cli.CallMethodUnmarshal(p.Endpoint, req, &resp); err != nil {
-		return nil, err
+	if fault := p.cli.CallMethodUnmarshal(p.Endpoint, req, &resp); fault != nil {
+		return nil, fault
 	}
 	return &resp, nil
 }
 
-func (p *device) OptRestoreSystem(args RestoreSystem) (*RestoreSystemResponse, error) {
+func (p *device) OptRestoreSystem(args RestoreSystem) (*RestoreSystemResponse, *common.Fault) {
 	req := struct {
 		XMLName       string `xml:"tds:RestoreSystem"`
 		RestoreSystem RestoreSystem
@@ -2127,13 +2127,13 @@ func (p *device) OptRestoreSystem(args RestoreSystem) (*RestoreSystemResponse, e
 
 	resp := RestoreSystemResponse{}
 
-	if err := p.cli.CallMethodUnmarshal(p.Endpoint, req, &resp); err != nil {
-		return nil, err
+	if fault := p.cli.CallMethodUnmarshal(p.Endpoint, req, &resp); fault != nil {
+		return nil, fault
 	}
 	return &resp, nil
 }
 
-func (p *device) OptScanAvailableDot11Networks(args ScanAvailableDot11Networks) (*ScanAvailableDot11NetworksResponse, error) {
+func (p *device) OptScanAvailableDot11Networks(args ScanAvailableDot11Networks) (*ScanAvailableDot11NetworksResponse, *common.Fault) {
 	req := struct {
 		XMLName                    string `xml:"tds:ScanAvailableDot11Networks"`
 		ScanAvailableDot11Networks ScanAvailableDot11Networks
@@ -2143,13 +2143,13 @@ func (p *device) OptScanAvailableDot11Networks(args ScanAvailableDot11Networks) 
 
 	resp := ScanAvailableDot11NetworksResponse{}
 
-	if err := p.cli.CallMethodUnmarshal(p.Endpoint, req, &resp); err != nil {
-		return nil, err
+	if fault := p.cli.CallMethodUnmarshal(p.Endpoint, req, &resp); fault != nil {
+		return nil, fault
 	}
 	return &resp, nil
 }
 
-func (p *device) OptSendAuxiliaryCommand(args SendAuxiliaryCommand) (*SendAuxiliaryCommandResponse, error) {
+func (p *device) OptSendAuxiliaryCommand(args SendAuxiliaryCommand) (*SendAuxiliaryCommandResponse, *common.Fault) {
 	req := struct {
 		XMLName              string `xml:"tds:SendAuxiliaryCommand"`
 		SendAuxiliaryCommand SendAuxiliaryCommand
@@ -2159,13 +2159,13 @@ func (p *device) OptSendAuxiliaryCommand(args SendAuxiliaryCommand) (*SendAuxili
 
 	resp := SendAuxiliaryCommandResponse{}
 
-	if err := p.cli.CallMethodUnmarshal(p.Endpoint, req, &resp); err != nil {
-		return nil, err
+	if fault := p.cli.CallMethodUnmarshal(p.Endpoint, req, &resp); fault != nil {
+		return nil, fault
 	}
 	return &resp, nil
 }
 
-func (p *device) OptSetAccessPolicy(args SetAccessPolicy) (*SetAccessPolicyResponse, error) {
+func (p *device) OptSetAccessPolicy(args SetAccessPolicy) (*SetAccessPolicyResponse, *common.Fault) {
 	req := struct {
 		XMLName         string `xml:"tds:SetAccessPolicy"`
 		SetAccessPolicy SetAccessPolicy
@@ -2175,13 +2175,13 @@ func (p *device) OptSetAccessPolicy(args SetAccessPolicy) (*SetAccessPolicyRespo
 
 	resp := SetAccessPolicyResponse{}
 
-	if err := p.cli.CallMethodUnmarshal(p.Endpoint, req, &resp); err != nil {
-		return nil, err
+	if fault := p.cli.CallMethodUnmarshal(p.Endpoint, req, &resp); fault != nil {
+		return nil, fault
 	}
 	return &resp, nil
 }
 
-func (p *device) OptSetAuthFailureWarningConfiguration(args SetAuthFailureWarningConfiguration) (*SetAuthFailureWarningConfigurationResponse, error) {
+func (p *device) OptSetAuthFailureWarningConfiguration(args SetAuthFailureWarningConfiguration) (*SetAuthFailureWarningConfigurationResponse, *common.Fault) {
 	req := struct {
 		XMLName                            string `xml:"tds:SetAuthFailureWarningConfiguration"`
 		SetAuthFailureWarningConfiguration SetAuthFailureWarningConfiguration
@@ -2191,13 +2191,13 @@ func (p *device) OptSetAuthFailureWarningConfiguration(args SetAuthFailureWarnin
 
 	resp := SetAuthFailureWarningConfigurationResponse{}
 
-	if err := p.cli.CallMethodUnmarshal(p.Endpoint, req, &resp); err != nil {
-		return nil, err
+	if fault := p.cli.CallMethodUnmarshal(p.Endpoint, req, &resp); fault != nil {
+		return nil, fault
 	}
 	return &resp, nil
 }
 
-func (p *device) OptSetCertificatesStatus(args SetCertificatesStatus) (*SetCertificatesStatusResponse, error) {
+func (p *device) OptSetCertificatesStatus(args SetCertificatesStatus) (*SetCertificatesStatusResponse, *common.Fault) {
 	req := struct {
 		XMLName               string `xml:"tds:SetCertificatesStatus"`
 		SetCertificatesStatus SetCertificatesStatus
@@ -2207,13 +2207,13 @@ func (p *device) OptSetCertificatesStatus(args SetCertificatesStatus) (*SetCerti
 
 	resp := SetCertificatesStatusResponse{}
 
-	if err := p.cli.CallMethodUnmarshal(p.Endpoint, req, &resp); err != nil {
-		return nil, err
+	if fault := p.cli.CallMethodUnmarshal(p.Endpoint, req, &resp); fault != nil {
+		return nil, fault
 	}
 	return &resp, nil
 }
 
-func (p *device) OptSetClientCertificateMode(args SetClientCertificateMode) (*SetClientCertificateModeResponse, error) {
+func (p *device) OptSetClientCertificateMode(args SetClientCertificateMode) (*SetClientCertificateModeResponse, *common.Fault) {
 	req := struct {
 		XMLName                  string `xml:"tds:SetClientCertificateMode"`
 		SetClientCertificateMode SetClientCertificateMode
@@ -2223,13 +2223,13 @@ func (p *device) OptSetClientCertificateMode(args SetClientCertificateMode) (*Se
 
 	resp := SetClientCertificateModeResponse{}
 
-	if err := p.cli.CallMethodUnmarshal(p.Endpoint, req, &resp); err != nil {
-		return nil, err
+	if fault := p.cli.CallMethodUnmarshal(p.Endpoint, req, &resp); fault != nil {
+		return nil, fault
 	}
 	return &resp, nil
 }
 
-func (p *device) OptSetDNS(args SetDNS) (*SetDNSResponse, error) {
+func (p *device) OptSetDNS(args SetDNS) (*SetDNSResponse, *common.Fault) {
 	req := struct {
 		XMLName string `xml:"tds:SetDNS"`
 		SetDNS  SetDNS
@@ -2239,13 +2239,13 @@ func (p *device) OptSetDNS(args SetDNS) (*SetDNSResponse, error) {
 
 	resp := SetDNSResponse{}
 
-	if err := p.cli.CallMethodUnmarshal(p.Endpoint, req, &resp); err != nil {
-		return nil, err
+	if fault := p.cli.CallMethodUnmarshal(p.Endpoint, req, &resp); fault != nil {
+		return nil, fault
 	}
 	return &resp, nil
 }
 
-func (p *device) OptSetDPAddresses(args SetDPAddresses) (*SetDPAddressesResponse, error) {
+func (p *device) OptSetDPAddresses(args SetDPAddresses) (*SetDPAddressesResponse, *common.Fault) {
 	req := struct {
 		XMLName        string `xml:"tds:SetDPAddresses"`
 		SetDPAddresses SetDPAddresses
@@ -2255,13 +2255,13 @@ func (p *device) OptSetDPAddresses(args SetDPAddresses) (*SetDPAddressesResponse
 
 	resp := SetDPAddressesResponse{}
 
-	if err := p.cli.CallMethodUnmarshal(p.Endpoint, req, &resp); err != nil {
-		return nil, err
+	if fault := p.cli.CallMethodUnmarshal(p.Endpoint, req, &resp); fault != nil {
+		return nil, fault
 	}
 	return &resp, nil
 }
 
-func (p *device) OptSetDiscoveryMode(args SetDiscoveryMode) (*SetDiscoveryModeResponse, error) {
+func (p *device) OptSetDiscoveryMode(args SetDiscoveryMode) (*SetDiscoveryModeResponse, *common.Fault) {
 	req := struct {
 		XMLName          string `xml:"tds:SetDiscoveryMode"`
 		SetDiscoveryMode SetDiscoveryMode
@@ -2271,13 +2271,13 @@ func (p *device) OptSetDiscoveryMode(args SetDiscoveryMode) (*SetDiscoveryModeRe
 
 	resp := SetDiscoveryModeResponse{}
 
-	if err := p.cli.CallMethodUnmarshal(p.Endpoint, req, &resp); err != nil {
-		return nil, err
+	if fault := p.cli.CallMethodUnmarshal(p.Endpoint, req, &resp); fault != nil {
+		return nil, fault
 	}
 	return &resp, nil
 }
 
-func (p *device) OptSetDot1XConfiguration(args SetDot1XConfiguration) (*SetDot1XConfigurationResponse, error) {
+func (p *device) OptSetDot1XConfiguration(args SetDot1XConfiguration) (*SetDot1XConfigurationResponse, *common.Fault) {
 	req := struct {
 		XMLName               string `xml:"tds:SetDot1XConfiguration"`
 		SetDot1XConfiguration SetDot1XConfiguration
@@ -2287,13 +2287,13 @@ func (p *device) OptSetDot1XConfiguration(args SetDot1XConfiguration) (*SetDot1X
 
 	resp := SetDot1XConfigurationResponse{}
 
-	if err := p.cli.CallMethodUnmarshal(p.Endpoint, req, &resp); err != nil {
-		return nil, err
+	if fault := p.cli.CallMethodUnmarshal(p.Endpoint, req, &resp); fault != nil {
+		return nil, fault
 	}
 	return &resp, nil
 }
 
-func (p *device) OptSetDynamicDNS(args SetDynamicDNS) (*SetDynamicDNSResponse, error) {
+func (p *device) OptSetDynamicDNS(args SetDynamicDNS) (*SetDynamicDNSResponse, *common.Fault) {
 	req := struct {
 		XMLName       string `xml:"tds:SetDynamicDNS"`
 		SetDynamicDNS SetDynamicDNS
@@ -2303,13 +2303,13 @@ func (p *device) OptSetDynamicDNS(args SetDynamicDNS) (*SetDynamicDNSResponse, e
 
 	resp := SetDynamicDNSResponse{}
 
-	if err := p.cli.CallMethodUnmarshal(p.Endpoint, req, &resp); err != nil {
-		return nil, err
+	if fault := p.cli.CallMethodUnmarshal(p.Endpoint, req, &resp); fault != nil {
+		return nil, fault
 	}
 	return &resp, nil
 }
 
-func (p *device) OptSetGeoLocation(args SetGeoLocation) (*SetGeoLocationResponse, error) {
+func (p *device) OptSetGeoLocation(args SetGeoLocation) (*SetGeoLocationResponse, *common.Fault) {
 	req := struct {
 		XMLName        string `xml:"tds:SetGeoLocation"`
 		SetGeoLocation SetGeoLocation
@@ -2319,13 +2319,13 @@ func (p *device) OptSetGeoLocation(args SetGeoLocation) (*SetGeoLocationResponse
 
 	resp := SetGeoLocationResponse{}
 
-	if err := p.cli.CallMethodUnmarshal(p.Endpoint, req, &resp); err != nil {
-		return nil, err
+	if fault := p.cli.CallMethodUnmarshal(p.Endpoint, req, &resp); fault != nil {
+		return nil, fault
 	}
 	return &resp, nil
 }
 
-func (p *device) OptSetHashingAlgorithm(args SetHashingAlgorithm) (*SetHashingAlgorithmResponse, error) {
+func (p *device) OptSetHashingAlgorithm(args SetHashingAlgorithm) (*SetHashingAlgorithmResponse, *common.Fault) {
 	req := struct {
 		XMLName             string `xml:"tds:SetHashingAlgorithm"`
 		SetHashingAlgorithm SetHashingAlgorithm
@@ -2335,13 +2335,13 @@ func (p *device) OptSetHashingAlgorithm(args SetHashingAlgorithm) (*SetHashingAl
 
 	resp := SetHashingAlgorithmResponse{}
 
-	if err := p.cli.CallMethodUnmarshal(p.Endpoint, req, &resp); err != nil {
-		return nil, err
+	if fault := p.cli.CallMethodUnmarshal(p.Endpoint, req, &resp); fault != nil {
+		return nil, fault
 	}
 	return &resp, nil
 }
 
-func (p *device) OptSetHostname(args SetHostname) (*SetHostnameResponse, error) {
+func (p *device) OptSetHostname(args SetHostname) (*SetHostnameResponse, *common.Fault) {
 	req := struct {
 		XMLName     string `xml:"tds:SetHostname"`
 		SetHostname SetHostname
@@ -2351,13 +2351,13 @@ func (p *device) OptSetHostname(args SetHostname) (*SetHostnameResponse, error) 
 
 	resp := SetHostnameResponse{}
 
-	if err := p.cli.CallMethodUnmarshal(p.Endpoint, req, &resp); err != nil {
-		return nil, err
+	if fault := p.cli.CallMethodUnmarshal(p.Endpoint, req, &resp); fault != nil {
+		return nil, fault
 	}
 	return &resp, nil
 }
 
-func (p *device) OptSetHostnameFromDHCP(args SetHostnameFromDHCP) (*SetHostnameFromDHCPResponse, error) {
+func (p *device) OptSetHostnameFromDHCP(args SetHostnameFromDHCP) (*SetHostnameFromDHCPResponse, *common.Fault) {
 	req := struct {
 		XMLName             string `xml:"tds:SetHostnameFromDHCP"`
 		SetHostnameFromDHCP SetHostnameFromDHCP
@@ -2367,13 +2367,13 @@ func (p *device) OptSetHostnameFromDHCP(args SetHostnameFromDHCP) (*SetHostnameF
 
 	resp := SetHostnameFromDHCPResponse{}
 
-	if err := p.cli.CallMethodUnmarshal(p.Endpoint, req, &resp); err != nil {
-		return nil, err
+	if fault := p.cli.CallMethodUnmarshal(p.Endpoint, req, &resp); fault != nil {
+		return nil, fault
 	}
 	return &resp, nil
 }
 
-func (p *device) OptSetIPAddressFilter(args SetIPAddressFilter) (*SetIPAddressFilterResponse, error) {
+func (p *device) OptSetIPAddressFilter(args SetIPAddressFilter) (*SetIPAddressFilterResponse, *common.Fault) {
 	req := struct {
 		XMLName            string `xml:"tds:SetIPAddressFilter"`
 		SetIPAddressFilter SetIPAddressFilter
@@ -2383,13 +2383,13 @@ func (p *device) OptSetIPAddressFilter(args SetIPAddressFilter) (*SetIPAddressFi
 
 	resp := SetIPAddressFilterResponse{}
 
-	if err := p.cli.CallMethodUnmarshal(p.Endpoint, req, &resp); err != nil {
-		return nil, err
+	if fault := p.cli.CallMethodUnmarshal(p.Endpoint, req, &resp); fault != nil {
+		return nil, fault
 	}
 	return &resp, nil
 }
 
-func (p *device) OptSetNTP(args SetNTP) (*SetNTPResponse, error) {
+func (p *device) OptSetNTP(args SetNTP) (*SetNTPResponse, *common.Fault) {
 	req := struct {
 		XMLName string `xml:"tds:SetNTP"`
 		SetNTP  SetNTP
@@ -2399,13 +2399,13 @@ func (p *device) OptSetNTP(args SetNTP) (*SetNTPResponse, error) {
 
 	resp := SetNTPResponse{}
 
-	if err := p.cli.CallMethodUnmarshal(p.Endpoint, req, &resp); err != nil {
-		return nil, err
+	if fault := p.cli.CallMethodUnmarshal(p.Endpoint, req, &resp); fault != nil {
+		return nil, fault
 	}
 	return &resp, nil
 }
 
-func (p *device) OptSetNetworkDefaultGateway(args SetNetworkDefaultGateway) (*SetNetworkDefaultGatewayResponse, error) {
+func (p *device) OptSetNetworkDefaultGateway(args SetNetworkDefaultGateway) (*SetNetworkDefaultGatewayResponse, *common.Fault) {
 	req := struct {
 		XMLName                  string `xml:"tds:SetNetworkDefaultGateway"`
 		SetNetworkDefaultGateway SetNetworkDefaultGateway
@@ -2415,13 +2415,13 @@ func (p *device) OptSetNetworkDefaultGateway(args SetNetworkDefaultGateway) (*Se
 
 	resp := SetNetworkDefaultGatewayResponse{}
 
-	if err := p.cli.CallMethodUnmarshal(p.Endpoint, req, &resp); err != nil {
-		return nil, err
+	if fault := p.cli.CallMethodUnmarshal(p.Endpoint, req, &resp); fault != nil {
+		return nil, fault
 	}
 	return &resp, nil
 }
 
-func (p *device) OptSetNetworkInterfaces(args SetNetworkInterfaces) (*SetNetworkInterfacesResponse, error) {
+func (p *device) OptSetNetworkInterfaces(args SetNetworkInterfaces) (*SetNetworkInterfacesResponse, *common.Fault) {
 	req := struct {
 		XMLName              string `xml:"tds:SetNetworkInterfaces"`
 		SetNetworkInterfaces SetNetworkInterfaces
@@ -2431,13 +2431,13 @@ func (p *device) OptSetNetworkInterfaces(args SetNetworkInterfaces) (*SetNetwork
 
 	resp := SetNetworkInterfacesResponse{}
 
-	if err := p.cli.CallMethodUnmarshal(p.Endpoint, req, &resp); err != nil {
-		return nil, err
+	if fault := p.cli.CallMethodUnmarshal(p.Endpoint, req, &resp); fault != nil {
+		return nil, fault
 	}
 	return &resp, nil
 }
 
-func (p *device) OptSetNetworkProtocols(args SetNetworkProtocols) (*SetNetworkProtocolsResponse, error) {
+func (p *device) OptSetNetworkProtocols(args SetNetworkProtocols) (*SetNetworkProtocolsResponse, *common.Fault) {
 	req := struct {
 		XMLName             string `xml:"tds:SetNetworkProtocols"`
 		SetNetworkProtocols SetNetworkProtocols
@@ -2447,13 +2447,13 @@ func (p *device) OptSetNetworkProtocols(args SetNetworkProtocols) (*SetNetworkPr
 
 	resp := SetNetworkProtocolsResponse{}
 
-	if err := p.cli.CallMethodUnmarshal(p.Endpoint, req, &resp); err != nil {
-		return nil, err
+	if fault := p.cli.CallMethodUnmarshal(p.Endpoint, req, &resp); fault != nil {
+		return nil, fault
 	}
 	return &resp, nil
 }
 
-func (p *device) OptSetPasswordComplexityConfiguration(args SetPasswordComplexityConfiguration) (*SetPasswordComplexityConfigurationResponse, error) {
+func (p *device) OptSetPasswordComplexityConfiguration(args SetPasswordComplexityConfiguration) (*SetPasswordComplexityConfigurationResponse, *common.Fault) {
 	req := struct {
 		XMLName                            string `xml:"tds:SetPasswordComplexityConfiguration"`
 		SetPasswordComplexityConfiguration SetPasswordComplexityConfiguration
@@ -2463,13 +2463,13 @@ func (p *device) OptSetPasswordComplexityConfiguration(args SetPasswordComplexit
 
 	resp := SetPasswordComplexityConfigurationResponse{}
 
-	if err := p.cli.CallMethodUnmarshal(p.Endpoint, req, &resp); err != nil {
-		return nil, err
+	if fault := p.cli.CallMethodUnmarshal(p.Endpoint, req, &resp); fault != nil {
+		return nil, fault
 	}
 	return &resp, nil
 }
 
-func (p *device) OptSetPasswordHistoryConfiguration(args SetPasswordHistoryConfiguration) (*SetPasswordHistoryConfigurationResponse, error) {
+func (p *device) OptSetPasswordHistoryConfiguration(args SetPasswordHistoryConfiguration) (*SetPasswordHistoryConfigurationResponse, *common.Fault) {
 	req := struct {
 		XMLName                         string `xml:"tds:SetPasswordHistoryConfiguration"`
 		SetPasswordHistoryConfiguration SetPasswordHistoryConfiguration
@@ -2479,13 +2479,13 @@ func (p *device) OptSetPasswordHistoryConfiguration(args SetPasswordHistoryConfi
 
 	resp := SetPasswordHistoryConfigurationResponse{}
 
-	if err := p.cli.CallMethodUnmarshal(p.Endpoint, req, &resp); err != nil {
-		return nil, err
+	if fault := p.cli.CallMethodUnmarshal(p.Endpoint, req, &resp); fault != nil {
+		return nil, fault
 	}
 	return &resp, nil
 }
 
-func (p *device) OptSetRelayOutputSettings(args SetRelayOutputSettings) (*SetRelayOutputSettingsResponse, error) {
+func (p *device) OptSetRelayOutputSettings(args SetRelayOutputSettings) (*SetRelayOutputSettingsResponse, *common.Fault) {
 	req := struct {
 		XMLName                string `xml:"tds:SetRelayOutputSettings"`
 		SetRelayOutputSettings SetRelayOutputSettings
@@ -2495,13 +2495,13 @@ func (p *device) OptSetRelayOutputSettings(args SetRelayOutputSettings) (*SetRel
 
 	resp := SetRelayOutputSettingsResponse{}
 
-	if err := p.cli.CallMethodUnmarshal(p.Endpoint, req, &resp); err != nil {
-		return nil, err
+	if fault := p.cli.CallMethodUnmarshal(p.Endpoint, req, &resp); fault != nil {
+		return nil, fault
 	}
 	return &resp, nil
 }
 
-func (p *device) OptSetRelayOutputState(args SetRelayOutputState) (*SetRelayOutputStateResponse, error) {
+func (p *device) OptSetRelayOutputState(args SetRelayOutputState) (*SetRelayOutputStateResponse, *common.Fault) {
 	req := struct {
 		XMLName             string `xml:"tds:SetRelayOutputState"`
 		SetRelayOutputState SetRelayOutputState
@@ -2511,13 +2511,13 @@ func (p *device) OptSetRelayOutputState(args SetRelayOutputState) (*SetRelayOutp
 
 	resp := SetRelayOutputStateResponse{}
 
-	if err := p.cli.CallMethodUnmarshal(p.Endpoint, req, &resp); err != nil {
-		return nil, err
+	if fault := p.cli.CallMethodUnmarshal(p.Endpoint, req, &resp); fault != nil {
+		return nil, fault
 	}
 	return &resp, nil
 }
 
-func (p *device) OptSetRemoteDiscoveryMode(args SetRemoteDiscoveryMode) (*SetRemoteDiscoveryModeResponse, error) {
+func (p *device) OptSetRemoteDiscoveryMode(args SetRemoteDiscoveryMode) (*SetRemoteDiscoveryModeResponse, *common.Fault) {
 	req := struct {
 		XMLName                string `xml:"tds:SetRemoteDiscoveryMode"`
 		SetRemoteDiscoveryMode SetRemoteDiscoveryMode
@@ -2527,13 +2527,13 @@ func (p *device) OptSetRemoteDiscoveryMode(args SetRemoteDiscoveryMode) (*SetRem
 
 	resp := SetRemoteDiscoveryModeResponse{}
 
-	if err := p.cli.CallMethodUnmarshal(p.Endpoint, req, &resp); err != nil {
-		return nil, err
+	if fault := p.cli.CallMethodUnmarshal(p.Endpoint, req, &resp); fault != nil {
+		return nil, fault
 	}
 	return &resp, nil
 }
 
-func (p *device) OptSetRemoteUser(args SetRemoteUser) (*SetRemoteUserResponse, error) {
+func (p *device) OptSetRemoteUser(args SetRemoteUser) (*SetRemoteUserResponse, *common.Fault) {
 	req := struct {
 		XMLName       string `xml:"tds:SetRemoteUser"`
 		SetRemoteUser SetRemoteUser
@@ -2543,13 +2543,13 @@ func (p *device) OptSetRemoteUser(args SetRemoteUser) (*SetRemoteUserResponse, e
 
 	resp := SetRemoteUserResponse{}
 
-	if err := p.cli.CallMethodUnmarshal(p.Endpoint, req, &resp); err != nil {
-		return nil, err
+	if fault := p.cli.CallMethodUnmarshal(p.Endpoint, req, &resp); fault != nil {
+		return nil, fault
 	}
 	return &resp, nil
 }
 
-func (p *device) OptSetScopes(args SetScopes) (*SetScopesResponse, error) {
+func (p *device) OptSetScopes(args SetScopes) (*SetScopesResponse, *common.Fault) {
 	req := struct {
 		XMLName   string `xml:"tds:SetScopes"`
 		SetScopes SetScopes
@@ -2559,13 +2559,13 @@ func (p *device) OptSetScopes(args SetScopes) (*SetScopesResponse, error) {
 
 	resp := SetScopesResponse{}
 
-	if err := p.cli.CallMethodUnmarshal(p.Endpoint, req, &resp); err != nil {
-		return nil, err
+	if fault := p.cli.CallMethodUnmarshal(p.Endpoint, req, &resp); fault != nil {
+		return nil, fault
 	}
 	return &resp, nil
 }
 
-func (p *device) OptSetStorageConfiguration(args SetStorageConfiguration) (*SetStorageConfigurationResponse, error) {
+func (p *device) OptSetStorageConfiguration(args SetStorageConfiguration) (*SetStorageConfigurationResponse, *common.Fault) {
 	req := struct {
 		XMLName                 string `xml:"tds:SetStorageConfiguration"`
 		SetStorageConfiguration SetStorageConfiguration
@@ -2575,13 +2575,13 @@ func (p *device) OptSetStorageConfiguration(args SetStorageConfiguration) (*SetS
 
 	resp := SetStorageConfigurationResponse{}
 
-	if err := p.cli.CallMethodUnmarshal(p.Endpoint, req, &resp); err != nil {
-		return nil, err
+	if fault := p.cli.CallMethodUnmarshal(p.Endpoint, req, &resp); fault != nil {
+		return nil, fault
 	}
 	return &resp, nil
 }
 
-func (p *device) OptSetSystemDateAndTime(args SetSystemDateAndTime) (*SetSystemDateAndTimeResponse, error) {
+func (p *device) OptSetSystemDateAndTime(args SetSystemDateAndTime) (*SetSystemDateAndTimeResponse, *common.Fault) {
 	req := struct {
 		XMLName              string `xml:"tds:SetSystemDateAndTime"`
 		SetSystemDateAndTime SetSystemDateAndTime
@@ -2591,13 +2591,13 @@ func (p *device) OptSetSystemDateAndTime(args SetSystemDateAndTime) (*SetSystemD
 
 	resp := SetSystemDateAndTimeResponse{}
 
-	if err := p.cli.CallMethodUnmarshal(p.Endpoint, req, &resp); err != nil {
-		return nil, err
+	if fault := p.cli.CallMethodUnmarshal(p.Endpoint, req, &resp); fault != nil {
+		return nil, fault
 	}
 	return &resp, nil
 }
 
-func (p *device) OptSetSystemFactoryDefault(args SetSystemFactoryDefault) (*SetSystemFactoryDefaultResponse, error) {
+func (p *device) OptSetSystemFactoryDefault(args SetSystemFactoryDefault) (*SetSystemFactoryDefaultResponse, *common.Fault) {
 	req := struct {
 		XMLName                 string `xml:"tds:SetSystemFactoryDefault"`
 		SetSystemFactoryDefault SetSystemFactoryDefault
@@ -2607,13 +2607,13 @@ func (p *device) OptSetSystemFactoryDefault(args SetSystemFactoryDefault) (*SetS
 
 	resp := SetSystemFactoryDefaultResponse{}
 
-	if err := p.cli.CallMethodUnmarshal(p.Endpoint, req, &resp); err != nil {
-		return nil, err
+	if fault := p.cli.CallMethodUnmarshal(p.Endpoint, req, &resp); fault != nil {
+		return nil, fault
 	}
 	return &resp, nil
 }
 
-func (p *device) OptSetUser(args SetUser) (*SetUserResponse, error) {
+func (p *device) OptSetUser(args SetUser) (*SetUserResponse, *common.Fault) {
 	req := struct {
 		XMLName string `xml:"tds:SetUser"`
 		SetUser SetUser
@@ -2623,13 +2623,13 @@ func (p *device) OptSetUser(args SetUser) (*SetUserResponse, error) {
 
 	resp := SetUserResponse{}
 
-	if err := p.cli.CallMethodUnmarshal(p.Endpoint, req, &resp); err != nil {
-		return nil, err
+	if fault := p.cli.CallMethodUnmarshal(p.Endpoint, req, &resp); fault != nil {
+		return nil, fault
 	}
 	return &resp, nil
 }
 
-func (p *device) OptSetZeroConfiguration(args SetZeroConfiguration) (*SetZeroConfigurationResponse, error) {
+func (p *device) OptSetZeroConfiguration(args SetZeroConfiguration) (*SetZeroConfigurationResponse, *common.Fault) {
 	req := struct {
 		XMLName              string `xml:"tds:SetZeroConfiguration"`
 		SetZeroConfiguration SetZeroConfiguration
@@ -2639,13 +2639,13 @@ func (p *device) OptSetZeroConfiguration(args SetZeroConfiguration) (*SetZeroCon
 
 	resp := SetZeroConfigurationResponse{}
 
-	if err := p.cli.CallMethodUnmarshal(p.Endpoint, req, &resp); err != nil {
-		return nil, err
+	if fault := p.cli.CallMethodUnmarshal(p.Endpoint, req, &resp); fault != nil {
+		return nil, fault
 	}
 	return &resp, nil
 }
 
-func (p *device) OptStartFirmwareUpgrade(args StartFirmwareUpgrade) (*StartFirmwareUpgradeResponse, error) {
+func (p *device) OptStartFirmwareUpgrade(args StartFirmwareUpgrade) (*StartFirmwareUpgradeResponse, *common.Fault) {
 	req := struct {
 		XMLName              string `xml:"tds:StartFirmwareUpgrade"`
 		StartFirmwareUpgrade StartFirmwareUpgrade
@@ -2655,13 +2655,13 @@ func (p *device) OptStartFirmwareUpgrade(args StartFirmwareUpgrade) (*StartFirmw
 
 	resp := StartFirmwareUpgradeResponse{}
 
-	if err := p.cli.CallMethodUnmarshal(p.Endpoint, req, &resp); err != nil {
-		return nil, err
+	if fault := p.cli.CallMethodUnmarshal(p.Endpoint, req, &resp); fault != nil {
+		return nil, fault
 	}
 	return &resp, nil
 }
 
-func (p *device) OptStartSystemRestore(args StartSystemRestore) (*StartSystemRestoreResponse, error) {
+func (p *device) OptStartSystemRestore(args StartSystemRestore) (*StartSystemRestoreResponse, *common.Fault) {
 	req := struct {
 		XMLName            string `xml:"tds:StartSystemRestore"`
 		StartSystemRestore StartSystemRestore
@@ -2671,13 +2671,13 @@ func (p *device) OptStartSystemRestore(args StartSystemRestore) (*StartSystemRes
 
 	resp := StartSystemRestoreResponse{}
 
-	if err := p.cli.CallMethodUnmarshal(p.Endpoint, req, &resp); err != nil {
-		return nil, err
+	if fault := p.cli.CallMethodUnmarshal(p.Endpoint, req, &resp); fault != nil {
+		return nil, fault
 	}
 	return &resp, nil
 }
 
-func (p *device) OptSystemReboot(args SystemReboot) (*SystemRebootResponse, error) {
+func (p *device) OptSystemReboot(args SystemReboot) (*SystemRebootResponse, *common.Fault) {
 	req := struct {
 		XMLName      string `xml:"tds:SystemReboot"`
 		SystemReboot SystemReboot
@@ -2687,13 +2687,13 @@ func (p *device) OptSystemReboot(args SystemReboot) (*SystemRebootResponse, erro
 
 	resp := SystemRebootResponse{}
 
-	if err := p.cli.CallMethodUnmarshal(p.Endpoint, req, &resp); err != nil {
-		return nil, err
+	if fault := p.cli.CallMethodUnmarshal(p.Endpoint, req, &resp); fault != nil {
+		return nil, fault
 	}
 	return &resp, nil
 }
 
-func (p *device) OptUpgradeSystemFirmware(args UpgradeSystemFirmware) (*UpgradeSystemFirmwareResponse, error) {
+func (p *device) OptUpgradeSystemFirmware(args UpgradeSystemFirmware) (*UpgradeSystemFirmwareResponse, *common.Fault) {
 	req := struct {
 		XMLName               string `xml:"tds:UpgradeSystemFirmware"`
 		UpgradeSystemFirmware UpgradeSystemFirmware
@@ -2703,8 +2703,8 @@ func (p *device) OptUpgradeSystemFirmware(args UpgradeSystemFirmware) (*UpgradeS
 
 	resp := UpgradeSystemFirmwareResponse{}
 
-	if err := p.cli.CallMethodUnmarshal(p.Endpoint, req, &resp); err != nil {
-		return nil, err
+	if fault := p.cli.CallMethodUnmarshal(p.Endpoint, req, &resp); fault != nil {
+		return nil, fault
 	}
 	return &resp, nil
 }

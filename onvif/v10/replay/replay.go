@@ -14,13 +14,13 @@ func NewReplayPort(endpoint string, cli common.Client) ReplayPort {
 // ReplayPort was auto-generated from WSDL
 // and defines interface for the remote service. Useful for testing.
 type ReplayPort interface {
-	OptGetReplayConfiguration(GetReplayConfiguration GetReplayConfiguration) (*GetReplayConfigurationResponse, error)
+	OptGetReplayConfiguration(GetReplayConfiguration GetReplayConfiguration) (*GetReplayConfigurationResponse, *common.Fault)
 
-	OptGetReplayUri(GetReplayUri GetReplayUri) (*GetReplayUriResponse, error)
+	OptGetReplayUri(GetReplayUri GetReplayUri) (*GetReplayUriResponse, *common.Fault)
 
-	OptGetServiceCapabilities(GetServiceCapabilities GetServiceCapabilities) (*GetServiceCapabilitiesResponse, error)
+	OptGetServiceCapabilities(GetServiceCapabilities GetServiceCapabilities) (*GetServiceCapabilitiesResponse, *common.Fault)
 
-	OptSetReplayConfiguration(SetReplayConfiguration SetReplayConfiguration) (*SetReplayConfigurationResponse, error)
+	OptSetReplayConfiguration(SetReplayConfiguration SetReplayConfiguration) (*SetReplayConfigurationResponse, *common.Fault)
 }
 type Capabilities []interface{}
 
@@ -60,7 +60,7 @@ type replayPort struct {
 	Endpoint string
 }
 
-func (p *replayPort) OptGetReplayConfiguration(args GetReplayConfiguration) (*GetReplayConfigurationResponse, error) {
+func (p *replayPort) OptGetReplayConfiguration(args GetReplayConfiguration) (*GetReplayConfigurationResponse, *common.Fault) {
 	req := struct {
 		XMLName                string `xml:"trp:GetReplayConfiguration"`
 		GetReplayConfiguration GetReplayConfiguration
@@ -70,13 +70,13 @@ func (p *replayPort) OptGetReplayConfiguration(args GetReplayConfiguration) (*Ge
 
 	resp := GetReplayConfigurationResponse{}
 
-	if err := p.cli.CallMethodUnmarshal(p.Endpoint, req, &resp); err != nil {
-		return nil, err
+	if fault := p.cli.CallMethodUnmarshal(p.Endpoint, req, &resp); fault != nil {
+		return nil, fault
 	}
 	return &resp, nil
 }
 
-func (p *replayPort) OptGetReplayUri(args GetReplayUri) (*GetReplayUriResponse, error) {
+func (p *replayPort) OptGetReplayUri(args GetReplayUri) (*GetReplayUriResponse, *common.Fault) {
 	req := struct {
 		XMLName      string `xml:"trp:GetReplayUri"`
 		GetReplayUri GetReplayUri
@@ -86,13 +86,13 @@ func (p *replayPort) OptGetReplayUri(args GetReplayUri) (*GetReplayUriResponse, 
 
 	resp := GetReplayUriResponse{}
 
-	if err := p.cli.CallMethodUnmarshal(p.Endpoint, req, &resp); err != nil {
-		return nil, err
+	if fault := p.cli.CallMethodUnmarshal(p.Endpoint, req, &resp); fault != nil {
+		return nil, fault
 	}
 	return &resp, nil
 }
 
-func (p *replayPort) OptGetServiceCapabilities(args GetServiceCapabilities) (*GetServiceCapabilitiesResponse, error) {
+func (p *replayPort) OptGetServiceCapabilities(args GetServiceCapabilities) (*GetServiceCapabilitiesResponse, *common.Fault) {
 	req := struct {
 		XMLName                string `xml:"trp:GetServiceCapabilities"`
 		GetServiceCapabilities GetServiceCapabilities
@@ -102,13 +102,13 @@ func (p *replayPort) OptGetServiceCapabilities(args GetServiceCapabilities) (*Ge
 
 	resp := GetServiceCapabilitiesResponse{}
 
-	if err := p.cli.CallMethodUnmarshal(p.Endpoint, req, &resp); err != nil {
-		return nil, err
+	if fault := p.cli.CallMethodUnmarshal(p.Endpoint, req, &resp); fault != nil {
+		return nil, fault
 	}
 	return &resp, nil
 }
 
-func (p *replayPort) OptSetReplayConfiguration(args SetReplayConfiguration) (*SetReplayConfigurationResponse, error) {
+func (p *replayPort) OptSetReplayConfiguration(args SetReplayConfiguration) (*SetReplayConfigurationResponse, *common.Fault) {
 	req := struct {
 		XMLName                string `xml:"trp:SetReplayConfiguration"`
 		SetReplayConfiguration SetReplayConfiguration
@@ -118,8 +118,8 @@ func (p *replayPort) OptSetReplayConfiguration(args SetReplayConfiguration) (*Se
 
 	resp := SetReplayConfigurationResponse{}
 
-	if err := p.cli.CallMethodUnmarshal(p.Endpoint, req, &resp); err != nil {
-		return nil, err
+	if fault := p.cli.CallMethodUnmarshal(p.Endpoint, req, &resp); fault != nil {
+		return nil, fault
 	}
 	return &resp, nil
 }

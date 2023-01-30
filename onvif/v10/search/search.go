@@ -14,33 +14,33 @@ func NewSearchPort(endpoint string, cli common.Client) SearchPort {
 // SearchPort was auto-generated from WSDL
 // and defines interface for the remote service. Useful for testing.
 type SearchPort interface {
-	OptEndSearch(EndSearch EndSearch) (*EndSearchResponse, error)
+	OptEndSearch(EndSearch EndSearch) (*EndSearchResponse, *common.Fault)
 
-	OptFindEvents(FindEvents FindEvents) (*FindEventsResponse, error)
+	OptFindEvents(FindEvents FindEvents) (*FindEventsResponse, *common.Fault)
 
-	OptFindMetadata(FindMetadata FindMetadata) (*FindMetadataResponse, error)
+	OptFindMetadata(FindMetadata FindMetadata) (*FindMetadataResponse, *common.Fault)
 
-	OptFindPTZPosition(FindPTZPosition FindPTZPosition) (*FindPTZPositionResponse, error)
+	OptFindPTZPosition(FindPTZPosition FindPTZPosition) (*FindPTZPositionResponse, *common.Fault)
 
-	OptFindRecordings(FindRecordings FindRecordings) (*FindRecordingsResponse, error)
+	OptFindRecordings(FindRecordings FindRecordings) (*FindRecordingsResponse, *common.Fault)
 
-	OptGetEventSearchResults(GetEventSearchResults GetEventSearchResults) (*GetEventSearchResultsResponse, error)
+	OptGetEventSearchResults(GetEventSearchResults GetEventSearchResults) (*GetEventSearchResultsResponse, *common.Fault)
 
-	OptGetMediaAttributes(GetMediaAttributes GetMediaAttributes) (*GetMediaAttributesResponse, error)
+	OptGetMediaAttributes(GetMediaAttributes GetMediaAttributes) (*GetMediaAttributesResponse, *common.Fault)
 
-	OptGetMetadataSearchResults(GetMetadataSearchResults GetMetadataSearchResults) (*GetMetadataSearchResultsResponse, error)
+	OptGetMetadataSearchResults(GetMetadataSearchResults GetMetadataSearchResults) (*GetMetadataSearchResultsResponse, *common.Fault)
 
-	OptGetPTZPositionSearchResults(GetPTZPositionSearchResults GetPTZPositionSearchResults) (*GetPTZPositionSearchResultsResponse, error)
+	OptGetPTZPositionSearchResults(GetPTZPositionSearchResults GetPTZPositionSearchResults) (*GetPTZPositionSearchResultsResponse, *common.Fault)
 
-	OptGetRecordingInformation(GetRecordingInformation GetRecordingInformation) (*GetRecordingInformationResponse, error)
+	OptGetRecordingInformation(GetRecordingInformation GetRecordingInformation) (*GetRecordingInformationResponse, *common.Fault)
 
-	OptGetRecordingSearchResults(GetRecordingSearchResults GetRecordingSearchResults) (*GetRecordingSearchResultsResponse, error)
+	OptGetRecordingSearchResults(GetRecordingSearchResults GetRecordingSearchResults) (*GetRecordingSearchResultsResponse, *common.Fault)
 
-	OptGetRecordingSummary(GetRecordingSummary GetRecordingSummary) (*GetRecordingSummaryResponse, error)
+	OptGetRecordingSummary(GetRecordingSummary GetRecordingSummary) (*GetRecordingSummaryResponse, *common.Fault)
 
-	OptGetSearchState(GetSearchState GetSearchState) (*GetSearchStateResponse, error)
+	OptGetSearchState(GetSearchState GetSearchState) (*GetSearchStateResponse, *common.Fault)
 
-	OptGetServiceCapabilities(GetServiceCapabilities GetServiceCapabilities) (*GetServiceCapabilitiesResponse, error)
+	OptGetServiceCapabilities(GetServiceCapabilities GetServiceCapabilities) (*GetServiceCapabilitiesResponse, *common.Fault)
 }
 type DateTime string
 
@@ -195,7 +195,7 @@ type searchPort struct {
 	Endpoint string
 }
 
-func (p *searchPort) OptEndSearch(args EndSearch) (*EndSearchResponse, error) {
+func (p *searchPort) OptEndSearch(args EndSearch) (*EndSearchResponse, *common.Fault) {
 	req := struct {
 		XMLName   string `xml:"tse:EndSearch"`
 		EndSearch EndSearch
@@ -205,13 +205,13 @@ func (p *searchPort) OptEndSearch(args EndSearch) (*EndSearchResponse, error) {
 
 	resp := EndSearchResponse{}
 
-	if err := p.cli.CallMethodUnmarshal(p.Endpoint, req, &resp); err != nil {
-		return nil, err
+	if fault := p.cli.CallMethodUnmarshal(p.Endpoint, req, &resp); fault != nil {
+		return nil, fault
 	}
 	return &resp, nil
 }
 
-func (p *searchPort) OptFindEvents(args FindEvents) (*FindEventsResponse, error) {
+func (p *searchPort) OptFindEvents(args FindEvents) (*FindEventsResponse, *common.Fault) {
 	req := struct {
 		XMLName    string `xml:"tse:FindEvents"`
 		FindEvents FindEvents
@@ -221,13 +221,13 @@ func (p *searchPort) OptFindEvents(args FindEvents) (*FindEventsResponse, error)
 
 	resp := FindEventsResponse{}
 
-	if err := p.cli.CallMethodUnmarshal(p.Endpoint, req, &resp); err != nil {
-		return nil, err
+	if fault := p.cli.CallMethodUnmarshal(p.Endpoint, req, &resp); fault != nil {
+		return nil, fault
 	}
 	return &resp, nil
 }
 
-func (p *searchPort) OptFindMetadata(args FindMetadata) (*FindMetadataResponse, error) {
+func (p *searchPort) OptFindMetadata(args FindMetadata) (*FindMetadataResponse, *common.Fault) {
 	req := struct {
 		XMLName      string `xml:"tse:FindMetadata"`
 		FindMetadata FindMetadata
@@ -237,13 +237,13 @@ func (p *searchPort) OptFindMetadata(args FindMetadata) (*FindMetadataResponse, 
 
 	resp := FindMetadataResponse{}
 
-	if err := p.cli.CallMethodUnmarshal(p.Endpoint, req, &resp); err != nil {
-		return nil, err
+	if fault := p.cli.CallMethodUnmarshal(p.Endpoint, req, &resp); fault != nil {
+		return nil, fault
 	}
 	return &resp, nil
 }
 
-func (p *searchPort) OptFindPTZPosition(args FindPTZPosition) (*FindPTZPositionResponse, error) {
+func (p *searchPort) OptFindPTZPosition(args FindPTZPosition) (*FindPTZPositionResponse, *common.Fault) {
 	req := struct {
 		XMLName         string `xml:"tse:FindPTZPosition"`
 		FindPTZPosition FindPTZPosition
@@ -253,13 +253,13 @@ func (p *searchPort) OptFindPTZPosition(args FindPTZPosition) (*FindPTZPositionR
 
 	resp := FindPTZPositionResponse{}
 
-	if err := p.cli.CallMethodUnmarshal(p.Endpoint, req, &resp); err != nil {
-		return nil, err
+	if fault := p.cli.CallMethodUnmarshal(p.Endpoint, req, &resp); fault != nil {
+		return nil, fault
 	}
 	return &resp, nil
 }
 
-func (p *searchPort) OptFindRecordings(args FindRecordings) (*FindRecordingsResponse, error) {
+func (p *searchPort) OptFindRecordings(args FindRecordings) (*FindRecordingsResponse, *common.Fault) {
 	req := struct {
 		XMLName        string `xml:"tse:FindRecordings"`
 		FindRecordings FindRecordings
@@ -269,13 +269,13 @@ func (p *searchPort) OptFindRecordings(args FindRecordings) (*FindRecordingsResp
 
 	resp := FindRecordingsResponse{}
 
-	if err := p.cli.CallMethodUnmarshal(p.Endpoint, req, &resp); err != nil {
-		return nil, err
+	if fault := p.cli.CallMethodUnmarshal(p.Endpoint, req, &resp); fault != nil {
+		return nil, fault
 	}
 	return &resp, nil
 }
 
-func (p *searchPort) OptGetEventSearchResults(args GetEventSearchResults) (*GetEventSearchResultsResponse, error) {
+func (p *searchPort) OptGetEventSearchResults(args GetEventSearchResults) (*GetEventSearchResultsResponse, *common.Fault) {
 	req := struct {
 		XMLName               string `xml:"tse:GetEventSearchResults"`
 		GetEventSearchResults GetEventSearchResults
@@ -285,13 +285,13 @@ func (p *searchPort) OptGetEventSearchResults(args GetEventSearchResults) (*GetE
 
 	resp := GetEventSearchResultsResponse{}
 
-	if err := p.cli.CallMethodUnmarshal(p.Endpoint, req, &resp); err != nil {
-		return nil, err
+	if fault := p.cli.CallMethodUnmarshal(p.Endpoint, req, &resp); fault != nil {
+		return nil, fault
 	}
 	return &resp, nil
 }
 
-func (p *searchPort) OptGetMediaAttributes(args GetMediaAttributes) (*GetMediaAttributesResponse, error) {
+func (p *searchPort) OptGetMediaAttributes(args GetMediaAttributes) (*GetMediaAttributesResponse, *common.Fault) {
 	req := struct {
 		XMLName            string `xml:"tse:GetMediaAttributes"`
 		GetMediaAttributes GetMediaAttributes
@@ -301,13 +301,13 @@ func (p *searchPort) OptGetMediaAttributes(args GetMediaAttributes) (*GetMediaAt
 
 	resp := GetMediaAttributesResponse{}
 
-	if err := p.cli.CallMethodUnmarshal(p.Endpoint, req, &resp); err != nil {
-		return nil, err
+	if fault := p.cli.CallMethodUnmarshal(p.Endpoint, req, &resp); fault != nil {
+		return nil, fault
 	}
 	return &resp, nil
 }
 
-func (p *searchPort) OptGetMetadataSearchResults(args GetMetadataSearchResults) (*GetMetadataSearchResultsResponse, error) {
+func (p *searchPort) OptGetMetadataSearchResults(args GetMetadataSearchResults) (*GetMetadataSearchResultsResponse, *common.Fault) {
 	req := struct {
 		XMLName                  string `xml:"tse:GetMetadataSearchResults"`
 		GetMetadataSearchResults GetMetadataSearchResults
@@ -317,13 +317,13 @@ func (p *searchPort) OptGetMetadataSearchResults(args GetMetadataSearchResults) 
 
 	resp := GetMetadataSearchResultsResponse{}
 
-	if err := p.cli.CallMethodUnmarshal(p.Endpoint, req, &resp); err != nil {
-		return nil, err
+	if fault := p.cli.CallMethodUnmarshal(p.Endpoint, req, &resp); fault != nil {
+		return nil, fault
 	}
 	return &resp, nil
 }
 
-func (p *searchPort) OptGetPTZPositionSearchResults(args GetPTZPositionSearchResults) (*GetPTZPositionSearchResultsResponse, error) {
+func (p *searchPort) OptGetPTZPositionSearchResults(args GetPTZPositionSearchResults) (*GetPTZPositionSearchResultsResponse, *common.Fault) {
 	req := struct {
 		XMLName                     string `xml:"tse:GetPTZPositionSearchResults"`
 		GetPTZPositionSearchResults GetPTZPositionSearchResults
@@ -333,13 +333,13 @@ func (p *searchPort) OptGetPTZPositionSearchResults(args GetPTZPositionSearchRes
 
 	resp := GetPTZPositionSearchResultsResponse{}
 
-	if err := p.cli.CallMethodUnmarshal(p.Endpoint, req, &resp); err != nil {
-		return nil, err
+	if fault := p.cli.CallMethodUnmarshal(p.Endpoint, req, &resp); fault != nil {
+		return nil, fault
 	}
 	return &resp, nil
 }
 
-func (p *searchPort) OptGetRecordingInformation(args GetRecordingInformation) (*GetRecordingInformationResponse, error) {
+func (p *searchPort) OptGetRecordingInformation(args GetRecordingInformation) (*GetRecordingInformationResponse, *common.Fault) {
 	req := struct {
 		XMLName                 string `xml:"tse:GetRecordingInformation"`
 		GetRecordingInformation GetRecordingInformation
@@ -349,13 +349,13 @@ func (p *searchPort) OptGetRecordingInformation(args GetRecordingInformation) (*
 
 	resp := GetRecordingInformationResponse{}
 
-	if err := p.cli.CallMethodUnmarshal(p.Endpoint, req, &resp); err != nil {
-		return nil, err
+	if fault := p.cli.CallMethodUnmarshal(p.Endpoint, req, &resp); fault != nil {
+		return nil, fault
 	}
 	return &resp, nil
 }
 
-func (p *searchPort) OptGetRecordingSearchResults(args GetRecordingSearchResults) (*GetRecordingSearchResultsResponse, error) {
+func (p *searchPort) OptGetRecordingSearchResults(args GetRecordingSearchResults) (*GetRecordingSearchResultsResponse, *common.Fault) {
 	req := struct {
 		XMLName                   string `xml:"tse:GetRecordingSearchResults"`
 		GetRecordingSearchResults GetRecordingSearchResults
@@ -365,13 +365,13 @@ func (p *searchPort) OptGetRecordingSearchResults(args GetRecordingSearchResults
 
 	resp := GetRecordingSearchResultsResponse{}
 
-	if err := p.cli.CallMethodUnmarshal(p.Endpoint, req, &resp); err != nil {
-		return nil, err
+	if fault := p.cli.CallMethodUnmarshal(p.Endpoint, req, &resp); fault != nil {
+		return nil, fault
 	}
 	return &resp, nil
 }
 
-func (p *searchPort) OptGetRecordingSummary(args GetRecordingSummary) (*GetRecordingSummaryResponse, error) {
+func (p *searchPort) OptGetRecordingSummary(args GetRecordingSummary) (*GetRecordingSummaryResponse, *common.Fault) {
 	req := struct {
 		XMLName             string `xml:"tse:GetRecordingSummary"`
 		GetRecordingSummary GetRecordingSummary
@@ -381,13 +381,13 @@ func (p *searchPort) OptGetRecordingSummary(args GetRecordingSummary) (*GetRecor
 
 	resp := GetRecordingSummaryResponse{}
 
-	if err := p.cli.CallMethodUnmarshal(p.Endpoint, req, &resp); err != nil {
-		return nil, err
+	if fault := p.cli.CallMethodUnmarshal(p.Endpoint, req, &resp); fault != nil {
+		return nil, fault
 	}
 	return &resp, nil
 }
 
-func (p *searchPort) OptGetSearchState(args GetSearchState) (*GetSearchStateResponse, error) {
+func (p *searchPort) OptGetSearchState(args GetSearchState) (*GetSearchStateResponse, *common.Fault) {
 	req := struct {
 		XMLName        string `xml:"tse:GetSearchState"`
 		GetSearchState GetSearchState
@@ -397,13 +397,13 @@ func (p *searchPort) OptGetSearchState(args GetSearchState) (*GetSearchStateResp
 
 	resp := GetSearchStateResponse{}
 
-	if err := p.cli.CallMethodUnmarshal(p.Endpoint, req, &resp); err != nil {
-		return nil, err
+	if fault := p.cli.CallMethodUnmarshal(p.Endpoint, req, &resp); fault != nil {
+		return nil, fault
 	}
 	return &resp, nil
 }
 
-func (p *searchPort) OptGetServiceCapabilities(args GetServiceCapabilities) (*GetServiceCapabilitiesResponse, error) {
+func (p *searchPort) OptGetServiceCapabilities(args GetServiceCapabilities) (*GetServiceCapabilitiesResponse, *common.Fault) {
 	req := struct {
 		XMLName                string `xml:"tse:GetServiceCapabilities"`
 		GetServiceCapabilities GetServiceCapabilities
@@ -413,8 +413,8 @@ func (p *searchPort) OptGetServiceCapabilities(args GetServiceCapabilities) (*Ge
 
 	resp := GetServiceCapabilitiesResponse{}
 
-	if err := p.cli.CallMethodUnmarshal(p.Endpoint, req, &resp); err != nil {
-		return nil, err
+	if fault := p.cli.CallMethodUnmarshal(p.Endpoint, req, &resp); fault != nil {
+		return nil, fault
 	}
 	return &resp, nil
 }

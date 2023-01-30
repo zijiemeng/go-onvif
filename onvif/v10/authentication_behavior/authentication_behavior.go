@@ -14,39 +14,39 @@ func NewAuthenticationBehaviorPort(endpoint string, cli common.Client) Authentic
 // AuthenticationBehaviorPort was auto-generated from WSDL
 // and defines interface for the remote service. Useful for testing.
 type AuthenticationBehaviorPort interface {
-	OptCreateAuthenticationProfile(CreateAuthenticationProfile CreateAuthenticationProfile) (*CreateAuthenticationProfileResponse, error)
+	OptCreateAuthenticationProfile(CreateAuthenticationProfile CreateAuthenticationProfile) (*CreateAuthenticationProfileResponse, *common.Fault)
 
-	OptCreateSecurityLevel(CreateSecurityLevel CreateSecurityLevel) (*CreateSecurityLevelResponse, error)
+	OptCreateSecurityLevel(CreateSecurityLevel CreateSecurityLevel) (*CreateSecurityLevelResponse, *common.Fault)
 
-	OptDeleteAuthenticationProfile(DeleteAuthenticationProfile DeleteAuthenticationProfile) (*DeleteAuthenticationProfileResponse, error)
+	OptDeleteAuthenticationProfile(DeleteAuthenticationProfile DeleteAuthenticationProfile) (*DeleteAuthenticationProfileResponse, *common.Fault)
 
-	OptDeleteSecurityLevel(DeleteSecurityLevel DeleteSecurityLevel) (*DeleteSecurityLevelResponse, error)
+	OptDeleteSecurityLevel(DeleteSecurityLevel DeleteSecurityLevel) (*DeleteSecurityLevelResponse, *common.Fault)
 
-	OptGetAuthenticationProfileInfo(GetAuthenticationProfileInfo GetAuthenticationProfileInfo) (*GetAuthenticationProfileInfoResponse, error)
+	OptGetAuthenticationProfileInfo(GetAuthenticationProfileInfo GetAuthenticationProfileInfo) (*GetAuthenticationProfileInfoResponse, *common.Fault)
 
-	OptGetAuthenticationProfileInfoList(GetAuthenticationProfileInfoList GetAuthenticationProfileInfoList) (*GetAuthenticationProfileInfoListResponse, error)
+	OptGetAuthenticationProfileInfoList(GetAuthenticationProfileInfoList GetAuthenticationProfileInfoList) (*GetAuthenticationProfileInfoListResponse, *common.Fault)
 
-	OptGetAuthenticationProfileList(GetAuthenticationProfileList GetAuthenticationProfileList) (*GetAuthenticationProfileListResponse, error)
+	OptGetAuthenticationProfileList(GetAuthenticationProfileList GetAuthenticationProfileList) (*GetAuthenticationProfileListResponse, *common.Fault)
 
-	OptGetAuthenticationProfiles(GetAuthenticationProfiles GetAuthenticationProfiles) (*GetAuthenticationProfilesResponse, error)
+	OptGetAuthenticationProfiles(GetAuthenticationProfiles GetAuthenticationProfiles) (*GetAuthenticationProfilesResponse, *common.Fault)
 
-	OptGetSecurityLevelInfo(GetSecurityLevelInfo GetSecurityLevelInfo) (*GetSecurityLevelInfoResponse, error)
+	OptGetSecurityLevelInfo(GetSecurityLevelInfo GetSecurityLevelInfo) (*GetSecurityLevelInfoResponse, *common.Fault)
 
-	OptGetSecurityLevelInfoList(GetSecurityLevelInfoList GetSecurityLevelInfoList) (*GetSecurityLevelInfoListResponse, error)
+	OptGetSecurityLevelInfoList(GetSecurityLevelInfoList GetSecurityLevelInfoList) (*GetSecurityLevelInfoListResponse, *common.Fault)
 
-	OptGetSecurityLevelList(GetSecurityLevelList GetSecurityLevelList) (*GetSecurityLevelListResponse, error)
+	OptGetSecurityLevelList(GetSecurityLevelList GetSecurityLevelList) (*GetSecurityLevelListResponse, *common.Fault)
 
-	OptGetSecurityLevels(GetSecurityLevels GetSecurityLevels) (*GetSecurityLevelsResponse, error)
+	OptGetSecurityLevels(GetSecurityLevels GetSecurityLevels) (*GetSecurityLevelsResponse, *common.Fault)
 
-	OptGetServiceCapabilities(GetServiceCapabilities GetServiceCapabilities) (*GetServiceCapabilitiesResponse, error)
+	OptGetServiceCapabilities(GetServiceCapabilities GetServiceCapabilities) (*GetServiceCapabilitiesResponse, *common.Fault)
 
-	OptModifyAuthenticationProfile(ModifyAuthenticationProfile ModifyAuthenticationProfile) (*ModifyAuthenticationProfileResponse, error)
+	OptModifyAuthenticationProfile(ModifyAuthenticationProfile ModifyAuthenticationProfile) (*ModifyAuthenticationProfileResponse, *common.Fault)
 
-	OptModifySecurityLevel(ModifySecurityLevel ModifySecurityLevel) (*ModifySecurityLevelResponse, error)
+	OptModifySecurityLevel(ModifySecurityLevel ModifySecurityLevel) (*ModifySecurityLevelResponse, *common.Fault)
 
-	OptSetAuthenticationProfile(SetAuthenticationProfile SetAuthenticationProfile) (*SetAuthenticationProfileResponse, error)
+	OptSetAuthenticationProfile(SetAuthenticationProfile SetAuthenticationProfile) (*SetAuthenticationProfileResponse, *common.Fault)
 
-	OptSetSecurityLevel(SetSecurityLevel SetSecurityLevel) (*SetSecurityLevelResponse, error)
+	OptSetSecurityLevel(SetSecurityLevel SetSecurityLevel) (*SetSecurityLevelResponse, *common.Fault)
 }
 type AuthenticationPolicy struct {
 	ScheduleToken           *common.ReferenceToken        `xml:"ScheduleToken,omitempty" json:"ScheduleToken,omitempty" yaml:"ScheduleToken,omitempty"`
@@ -329,7 +329,7 @@ type authenticationBehaviorPort struct {
 	Endpoint string
 }
 
-func (p *authenticationBehaviorPort) OptCreateAuthenticationProfile(args CreateAuthenticationProfile) (*CreateAuthenticationProfileResponse, error) {
+func (p *authenticationBehaviorPort) OptCreateAuthenticationProfile(args CreateAuthenticationProfile) (*CreateAuthenticationProfileResponse, *common.Fault) {
 	req := struct {
 		XMLName                     string `xml:"tab:CreateAuthenticationProfile"`
 		CreateAuthenticationProfile CreateAuthenticationProfile
@@ -339,13 +339,13 @@ func (p *authenticationBehaviorPort) OptCreateAuthenticationProfile(args CreateA
 
 	resp := CreateAuthenticationProfileResponse{}
 
-	if err := p.cli.CallMethodUnmarshal(p.Endpoint, req, &resp); err != nil {
-		return nil, err
+	if fault := p.cli.CallMethodUnmarshal(p.Endpoint, req, &resp); fault != nil {
+		return nil, fault
 	}
 	return &resp, nil
 }
 
-func (p *authenticationBehaviorPort) OptCreateSecurityLevel(args CreateSecurityLevel) (*CreateSecurityLevelResponse, error) {
+func (p *authenticationBehaviorPort) OptCreateSecurityLevel(args CreateSecurityLevel) (*CreateSecurityLevelResponse, *common.Fault) {
 	req := struct {
 		XMLName             string `xml:"tab:CreateSecurityLevel"`
 		CreateSecurityLevel CreateSecurityLevel
@@ -355,13 +355,13 @@ func (p *authenticationBehaviorPort) OptCreateSecurityLevel(args CreateSecurityL
 
 	resp := CreateSecurityLevelResponse{}
 
-	if err := p.cli.CallMethodUnmarshal(p.Endpoint, req, &resp); err != nil {
-		return nil, err
+	if fault := p.cli.CallMethodUnmarshal(p.Endpoint, req, &resp); fault != nil {
+		return nil, fault
 	}
 	return &resp, nil
 }
 
-func (p *authenticationBehaviorPort) OptDeleteAuthenticationProfile(args DeleteAuthenticationProfile) (*DeleteAuthenticationProfileResponse, error) {
+func (p *authenticationBehaviorPort) OptDeleteAuthenticationProfile(args DeleteAuthenticationProfile) (*DeleteAuthenticationProfileResponse, *common.Fault) {
 	req := struct {
 		XMLName                     string `xml:"tab:DeleteAuthenticationProfile"`
 		DeleteAuthenticationProfile DeleteAuthenticationProfile
@@ -371,13 +371,13 @@ func (p *authenticationBehaviorPort) OptDeleteAuthenticationProfile(args DeleteA
 
 	resp := DeleteAuthenticationProfileResponse{}
 
-	if err := p.cli.CallMethodUnmarshal(p.Endpoint, req, &resp); err != nil {
-		return nil, err
+	if fault := p.cli.CallMethodUnmarshal(p.Endpoint, req, &resp); fault != nil {
+		return nil, fault
 	}
 	return &resp, nil
 }
 
-func (p *authenticationBehaviorPort) OptDeleteSecurityLevel(args DeleteSecurityLevel) (*DeleteSecurityLevelResponse, error) {
+func (p *authenticationBehaviorPort) OptDeleteSecurityLevel(args DeleteSecurityLevel) (*DeleteSecurityLevelResponse, *common.Fault) {
 	req := struct {
 		XMLName             string `xml:"tab:DeleteSecurityLevel"`
 		DeleteSecurityLevel DeleteSecurityLevel
@@ -387,13 +387,13 @@ func (p *authenticationBehaviorPort) OptDeleteSecurityLevel(args DeleteSecurityL
 
 	resp := DeleteSecurityLevelResponse{}
 
-	if err := p.cli.CallMethodUnmarshal(p.Endpoint, req, &resp); err != nil {
-		return nil, err
+	if fault := p.cli.CallMethodUnmarshal(p.Endpoint, req, &resp); fault != nil {
+		return nil, fault
 	}
 	return &resp, nil
 }
 
-func (p *authenticationBehaviorPort) OptGetAuthenticationProfileInfo(args GetAuthenticationProfileInfo) (*GetAuthenticationProfileInfoResponse, error) {
+func (p *authenticationBehaviorPort) OptGetAuthenticationProfileInfo(args GetAuthenticationProfileInfo) (*GetAuthenticationProfileInfoResponse, *common.Fault) {
 	req := struct {
 		XMLName                      string `xml:"tab:GetAuthenticationProfileInfo"`
 		GetAuthenticationProfileInfo GetAuthenticationProfileInfo
@@ -403,13 +403,13 @@ func (p *authenticationBehaviorPort) OptGetAuthenticationProfileInfo(args GetAut
 
 	resp := GetAuthenticationProfileInfoResponse{}
 
-	if err := p.cli.CallMethodUnmarshal(p.Endpoint, req, &resp); err != nil {
-		return nil, err
+	if fault := p.cli.CallMethodUnmarshal(p.Endpoint, req, &resp); fault != nil {
+		return nil, fault
 	}
 	return &resp, nil
 }
 
-func (p *authenticationBehaviorPort) OptGetAuthenticationProfileInfoList(args GetAuthenticationProfileInfoList) (*GetAuthenticationProfileInfoListResponse, error) {
+func (p *authenticationBehaviorPort) OptGetAuthenticationProfileInfoList(args GetAuthenticationProfileInfoList) (*GetAuthenticationProfileInfoListResponse, *common.Fault) {
 	req := struct {
 		XMLName                          string `xml:"tab:GetAuthenticationProfileInfoList"`
 		GetAuthenticationProfileInfoList GetAuthenticationProfileInfoList
@@ -419,13 +419,13 @@ func (p *authenticationBehaviorPort) OptGetAuthenticationProfileInfoList(args Ge
 
 	resp := GetAuthenticationProfileInfoListResponse{}
 
-	if err := p.cli.CallMethodUnmarshal(p.Endpoint, req, &resp); err != nil {
-		return nil, err
+	if fault := p.cli.CallMethodUnmarshal(p.Endpoint, req, &resp); fault != nil {
+		return nil, fault
 	}
 	return &resp, nil
 }
 
-func (p *authenticationBehaviorPort) OptGetAuthenticationProfileList(args GetAuthenticationProfileList) (*GetAuthenticationProfileListResponse, error) {
+func (p *authenticationBehaviorPort) OptGetAuthenticationProfileList(args GetAuthenticationProfileList) (*GetAuthenticationProfileListResponse, *common.Fault) {
 	req := struct {
 		XMLName                      string `xml:"tab:GetAuthenticationProfileList"`
 		GetAuthenticationProfileList GetAuthenticationProfileList
@@ -435,13 +435,13 @@ func (p *authenticationBehaviorPort) OptGetAuthenticationProfileList(args GetAut
 
 	resp := GetAuthenticationProfileListResponse{}
 
-	if err := p.cli.CallMethodUnmarshal(p.Endpoint, req, &resp); err != nil {
-		return nil, err
+	if fault := p.cli.CallMethodUnmarshal(p.Endpoint, req, &resp); fault != nil {
+		return nil, fault
 	}
 	return &resp, nil
 }
 
-func (p *authenticationBehaviorPort) OptGetAuthenticationProfiles(args GetAuthenticationProfiles) (*GetAuthenticationProfilesResponse, error) {
+func (p *authenticationBehaviorPort) OptGetAuthenticationProfiles(args GetAuthenticationProfiles) (*GetAuthenticationProfilesResponse, *common.Fault) {
 	req := struct {
 		XMLName                   string `xml:"tab:GetAuthenticationProfiles"`
 		GetAuthenticationProfiles GetAuthenticationProfiles
@@ -451,13 +451,13 @@ func (p *authenticationBehaviorPort) OptGetAuthenticationProfiles(args GetAuthen
 
 	resp := GetAuthenticationProfilesResponse{}
 
-	if err := p.cli.CallMethodUnmarshal(p.Endpoint, req, &resp); err != nil {
-		return nil, err
+	if fault := p.cli.CallMethodUnmarshal(p.Endpoint, req, &resp); fault != nil {
+		return nil, fault
 	}
 	return &resp, nil
 }
 
-func (p *authenticationBehaviorPort) OptGetSecurityLevelInfo(args GetSecurityLevelInfo) (*GetSecurityLevelInfoResponse, error) {
+func (p *authenticationBehaviorPort) OptGetSecurityLevelInfo(args GetSecurityLevelInfo) (*GetSecurityLevelInfoResponse, *common.Fault) {
 	req := struct {
 		XMLName              string `xml:"tab:GetSecurityLevelInfo"`
 		GetSecurityLevelInfo GetSecurityLevelInfo
@@ -467,13 +467,13 @@ func (p *authenticationBehaviorPort) OptGetSecurityLevelInfo(args GetSecurityLev
 
 	resp := GetSecurityLevelInfoResponse{}
 
-	if err := p.cli.CallMethodUnmarshal(p.Endpoint, req, &resp); err != nil {
-		return nil, err
+	if fault := p.cli.CallMethodUnmarshal(p.Endpoint, req, &resp); fault != nil {
+		return nil, fault
 	}
 	return &resp, nil
 }
 
-func (p *authenticationBehaviorPort) OptGetSecurityLevelInfoList(args GetSecurityLevelInfoList) (*GetSecurityLevelInfoListResponse, error) {
+func (p *authenticationBehaviorPort) OptGetSecurityLevelInfoList(args GetSecurityLevelInfoList) (*GetSecurityLevelInfoListResponse, *common.Fault) {
 	req := struct {
 		XMLName                  string `xml:"tab:GetSecurityLevelInfoList"`
 		GetSecurityLevelInfoList GetSecurityLevelInfoList
@@ -483,13 +483,13 @@ func (p *authenticationBehaviorPort) OptGetSecurityLevelInfoList(args GetSecurit
 
 	resp := GetSecurityLevelInfoListResponse{}
 
-	if err := p.cli.CallMethodUnmarshal(p.Endpoint, req, &resp); err != nil {
-		return nil, err
+	if fault := p.cli.CallMethodUnmarshal(p.Endpoint, req, &resp); fault != nil {
+		return nil, fault
 	}
 	return &resp, nil
 }
 
-func (p *authenticationBehaviorPort) OptGetSecurityLevelList(args GetSecurityLevelList) (*GetSecurityLevelListResponse, error) {
+func (p *authenticationBehaviorPort) OptGetSecurityLevelList(args GetSecurityLevelList) (*GetSecurityLevelListResponse, *common.Fault) {
 	req := struct {
 		XMLName              string `xml:"tab:GetSecurityLevelList"`
 		GetSecurityLevelList GetSecurityLevelList
@@ -499,13 +499,13 @@ func (p *authenticationBehaviorPort) OptGetSecurityLevelList(args GetSecurityLev
 
 	resp := GetSecurityLevelListResponse{}
 
-	if err := p.cli.CallMethodUnmarshal(p.Endpoint, req, &resp); err != nil {
-		return nil, err
+	if fault := p.cli.CallMethodUnmarshal(p.Endpoint, req, &resp); fault != nil {
+		return nil, fault
 	}
 	return &resp, nil
 }
 
-func (p *authenticationBehaviorPort) OptGetSecurityLevels(args GetSecurityLevels) (*GetSecurityLevelsResponse, error) {
+func (p *authenticationBehaviorPort) OptGetSecurityLevels(args GetSecurityLevels) (*GetSecurityLevelsResponse, *common.Fault) {
 	req := struct {
 		XMLName           string `xml:"tab:GetSecurityLevels"`
 		GetSecurityLevels GetSecurityLevels
@@ -515,13 +515,13 @@ func (p *authenticationBehaviorPort) OptGetSecurityLevels(args GetSecurityLevels
 
 	resp := GetSecurityLevelsResponse{}
 
-	if err := p.cli.CallMethodUnmarshal(p.Endpoint, req, &resp); err != nil {
-		return nil, err
+	if fault := p.cli.CallMethodUnmarshal(p.Endpoint, req, &resp); fault != nil {
+		return nil, fault
 	}
 	return &resp, nil
 }
 
-func (p *authenticationBehaviorPort) OptGetServiceCapabilities(args GetServiceCapabilities) (*GetServiceCapabilitiesResponse, error) {
+func (p *authenticationBehaviorPort) OptGetServiceCapabilities(args GetServiceCapabilities) (*GetServiceCapabilitiesResponse, *common.Fault) {
 	req := struct {
 		XMLName                string `xml:"tab:GetServiceCapabilities"`
 		GetServiceCapabilities GetServiceCapabilities
@@ -531,13 +531,13 @@ func (p *authenticationBehaviorPort) OptGetServiceCapabilities(args GetServiceCa
 
 	resp := GetServiceCapabilitiesResponse{}
 
-	if err := p.cli.CallMethodUnmarshal(p.Endpoint, req, &resp); err != nil {
-		return nil, err
+	if fault := p.cli.CallMethodUnmarshal(p.Endpoint, req, &resp); fault != nil {
+		return nil, fault
 	}
 	return &resp, nil
 }
 
-func (p *authenticationBehaviorPort) OptModifyAuthenticationProfile(args ModifyAuthenticationProfile) (*ModifyAuthenticationProfileResponse, error) {
+func (p *authenticationBehaviorPort) OptModifyAuthenticationProfile(args ModifyAuthenticationProfile) (*ModifyAuthenticationProfileResponse, *common.Fault) {
 	req := struct {
 		XMLName                     string `xml:"tab:ModifyAuthenticationProfile"`
 		ModifyAuthenticationProfile ModifyAuthenticationProfile
@@ -547,13 +547,13 @@ func (p *authenticationBehaviorPort) OptModifyAuthenticationProfile(args ModifyA
 
 	resp := ModifyAuthenticationProfileResponse{}
 
-	if err := p.cli.CallMethodUnmarshal(p.Endpoint, req, &resp); err != nil {
-		return nil, err
+	if fault := p.cli.CallMethodUnmarshal(p.Endpoint, req, &resp); fault != nil {
+		return nil, fault
 	}
 	return &resp, nil
 }
 
-func (p *authenticationBehaviorPort) OptModifySecurityLevel(args ModifySecurityLevel) (*ModifySecurityLevelResponse, error) {
+func (p *authenticationBehaviorPort) OptModifySecurityLevel(args ModifySecurityLevel) (*ModifySecurityLevelResponse, *common.Fault) {
 	req := struct {
 		XMLName             string `xml:"tab:ModifySecurityLevel"`
 		ModifySecurityLevel ModifySecurityLevel
@@ -563,13 +563,13 @@ func (p *authenticationBehaviorPort) OptModifySecurityLevel(args ModifySecurityL
 
 	resp := ModifySecurityLevelResponse{}
 
-	if err := p.cli.CallMethodUnmarshal(p.Endpoint, req, &resp); err != nil {
-		return nil, err
+	if fault := p.cli.CallMethodUnmarshal(p.Endpoint, req, &resp); fault != nil {
+		return nil, fault
 	}
 	return &resp, nil
 }
 
-func (p *authenticationBehaviorPort) OptSetAuthenticationProfile(args SetAuthenticationProfile) (*SetAuthenticationProfileResponse, error) {
+func (p *authenticationBehaviorPort) OptSetAuthenticationProfile(args SetAuthenticationProfile) (*SetAuthenticationProfileResponse, *common.Fault) {
 	req := struct {
 		XMLName                  string `xml:"tab:SetAuthenticationProfile"`
 		SetAuthenticationProfile SetAuthenticationProfile
@@ -579,13 +579,13 @@ func (p *authenticationBehaviorPort) OptSetAuthenticationProfile(args SetAuthent
 
 	resp := SetAuthenticationProfileResponse{}
 
-	if err := p.cli.CallMethodUnmarshal(p.Endpoint, req, &resp); err != nil {
-		return nil, err
+	if fault := p.cli.CallMethodUnmarshal(p.Endpoint, req, &resp); fault != nil {
+		return nil, fault
 	}
 	return &resp, nil
 }
 
-func (p *authenticationBehaviorPort) OptSetSecurityLevel(args SetSecurityLevel) (*SetSecurityLevelResponse, error) {
+func (p *authenticationBehaviorPort) OptSetSecurityLevel(args SetSecurityLevel) (*SetSecurityLevelResponse, *common.Fault) {
 	req := struct {
 		XMLName          string `xml:"tab:SetSecurityLevel"`
 		SetSecurityLevel SetSecurityLevel
@@ -595,8 +595,8 @@ func (p *authenticationBehaviorPort) OptSetSecurityLevel(args SetSecurityLevel) 
 
 	resp := SetSecurityLevelResponse{}
 
-	if err := p.cli.CallMethodUnmarshal(p.Endpoint, req, &resp); err != nil {
-		return nil, err
+	if fault := p.cli.CallMethodUnmarshal(p.Endpoint, req, &resp); fault != nil {
+		return nil, fault
 	}
 	return &resp, nil
 }

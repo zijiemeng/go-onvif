@@ -16,97 +16,97 @@ func NewMedia2(endpoint string, cli common.Client) Media2 {
 // Media2 was auto-generated from WSDL
 // and defines interface for the remote service. Useful for testing.
 type Media2 interface {
-	OptAddConfiguration(AddConfiguration AddConfiguration) (*AddConfigurationResponse, error)
+	OptAddConfiguration(AddConfiguration AddConfiguration) (*AddConfigurationResponse, *common.Fault)
 
-	OptCreateMask(CreateMask CreateMask) (*CreateMaskResponse, error)
+	OptCreateMask(CreateMask CreateMask) (*CreateMaskResponse, *common.Fault)
 
-	OptCreateOSD(CreateOSD CreateOSD) (*CreateOSDResponse, error)
+	OptCreateOSD(CreateOSD CreateOSD) (*CreateOSDResponse, *common.Fault)
 
-	OptCreateProfile(CreateProfile CreateProfile) (*CreateProfileResponse, error)
+	OptCreateProfile(CreateProfile CreateProfile) (*CreateProfileResponse, *common.Fault)
 
-	OptDeleteMask(DeleteMask DeleteMask) (*SetConfigurationResponse, error)
+	OptDeleteMask(DeleteMask DeleteMask) (*SetConfigurationResponse, *common.Fault)
 
-	OptDeleteOSD(DeleteOSD DeleteOSD) (*SetConfigurationResponse, error)
+	OptDeleteOSD(DeleteOSD DeleteOSD) (*SetConfigurationResponse, *common.Fault)
 
-	OptDeleteProfile(DeleteProfile DeleteProfile) (*DeleteProfileResponse, error)
+	OptDeleteProfile(DeleteProfile DeleteProfile) (*DeleteProfileResponse, *common.Fault)
 
-	OptGetAnalyticsConfigurations(GetAnalyticsConfigurations GetConfiguration) (*GetAnalyticsConfigurationsResponse, error)
+	OptGetAnalyticsConfigurations(GetAnalyticsConfigurations GetConfiguration) (*GetAnalyticsConfigurationsResponse, *common.Fault)
 
-	OptGetAudioDecoderConfigurationOptions(GetAudioDecoderConfigurationOptions GetConfiguration) (*GetAudioDecoderConfigurationOptionsResponse, error)
+	OptGetAudioDecoderConfigurationOptions(GetAudioDecoderConfigurationOptions GetConfiguration) (*GetAudioDecoderConfigurationOptionsResponse, *common.Fault)
 
-	OptGetAudioDecoderConfigurations(GetAudioDecoderConfigurations GetConfiguration) (*GetAudioDecoderConfigurationsResponse, error)
+	OptGetAudioDecoderConfigurations(GetAudioDecoderConfigurations GetConfiguration) (*GetAudioDecoderConfigurationsResponse, *common.Fault)
 
-	OptGetAudioEncoderConfigurationOptions(GetAudioEncoderConfigurationOptions GetConfiguration) (*GetAudioEncoderConfigurationOptionsResponse, error)
+	OptGetAudioEncoderConfigurationOptions(GetAudioEncoderConfigurationOptions GetConfiguration) (*GetAudioEncoderConfigurationOptionsResponse, *common.Fault)
 
-	OptGetAudioEncoderConfigurations(GetAudioEncoderConfigurations GetConfiguration) (*GetAudioEncoderConfigurationsResponse, error)
+	OptGetAudioEncoderConfigurations(GetAudioEncoderConfigurations GetConfiguration) (*GetAudioEncoderConfigurationsResponse, *common.Fault)
 
-	OptGetAudioOutputConfigurationOptions(GetAudioOutputConfigurationOptions GetConfiguration) (*GetAudioOutputConfigurationOptionsResponse, error)
+	OptGetAudioOutputConfigurationOptions(GetAudioOutputConfigurationOptions GetConfiguration) (*GetAudioOutputConfigurationOptionsResponse, *common.Fault)
 
-	OptGetAudioOutputConfigurations(GetAudioOutputConfigurations GetConfiguration) (*GetAudioOutputConfigurationsResponse, error)
+	OptGetAudioOutputConfigurations(GetAudioOutputConfigurations GetConfiguration) (*GetAudioOutputConfigurationsResponse, *common.Fault)
 
-	OptGetAudioSourceConfigurationOptions(GetAudioSourceConfigurationOptions GetConfiguration) (*GetAudioSourceConfigurationOptionsResponse, error)
+	OptGetAudioSourceConfigurationOptions(GetAudioSourceConfigurationOptions GetConfiguration) (*GetAudioSourceConfigurationOptionsResponse, *common.Fault)
 
-	OptGetAudioSourceConfigurations(GetAudioSourceConfigurations GetConfiguration) (*GetAudioSourceConfigurationsResponse, error)
+	OptGetAudioSourceConfigurations(GetAudioSourceConfigurations GetConfiguration) (*GetAudioSourceConfigurationsResponse, *common.Fault)
 
-	OptGetMaskOptions(GetMaskOptions GetMaskOptions) (*GetMaskOptionsResponse, error)
+	OptGetMaskOptions(GetMaskOptions GetMaskOptions) (*GetMaskOptionsResponse, *common.Fault)
 
-	OptGetMasks(GetMasks GetMasks) (*GetMasksResponse, error)
+	OptGetMasks(GetMasks GetMasks) (*GetMasksResponse, *common.Fault)
 
-	OptGetMetadataConfigurationOptions(GetMetadataConfigurationOptions GetConfiguration) (*GetMetadataConfigurationOptionsResponse, error)
+	OptGetMetadataConfigurationOptions(GetMetadataConfigurationOptions GetConfiguration) (*GetMetadataConfigurationOptionsResponse, *common.Fault)
 
-	OptGetMetadataConfigurations(GetMetadataConfigurations GetConfiguration) (*GetMetadataConfigurationsResponse, error)
+	OptGetMetadataConfigurations(GetMetadataConfigurations GetConfiguration) (*GetMetadataConfigurationsResponse, *common.Fault)
 
-	OptGetOSDOptions(GetOSDOptions GetOSDOptions) (*GetOSDOptionsResponse, error)
+	OptGetOSDOptions(GetOSDOptions GetOSDOptions) (*GetOSDOptionsResponse, *common.Fault)
 
-	OptGetOSDs(GetOSDs GetOSDs) (*GetOSDsResponse, error)
+	OptGetOSDs(GetOSDs GetOSDs) (*GetOSDsResponse, *common.Fault)
 
-	OptGetProfiles(GetProfiles GetProfiles) (*GetProfilesResponse, error)
+	OptGetProfiles(GetProfiles GetProfiles) (*GetProfilesResponse, *common.Fault)
 
-	OptGetServiceCapabilities(GetServiceCapabilities GetServiceCapabilities) (*GetServiceCapabilitiesResponse, error)
+	OptGetServiceCapabilities(GetServiceCapabilities GetServiceCapabilities) (*GetServiceCapabilitiesResponse, *common.Fault)
 
-	OptGetSnapshotUri(GetSnapshotUri GetSnapshotUri) (*GetSnapshotUriResponse, error)
+	OptGetSnapshotUri(GetSnapshotUri GetSnapshotUri) (*GetSnapshotUriResponse, *common.Fault)
 
-	OptGetStreamUri(GetStreamUri GetStreamUri) (*GetStreamUriResponse, error)
+	OptGetStreamUri(GetStreamUri GetStreamUri) (*GetStreamUriResponse, *common.Fault)
 
-	OptGetVideoEncoderConfigurationOptions(GetVideoEncoderConfigurationOptions GetConfiguration) (*GetVideoEncoderConfigurationOptionsResponse, error)
+	OptGetVideoEncoderConfigurationOptions(GetVideoEncoderConfigurationOptions GetConfiguration) (*GetVideoEncoderConfigurationOptionsResponse, *common.Fault)
 
-	OptGetVideoEncoderConfigurations(GetVideoEncoderConfigurations GetConfiguration) (*GetVideoEncoderConfigurationsResponse, error)
+	OptGetVideoEncoderConfigurations(GetVideoEncoderConfigurations GetConfiguration) (*GetVideoEncoderConfigurationsResponse, *common.Fault)
 
-	OptGetVideoEncoderInstances(GetVideoEncoderInstances GetVideoEncoderInstances) (*GetVideoEncoderInstancesResponse, error)
+	OptGetVideoEncoderInstances(GetVideoEncoderInstances GetVideoEncoderInstances) (*GetVideoEncoderInstancesResponse, *common.Fault)
 
-	OptGetVideoSourceConfigurationOptions(GetVideoSourceConfigurationOptions GetConfiguration) (*GetVideoSourceConfigurationOptionsResponse, error)
+	OptGetVideoSourceConfigurationOptions(GetVideoSourceConfigurationOptions GetConfiguration) (*GetVideoSourceConfigurationOptionsResponse, *common.Fault)
 
-	OptGetVideoSourceConfigurations(GetVideoSourceConfigurations GetConfiguration) (*GetVideoSourceConfigurationsResponse, error)
+	OptGetVideoSourceConfigurations(GetVideoSourceConfigurations GetConfiguration) (*GetVideoSourceConfigurationsResponse, *common.Fault)
 
-	OptGetVideoSourceModes(GetVideoSourceModes GetVideoSourceModes) (*GetVideoSourceModesResponse, error)
+	OptGetVideoSourceModes(GetVideoSourceModes GetVideoSourceModes) (*GetVideoSourceModesResponse, *common.Fault)
 
-	OptRemoveConfiguration(RemoveConfiguration RemoveConfiguration) (*RemoveConfigurationResponse, error)
+	OptRemoveConfiguration(RemoveConfiguration RemoveConfiguration) (*RemoveConfigurationResponse, *common.Fault)
 
-	OptSetAudioDecoderConfiguration(SetAudioDecoderConfiguration SetAudioDecoderConfiguration) (*SetConfigurationResponse, error)
+	OptSetAudioDecoderConfiguration(SetAudioDecoderConfiguration SetAudioDecoderConfiguration) (*SetConfigurationResponse, *common.Fault)
 
-	OptSetAudioEncoderConfiguration(SetAudioEncoderConfiguration SetAudioEncoderConfiguration) (*SetConfigurationResponse, error)
+	OptSetAudioEncoderConfiguration(SetAudioEncoderConfiguration SetAudioEncoderConfiguration) (*SetConfigurationResponse, *common.Fault)
 
-	OptSetAudioOutputConfiguration(SetAudioOutputConfiguration SetAudioOutputConfiguration) (*SetConfigurationResponse, error)
+	OptSetAudioOutputConfiguration(SetAudioOutputConfiguration SetAudioOutputConfiguration) (*SetConfigurationResponse, *common.Fault)
 
-	OptSetAudioSourceConfiguration(SetAudioSourceConfiguration SetAudioSourceConfiguration) (*SetConfigurationResponse, error)
+	OptSetAudioSourceConfiguration(SetAudioSourceConfiguration SetAudioSourceConfiguration) (*SetConfigurationResponse, *common.Fault)
 
-	OptSetMask(SetMask SetMask) (*SetConfigurationResponse, error)
+	OptSetMask(SetMask SetMask) (*SetConfigurationResponse, *common.Fault)
 
-	OptSetMetadataConfiguration(SetMetadataConfiguration SetMetadataConfiguration) (*SetConfigurationResponse, error)
+	OptSetMetadataConfiguration(SetMetadataConfiguration SetMetadataConfiguration) (*SetConfigurationResponse, *common.Fault)
 
-	OptSetOSD(SetOSD SetOSD) (*SetConfigurationResponse, error)
+	OptSetOSD(SetOSD SetOSD) (*SetConfigurationResponse, *common.Fault)
 
-	OptSetSynchronizationPoint(SetSynchronizationPoint SetSynchronizationPoint) (*SetSynchronizationPointResponse, error)
+	OptSetSynchronizationPoint(SetSynchronizationPoint SetSynchronizationPoint) (*SetSynchronizationPointResponse, *common.Fault)
 
-	OptSetVideoEncoderConfiguration(SetVideoEncoderConfiguration SetVideoEncoderConfiguration) (*SetConfigurationResponse, error)
+	OptSetVideoEncoderConfiguration(SetVideoEncoderConfiguration SetVideoEncoderConfiguration) (*SetConfigurationResponse, *common.Fault)
 
-	OptSetVideoSourceConfiguration(SetVideoSourceConfiguration SetVideoSourceConfiguration) (*SetConfigurationResponse, error)
+	OptSetVideoSourceConfiguration(SetVideoSourceConfiguration SetVideoSourceConfiguration) (*SetConfigurationResponse, *common.Fault)
 
-	OptSetVideoSourceMode(SetVideoSourceMode SetVideoSourceMode) (*SetVideoSourceModeResponse, error)
+	OptSetVideoSourceMode(SetVideoSourceMode SetVideoSourceMode) (*SetVideoSourceModeResponse, *common.Fault)
 
-	OptStartMulticastStreaming(StartMulticastStreaming StartStopMulticastStreaming) (*SetConfigurationResponse, error)
+	OptStartMulticastStreaming(StartMulticastStreaming StartStopMulticastStreaming) (*SetConfigurationResponse, *common.Fault)
 
-	OptStopMulticastStreaming(StopMulticastStreaming StartStopMulticastStreaming) (*SetConfigurationResponse, error)
+	OptStopMulticastStreaming(StopMulticastStreaming StartStopMulticastStreaming) (*SetConfigurationResponse, *common.Fault)
 }
 type ConfigurationEnumeration string
 
@@ -535,7 +535,7 @@ type media2 struct {
 	Endpoint string
 }
 
-func (p *media2) OptAddConfiguration(args AddConfiguration) (*AddConfigurationResponse, error) {
+func (p *media2) OptAddConfiguration(args AddConfiguration) (*AddConfigurationResponse, *common.Fault) {
 	req := struct {
 		XMLName          string `xml:"tr2:AddConfiguration"`
 		AddConfiguration AddConfiguration
@@ -545,13 +545,13 @@ func (p *media2) OptAddConfiguration(args AddConfiguration) (*AddConfigurationRe
 
 	resp := AddConfigurationResponse{}
 
-	if err := p.cli.CallMethodUnmarshal(p.Endpoint, req, &resp); err != nil {
-		return nil, err
+	if fault := p.cli.CallMethodUnmarshal(p.Endpoint, req, &resp); fault != nil {
+		return nil, fault
 	}
 	return &resp, nil
 }
 
-func (p *media2) OptCreateMask(args CreateMask) (*CreateMaskResponse, error) {
+func (p *media2) OptCreateMask(args CreateMask) (*CreateMaskResponse, *common.Fault) {
 	req := struct {
 		XMLName    string `xml:"tr2:CreateMask"`
 		CreateMask CreateMask
@@ -561,13 +561,13 @@ func (p *media2) OptCreateMask(args CreateMask) (*CreateMaskResponse, error) {
 
 	resp := CreateMaskResponse{}
 
-	if err := p.cli.CallMethodUnmarshal(p.Endpoint, req, &resp); err != nil {
-		return nil, err
+	if fault := p.cli.CallMethodUnmarshal(p.Endpoint, req, &resp); fault != nil {
+		return nil, fault
 	}
 	return &resp, nil
 }
 
-func (p *media2) OptCreateOSD(args CreateOSD) (*CreateOSDResponse, error) {
+func (p *media2) OptCreateOSD(args CreateOSD) (*CreateOSDResponse, *common.Fault) {
 	req := struct {
 		XMLName   string `xml:"tr2:CreateOSD"`
 		CreateOSD CreateOSD
@@ -577,13 +577,13 @@ func (p *media2) OptCreateOSD(args CreateOSD) (*CreateOSDResponse, error) {
 
 	resp := CreateOSDResponse{}
 
-	if err := p.cli.CallMethodUnmarshal(p.Endpoint, req, &resp); err != nil {
-		return nil, err
+	if fault := p.cli.CallMethodUnmarshal(p.Endpoint, req, &resp); fault != nil {
+		return nil, fault
 	}
 	return &resp, nil
 }
 
-func (p *media2) OptCreateProfile(args CreateProfile) (*CreateProfileResponse, error) {
+func (p *media2) OptCreateProfile(args CreateProfile) (*CreateProfileResponse, *common.Fault) {
 	req := struct {
 		XMLName       string `xml:"tr2:CreateProfile"`
 		CreateProfile CreateProfile
@@ -593,13 +593,13 @@ func (p *media2) OptCreateProfile(args CreateProfile) (*CreateProfileResponse, e
 
 	resp := CreateProfileResponse{}
 
-	if err := p.cli.CallMethodUnmarshal(p.Endpoint, req, &resp); err != nil {
-		return nil, err
+	if fault := p.cli.CallMethodUnmarshal(p.Endpoint, req, &resp); fault != nil {
+		return nil, fault
 	}
 	return &resp, nil
 }
 
-func (p *media2) OptDeleteMask(args DeleteMask) (*SetConfigurationResponse, error) {
+func (p *media2) OptDeleteMask(args DeleteMask) (*SetConfigurationResponse, *common.Fault) {
 	req := struct {
 		XMLName    string `xml:"tr2:DeleteMask"`
 		DeleteMask DeleteMask
@@ -609,13 +609,13 @@ func (p *media2) OptDeleteMask(args DeleteMask) (*SetConfigurationResponse, erro
 
 	resp := SetConfigurationResponse{}
 
-	if err := p.cli.CallMethodUnmarshal(p.Endpoint, req, &resp); err != nil {
-		return nil, err
+	if fault := p.cli.CallMethodUnmarshal(p.Endpoint, req, &resp); fault != nil {
+		return nil, fault
 	}
 	return &resp, nil
 }
 
-func (p *media2) OptDeleteOSD(args DeleteOSD) (*SetConfigurationResponse, error) {
+func (p *media2) OptDeleteOSD(args DeleteOSD) (*SetConfigurationResponse, *common.Fault) {
 	req := struct {
 		XMLName   string `xml:"tr2:DeleteOSD"`
 		DeleteOSD DeleteOSD
@@ -625,13 +625,13 @@ func (p *media2) OptDeleteOSD(args DeleteOSD) (*SetConfigurationResponse, error)
 
 	resp := SetConfigurationResponse{}
 
-	if err := p.cli.CallMethodUnmarshal(p.Endpoint, req, &resp); err != nil {
-		return nil, err
+	if fault := p.cli.CallMethodUnmarshal(p.Endpoint, req, &resp); fault != nil {
+		return nil, fault
 	}
 	return &resp, nil
 }
 
-func (p *media2) OptDeleteProfile(args DeleteProfile) (*DeleteProfileResponse, error) {
+func (p *media2) OptDeleteProfile(args DeleteProfile) (*DeleteProfileResponse, *common.Fault) {
 	req := struct {
 		XMLName       string `xml:"tr2:DeleteProfile"`
 		DeleteProfile DeleteProfile
@@ -641,13 +641,13 @@ func (p *media2) OptDeleteProfile(args DeleteProfile) (*DeleteProfileResponse, e
 
 	resp := DeleteProfileResponse{}
 
-	if err := p.cli.CallMethodUnmarshal(p.Endpoint, req, &resp); err != nil {
-		return nil, err
+	if fault := p.cli.CallMethodUnmarshal(p.Endpoint, req, &resp); fault != nil {
+		return nil, fault
 	}
 	return &resp, nil
 }
 
-func (p *media2) OptGetAnalyticsConfigurations(args GetConfiguration) (*GetAnalyticsConfigurationsResponse, error) {
+func (p *media2) OptGetAnalyticsConfigurations(args GetConfiguration) (*GetAnalyticsConfigurationsResponse, *common.Fault) {
 	req := struct {
 		XMLName          string `xml:"tr2:GetAnalyticsConfigurations"`
 		GetConfiguration GetConfiguration
@@ -657,13 +657,13 @@ func (p *media2) OptGetAnalyticsConfigurations(args GetConfiguration) (*GetAnaly
 
 	resp := GetAnalyticsConfigurationsResponse{}
 
-	if err := p.cli.CallMethodUnmarshal(p.Endpoint, req, &resp); err != nil {
-		return nil, err
+	if fault := p.cli.CallMethodUnmarshal(p.Endpoint, req, &resp); fault != nil {
+		return nil, fault
 	}
 	return &resp, nil
 }
 
-func (p *media2) OptGetAudioDecoderConfigurationOptions(args GetConfiguration) (*GetAudioDecoderConfigurationOptionsResponse, error) {
+func (p *media2) OptGetAudioDecoderConfigurationOptions(args GetConfiguration) (*GetAudioDecoderConfigurationOptionsResponse, *common.Fault) {
 	req := struct {
 		XMLName          string `xml:"tr2:GetAudioDecoderConfigurationOptions"`
 		GetConfiguration GetConfiguration
@@ -673,13 +673,13 @@ func (p *media2) OptGetAudioDecoderConfigurationOptions(args GetConfiguration) (
 
 	resp := GetAudioDecoderConfigurationOptionsResponse{}
 
-	if err := p.cli.CallMethodUnmarshal(p.Endpoint, req, &resp); err != nil {
-		return nil, err
+	if fault := p.cli.CallMethodUnmarshal(p.Endpoint, req, &resp); fault != nil {
+		return nil, fault
 	}
 	return &resp, nil
 }
 
-func (p *media2) OptGetAudioDecoderConfigurations(args GetConfiguration) (*GetAudioDecoderConfigurationsResponse, error) {
+func (p *media2) OptGetAudioDecoderConfigurations(args GetConfiguration) (*GetAudioDecoderConfigurationsResponse, *common.Fault) {
 	req := struct {
 		XMLName          string `xml:"tr2:GetAudioDecoderConfigurations"`
 		GetConfiguration GetConfiguration
@@ -689,13 +689,13 @@ func (p *media2) OptGetAudioDecoderConfigurations(args GetConfiguration) (*GetAu
 
 	resp := GetAudioDecoderConfigurationsResponse{}
 
-	if err := p.cli.CallMethodUnmarshal(p.Endpoint, req, &resp); err != nil {
-		return nil, err
+	if fault := p.cli.CallMethodUnmarshal(p.Endpoint, req, &resp); fault != nil {
+		return nil, fault
 	}
 	return &resp, nil
 }
 
-func (p *media2) OptGetAudioEncoderConfigurationOptions(args GetConfiguration) (*GetAudioEncoderConfigurationOptionsResponse, error) {
+func (p *media2) OptGetAudioEncoderConfigurationOptions(args GetConfiguration) (*GetAudioEncoderConfigurationOptionsResponse, *common.Fault) {
 	req := struct {
 		XMLName          string `xml:"tr2:GetAudioEncoderConfigurationOptions"`
 		GetConfiguration GetConfiguration
@@ -705,13 +705,13 @@ func (p *media2) OptGetAudioEncoderConfigurationOptions(args GetConfiguration) (
 
 	resp := GetAudioEncoderConfigurationOptionsResponse{}
 
-	if err := p.cli.CallMethodUnmarshal(p.Endpoint, req, &resp); err != nil {
-		return nil, err
+	if fault := p.cli.CallMethodUnmarshal(p.Endpoint, req, &resp); fault != nil {
+		return nil, fault
 	}
 	return &resp, nil
 }
 
-func (p *media2) OptGetAudioEncoderConfigurations(args GetConfiguration) (*GetAudioEncoderConfigurationsResponse, error) {
+func (p *media2) OptGetAudioEncoderConfigurations(args GetConfiguration) (*GetAudioEncoderConfigurationsResponse, *common.Fault) {
 	req := struct {
 		XMLName          string `xml:"tr2:GetAudioEncoderConfigurations"`
 		GetConfiguration GetConfiguration
@@ -721,13 +721,13 @@ func (p *media2) OptGetAudioEncoderConfigurations(args GetConfiguration) (*GetAu
 
 	resp := GetAudioEncoderConfigurationsResponse{}
 
-	if err := p.cli.CallMethodUnmarshal(p.Endpoint, req, &resp); err != nil {
-		return nil, err
+	if fault := p.cli.CallMethodUnmarshal(p.Endpoint, req, &resp); fault != nil {
+		return nil, fault
 	}
 	return &resp, nil
 }
 
-func (p *media2) OptGetAudioOutputConfigurationOptions(args GetConfiguration) (*GetAudioOutputConfigurationOptionsResponse, error) {
+func (p *media2) OptGetAudioOutputConfigurationOptions(args GetConfiguration) (*GetAudioOutputConfigurationOptionsResponse, *common.Fault) {
 	req := struct {
 		XMLName          string `xml:"tr2:GetAudioOutputConfigurationOptions"`
 		GetConfiguration GetConfiguration
@@ -737,13 +737,13 @@ func (p *media2) OptGetAudioOutputConfigurationOptions(args GetConfiguration) (*
 
 	resp := GetAudioOutputConfigurationOptionsResponse{}
 
-	if err := p.cli.CallMethodUnmarshal(p.Endpoint, req, &resp); err != nil {
-		return nil, err
+	if fault := p.cli.CallMethodUnmarshal(p.Endpoint, req, &resp); fault != nil {
+		return nil, fault
 	}
 	return &resp, nil
 }
 
-func (p *media2) OptGetAudioOutputConfigurations(args GetConfiguration) (*GetAudioOutputConfigurationsResponse, error) {
+func (p *media2) OptGetAudioOutputConfigurations(args GetConfiguration) (*GetAudioOutputConfigurationsResponse, *common.Fault) {
 	req := struct {
 		XMLName          string `xml:"tr2:GetAudioOutputConfigurations"`
 		GetConfiguration GetConfiguration
@@ -753,13 +753,13 @@ func (p *media2) OptGetAudioOutputConfigurations(args GetConfiguration) (*GetAud
 
 	resp := GetAudioOutputConfigurationsResponse{}
 
-	if err := p.cli.CallMethodUnmarshal(p.Endpoint, req, &resp); err != nil {
-		return nil, err
+	if fault := p.cli.CallMethodUnmarshal(p.Endpoint, req, &resp); fault != nil {
+		return nil, fault
 	}
 	return &resp, nil
 }
 
-func (p *media2) OptGetAudioSourceConfigurationOptions(args GetConfiguration) (*GetAudioSourceConfigurationOptionsResponse, error) {
+func (p *media2) OptGetAudioSourceConfigurationOptions(args GetConfiguration) (*GetAudioSourceConfigurationOptionsResponse, *common.Fault) {
 	req := struct {
 		XMLName          string `xml:"tr2:GetAudioSourceConfigurationOptions"`
 		GetConfiguration GetConfiguration
@@ -769,13 +769,13 @@ func (p *media2) OptGetAudioSourceConfigurationOptions(args GetConfiguration) (*
 
 	resp := GetAudioSourceConfigurationOptionsResponse{}
 
-	if err := p.cli.CallMethodUnmarshal(p.Endpoint, req, &resp); err != nil {
-		return nil, err
+	if fault := p.cli.CallMethodUnmarshal(p.Endpoint, req, &resp); fault != nil {
+		return nil, fault
 	}
 	return &resp, nil
 }
 
-func (p *media2) OptGetAudioSourceConfigurations(args GetConfiguration) (*GetAudioSourceConfigurationsResponse, error) {
+func (p *media2) OptGetAudioSourceConfigurations(args GetConfiguration) (*GetAudioSourceConfigurationsResponse, *common.Fault) {
 	req := struct {
 		XMLName          string `xml:"tr2:GetAudioSourceConfigurations"`
 		GetConfiguration GetConfiguration
@@ -785,13 +785,13 @@ func (p *media2) OptGetAudioSourceConfigurations(args GetConfiguration) (*GetAud
 
 	resp := GetAudioSourceConfigurationsResponse{}
 
-	if err := p.cli.CallMethodUnmarshal(p.Endpoint, req, &resp); err != nil {
-		return nil, err
+	if fault := p.cli.CallMethodUnmarshal(p.Endpoint, req, &resp); fault != nil {
+		return nil, fault
 	}
 	return &resp, nil
 }
 
-func (p *media2) OptGetMaskOptions(args GetMaskOptions) (*GetMaskOptionsResponse, error) {
+func (p *media2) OptGetMaskOptions(args GetMaskOptions) (*GetMaskOptionsResponse, *common.Fault) {
 	req := struct {
 		XMLName        string `xml:"tr2:GetMaskOptions"`
 		GetMaskOptions GetMaskOptions
@@ -801,13 +801,13 @@ func (p *media2) OptGetMaskOptions(args GetMaskOptions) (*GetMaskOptionsResponse
 
 	resp := GetMaskOptionsResponse{}
 
-	if err := p.cli.CallMethodUnmarshal(p.Endpoint, req, &resp); err != nil {
-		return nil, err
+	if fault := p.cli.CallMethodUnmarshal(p.Endpoint, req, &resp); fault != nil {
+		return nil, fault
 	}
 	return &resp, nil
 }
 
-func (p *media2) OptGetMasks(args GetMasks) (*GetMasksResponse, error) {
+func (p *media2) OptGetMasks(args GetMasks) (*GetMasksResponse, *common.Fault) {
 	req := struct {
 		XMLName  string `xml:"tr2:GetMasks"`
 		GetMasks GetMasks
@@ -817,13 +817,13 @@ func (p *media2) OptGetMasks(args GetMasks) (*GetMasksResponse, error) {
 
 	resp := GetMasksResponse{}
 
-	if err := p.cli.CallMethodUnmarshal(p.Endpoint, req, &resp); err != nil {
-		return nil, err
+	if fault := p.cli.CallMethodUnmarshal(p.Endpoint, req, &resp); fault != nil {
+		return nil, fault
 	}
 	return &resp, nil
 }
 
-func (p *media2) OptGetMetadataConfigurationOptions(args GetConfiguration) (*GetMetadataConfigurationOptionsResponse, error) {
+func (p *media2) OptGetMetadataConfigurationOptions(args GetConfiguration) (*GetMetadataConfigurationOptionsResponse, *common.Fault) {
 	req := struct {
 		XMLName          string `xml:"tr2:GetMetadataConfigurationOptions"`
 		GetConfiguration GetConfiguration
@@ -833,13 +833,13 @@ func (p *media2) OptGetMetadataConfigurationOptions(args GetConfiguration) (*Get
 
 	resp := GetMetadataConfigurationOptionsResponse{}
 
-	if err := p.cli.CallMethodUnmarshal(p.Endpoint, req, &resp); err != nil {
-		return nil, err
+	if fault := p.cli.CallMethodUnmarshal(p.Endpoint, req, &resp); fault != nil {
+		return nil, fault
 	}
 	return &resp, nil
 }
 
-func (p *media2) OptGetMetadataConfigurations(args GetConfiguration) (*GetMetadataConfigurationsResponse, error) {
+func (p *media2) OptGetMetadataConfigurations(args GetConfiguration) (*GetMetadataConfigurationsResponse, *common.Fault) {
 	req := struct {
 		XMLName          string `xml:"tr2:GetMetadataConfigurations"`
 		GetConfiguration GetConfiguration
@@ -849,13 +849,13 @@ func (p *media2) OptGetMetadataConfigurations(args GetConfiguration) (*GetMetada
 
 	resp := GetMetadataConfigurationsResponse{}
 
-	if err := p.cli.CallMethodUnmarshal(p.Endpoint, req, &resp); err != nil {
-		return nil, err
+	if fault := p.cli.CallMethodUnmarshal(p.Endpoint, req, &resp); fault != nil {
+		return nil, fault
 	}
 	return &resp, nil
 }
 
-func (p *media2) OptGetOSDOptions(args GetOSDOptions) (*GetOSDOptionsResponse, error) {
+func (p *media2) OptGetOSDOptions(args GetOSDOptions) (*GetOSDOptionsResponse, *common.Fault) {
 	req := struct {
 		XMLName       string `xml:"tr2:GetOSDOptions"`
 		GetOSDOptions GetOSDOptions
@@ -865,13 +865,13 @@ func (p *media2) OptGetOSDOptions(args GetOSDOptions) (*GetOSDOptionsResponse, e
 
 	resp := GetOSDOptionsResponse{}
 
-	if err := p.cli.CallMethodUnmarshal(p.Endpoint, req, &resp); err != nil {
-		return nil, err
+	if fault := p.cli.CallMethodUnmarshal(p.Endpoint, req, &resp); fault != nil {
+		return nil, fault
 	}
 	return &resp, nil
 }
 
-func (p *media2) OptGetOSDs(args GetOSDs) (*GetOSDsResponse, error) {
+func (p *media2) OptGetOSDs(args GetOSDs) (*GetOSDsResponse, *common.Fault) {
 	req := struct {
 		XMLName string `xml:"tr2:GetOSDs"`
 		GetOSDs GetOSDs
@@ -881,13 +881,13 @@ func (p *media2) OptGetOSDs(args GetOSDs) (*GetOSDsResponse, error) {
 
 	resp := GetOSDsResponse{}
 
-	if err := p.cli.CallMethodUnmarshal(p.Endpoint, req, &resp); err != nil {
-		return nil, err
+	if fault := p.cli.CallMethodUnmarshal(p.Endpoint, req, &resp); fault != nil {
+		return nil, fault
 	}
 	return &resp, nil
 }
 
-func (p *media2) OptGetProfiles(args GetProfiles) (*GetProfilesResponse, error) {
+func (p *media2) OptGetProfiles(args GetProfiles) (*GetProfilesResponse, *common.Fault) {
 	req := struct {
 		XMLName     string `xml:"tr2:GetProfiles"`
 		GetProfiles GetProfiles
@@ -897,13 +897,13 @@ func (p *media2) OptGetProfiles(args GetProfiles) (*GetProfilesResponse, error) 
 
 	resp := GetProfilesResponse{}
 
-	if err := p.cli.CallMethodUnmarshal(p.Endpoint, req, &resp); err != nil {
-		return nil, err
+	if fault := p.cli.CallMethodUnmarshal(p.Endpoint, req, &resp); fault != nil {
+		return nil, fault
 	}
 	return &resp, nil
 }
 
-func (p *media2) OptGetServiceCapabilities(args GetServiceCapabilities) (*GetServiceCapabilitiesResponse, error) {
+func (p *media2) OptGetServiceCapabilities(args GetServiceCapabilities) (*GetServiceCapabilitiesResponse, *common.Fault) {
 	req := struct {
 		XMLName                string `xml:"tr2:GetServiceCapabilities"`
 		GetServiceCapabilities GetServiceCapabilities
@@ -913,13 +913,13 @@ func (p *media2) OptGetServiceCapabilities(args GetServiceCapabilities) (*GetSer
 
 	resp := GetServiceCapabilitiesResponse{}
 
-	if err := p.cli.CallMethodUnmarshal(p.Endpoint, req, &resp); err != nil {
-		return nil, err
+	if fault := p.cli.CallMethodUnmarshal(p.Endpoint, req, &resp); fault != nil {
+		return nil, fault
 	}
 	return &resp, nil
 }
 
-func (p *media2) OptGetSnapshotUri(args GetSnapshotUri) (*GetSnapshotUriResponse, error) {
+func (p *media2) OptGetSnapshotUri(args GetSnapshotUri) (*GetSnapshotUriResponse, *common.Fault) {
 	req := struct {
 		XMLName        string `xml:"tr2:GetSnapshotUri"`
 		GetSnapshotUri GetSnapshotUri
@@ -929,13 +929,13 @@ func (p *media2) OptGetSnapshotUri(args GetSnapshotUri) (*GetSnapshotUriResponse
 
 	resp := GetSnapshotUriResponse{}
 
-	if err := p.cli.CallMethodUnmarshal(p.Endpoint, req, &resp); err != nil {
-		return nil, err
+	if fault := p.cli.CallMethodUnmarshal(p.Endpoint, req, &resp); fault != nil {
+		return nil, fault
 	}
 	return &resp, nil
 }
 
-func (p *media2) OptGetStreamUri(args GetStreamUri) (*GetStreamUriResponse, error) {
+func (p *media2) OptGetStreamUri(args GetStreamUri) (*GetStreamUriResponse, *common.Fault) {
 	req := struct {
 		XMLName      string `xml:"tr2:GetStreamUri"`
 		GetStreamUri GetStreamUri
@@ -945,13 +945,13 @@ func (p *media2) OptGetStreamUri(args GetStreamUri) (*GetStreamUriResponse, erro
 
 	resp := GetStreamUriResponse{}
 
-	if err := p.cli.CallMethodUnmarshal(p.Endpoint, req, &resp); err != nil {
-		return nil, err
+	if fault := p.cli.CallMethodUnmarshal(p.Endpoint, req, &resp); fault != nil {
+		return nil, fault
 	}
 	return &resp, nil
 }
 
-func (p *media2) OptGetVideoEncoderConfigurationOptions(args GetConfiguration) (*GetVideoEncoderConfigurationOptionsResponse, error) {
+func (p *media2) OptGetVideoEncoderConfigurationOptions(args GetConfiguration) (*GetVideoEncoderConfigurationOptionsResponse, *common.Fault) {
 	req := struct {
 		XMLName          string `xml:"tr2:GetVideoEncoderConfigurationOptions"`
 		GetConfiguration GetConfiguration
@@ -961,13 +961,13 @@ func (p *media2) OptGetVideoEncoderConfigurationOptions(args GetConfiguration) (
 
 	resp := GetVideoEncoderConfigurationOptionsResponse{}
 
-	if err := p.cli.CallMethodUnmarshal(p.Endpoint, req, &resp); err != nil {
-		return nil, err
+	if fault := p.cli.CallMethodUnmarshal(p.Endpoint, req, &resp); fault != nil {
+		return nil, fault
 	}
 	return &resp, nil
 }
 
-func (p *media2) OptGetVideoEncoderConfigurations(args GetConfiguration) (*GetVideoEncoderConfigurationsResponse, error) {
+func (p *media2) OptGetVideoEncoderConfigurations(args GetConfiguration) (*GetVideoEncoderConfigurationsResponse, *common.Fault) {
 	req := struct {
 		XMLName          string `xml:"tr2:GetVideoEncoderConfigurations"`
 		GetConfiguration GetConfiguration
@@ -977,13 +977,13 @@ func (p *media2) OptGetVideoEncoderConfigurations(args GetConfiguration) (*GetVi
 
 	resp := GetVideoEncoderConfigurationsResponse{}
 
-	if err := p.cli.CallMethodUnmarshal(p.Endpoint, req, &resp); err != nil {
-		return nil, err
+	if fault := p.cli.CallMethodUnmarshal(p.Endpoint, req, &resp); fault != nil {
+		return nil, fault
 	}
 	return &resp, nil
 }
 
-func (p *media2) OptGetVideoEncoderInstances(args GetVideoEncoderInstances) (*GetVideoEncoderInstancesResponse, error) {
+func (p *media2) OptGetVideoEncoderInstances(args GetVideoEncoderInstances) (*GetVideoEncoderInstancesResponse, *common.Fault) {
 	req := struct {
 		XMLName                  string `xml:"tr2:GetVideoEncoderInstances"`
 		GetVideoEncoderInstances GetVideoEncoderInstances
@@ -993,13 +993,13 @@ func (p *media2) OptGetVideoEncoderInstances(args GetVideoEncoderInstances) (*Ge
 
 	resp := GetVideoEncoderInstancesResponse{}
 
-	if err := p.cli.CallMethodUnmarshal(p.Endpoint, req, &resp); err != nil {
-		return nil, err
+	if fault := p.cli.CallMethodUnmarshal(p.Endpoint, req, &resp); fault != nil {
+		return nil, fault
 	}
 	return &resp, nil
 }
 
-func (p *media2) OptGetVideoSourceConfigurationOptions(args GetConfiguration) (*GetVideoSourceConfigurationOptionsResponse, error) {
+func (p *media2) OptGetVideoSourceConfigurationOptions(args GetConfiguration) (*GetVideoSourceConfigurationOptionsResponse, *common.Fault) {
 	req := struct {
 		XMLName          string `xml:"tr2:GetVideoSourceConfigurationOptions"`
 		GetConfiguration GetConfiguration
@@ -1009,13 +1009,13 @@ func (p *media2) OptGetVideoSourceConfigurationOptions(args GetConfiguration) (*
 
 	resp := GetVideoSourceConfigurationOptionsResponse{}
 
-	if err := p.cli.CallMethodUnmarshal(p.Endpoint, req, &resp); err != nil {
-		return nil, err
+	if fault := p.cli.CallMethodUnmarshal(p.Endpoint, req, &resp); fault != nil {
+		return nil, fault
 	}
 	return &resp, nil
 }
 
-func (p *media2) OptGetVideoSourceConfigurations(args GetConfiguration) (*GetVideoSourceConfigurationsResponse, error) {
+func (p *media2) OptGetVideoSourceConfigurations(args GetConfiguration) (*GetVideoSourceConfigurationsResponse, *common.Fault) {
 	req := struct {
 		XMLName          string `xml:"tr2:GetVideoSourceConfigurations"`
 		GetConfiguration GetConfiguration
@@ -1025,13 +1025,13 @@ func (p *media2) OptGetVideoSourceConfigurations(args GetConfiguration) (*GetVid
 
 	resp := GetVideoSourceConfigurationsResponse{}
 
-	if err := p.cli.CallMethodUnmarshal(p.Endpoint, req, &resp); err != nil {
-		return nil, err
+	if fault := p.cli.CallMethodUnmarshal(p.Endpoint, req, &resp); fault != nil {
+		return nil, fault
 	}
 	return &resp, nil
 }
 
-func (p *media2) OptGetVideoSourceModes(args GetVideoSourceModes) (*GetVideoSourceModesResponse, error) {
+func (p *media2) OptGetVideoSourceModes(args GetVideoSourceModes) (*GetVideoSourceModesResponse, *common.Fault) {
 	req := struct {
 		XMLName             string `xml:"tr2:GetVideoSourceModes"`
 		GetVideoSourceModes GetVideoSourceModes
@@ -1041,13 +1041,13 @@ func (p *media2) OptGetVideoSourceModes(args GetVideoSourceModes) (*GetVideoSour
 
 	resp := GetVideoSourceModesResponse{}
 
-	if err := p.cli.CallMethodUnmarshal(p.Endpoint, req, &resp); err != nil {
-		return nil, err
+	if fault := p.cli.CallMethodUnmarshal(p.Endpoint, req, &resp); fault != nil {
+		return nil, fault
 	}
 	return &resp, nil
 }
 
-func (p *media2) OptRemoveConfiguration(args RemoveConfiguration) (*RemoveConfigurationResponse, error) {
+func (p *media2) OptRemoveConfiguration(args RemoveConfiguration) (*RemoveConfigurationResponse, *common.Fault) {
 	req := struct {
 		XMLName             string `xml:"tr2:RemoveConfiguration"`
 		RemoveConfiguration RemoveConfiguration
@@ -1057,13 +1057,13 @@ func (p *media2) OptRemoveConfiguration(args RemoveConfiguration) (*RemoveConfig
 
 	resp := RemoveConfigurationResponse{}
 
-	if err := p.cli.CallMethodUnmarshal(p.Endpoint, req, &resp); err != nil {
-		return nil, err
+	if fault := p.cli.CallMethodUnmarshal(p.Endpoint, req, &resp); fault != nil {
+		return nil, fault
 	}
 	return &resp, nil
 }
 
-func (p *media2) OptSetAudioDecoderConfiguration(args SetAudioDecoderConfiguration) (*SetConfigurationResponse, error) {
+func (p *media2) OptSetAudioDecoderConfiguration(args SetAudioDecoderConfiguration) (*SetConfigurationResponse, *common.Fault) {
 	req := struct {
 		XMLName                      string `xml:"tr2:SetAudioDecoderConfiguration"`
 		SetAudioDecoderConfiguration SetAudioDecoderConfiguration
@@ -1073,13 +1073,13 @@ func (p *media2) OptSetAudioDecoderConfiguration(args SetAudioDecoderConfigurati
 
 	resp := SetConfigurationResponse{}
 
-	if err := p.cli.CallMethodUnmarshal(p.Endpoint, req, &resp); err != nil {
-		return nil, err
+	if fault := p.cli.CallMethodUnmarshal(p.Endpoint, req, &resp); fault != nil {
+		return nil, fault
 	}
 	return &resp, nil
 }
 
-func (p *media2) OptSetAudioEncoderConfiguration(args SetAudioEncoderConfiguration) (*SetConfigurationResponse, error) {
+func (p *media2) OptSetAudioEncoderConfiguration(args SetAudioEncoderConfiguration) (*SetConfigurationResponse, *common.Fault) {
 	req := struct {
 		XMLName                      string `xml:"tr2:SetAudioEncoderConfiguration"`
 		SetAudioEncoderConfiguration SetAudioEncoderConfiguration
@@ -1089,13 +1089,13 @@ func (p *media2) OptSetAudioEncoderConfiguration(args SetAudioEncoderConfigurati
 
 	resp := SetConfigurationResponse{}
 
-	if err := p.cli.CallMethodUnmarshal(p.Endpoint, req, &resp); err != nil {
-		return nil, err
+	if fault := p.cli.CallMethodUnmarshal(p.Endpoint, req, &resp); fault != nil {
+		return nil, fault
 	}
 	return &resp, nil
 }
 
-func (p *media2) OptSetAudioOutputConfiguration(args SetAudioOutputConfiguration) (*SetConfigurationResponse, error) {
+func (p *media2) OptSetAudioOutputConfiguration(args SetAudioOutputConfiguration) (*SetConfigurationResponse, *common.Fault) {
 	req := struct {
 		XMLName                     string `xml:"tr2:SetAudioOutputConfiguration"`
 		SetAudioOutputConfiguration SetAudioOutputConfiguration
@@ -1105,13 +1105,13 @@ func (p *media2) OptSetAudioOutputConfiguration(args SetAudioOutputConfiguration
 
 	resp := SetConfigurationResponse{}
 
-	if err := p.cli.CallMethodUnmarshal(p.Endpoint, req, &resp); err != nil {
-		return nil, err
+	if fault := p.cli.CallMethodUnmarshal(p.Endpoint, req, &resp); fault != nil {
+		return nil, fault
 	}
 	return &resp, nil
 }
 
-func (p *media2) OptSetAudioSourceConfiguration(args SetAudioSourceConfiguration) (*SetConfigurationResponse, error) {
+func (p *media2) OptSetAudioSourceConfiguration(args SetAudioSourceConfiguration) (*SetConfigurationResponse, *common.Fault) {
 	req := struct {
 		XMLName                     string `xml:"tr2:SetAudioSourceConfiguration"`
 		SetAudioSourceConfiguration SetAudioSourceConfiguration
@@ -1121,13 +1121,13 @@ func (p *media2) OptSetAudioSourceConfiguration(args SetAudioSourceConfiguration
 
 	resp := SetConfigurationResponse{}
 
-	if err := p.cli.CallMethodUnmarshal(p.Endpoint, req, &resp); err != nil {
-		return nil, err
+	if fault := p.cli.CallMethodUnmarshal(p.Endpoint, req, &resp); fault != nil {
+		return nil, fault
 	}
 	return &resp, nil
 }
 
-func (p *media2) OptSetMask(args SetMask) (*SetConfigurationResponse, error) {
+func (p *media2) OptSetMask(args SetMask) (*SetConfigurationResponse, *common.Fault) {
 	req := struct {
 		XMLName string `xml:"tr2:SetMask"`
 		SetMask SetMask
@@ -1137,13 +1137,13 @@ func (p *media2) OptSetMask(args SetMask) (*SetConfigurationResponse, error) {
 
 	resp := SetConfigurationResponse{}
 
-	if err := p.cli.CallMethodUnmarshal(p.Endpoint, req, &resp); err != nil {
-		return nil, err
+	if fault := p.cli.CallMethodUnmarshal(p.Endpoint, req, &resp); fault != nil {
+		return nil, fault
 	}
 	return &resp, nil
 }
 
-func (p *media2) OptSetMetadataConfiguration(args SetMetadataConfiguration) (*SetConfigurationResponse, error) {
+func (p *media2) OptSetMetadataConfiguration(args SetMetadataConfiguration) (*SetConfigurationResponse, *common.Fault) {
 	req := struct {
 		XMLName                  string `xml:"tr2:SetMetadataConfiguration"`
 		SetMetadataConfiguration SetMetadataConfiguration
@@ -1153,13 +1153,13 @@ func (p *media2) OptSetMetadataConfiguration(args SetMetadataConfiguration) (*Se
 
 	resp := SetConfigurationResponse{}
 
-	if err := p.cli.CallMethodUnmarshal(p.Endpoint, req, &resp); err != nil {
-		return nil, err
+	if fault := p.cli.CallMethodUnmarshal(p.Endpoint, req, &resp); fault != nil {
+		return nil, fault
 	}
 	return &resp, nil
 }
 
-func (p *media2) OptSetOSD(args SetOSD) (*SetConfigurationResponse, error) {
+func (p *media2) OptSetOSD(args SetOSD) (*SetConfigurationResponse, *common.Fault) {
 	req := struct {
 		XMLName string `xml:"tr2:SetOSD"`
 		SetOSD  SetOSD
@@ -1169,13 +1169,13 @@ func (p *media2) OptSetOSD(args SetOSD) (*SetConfigurationResponse, error) {
 
 	resp := SetConfigurationResponse{}
 
-	if err := p.cli.CallMethodUnmarshal(p.Endpoint, req, &resp); err != nil {
-		return nil, err
+	if fault := p.cli.CallMethodUnmarshal(p.Endpoint, req, &resp); fault != nil {
+		return nil, fault
 	}
 	return &resp, nil
 }
 
-func (p *media2) OptSetSynchronizationPoint(args SetSynchronizationPoint) (*SetSynchronizationPointResponse, error) {
+func (p *media2) OptSetSynchronizationPoint(args SetSynchronizationPoint) (*SetSynchronizationPointResponse, *common.Fault) {
 	req := struct {
 		XMLName                 string `xml:"tr2:SetSynchronizationPoint"`
 		SetSynchronizationPoint SetSynchronizationPoint
@@ -1185,13 +1185,13 @@ func (p *media2) OptSetSynchronizationPoint(args SetSynchronizationPoint) (*SetS
 
 	resp := SetSynchronizationPointResponse{}
 
-	if err := p.cli.CallMethodUnmarshal(p.Endpoint, req, &resp); err != nil {
-		return nil, err
+	if fault := p.cli.CallMethodUnmarshal(p.Endpoint, req, &resp); fault != nil {
+		return nil, fault
 	}
 	return &resp, nil
 }
 
-func (p *media2) OptSetVideoEncoderConfiguration(args SetVideoEncoderConfiguration) (*SetConfigurationResponse, error) {
+func (p *media2) OptSetVideoEncoderConfiguration(args SetVideoEncoderConfiguration) (*SetConfigurationResponse, *common.Fault) {
 	req := struct {
 		XMLName                      string `xml:"tr2:SetVideoEncoderConfiguration"`
 		SetVideoEncoderConfiguration SetVideoEncoderConfiguration
@@ -1201,13 +1201,13 @@ func (p *media2) OptSetVideoEncoderConfiguration(args SetVideoEncoderConfigurati
 
 	resp := SetConfigurationResponse{}
 
-	if err := p.cli.CallMethodUnmarshal(p.Endpoint, req, &resp); err != nil {
-		return nil, err
+	if fault := p.cli.CallMethodUnmarshal(p.Endpoint, req, &resp); fault != nil {
+		return nil, fault
 	}
 	return &resp, nil
 }
 
-func (p *media2) OptSetVideoSourceConfiguration(args SetVideoSourceConfiguration) (*SetConfigurationResponse, error) {
+func (p *media2) OptSetVideoSourceConfiguration(args SetVideoSourceConfiguration) (*SetConfigurationResponse, *common.Fault) {
 	req := struct {
 		XMLName                     string `xml:"tr2:SetVideoSourceConfiguration"`
 		SetVideoSourceConfiguration SetVideoSourceConfiguration
@@ -1217,13 +1217,13 @@ func (p *media2) OptSetVideoSourceConfiguration(args SetVideoSourceConfiguration
 
 	resp := SetConfigurationResponse{}
 
-	if err := p.cli.CallMethodUnmarshal(p.Endpoint, req, &resp); err != nil {
-		return nil, err
+	if fault := p.cli.CallMethodUnmarshal(p.Endpoint, req, &resp); fault != nil {
+		return nil, fault
 	}
 	return &resp, nil
 }
 
-func (p *media2) OptSetVideoSourceMode(args SetVideoSourceMode) (*SetVideoSourceModeResponse, error) {
+func (p *media2) OptSetVideoSourceMode(args SetVideoSourceMode) (*SetVideoSourceModeResponse, *common.Fault) {
 	req := struct {
 		XMLName            string `xml:"tr2:SetVideoSourceMode"`
 		SetVideoSourceMode SetVideoSourceMode
@@ -1233,13 +1233,13 @@ func (p *media2) OptSetVideoSourceMode(args SetVideoSourceMode) (*SetVideoSource
 
 	resp := SetVideoSourceModeResponse{}
 
-	if err := p.cli.CallMethodUnmarshal(p.Endpoint, req, &resp); err != nil {
-		return nil, err
+	if fault := p.cli.CallMethodUnmarshal(p.Endpoint, req, &resp); fault != nil {
+		return nil, fault
 	}
 	return &resp, nil
 }
 
-func (p *media2) OptStartMulticastStreaming(args StartStopMulticastStreaming) (*SetConfigurationResponse, error) {
+func (p *media2) OptStartMulticastStreaming(args StartStopMulticastStreaming) (*SetConfigurationResponse, *common.Fault) {
 	req := struct {
 		XMLName                     string `xml:"tr2:StartMulticastStreaming"`
 		StartStopMulticastStreaming StartStopMulticastStreaming
@@ -1249,15 +1249,15 @@ func (p *media2) OptStartMulticastStreaming(args StartStopMulticastStreaming) (*
 
 	resp := SetConfigurationResponse{}
 
-	if err := p.cli.CallMethodUnmarshal(p.Endpoint, req, &resp); err != nil {
-		return nil, err
+	if fault := p.cli.CallMethodUnmarshal(p.Endpoint, req, &resp); fault != nil {
+		return nil, fault
 	}
 	return &resp, nil
 }
 
-func (p *media2) OptStopMulticastStreaming(args StartStopMulticastStreaming) (*SetConfigurationResponse, error) {
+func (p *media2) OptStopMulticastStreaming(args StartStopMulticastStreaming) (*SetConfigurationResponse, *common.Fault) {
 	req := struct {
-		XMLName                     string `xml:"tr2:StopMulticastStreaming"`
+		XMLName string `xml:"tr2:StopMulticastStreaming"`
 		StartStopMulticastStreaming StartStopMulticastStreaming
 	}{
 		StartStopMulticastStreaming: args,
@@ -1265,8 +1265,8 @@ func (p *media2) OptStopMulticastStreaming(args StartStopMulticastStreaming) (*S
 
 	resp := SetConfigurationResponse{}
 
-	if err := p.cli.CallMethodUnmarshal(p.Endpoint, req, &resp); err != nil {
-		return nil, err
+	if fault := p.cli.CallMethodUnmarshal(p.Endpoint, req, &resp); fault != nil {
+		return nil, fault
 	}
 	return &resp, nil
 }

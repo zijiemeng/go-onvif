@@ -14,41 +14,41 @@ func NewSchedulePort(endpoint string, cli common.Client) SchedulePort {
 // SchedulePort was auto-generated from WSDL
 // and defines interface for the remote service. Useful for testing.
 type SchedulePort interface {
-	OptCreateSchedule(CreateSchedule CreateSchedule) (*CreateScheduleResponse, error)
+	OptCreateSchedule(CreateSchedule CreateSchedule) (*CreateScheduleResponse, *common.Fault)
 
-	OptCreateSpecialDayGroup(CreateSpecialDayGroup CreateSpecialDayGroup) (*CreateSpecialDayGroupResponse, error)
+	OptCreateSpecialDayGroup(CreateSpecialDayGroup CreateSpecialDayGroup) (*CreateSpecialDayGroupResponse, *common.Fault)
 
-	OptDeleteSchedule(DeleteSchedule DeleteSchedule) (*DeleteScheduleResponse, error)
+	OptDeleteSchedule(DeleteSchedule DeleteSchedule) (*DeleteScheduleResponse, *common.Fault)
 
-	OptDeleteSpecialDayGroup(DeleteSpecialDayGroup DeleteSpecialDayGroup) (*DeleteSpecialDayGroupResponse, error)
+	OptDeleteSpecialDayGroup(DeleteSpecialDayGroup DeleteSpecialDayGroup) (*DeleteSpecialDayGroupResponse, *common.Fault)
 
-	OptGetScheduleInfo(GetScheduleInfo GetScheduleInfo) (*GetScheduleInfoResponse, error)
+	OptGetScheduleInfo(GetScheduleInfo GetScheduleInfo) (*GetScheduleInfoResponse, *common.Fault)
 
-	OptGetScheduleInfoList(GetScheduleInfoList GetScheduleInfoList) (*GetScheduleInfoListResponse, error)
+	OptGetScheduleInfoList(GetScheduleInfoList GetScheduleInfoList) (*GetScheduleInfoListResponse, *common.Fault)
 
-	OptGetScheduleList(GetScheduleList GetScheduleList) (*GetScheduleListResponse, error)
+	OptGetScheduleList(GetScheduleList GetScheduleList) (*GetScheduleListResponse, *common.Fault)
 
-	OptGetScheduleState(GetScheduleState GetScheduleState) (*GetScheduleStateResponse, error)
+	OptGetScheduleState(GetScheduleState GetScheduleState) (*GetScheduleStateResponse, *common.Fault)
 
-	OptGetSchedules(GetSchedules GetSchedules) (*GetSchedulesResponse, error)
+	OptGetSchedules(GetSchedules GetSchedules) (*GetSchedulesResponse, *common.Fault)
 
-	OptGetServiceCapabilities(GetServiceCapabilities GetServiceCapabilities) (*GetServiceCapabilitiesResponse, error)
+	OptGetServiceCapabilities(GetServiceCapabilities GetServiceCapabilities) (*GetServiceCapabilitiesResponse, *common.Fault)
 
-	OptGetSpecialDayGroupInfo(GetSpecialDayGroupInfo GetSpecialDayGroupInfo) (*GetSpecialDayGroupInfoResponse, error)
+	OptGetSpecialDayGroupInfo(GetSpecialDayGroupInfo GetSpecialDayGroupInfo) (*GetSpecialDayGroupInfoResponse, *common.Fault)
 
-	OptGetSpecialDayGroupInfoList(GetSpecialDayGroupInfoList GetSpecialDayGroupInfoList) (*GetSpecialDayGroupInfoListResponse, error)
+	OptGetSpecialDayGroupInfoList(GetSpecialDayGroupInfoList GetSpecialDayGroupInfoList) (*GetSpecialDayGroupInfoListResponse, *common.Fault)
 
-	OptGetSpecialDayGroupList(GetSpecialDayGroupList GetSpecialDayGroupList) (*GetSpecialDayGroupListResponse, error)
+	OptGetSpecialDayGroupList(GetSpecialDayGroupList GetSpecialDayGroupList) (*GetSpecialDayGroupListResponse, *common.Fault)
 
-	OptGetSpecialDayGroups(GetSpecialDayGroups GetSpecialDayGroups) (*GetSpecialDayGroupsResponse, error)
+	OptGetSpecialDayGroups(GetSpecialDayGroups GetSpecialDayGroups) (*GetSpecialDayGroupsResponse, *common.Fault)
 
-	OptModifySchedule(ModifySchedule ModifySchedule) (*ModifyScheduleResponse, error)
+	OptModifySchedule(ModifySchedule ModifySchedule) (*ModifyScheduleResponse, *common.Fault)
 
-	OptModifySpecialDayGroup(ModifySpecialDayGroup ModifySpecialDayGroup) (*ModifySpecialDayGroupResponse, error)
+	OptModifySpecialDayGroup(ModifySpecialDayGroup ModifySpecialDayGroup) (*ModifySpecialDayGroupResponse, *common.Fault)
 
-	OptSetSchedule(SetSchedule SetSchedule) (*SetScheduleResponse, error)
+	OptSetSchedule(SetSchedule SetSchedule) (*SetScheduleResponse, *common.Fault)
 
-	OptSetSpecialDayGroup(SetSpecialDayGroup SetSpecialDayGroup) (*SetSpecialDayGroupResponse, error)
+	OptSetSpecialDayGroup(SetSpecialDayGroup SetSpecialDayGroup) (*SetSpecialDayGroupResponse, *common.Fault)
 }
 type Time string
 
@@ -330,7 +330,7 @@ type schedulePort struct {
 	Endpoint string
 }
 
-func (p *schedulePort) OptCreateSchedule(args CreateSchedule) (*CreateScheduleResponse, error) {
+func (p *schedulePort) OptCreateSchedule(args CreateSchedule) (*CreateScheduleResponse, *common.Fault) {
 	req := struct {
 		XMLName        string `xml:"tsc:CreateSchedule"`
 		CreateSchedule CreateSchedule
@@ -340,13 +340,13 @@ func (p *schedulePort) OptCreateSchedule(args CreateSchedule) (*CreateScheduleRe
 
 	resp := CreateScheduleResponse{}
 
-	if err := p.cli.CallMethodUnmarshal(p.Endpoint, req, &resp); err != nil {
-		return nil, err
+	if fault := p.cli.CallMethodUnmarshal(p.Endpoint, req, &resp); fault != nil {
+		return nil, fault
 	}
 	return &resp, nil
 }
 
-func (p *schedulePort) OptCreateSpecialDayGroup(args CreateSpecialDayGroup) (*CreateSpecialDayGroupResponse, error) {
+func (p *schedulePort) OptCreateSpecialDayGroup(args CreateSpecialDayGroup) (*CreateSpecialDayGroupResponse, *common.Fault) {
 	req := struct {
 		XMLName               string `xml:"tsc:CreateSpecialDayGroup"`
 		CreateSpecialDayGroup CreateSpecialDayGroup
@@ -356,13 +356,13 @@ func (p *schedulePort) OptCreateSpecialDayGroup(args CreateSpecialDayGroup) (*Cr
 
 	resp := CreateSpecialDayGroupResponse{}
 
-	if err := p.cli.CallMethodUnmarshal(p.Endpoint, req, &resp); err != nil {
-		return nil, err
+	if fault := p.cli.CallMethodUnmarshal(p.Endpoint, req, &resp); fault != nil {
+		return nil, fault
 	}
 	return &resp, nil
 }
 
-func (p *schedulePort) OptDeleteSchedule(args DeleteSchedule) (*DeleteScheduleResponse, error) {
+func (p *schedulePort) OptDeleteSchedule(args DeleteSchedule) (*DeleteScheduleResponse, *common.Fault) {
 	req := struct {
 		XMLName        string `xml:"tsc:DeleteSchedule"`
 		DeleteSchedule DeleteSchedule
@@ -372,13 +372,13 @@ func (p *schedulePort) OptDeleteSchedule(args DeleteSchedule) (*DeleteScheduleRe
 
 	resp := DeleteScheduleResponse{}
 
-	if err := p.cli.CallMethodUnmarshal(p.Endpoint, req, &resp); err != nil {
-		return nil, err
+	if fault := p.cli.CallMethodUnmarshal(p.Endpoint, req, &resp); fault != nil {
+		return nil, fault
 	}
 	return &resp, nil
 }
 
-func (p *schedulePort) OptDeleteSpecialDayGroup(args DeleteSpecialDayGroup) (*DeleteSpecialDayGroupResponse, error) {
+func (p *schedulePort) OptDeleteSpecialDayGroup(args DeleteSpecialDayGroup) (*DeleteSpecialDayGroupResponse, *common.Fault) {
 	req := struct {
 		XMLName               string `xml:"tsc:DeleteSpecialDayGroup"`
 		DeleteSpecialDayGroup DeleteSpecialDayGroup
@@ -388,13 +388,13 @@ func (p *schedulePort) OptDeleteSpecialDayGroup(args DeleteSpecialDayGroup) (*De
 
 	resp := DeleteSpecialDayGroupResponse{}
 
-	if err := p.cli.CallMethodUnmarshal(p.Endpoint, req, &resp); err != nil {
-		return nil, err
+	if fault := p.cli.CallMethodUnmarshal(p.Endpoint, req, &resp); fault != nil {
+		return nil, fault
 	}
 	return &resp, nil
 }
 
-func (p *schedulePort) OptGetScheduleInfo(args GetScheduleInfo) (*GetScheduleInfoResponse, error) {
+func (p *schedulePort) OptGetScheduleInfo(args GetScheduleInfo) (*GetScheduleInfoResponse, *common.Fault) {
 	req := struct {
 		XMLName         string `xml:"tsc:GetScheduleInfo"`
 		GetScheduleInfo GetScheduleInfo
@@ -404,13 +404,13 @@ func (p *schedulePort) OptGetScheduleInfo(args GetScheduleInfo) (*GetScheduleInf
 
 	resp := GetScheduleInfoResponse{}
 
-	if err := p.cli.CallMethodUnmarshal(p.Endpoint, req, &resp); err != nil {
-		return nil, err
+	if fault := p.cli.CallMethodUnmarshal(p.Endpoint, req, &resp); fault != nil {
+		return nil, fault
 	}
 	return &resp, nil
 }
 
-func (p *schedulePort) OptGetScheduleInfoList(args GetScheduleInfoList) (*GetScheduleInfoListResponse, error) {
+func (p *schedulePort) OptGetScheduleInfoList(args GetScheduleInfoList) (*GetScheduleInfoListResponse, *common.Fault) {
 	req := struct {
 		XMLName             string `xml:"tsc:GetScheduleInfoList"`
 		GetScheduleInfoList GetScheduleInfoList
@@ -420,13 +420,13 @@ func (p *schedulePort) OptGetScheduleInfoList(args GetScheduleInfoList) (*GetSch
 
 	resp := GetScheduleInfoListResponse{}
 
-	if err := p.cli.CallMethodUnmarshal(p.Endpoint, req, &resp); err != nil {
-		return nil, err
+	if fault := p.cli.CallMethodUnmarshal(p.Endpoint, req, &resp); fault != nil {
+		return nil, fault
 	}
 	return &resp, nil
 }
 
-func (p *schedulePort) OptGetScheduleList(args GetScheduleList) (*GetScheduleListResponse, error) {
+func (p *schedulePort) OptGetScheduleList(args GetScheduleList) (*GetScheduleListResponse, *common.Fault) {
 	req := struct {
 		XMLName         string `xml:"tsc:GetScheduleList"`
 		GetScheduleList GetScheduleList
@@ -436,13 +436,13 @@ func (p *schedulePort) OptGetScheduleList(args GetScheduleList) (*GetScheduleLis
 
 	resp := GetScheduleListResponse{}
 
-	if err := p.cli.CallMethodUnmarshal(p.Endpoint, req, &resp); err != nil {
-		return nil, err
+	if fault := p.cli.CallMethodUnmarshal(p.Endpoint, req, &resp); fault != nil {
+		return nil, fault
 	}
 	return &resp, nil
 }
 
-func (p *schedulePort) OptGetScheduleState(args GetScheduleState) (*GetScheduleStateResponse, error) {
+func (p *schedulePort) OptGetScheduleState(args GetScheduleState) (*GetScheduleStateResponse, *common.Fault) {
 	req := struct {
 		XMLName          string `xml:"tsc:GetScheduleState"`
 		GetScheduleState GetScheduleState
@@ -452,13 +452,13 @@ func (p *schedulePort) OptGetScheduleState(args GetScheduleState) (*GetScheduleS
 
 	resp := GetScheduleStateResponse{}
 
-	if err := p.cli.CallMethodUnmarshal(p.Endpoint, req, &resp); err != nil {
-		return nil, err
+	if fault := p.cli.CallMethodUnmarshal(p.Endpoint, req, &resp); fault != nil {
+		return nil, fault
 	}
 	return &resp, nil
 }
 
-func (p *schedulePort) OptGetSchedules(args GetSchedules) (*GetSchedulesResponse, error) {
+func (p *schedulePort) OptGetSchedules(args GetSchedules) (*GetSchedulesResponse, *common.Fault) {
 	req := struct {
 		XMLName      string `xml:"tsc:GetSchedules"`
 		GetSchedules GetSchedules
@@ -468,13 +468,13 @@ func (p *schedulePort) OptGetSchedules(args GetSchedules) (*GetSchedulesResponse
 
 	resp := GetSchedulesResponse{}
 
-	if err := p.cli.CallMethodUnmarshal(p.Endpoint, req, &resp); err != nil {
-		return nil, err
+	if fault := p.cli.CallMethodUnmarshal(p.Endpoint, req, &resp); fault != nil {
+		return nil, fault
 	}
 	return &resp, nil
 }
 
-func (p *schedulePort) OptGetServiceCapabilities(args GetServiceCapabilities) (*GetServiceCapabilitiesResponse, error) {
+func (p *schedulePort) OptGetServiceCapabilities(args GetServiceCapabilities) (*GetServiceCapabilitiesResponse, *common.Fault) {
 	req := struct {
 		XMLName                string `xml:"tsc:GetServiceCapabilities"`
 		GetServiceCapabilities GetServiceCapabilities
@@ -484,13 +484,13 @@ func (p *schedulePort) OptGetServiceCapabilities(args GetServiceCapabilities) (*
 
 	resp := GetServiceCapabilitiesResponse{}
 
-	if err := p.cli.CallMethodUnmarshal(p.Endpoint, req, &resp); err != nil {
-		return nil, err
+	if fault := p.cli.CallMethodUnmarshal(p.Endpoint, req, &resp); fault != nil {
+		return nil, fault
 	}
 	return &resp, nil
 }
 
-func (p *schedulePort) OptGetSpecialDayGroupInfo(args GetSpecialDayGroupInfo) (*GetSpecialDayGroupInfoResponse, error) {
+func (p *schedulePort) OptGetSpecialDayGroupInfo(args GetSpecialDayGroupInfo) (*GetSpecialDayGroupInfoResponse, *common.Fault) {
 	req := struct {
 		XMLName                string `xml:"tsc:GetSpecialDayGroupInfo"`
 		GetSpecialDayGroupInfo GetSpecialDayGroupInfo
@@ -500,13 +500,13 @@ func (p *schedulePort) OptGetSpecialDayGroupInfo(args GetSpecialDayGroupInfo) (*
 
 	resp := GetSpecialDayGroupInfoResponse{}
 
-	if err := p.cli.CallMethodUnmarshal(p.Endpoint, req, &resp); err != nil {
-		return nil, err
+	if fault := p.cli.CallMethodUnmarshal(p.Endpoint, req, &resp); fault != nil {
+		return nil, fault
 	}
 	return &resp, nil
 }
 
-func (p *schedulePort) OptGetSpecialDayGroupInfoList(args GetSpecialDayGroupInfoList) (*GetSpecialDayGroupInfoListResponse, error) {
+func (p *schedulePort) OptGetSpecialDayGroupInfoList(args GetSpecialDayGroupInfoList) (*GetSpecialDayGroupInfoListResponse, *common.Fault) {
 	req := struct {
 		XMLName                    string `xml:"tsc:GetSpecialDayGroupInfoList"`
 		GetSpecialDayGroupInfoList GetSpecialDayGroupInfoList
@@ -516,13 +516,13 @@ func (p *schedulePort) OptGetSpecialDayGroupInfoList(args GetSpecialDayGroupInfo
 
 	resp := GetSpecialDayGroupInfoListResponse{}
 
-	if err := p.cli.CallMethodUnmarshal(p.Endpoint, req, &resp); err != nil {
-		return nil, err
+	if fault := p.cli.CallMethodUnmarshal(p.Endpoint, req, &resp); fault != nil {
+		return nil, fault
 	}
 	return &resp, nil
 }
 
-func (p *schedulePort) OptGetSpecialDayGroupList(args GetSpecialDayGroupList) (*GetSpecialDayGroupListResponse, error) {
+func (p *schedulePort) OptGetSpecialDayGroupList(args GetSpecialDayGroupList) (*GetSpecialDayGroupListResponse, *common.Fault) {
 	req := struct {
 		XMLName                string `xml:"tsc:GetSpecialDayGroupList"`
 		GetSpecialDayGroupList GetSpecialDayGroupList
@@ -532,13 +532,13 @@ func (p *schedulePort) OptGetSpecialDayGroupList(args GetSpecialDayGroupList) (*
 
 	resp := GetSpecialDayGroupListResponse{}
 
-	if err := p.cli.CallMethodUnmarshal(p.Endpoint, req, &resp); err != nil {
-		return nil, err
+	if fault := p.cli.CallMethodUnmarshal(p.Endpoint, req, &resp); fault != nil {
+		return nil, fault
 	}
 	return &resp, nil
 }
 
-func (p *schedulePort) OptGetSpecialDayGroups(args GetSpecialDayGroups) (*GetSpecialDayGroupsResponse, error) {
+func (p *schedulePort) OptGetSpecialDayGroups(args GetSpecialDayGroups) (*GetSpecialDayGroupsResponse, *common.Fault) {
 	req := struct {
 		XMLName             string `xml:"tsc:GetSpecialDayGroups"`
 		GetSpecialDayGroups GetSpecialDayGroups
@@ -548,13 +548,13 @@ func (p *schedulePort) OptGetSpecialDayGroups(args GetSpecialDayGroups) (*GetSpe
 
 	resp := GetSpecialDayGroupsResponse{}
 
-	if err := p.cli.CallMethodUnmarshal(p.Endpoint, req, &resp); err != nil {
-		return nil, err
+	if fault := p.cli.CallMethodUnmarshal(p.Endpoint, req, &resp); fault != nil {
+		return nil, fault
 	}
 	return &resp, nil
 }
 
-func (p *schedulePort) OptModifySchedule(args ModifySchedule) (*ModifyScheduleResponse, error) {
+func (p *schedulePort) OptModifySchedule(args ModifySchedule) (*ModifyScheduleResponse, *common.Fault) {
 	req := struct {
 		XMLName        string `xml:"tsc:ModifySchedule"`
 		ModifySchedule ModifySchedule
@@ -564,13 +564,13 @@ func (p *schedulePort) OptModifySchedule(args ModifySchedule) (*ModifyScheduleRe
 
 	resp := ModifyScheduleResponse{}
 
-	if err := p.cli.CallMethodUnmarshal(p.Endpoint, req, &resp); err != nil {
-		return nil, err
+	if fault := p.cli.CallMethodUnmarshal(p.Endpoint, req, &resp); fault != nil {
+		return nil, fault
 	}
 	return &resp, nil
 }
 
-func (p *schedulePort) OptModifySpecialDayGroup(args ModifySpecialDayGroup) (*ModifySpecialDayGroupResponse, error) {
+func (p *schedulePort) OptModifySpecialDayGroup(args ModifySpecialDayGroup) (*ModifySpecialDayGroupResponse, *common.Fault) {
 	req := struct {
 		XMLName               string `xml:"tsc:ModifySpecialDayGroup"`
 		ModifySpecialDayGroup ModifySpecialDayGroup
@@ -580,13 +580,13 @@ func (p *schedulePort) OptModifySpecialDayGroup(args ModifySpecialDayGroup) (*Mo
 
 	resp := ModifySpecialDayGroupResponse{}
 
-	if err := p.cli.CallMethodUnmarshal(p.Endpoint, req, &resp); err != nil {
-		return nil, err
+	if fault := p.cli.CallMethodUnmarshal(p.Endpoint, req, &resp); fault != nil {
+		return nil, fault
 	}
 	return &resp, nil
 }
 
-func (p *schedulePort) OptSetSchedule(args SetSchedule) (*SetScheduleResponse, error) {
+func (p *schedulePort) OptSetSchedule(args SetSchedule) (*SetScheduleResponse, *common.Fault) {
 	req := struct {
 		XMLName     string `xml:"tsc:SetSchedule"`
 		SetSchedule SetSchedule
@@ -596,13 +596,13 @@ func (p *schedulePort) OptSetSchedule(args SetSchedule) (*SetScheduleResponse, e
 
 	resp := SetScheduleResponse{}
 
-	if err := p.cli.CallMethodUnmarshal(p.Endpoint, req, &resp); err != nil {
-		return nil, err
+	if fault := p.cli.CallMethodUnmarshal(p.Endpoint, req, &resp); fault != nil {
+		return nil, fault
 	}
 	return &resp, nil
 }
 
-func (p *schedulePort) OptSetSpecialDayGroup(args SetSpecialDayGroup) (*SetSpecialDayGroupResponse, error) {
+func (p *schedulePort) OptSetSpecialDayGroup(args SetSpecialDayGroup) (*SetSpecialDayGroupResponse, *common.Fault) {
 	req := struct {
 		XMLName            string `xml:"tsc:SetSpecialDayGroup"`
 		SetSpecialDayGroup SetSpecialDayGroup
@@ -612,8 +612,8 @@ func (p *schedulePort) OptSetSpecialDayGroup(args SetSpecialDayGroup) (*SetSpeci
 
 	resp := SetSpecialDayGroupResponse{}
 
-	if err := p.cli.CallMethodUnmarshal(p.Endpoint, req, &resp); err != nil {
-		return nil, err
+	if fault := p.cli.CallMethodUnmarshal(p.Endpoint, req, &resp); fault != nil {
+		return nil, fault
 	}
 	return &resp, nil
 }

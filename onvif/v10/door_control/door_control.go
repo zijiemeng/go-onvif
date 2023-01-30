@@ -16,43 +16,43 @@ func NewDoorControlPort(endpoint string, cli common.Client) DoorControlPort {
 // DoorControlPort was auto-generated from WSDL
 // and defines interface for the remote service. Useful for testing.
 type DoorControlPort interface {
-	OptAccessDoor(AccessDoor AccessDoor) (*AccessDoorResponse, error)
+	OptAccessDoor(AccessDoor AccessDoor) (*AccessDoorResponse, *common.Fault)
 
-	OptBlockDoor(BlockDoor BlockDoor) (*BlockDoorResponse, error)
+	OptBlockDoor(BlockDoor BlockDoor) (*BlockDoorResponse, *common.Fault)
 
-	OptCreateDoor(CreateDoor CreateDoor) (*CreateDoorResponse, error)
+	OptCreateDoor(CreateDoor CreateDoor) (*CreateDoorResponse, *common.Fault)
 
-	OptDeleteDoor(DeleteDoor DeleteDoor) (*DeleteDoorResponse, error)
+	OptDeleteDoor(DeleteDoor DeleteDoor) (*DeleteDoorResponse, *common.Fault)
 
-	OptDoubleLockDoor(DoubleLockDoor DoubleLockDoor) (*DoubleLockDoorResponse, error)
+	OptDoubleLockDoor(DoubleLockDoor DoubleLockDoor) (*DoubleLockDoorResponse, *common.Fault)
 
-	OptGetDoorInfo(GetDoorInfo GetDoorInfo) (*GetDoorInfoResponse, error)
+	OptGetDoorInfo(GetDoorInfo GetDoorInfo) (*GetDoorInfoResponse, *common.Fault)
 
-	OptGetDoorInfoList(GetDoorInfoList GetDoorInfoList) (*GetDoorInfoListResponse, error)
+	OptGetDoorInfoList(GetDoorInfoList GetDoorInfoList) (*GetDoorInfoListResponse, *common.Fault)
 
-	OptGetDoorList(GetDoorList GetDoorList) (*GetDoorListResponse, error)
+	OptGetDoorList(GetDoorList GetDoorList) (*GetDoorListResponse, *common.Fault)
 
-	OptGetDoorState(GetDoorState GetDoorState) (*GetDoorStateResponse, error)
+	OptGetDoorState(GetDoorState GetDoorState) (*GetDoorStateResponse, *common.Fault)
 
-	OptGetDoors(GetDoors GetDoors) (*GetDoorsResponse, error)
+	OptGetDoors(GetDoors GetDoors) (*GetDoorsResponse, *common.Fault)
 
-	OptGetServiceCapabilities(GetServiceCapabilities GetServiceCapabilities) (*GetServiceCapabilitiesResponse, error)
+	OptGetServiceCapabilities(GetServiceCapabilities GetServiceCapabilities) (*GetServiceCapabilitiesResponse, *common.Fault)
 
-	OptLockDoor(LockDoor LockDoor) (*LockDoorResponse, error)
+	OptLockDoor(LockDoor LockDoor) (*LockDoorResponse, *common.Fault)
 
-	OptLockDownDoor(LockDownDoor LockDownDoor) (*LockDownDoorResponse, error)
+	OptLockDownDoor(LockDownDoor LockDownDoor) (*LockDownDoorResponse, *common.Fault)
 
-	OptLockDownReleaseDoor(LockDownReleaseDoor LockDownReleaseDoor) (*LockDownReleaseDoorResponse, error)
+	OptLockDownReleaseDoor(LockDownReleaseDoor LockDownReleaseDoor) (*LockDownReleaseDoorResponse, *common.Fault)
 
-	OptLockOpenDoor(LockOpenDoor LockOpenDoor) (*LockOpenDoorResponse, error)
+	OptLockOpenDoor(LockOpenDoor LockOpenDoor) (*LockOpenDoorResponse, *common.Fault)
 
-	OptLockOpenReleaseDoor(LockOpenReleaseDoor LockOpenReleaseDoor) (*LockOpenReleaseDoorResponse, error)
+	OptLockOpenReleaseDoor(LockOpenReleaseDoor LockOpenReleaseDoor) (*LockOpenReleaseDoorResponse, *common.Fault)
 
-	OptModifyDoor(ModifyDoor ModifyDoor) (*ModifyDoorResponse, error)
+	OptModifyDoor(ModifyDoor ModifyDoor) (*ModifyDoorResponse, *common.Fault)
 
-	OptSetDoor(SetDoor SetDoor) (*SetDoorResponse, error)
+	OptSetDoor(SetDoor SetDoor) (*SetDoorResponse, *common.Fault)
 
-	OptUnlockDoor(UnlockDoor UnlockDoor) (*UnlockDoorResponse, error)
+	OptUnlockDoor(UnlockDoor UnlockDoor) (*UnlockDoorResponse, *common.Fault)
 }
 type Duration string
 
@@ -421,7 +421,7 @@ type doorControlPort struct {
 	Endpoint string
 }
 
-func (p *doorControlPort) OptAccessDoor(args AccessDoor) (*AccessDoorResponse, error) {
+func (p *doorControlPort) OptAccessDoor(args AccessDoor) (*AccessDoorResponse, *common.Fault) {
 	req := struct {
 		XMLName    string `xml:"tdc:AccessDoor"`
 		AccessDoor AccessDoor
@@ -431,13 +431,13 @@ func (p *doorControlPort) OptAccessDoor(args AccessDoor) (*AccessDoorResponse, e
 
 	resp := AccessDoorResponse{}
 
-	if err := p.cli.CallMethodUnmarshal(p.Endpoint, req, &resp); err != nil {
-		return nil, err
+	if fault := p.cli.CallMethodUnmarshal(p.Endpoint, req, &resp); fault != nil {
+		return nil, fault
 	}
 	return &resp, nil
 }
 
-func (p *doorControlPort) OptBlockDoor(args BlockDoor) (*BlockDoorResponse, error) {
+func (p *doorControlPort) OptBlockDoor(args BlockDoor) (*BlockDoorResponse, *common.Fault) {
 	req := struct {
 		XMLName   string `xml:"tdc:BlockDoor"`
 		BlockDoor BlockDoor
@@ -447,13 +447,13 @@ func (p *doorControlPort) OptBlockDoor(args BlockDoor) (*BlockDoorResponse, erro
 
 	resp := BlockDoorResponse{}
 
-	if err := p.cli.CallMethodUnmarshal(p.Endpoint, req, &resp); err != nil {
-		return nil, err
+	if fault := p.cli.CallMethodUnmarshal(p.Endpoint, req, &resp); fault != nil {
+		return nil, fault
 	}
 	return &resp, nil
 }
 
-func (p *doorControlPort) OptCreateDoor(args CreateDoor) (*CreateDoorResponse, error) {
+func (p *doorControlPort) OptCreateDoor(args CreateDoor) (*CreateDoorResponse, *common.Fault) {
 	req := struct {
 		XMLName    string `xml:"tdc:CreateDoor"`
 		CreateDoor CreateDoor
@@ -463,13 +463,13 @@ func (p *doorControlPort) OptCreateDoor(args CreateDoor) (*CreateDoorResponse, e
 
 	resp := CreateDoorResponse{}
 
-	if err := p.cli.CallMethodUnmarshal(p.Endpoint, req, &resp); err != nil {
-		return nil, err
+	if fault := p.cli.CallMethodUnmarshal(p.Endpoint, req, &resp); fault != nil {
+		return nil, fault
 	}
 	return &resp, nil
 }
 
-func (p *doorControlPort) OptDeleteDoor(args DeleteDoor) (*DeleteDoorResponse, error) {
+func (p *doorControlPort) OptDeleteDoor(args DeleteDoor) (*DeleteDoorResponse, *common.Fault) {
 	req := struct {
 		XMLName    string `xml:"tdc:DeleteDoor"`
 		DeleteDoor DeleteDoor
@@ -479,13 +479,13 @@ func (p *doorControlPort) OptDeleteDoor(args DeleteDoor) (*DeleteDoorResponse, e
 
 	resp := DeleteDoorResponse{}
 
-	if err := p.cli.CallMethodUnmarshal(p.Endpoint, req, &resp); err != nil {
-		return nil, err
+	if fault := p.cli.CallMethodUnmarshal(p.Endpoint, req, &resp); fault != nil {
+		return nil, fault
 	}
 	return &resp, nil
 }
 
-func (p *doorControlPort) OptDoubleLockDoor(args DoubleLockDoor) (*DoubleLockDoorResponse, error) {
+func (p *doorControlPort) OptDoubleLockDoor(args DoubleLockDoor) (*DoubleLockDoorResponse, *common.Fault) {
 	req := struct {
 		XMLName        string `xml:"tdc:DoubleLockDoor"`
 		DoubleLockDoor DoubleLockDoor
@@ -495,13 +495,13 @@ func (p *doorControlPort) OptDoubleLockDoor(args DoubleLockDoor) (*DoubleLockDoo
 
 	resp := DoubleLockDoorResponse{}
 
-	if err := p.cli.CallMethodUnmarshal(p.Endpoint, req, &resp); err != nil {
-		return nil, err
+	if fault := p.cli.CallMethodUnmarshal(p.Endpoint, req, &resp); fault != nil {
+		return nil, fault
 	}
 	return &resp, nil
 }
 
-func (p *doorControlPort) OptGetDoorInfo(args GetDoorInfo) (*GetDoorInfoResponse, error) {
+func (p *doorControlPort) OptGetDoorInfo(args GetDoorInfo) (*GetDoorInfoResponse, *common.Fault) {
 	req := struct {
 		XMLName     string `xml:"tdc:GetDoorInfo"`
 		GetDoorInfo GetDoorInfo
@@ -511,13 +511,13 @@ func (p *doorControlPort) OptGetDoorInfo(args GetDoorInfo) (*GetDoorInfoResponse
 
 	resp := GetDoorInfoResponse{}
 
-	if err := p.cli.CallMethodUnmarshal(p.Endpoint, req, &resp); err != nil {
-		return nil, err
+	if fault := p.cli.CallMethodUnmarshal(p.Endpoint, req, &resp); fault != nil {
+		return nil, fault
 	}
 	return &resp, nil
 }
 
-func (p *doorControlPort) OptGetDoorInfoList(args GetDoorInfoList) (*GetDoorInfoListResponse, error) {
+func (p *doorControlPort) OptGetDoorInfoList(args GetDoorInfoList) (*GetDoorInfoListResponse, *common.Fault) {
 	req := struct {
 		XMLName         string `xml:"tdc:GetDoorInfoList"`
 		GetDoorInfoList GetDoorInfoList
@@ -527,13 +527,13 @@ func (p *doorControlPort) OptGetDoorInfoList(args GetDoorInfoList) (*GetDoorInfo
 
 	resp := GetDoorInfoListResponse{}
 
-	if err := p.cli.CallMethodUnmarshal(p.Endpoint, req, &resp); err != nil {
-		return nil, err
+	if fault := p.cli.CallMethodUnmarshal(p.Endpoint, req, &resp); fault != nil {
+		return nil, fault
 	}
 	return &resp, nil
 }
 
-func (p *doorControlPort) OptGetDoorList(args GetDoorList) (*GetDoorListResponse, error) {
+func (p *doorControlPort) OptGetDoorList(args GetDoorList) (*GetDoorListResponse, *common.Fault) {
 	req := struct {
 		XMLName     string `xml:"tdc:GetDoorList"`
 		GetDoorList GetDoorList
@@ -543,13 +543,13 @@ func (p *doorControlPort) OptGetDoorList(args GetDoorList) (*GetDoorListResponse
 
 	resp := GetDoorListResponse{}
 
-	if err := p.cli.CallMethodUnmarshal(p.Endpoint, req, &resp); err != nil {
-		return nil, err
+	if fault := p.cli.CallMethodUnmarshal(p.Endpoint, req, &resp); fault != nil {
+		return nil, fault
 	}
 	return &resp, nil
 }
 
-func (p *doorControlPort) OptGetDoorState(args GetDoorState) (*GetDoorStateResponse, error) {
+func (p *doorControlPort) OptGetDoorState(args GetDoorState) (*GetDoorStateResponse, *common.Fault) {
 	req := struct {
 		XMLName      string `xml:"tdc:GetDoorState"`
 		GetDoorState GetDoorState
@@ -559,13 +559,13 @@ func (p *doorControlPort) OptGetDoorState(args GetDoorState) (*GetDoorStateRespo
 
 	resp := GetDoorStateResponse{}
 
-	if err := p.cli.CallMethodUnmarshal(p.Endpoint, req, &resp); err != nil {
-		return nil, err
+	if fault := p.cli.CallMethodUnmarshal(p.Endpoint, req, &resp); fault != nil {
+		return nil, fault
 	}
 	return &resp, nil
 }
 
-func (p *doorControlPort) OptGetDoors(args GetDoors) (*GetDoorsResponse, error) {
+func (p *doorControlPort) OptGetDoors(args GetDoors) (*GetDoorsResponse, *common.Fault) {
 	req := struct {
 		XMLName  string `xml:"tdc:GetDoors"`
 		GetDoors GetDoors
@@ -575,13 +575,13 @@ func (p *doorControlPort) OptGetDoors(args GetDoors) (*GetDoorsResponse, error) 
 
 	resp := GetDoorsResponse{}
 
-	if err := p.cli.CallMethodUnmarshal(p.Endpoint, req, &resp); err != nil {
-		return nil, err
+	if fault := p.cli.CallMethodUnmarshal(p.Endpoint, req, &resp); fault != nil {
+		return nil, fault
 	}
 	return &resp, nil
 }
 
-func (p *doorControlPort) OptGetServiceCapabilities(args GetServiceCapabilities) (*GetServiceCapabilitiesResponse, error) {
+func (p *doorControlPort) OptGetServiceCapabilities(args GetServiceCapabilities) (*GetServiceCapabilitiesResponse, *common.Fault) {
 	req := struct {
 		XMLName                string `xml:"tdc:GetServiceCapabilities"`
 		GetServiceCapabilities GetServiceCapabilities
@@ -591,13 +591,13 @@ func (p *doorControlPort) OptGetServiceCapabilities(args GetServiceCapabilities)
 
 	resp := GetServiceCapabilitiesResponse{}
 
-	if err := p.cli.CallMethodUnmarshal(p.Endpoint, req, &resp); err != nil {
-		return nil, err
+	if fault := p.cli.CallMethodUnmarshal(p.Endpoint, req, &resp); fault != nil {
+		return nil, fault
 	}
 	return &resp, nil
 }
 
-func (p *doorControlPort) OptLockDoor(args LockDoor) (*LockDoorResponse, error) {
+func (p *doorControlPort) OptLockDoor(args LockDoor) (*LockDoorResponse, *common.Fault) {
 	req := struct {
 		XMLName  string `xml:"tdc:LockDoor"`
 		LockDoor LockDoor
@@ -607,13 +607,13 @@ func (p *doorControlPort) OptLockDoor(args LockDoor) (*LockDoorResponse, error) 
 
 	resp := LockDoorResponse{}
 
-	if err := p.cli.CallMethodUnmarshal(p.Endpoint, req, &resp); err != nil {
-		return nil, err
+	if fault := p.cli.CallMethodUnmarshal(p.Endpoint, req, &resp); fault != nil {
+		return nil, fault
 	}
 	return &resp, nil
 }
 
-func (p *doorControlPort) OptLockDownDoor(args LockDownDoor) (*LockDownDoorResponse, error) {
+func (p *doorControlPort) OptLockDownDoor(args LockDownDoor) (*LockDownDoorResponse, *common.Fault) {
 	req := struct {
 		XMLName      string `xml:"tdc:LockDownDoor"`
 		LockDownDoor LockDownDoor
@@ -623,13 +623,13 @@ func (p *doorControlPort) OptLockDownDoor(args LockDownDoor) (*LockDownDoorRespo
 
 	resp := LockDownDoorResponse{}
 
-	if err := p.cli.CallMethodUnmarshal(p.Endpoint, req, &resp); err != nil {
-		return nil, err
+	if fault := p.cli.CallMethodUnmarshal(p.Endpoint, req, &resp); fault != nil {
+		return nil, fault
 	}
 	return &resp, nil
 }
 
-func (p *doorControlPort) OptLockDownReleaseDoor(args LockDownReleaseDoor) (*LockDownReleaseDoorResponse, error) {
+func (p *doorControlPort) OptLockDownReleaseDoor(args LockDownReleaseDoor) (*LockDownReleaseDoorResponse, *common.Fault) {
 	req := struct {
 		XMLName             string `xml:"tdc:LockDownReleaseDoor"`
 		LockDownReleaseDoor LockDownReleaseDoor
@@ -639,13 +639,13 @@ func (p *doorControlPort) OptLockDownReleaseDoor(args LockDownReleaseDoor) (*Loc
 
 	resp := LockDownReleaseDoorResponse{}
 
-	if err := p.cli.CallMethodUnmarshal(p.Endpoint, req, &resp); err != nil {
-		return nil, err
+	if fault := p.cli.CallMethodUnmarshal(p.Endpoint, req, &resp); fault != nil {
+		return nil, fault
 	}
 	return &resp, nil
 }
 
-func (p *doorControlPort) OptLockOpenDoor(args LockOpenDoor) (*LockOpenDoorResponse, error) {
+func (p *doorControlPort) OptLockOpenDoor(args LockOpenDoor) (*LockOpenDoorResponse, *common.Fault) {
 	req := struct {
 		XMLName      string `xml:"tdc:LockOpenDoor"`
 		LockOpenDoor LockOpenDoor
@@ -655,13 +655,13 @@ func (p *doorControlPort) OptLockOpenDoor(args LockOpenDoor) (*LockOpenDoorRespo
 
 	resp := LockOpenDoorResponse{}
 
-	if err := p.cli.CallMethodUnmarshal(p.Endpoint, req, &resp); err != nil {
-		return nil, err
+	if fault := p.cli.CallMethodUnmarshal(p.Endpoint, req, &resp); fault != nil {
+		return nil, fault
 	}
 	return &resp, nil
 }
 
-func (p *doorControlPort) OptLockOpenReleaseDoor(args LockOpenReleaseDoor) (*LockOpenReleaseDoorResponse, error) {
+func (p *doorControlPort) OptLockOpenReleaseDoor(args LockOpenReleaseDoor) (*LockOpenReleaseDoorResponse, *common.Fault) {
 	req := struct {
 		XMLName             string `xml:"tdc:LockOpenReleaseDoor"`
 		LockOpenReleaseDoor LockOpenReleaseDoor
@@ -671,13 +671,13 @@ func (p *doorControlPort) OptLockOpenReleaseDoor(args LockOpenReleaseDoor) (*Loc
 
 	resp := LockOpenReleaseDoorResponse{}
 
-	if err := p.cli.CallMethodUnmarshal(p.Endpoint, req, &resp); err != nil {
-		return nil, err
+	if fault := p.cli.CallMethodUnmarshal(p.Endpoint, req, &resp); fault != nil {
+		return nil, fault
 	}
 	return &resp, nil
 }
 
-func (p *doorControlPort) OptModifyDoor(args ModifyDoor) (*ModifyDoorResponse, error) {
+func (p *doorControlPort) OptModifyDoor(args ModifyDoor) (*ModifyDoorResponse, *common.Fault) {
 	req := struct {
 		XMLName    string `xml:"tdc:ModifyDoor"`
 		ModifyDoor ModifyDoor
@@ -687,13 +687,13 @@ func (p *doorControlPort) OptModifyDoor(args ModifyDoor) (*ModifyDoorResponse, e
 
 	resp := ModifyDoorResponse{}
 
-	if err := p.cli.CallMethodUnmarshal(p.Endpoint, req, &resp); err != nil {
-		return nil, err
+	if fault := p.cli.CallMethodUnmarshal(p.Endpoint, req, &resp); fault != nil {
+		return nil, fault
 	}
 	return &resp, nil
 }
 
-func (p *doorControlPort) OptSetDoor(args SetDoor) (*SetDoorResponse, error) {
+func (p *doorControlPort) OptSetDoor(args SetDoor) (*SetDoorResponse, *common.Fault) {
 	req := struct {
 		XMLName string `xml:"tdc:SetDoor"`
 		SetDoor SetDoor
@@ -703,13 +703,13 @@ func (p *doorControlPort) OptSetDoor(args SetDoor) (*SetDoorResponse, error) {
 
 	resp := SetDoorResponse{}
 
-	if err := p.cli.CallMethodUnmarshal(p.Endpoint, req, &resp); err != nil {
-		return nil, err
+	if fault := p.cli.CallMethodUnmarshal(p.Endpoint, req, &resp); fault != nil {
+		return nil, fault
 	}
 	return &resp, nil
 }
 
-func (p *doorControlPort) OptUnlockDoor(args UnlockDoor) (*UnlockDoorResponse, error) {
+func (p *doorControlPort) OptUnlockDoor(args UnlockDoor) (*UnlockDoorResponse, *common.Fault) {
 	req := struct {
 		XMLName    string `xml:"tdc:UnlockDoor"`
 		UnlockDoor UnlockDoor
@@ -719,8 +719,8 @@ func (p *doorControlPort) OptUnlockDoor(args UnlockDoor) (*UnlockDoorResponse, e
 
 	resp := UnlockDoorResponse{}
 
-	if err := p.cli.CallMethodUnmarshal(p.Endpoint, req, &resp); err != nil {
-		return nil, err
+	if fault := p.cli.CallMethodUnmarshal(p.Endpoint, req, &resp); fault != nil {
+		return nil, fault
 	}
 	return &resp, nil
 }

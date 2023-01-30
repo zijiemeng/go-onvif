@@ -17,63 +17,63 @@ func NewDeviceIOPort(endpoint string, cli common.Client) DeviceIOPort {
 // DeviceIOPort was auto-generated from WSDL
 // and defines interface for the remote service. Useful for testing.
 type DeviceIOPort interface {
-	OptGetAudioOutputConfiguration(GetAudioOutputConfiguration GetAudioOutputConfiguration) (*GetAudioOutputConfigurationResponse, error)
+	OptGetAudioOutputConfiguration(GetAudioOutputConfiguration GetAudioOutputConfiguration) (*GetAudioOutputConfigurationResponse, *common.Fault)
 
-	OptGetAudioOutputConfigurationOptions(GetAudioOutputConfigurationOptions GetAudioOutputConfigurationOptions) (*GetAudioOutputConfigurationOptionsResponse, error)
+	OptGetAudioOutputConfigurationOptions(GetAudioOutputConfigurationOptions GetAudioOutputConfigurationOptions) (*GetAudioOutputConfigurationOptionsResponse, *common.Fault)
 
-	OptGetAudioOutputs(GetAudioOutputs Get) (*GetResponse, error)
+	OptGetAudioOutputs(GetAudioOutputs Get) (*GetResponse, *common.Fault)
 
-	OptGetAudioSourceConfiguration(GetAudioSourceConfiguration GetAudioSourceConfiguration) (*GetAudioSourceConfigurationResponse, error)
+	OptGetAudioSourceConfiguration(GetAudioSourceConfiguration GetAudioSourceConfiguration) (*GetAudioSourceConfigurationResponse, *common.Fault)
 
-	OptGetAudioSourceConfigurationOptions(GetAudioSourceConfigurationOptions GetAudioSourceConfigurationOptions) (*GetAudioSourceConfigurationOptionsResponse, error)
+	OptGetAudioSourceConfigurationOptions(GetAudioSourceConfigurationOptions GetAudioSourceConfigurationOptions) (*GetAudioSourceConfigurationOptionsResponse, *common.Fault)
 
-	OptGetAudioSources(GetAudioSources Get) (*GetResponse, error)
+	OptGetAudioSources(GetAudioSources Get) (*GetResponse, *common.Fault)
 
-	OptGetDigitalInputConfigurationOptions(GetDigitalInputConfigurationOptions GetDigitalInputConfigurationOptions) (*GetDigitalInputConfigurationOptionsResponse, error)
+	OptGetDigitalInputConfigurationOptions(GetDigitalInputConfigurationOptions GetDigitalInputConfigurationOptions) (*GetDigitalInputConfigurationOptionsResponse, *common.Fault)
 
-	OptGetDigitalInputs(GetDigitalInputs GetDigitalInputs) (*GetDigitalInputsResponse, error)
+	OptGetDigitalInputs(GetDigitalInputs GetDigitalInputs) (*GetDigitalInputsResponse, *common.Fault)
 
-	OptGetRelayOutputOptions(GetRelayOutputOptions GetRelayOutputOptions) (*GetRelayOutputOptionsResponse, error)
+	OptGetRelayOutputOptions(GetRelayOutputOptions GetRelayOutputOptions) (*GetRelayOutputOptionsResponse, *common.Fault)
 
-	OptGetRelayOutputs(GetRelayOutputs device.GetRelayOutputs) (*device.GetRelayOutputsResponse, error)
+	OptGetRelayOutputs(GetRelayOutputs device.GetRelayOutputs) (*device.GetRelayOutputsResponse, *common.Fault)
 
-	OptGetSerialPortConfiguration(GetSerialPortConfiguration GetSerialPortConfiguration) (*GetSerialPortConfigurationResponse, error)
+	OptGetSerialPortConfiguration(GetSerialPortConfiguration GetSerialPortConfiguration) (*GetSerialPortConfigurationResponse, *common.Fault)
 
-	OptGetSerialPortConfigurationOptions(GetSerialPortConfigurationOptions GetSerialPortConfigurationOptions) (*GetSerialPortConfigurationOptionsResponse, error)
+	OptGetSerialPortConfigurationOptions(GetSerialPortConfigurationOptions GetSerialPortConfigurationOptions) (*GetSerialPortConfigurationOptionsResponse, *common.Fault)
 
-	OptGetSerialPorts(GetSerialPorts GetSerialPorts) (*GetSerialPortsResponse, error)
+	OptGetSerialPorts(GetSerialPorts GetSerialPorts) (*GetSerialPortsResponse, *common.Fault)
 
-	OptGetServiceCapabilities(GetServiceCapabilities GetServiceCapabilities) (*GetServiceCapabilitiesResponse, error)
+	OptGetServiceCapabilities(GetServiceCapabilities GetServiceCapabilities) (*GetServiceCapabilitiesResponse, *common.Fault)
 
-	OptGetVideoOutputConfiguration(GetVideoOutputConfiguration GetVideoOutputConfiguration) (*GetVideoOutputConfigurationResponse, error)
+	OptGetVideoOutputConfiguration(GetVideoOutputConfiguration GetVideoOutputConfiguration) (*GetVideoOutputConfigurationResponse, *common.Fault)
 
-	OptGetVideoOutputConfigurationOptions(GetVideoOutputConfigurationOptions GetVideoOutputConfigurationOptions) (*GetVideoOutputConfigurationOptionsResponse, error)
+	OptGetVideoOutputConfigurationOptions(GetVideoOutputConfigurationOptions GetVideoOutputConfigurationOptions) (*GetVideoOutputConfigurationOptionsResponse, *common.Fault)
 
-	OptGetVideoOutputs(GetVideoOutputs GetVideoOutputs) (*GetVideoOutputsResponse, error)
+	OptGetVideoOutputs(GetVideoOutputs GetVideoOutputs) (*GetVideoOutputsResponse, *common.Fault)
 
-	OptGetVideoSourceConfiguration(GetVideoSourceConfiguration GetVideoSourceConfiguration) (*GetVideoSourceConfigurationResponse, error)
+	OptGetVideoSourceConfiguration(GetVideoSourceConfiguration GetVideoSourceConfiguration) (*GetVideoSourceConfigurationResponse, *common.Fault)
 
-	OptGetVideoSourceConfigurationOptions(GetVideoSourceConfigurationOptions GetVideoSourceConfigurationOptions) (*GetVideoSourceConfigurationOptionsResponse, error)
+	OptGetVideoSourceConfigurationOptions(GetVideoSourceConfigurationOptions GetVideoSourceConfigurationOptions) (*GetVideoSourceConfigurationOptionsResponse, *common.Fault)
 
-	OptGetVideoSources(GetVideoSources Get) (*GetResponse, error)
+	OptGetVideoSources(GetVideoSources Get) (*GetResponse, *common.Fault)
 
-	OptSendReceiveSerialCommand(SendReceiveSerialCommand SendReceiveSerialCommand) (*SendReceiveSerialCommandResponse, error)
+	OptSendReceiveSerialCommand(SendReceiveSerialCommand SendReceiveSerialCommand) (*SendReceiveSerialCommandResponse, *common.Fault)
 
-	OptSetAudioOutputConfiguration(SetAudioOutputConfiguration SetAudioOutputConfiguration) (*SetAudioOutputConfigurationResponse, error)
+	OptSetAudioOutputConfiguration(SetAudioOutputConfiguration SetAudioOutputConfiguration) (*SetAudioOutputConfigurationResponse, *common.Fault)
 
-	OptSetAudioSourceConfiguration(SetAudioSourceConfiguration SetAudioSourceConfiguration) (*SetAudioSourceConfigurationResponse, error)
+	OptSetAudioSourceConfiguration(SetAudioSourceConfiguration SetAudioSourceConfiguration) (*SetAudioSourceConfigurationResponse, *common.Fault)
 
-	OptSetDigitalInputConfigurations(SetDigitalInputConfigurations SetDigitalInputConfigurations) (*SetDigitalInputConfigurationsResponse, error)
+	OptSetDigitalInputConfigurations(SetDigitalInputConfigurations SetDigitalInputConfigurations) (*SetDigitalInputConfigurationsResponse, *common.Fault)
 
-	OptSetRelayOutputSettings(SetRelayOutputSettings SetRelayOutputSettings) (*SetRelayOutputSettingsResponse, error)
+	OptSetRelayOutputSettings(SetRelayOutputSettings SetRelayOutputSettings) (*SetRelayOutputSettingsResponse, *common.Fault)
 
-	OptSetRelayOutputState(SetRelayOutputState device.SetRelayOutputState) (*device.SetRelayOutputStateResponse, error)
+	OptSetRelayOutputState(SetRelayOutputState device.SetRelayOutputState) (*device.SetRelayOutputStateResponse, *common.Fault)
 
-	OptSetSerialPortConfiguration(SetSerialPortConfiguration SetSerialPortConfiguration) (*SetSerialPortConfigurationResponse, error)
+	OptSetSerialPortConfiguration(SetSerialPortConfiguration SetSerialPortConfiguration) (*SetSerialPortConfigurationResponse, *common.Fault)
 
-	OptSetVideoOutputConfiguration(SetVideoOutputConfiguration SetVideoOutputConfiguration) (*SetVideoOutputConfigurationResponse, error)
+	OptSetVideoOutputConfiguration(SetVideoOutputConfiguration SetVideoOutputConfiguration) (*SetVideoOutputConfigurationResponse, *common.Fault)
 
-	OptSetVideoSourceConfiguration(SetVideoSourceConfiguration SetVideoSourceConfiguration) (*SetVideoSourceConfigurationResponse, error)
+	OptSetVideoSourceConfiguration(SetVideoSourceConfiguration SetVideoSourceConfiguration) (*SetVideoSourceConfigurationResponse, *common.Fault)
 }
 type Duration string
 
@@ -375,7 +375,7 @@ type deviceIOPort struct {
 	Endpoint string
 }
 
-func (p *deviceIOPort) OptGetAudioOutputConfiguration(args GetAudioOutputConfiguration) (*GetAudioOutputConfigurationResponse, error) {
+func (p *deviceIOPort) OptGetAudioOutputConfiguration(args GetAudioOutputConfiguration) (*GetAudioOutputConfigurationResponse, *common.Fault) {
 	req := struct {
 		XMLName                     string `xml:"tmd:GetAudioOutputConfiguration"`
 		GetAudioOutputConfiguration GetAudioOutputConfiguration
@@ -385,13 +385,13 @@ func (p *deviceIOPort) OptGetAudioOutputConfiguration(args GetAudioOutputConfigu
 
 	resp := GetAudioOutputConfigurationResponse{}
 
-	if err := p.cli.CallMethodUnmarshal(p.Endpoint, req, &resp); err != nil {
-		return nil, err
+	if fault := p.cli.CallMethodUnmarshal(p.Endpoint, req, &resp); fault != nil {
+		return nil, fault
 	}
 	return &resp, nil
 }
 
-func (p *deviceIOPort) OptGetAudioOutputConfigurationOptions(args GetAudioOutputConfigurationOptions) (*GetAudioOutputConfigurationOptionsResponse, error) {
+func (p *deviceIOPort) OptGetAudioOutputConfigurationOptions(args GetAudioOutputConfigurationOptions) (*GetAudioOutputConfigurationOptionsResponse, *common.Fault) {
 	req := struct {
 		XMLName                            string `xml:"tmd:GetAudioOutputConfigurationOptions"`
 		GetAudioOutputConfigurationOptions GetAudioOutputConfigurationOptions
@@ -401,13 +401,13 @@ func (p *deviceIOPort) OptGetAudioOutputConfigurationOptions(args GetAudioOutput
 
 	resp := GetAudioOutputConfigurationOptionsResponse{}
 
-	if err := p.cli.CallMethodUnmarshal(p.Endpoint, req, &resp); err != nil {
-		return nil, err
+	if fault := p.cli.CallMethodUnmarshal(p.Endpoint, req, &resp); fault != nil {
+		return nil, fault
 	}
 	return &resp, nil
 }
 
-func (p *deviceIOPort) OptGetAudioOutputs(args Get) (*GetResponse, error) {
+func (p *deviceIOPort) OptGetAudioOutputs(args Get) (*GetResponse, *common.Fault) {
 	req := struct {
 		XMLName string `xml:"tmd:GetAudioOutputs"`
 		Get     Get
@@ -417,13 +417,13 @@ func (p *deviceIOPort) OptGetAudioOutputs(args Get) (*GetResponse, error) {
 
 	resp := GetResponse{}
 
-	if err := p.cli.CallMethodUnmarshal(p.Endpoint, req, &resp); err != nil {
-		return nil, err
+	if fault := p.cli.CallMethodUnmarshal(p.Endpoint, req, &resp); fault != nil {
+		return nil, fault
 	}
 	return &resp, nil
 }
 
-func (p *deviceIOPort) OptGetAudioSourceConfiguration(args GetAudioSourceConfiguration) (*GetAudioSourceConfigurationResponse, error) {
+func (p *deviceIOPort) OptGetAudioSourceConfiguration(args GetAudioSourceConfiguration) (*GetAudioSourceConfigurationResponse, *common.Fault) {
 	req := struct {
 		XMLName                     string `xml:"tmd:GetAudioSourceConfiguration"`
 		GetAudioSourceConfiguration GetAudioSourceConfiguration
@@ -433,13 +433,13 @@ func (p *deviceIOPort) OptGetAudioSourceConfiguration(args GetAudioSourceConfigu
 
 	resp := GetAudioSourceConfigurationResponse{}
 
-	if err := p.cli.CallMethodUnmarshal(p.Endpoint, req, &resp); err != nil {
-		return nil, err
+	if fault := p.cli.CallMethodUnmarshal(p.Endpoint, req, &resp); fault != nil {
+		return nil, fault
 	}
 	return &resp, nil
 }
 
-func (p *deviceIOPort) OptGetAudioSourceConfigurationOptions(args GetAudioSourceConfigurationOptions) (*GetAudioSourceConfigurationOptionsResponse, error) {
+func (p *deviceIOPort) OptGetAudioSourceConfigurationOptions(args GetAudioSourceConfigurationOptions) (*GetAudioSourceConfigurationOptionsResponse, *common.Fault) {
 	req := struct {
 		XMLName                            string `xml:"tmd:GetAudioSourceConfigurationOptions"`
 		GetAudioSourceConfigurationOptions GetAudioSourceConfigurationOptions
@@ -449,13 +449,13 @@ func (p *deviceIOPort) OptGetAudioSourceConfigurationOptions(args GetAudioSource
 
 	resp := GetAudioSourceConfigurationOptionsResponse{}
 
-	if err := p.cli.CallMethodUnmarshal(p.Endpoint, req, &resp); err != nil {
-		return nil, err
+	if fault := p.cli.CallMethodUnmarshal(p.Endpoint, req, &resp); fault != nil {
+		return nil, fault
 	}
 	return &resp, nil
 }
 
-func (p *deviceIOPort) OptGetAudioSources(args Get) (*GetResponse, error) {
+func (p *deviceIOPort) OptGetAudioSources(args Get) (*GetResponse, *common.Fault) {
 	req := struct {
 		XMLName string `xml:"tmd:GetAudioSources"`
 		Get     Get
@@ -465,13 +465,13 @@ func (p *deviceIOPort) OptGetAudioSources(args Get) (*GetResponse, error) {
 
 	resp := GetResponse{}
 
-	if err := p.cli.CallMethodUnmarshal(p.Endpoint, req, &resp); err != nil {
-		return nil, err
+	if fault := p.cli.CallMethodUnmarshal(p.Endpoint, req, &resp); fault != nil {
+		return nil, fault
 	}
 	return &resp, nil
 }
 
-func (p *deviceIOPort) OptGetDigitalInputConfigurationOptions(args GetDigitalInputConfigurationOptions) (*GetDigitalInputConfigurationOptionsResponse, error) {
+func (p *deviceIOPort) OptGetDigitalInputConfigurationOptions(args GetDigitalInputConfigurationOptions) (*GetDigitalInputConfigurationOptionsResponse, *common.Fault) {
 	req := struct {
 		XMLName                             string `xml:"tmd:GetDigitalInputConfigurationOptions"`
 		GetDigitalInputConfigurationOptions GetDigitalInputConfigurationOptions
@@ -481,13 +481,13 @@ func (p *deviceIOPort) OptGetDigitalInputConfigurationOptions(args GetDigitalInp
 
 	resp := GetDigitalInputConfigurationOptionsResponse{}
 
-	if err := p.cli.CallMethodUnmarshal(p.Endpoint, req, &resp); err != nil {
-		return nil, err
+	if fault := p.cli.CallMethodUnmarshal(p.Endpoint, req, &resp); fault != nil {
+		return nil, fault
 	}
 	return &resp, nil
 }
 
-func (p *deviceIOPort) OptGetDigitalInputs(args GetDigitalInputs) (*GetDigitalInputsResponse, error) {
+func (p *deviceIOPort) OptGetDigitalInputs(args GetDigitalInputs) (*GetDigitalInputsResponse, *common.Fault) {
 	req := struct {
 		XMLName          string `xml:"tmd:GetDigitalInputs"`
 		GetDigitalInputs GetDigitalInputs
@@ -497,13 +497,13 @@ func (p *deviceIOPort) OptGetDigitalInputs(args GetDigitalInputs) (*GetDigitalIn
 
 	resp := GetDigitalInputsResponse{}
 
-	if err := p.cli.CallMethodUnmarshal(p.Endpoint, req, &resp); err != nil {
-		return nil, err
+	if fault := p.cli.CallMethodUnmarshal(p.Endpoint, req, &resp); fault != nil {
+		return nil, fault
 	}
 	return &resp, nil
 }
 
-func (p *deviceIOPort) OptGetRelayOutputOptions(args GetRelayOutputOptions) (*GetRelayOutputOptionsResponse, error) {
+func (p *deviceIOPort) OptGetRelayOutputOptions(args GetRelayOutputOptions) (*GetRelayOutputOptionsResponse, *common.Fault) {
 	req := struct {
 		XMLName               string `xml:"tmd:GetRelayOutputOptions"`
 		GetRelayOutputOptions GetRelayOutputOptions
@@ -513,13 +513,13 @@ func (p *deviceIOPort) OptGetRelayOutputOptions(args GetRelayOutputOptions) (*Ge
 
 	resp := GetRelayOutputOptionsResponse{}
 
-	if err := p.cli.CallMethodUnmarshal(p.Endpoint, req, &resp); err != nil {
-		return nil, err
+	if fault := p.cli.CallMethodUnmarshal(p.Endpoint, req, &resp); fault != nil {
+		return nil, fault
 	}
 	return &resp, nil
 }
 
-func (p *deviceIOPort) OptGetRelayOutputs(args device.GetRelayOutputs) (*device.GetRelayOutputsResponse, error) {
+func (p *deviceIOPort) OptGetRelayOutputs(args device.GetRelayOutputs) (*device.GetRelayOutputsResponse, *common.Fault) {
 	req := struct {
 		XMLName         string `xml:"tmd:GetRelayOutputs"`
 		GetRelayOutputs device.GetRelayOutputs
@@ -529,13 +529,13 @@ func (p *deviceIOPort) OptGetRelayOutputs(args device.GetRelayOutputs) (*device.
 
 	resp := device.GetRelayOutputsResponse{}
 
-	if err := p.cli.CallMethodUnmarshal(p.Endpoint, req, &resp); err != nil {
-		return nil, err
+	if fault := p.cli.CallMethodUnmarshal(p.Endpoint, req, &resp); fault != nil {
+		return nil, fault
 	}
 	return &resp, nil
 }
 
-func (p *deviceIOPort) OptGetSerialPortConfiguration(args GetSerialPortConfiguration) (*GetSerialPortConfigurationResponse, error) {
+func (p *deviceIOPort) OptGetSerialPortConfiguration(args GetSerialPortConfiguration) (*GetSerialPortConfigurationResponse, *common.Fault) {
 	req := struct {
 		XMLName                    string `xml:"tmd:GetSerialPortConfiguration"`
 		GetSerialPortConfiguration GetSerialPortConfiguration
@@ -545,13 +545,13 @@ func (p *deviceIOPort) OptGetSerialPortConfiguration(args GetSerialPortConfigura
 
 	resp := GetSerialPortConfigurationResponse{}
 
-	if err := p.cli.CallMethodUnmarshal(p.Endpoint, req, &resp); err != nil {
-		return nil, err
+	if fault := p.cli.CallMethodUnmarshal(p.Endpoint, req, &resp); fault != nil {
+		return nil, fault
 	}
 	return &resp, nil
 }
 
-func (p *deviceIOPort) OptGetSerialPortConfigurationOptions(args GetSerialPortConfigurationOptions) (*GetSerialPortConfigurationOptionsResponse, error) {
+func (p *deviceIOPort) OptGetSerialPortConfigurationOptions(args GetSerialPortConfigurationOptions) (*GetSerialPortConfigurationOptionsResponse, *common.Fault) {
 	req := struct {
 		XMLName                           string `xml:"tmd:GetSerialPortConfigurationOptions"`
 		GetSerialPortConfigurationOptions GetSerialPortConfigurationOptions
@@ -561,13 +561,13 @@ func (p *deviceIOPort) OptGetSerialPortConfigurationOptions(args GetSerialPortCo
 
 	resp := GetSerialPortConfigurationOptionsResponse{}
 
-	if err := p.cli.CallMethodUnmarshal(p.Endpoint, req, &resp); err != nil {
-		return nil, err
+	if fault := p.cli.CallMethodUnmarshal(p.Endpoint, req, &resp); fault != nil {
+		return nil, fault
 	}
 	return &resp, nil
 }
 
-func (p *deviceIOPort) OptGetSerialPorts(args GetSerialPorts) (*GetSerialPortsResponse, error) {
+func (p *deviceIOPort) OptGetSerialPorts(args GetSerialPorts) (*GetSerialPortsResponse, *common.Fault) {
 	req := struct {
 		XMLName        string `xml:"tmd:GetSerialPorts"`
 		GetSerialPorts GetSerialPorts
@@ -577,13 +577,13 @@ func (p *deviceIOPort) OptGetSerialPorts(args GetSerialPorts) (*GetSerialPortsRe
 
 	resp := GetSerialPortsResponse{}
 
-	if err := p.cli.CallMethodUnmarshal(p.Endpoint, req, &resp); err != nil {
-		return nil, err
+	if fault := p.cli.CallMethodUnmarshal(p.Endpoint, req, &resp); fault != nil {
+		return nil, fault
 	}
 	return &resp, nil
 }
 
-func (p *deviceIOPort) OptGetServiceCapabilities(args GetServiceCapabilities) (*GetServiceCapabilitiesResponse, error) {
+func (p *deviceIOPort) OptGetServiceCapabilities(args GetServiceCapabilities) (*GetServiceCapabilitiesResponse, *common.Fault) {
 	req := struct {
 		XMLName                string `xml:"tmd:GetServiceCapabilities"`
 		GetServiceCapabilities GetServiceCapabilities
@@ -593,13 +593,13 @@ func (p *deviceIOPort) OptGetServiceCapabilities(args GetServiceCapabilities) (*
 
 	resp := GetServiceCapabilitiesResponse{}
 
-	if err := p.cli.CallMethodUnmarshal(p.Endpoint, req, &resp); err != nil {
-		return nil, err
+	if fault := p.cli.CallMethodUnmarshal(p.Endpoint, req, &resp); fault != nil {
+		return nil, fault
 	}
 	return &resp, nil
 }
 
-func (p *deviceIOPort) OptGetVideoOutputConfiguration(args GetVideoOutputConfiguration) (*GetVideoOutputConfigurationResponse, error) {
+func (p *deviceIOPort) OptGetVideoOutputConfiguration(args GetVideoOutputConfiguration) (*GetVideoOutputConfigurationResponse, *common.Fault) {
 	req := struct {
 		XMLName                     string `xml:"tmd:GetVideoOutputConfiguration"`
 		GetVideoOutputConfiguration GetVideoOutputConfiguration
@@ -609,13 +609,13 @@ func (p *deviceIOPort) OptGetVideoOutputConfiguration(args GetVideoOutputConfigu
 
 	resp := GetVideoOutputConfigurationResponse{}
 
-	if err := p.cli.CallMethodUnmarshal(p.Endpoint, req, &resp); err != nil {
-		return nil, err
+	if fault := p.cli.CallMethodUnmarshal(p.Endpoint, req, &resp); fault != nil {
+		return nil, fault
 	}
 	return &resp, nil
 }
 
-func (p *deviceIOPort) OptGetVideoOutputConfigurationOptions(args GetVideoOutputConfigurationOptions) (*GetVideoOutputConfigurationOptionsResponse, error) {
+func (p *deviceIOPort) OptGetVideoOutputConfigurationOptions(args GetVideoOutputConfigurationOptions) (*GetVideoOutputConfigurationOptionsResponse, *common.Fault) {
 	req := struct {
 		XMLName                            string `xml:"tmd:GetVideoOutputConfigurationOptions"`
 		GetVideoOutputConfigurationOptions GetVideoOutputConfigurationOptions
@@ -625,13 +625,13 @@ func (p *deviceIOPort) OptGetVideoOutputConfigurationOptions(args GetVideoOutput
 
 	resp := GetVideoOutputConfigurationOptionsResponse{}
 
-	if err := p.cli.CallMethodUnmarshal(p.Endpoint, req, &resp); err != nil {
-		return nil, err
+	if fault := p.cli.CallMethodUnmarshal(p.Endpoint, req, &resp); fault != nil {
+		return nil, fault
 	}
 	return &resp, nil
 }
 
-func (p *deviceIOPort) OptGetVideoOutputs(args GetVideoOutputs) (*GetVideoOutputsResponse, error) {
+func (p *deviceIOPort) OptGetVideoOutputs(args GetVideoOutputs) (*GetVideoOutputsResponse, *common.Fault) {
 	req := struct {
 		XMLName         string `xml:"tmd:GetVideoOutputs"`
 		GetVideoOutputs GetVideoOutputs
@@ -641,13 +641,13 @@ func (p *deviceIOPort) OptGetVideoOutputs(args GetVideoOutputs) (*GetVideoOutput
 
 	resp := GetVideoOutputsResponse{}
 
-	if err := p.cli.CallMethodUnmarshal(p.Endpoint, req, &resp); err != nil {
-		return nil, err
+	if fault := p.cli.CallMethodUnmarshal(p.Endpoint, req, &resp); fault != nil {
+		return nil, fault
 	}
 	return &resp, nil
 }
 
-func (p *deviceIOPort) OptGetVideoSourceConfiguration(args GetVideoSourceConfiguration) (*GetVideoSourceConfigurationResponse, error) {
+func (p *deviceIOPort) OptGetVideoSourceConfiguration(args GetVideoSourceConfiguration) (*GetVideoSourceConfigurationResponse, *common.Fault) {
 	req := struct {
 		XMLName                     string `xml:"tmd:GetVideoSourceConfiguration"`
 		GetVideoSourceConfiguration GetVideoSourceConfiguration
@@ -657,13 +657,13 @@ func (p *deviceIOPort) OptGetVideoSourceConfiguration(args GetVideoSourceConfigu
 
 	resp := GetVideoSourceConfigurationResponse{}
 
-	if err := p.cli.CallMethodUnmarshal(p.Endpoint, req, &resp); err != nil {
-		return nil, err
+	if fault := p.cli.CallMethodUnmarshal(p.Endpoint, req, &resp); fault != nil {
+		return nil, fault
 	}
 	return &resp, nil
 }
 
-func (p *deviceIOPort) OptGetVideoSourceConfigurationOptions(args GetVideoSourceConfigurationOptions) (*GetVideoSourceConfigurationOptionsResponse, error) {
+func (p *deviceIOPort) OptGetVideoSourceConfigurationOptions(args GetVideoSourceConfigurationOptions) (*GetVideoSourceConfigurationOptionsResponse, *common.Fault) {
 	req := struct {
 		XMLName                            string `xml:"tmd:GetVideoSourceConfigurationOptions"`
 		GetVideoSourceConfigurationOptions GetVideoSourceConfigurationOptions
@@ -673,13 +673,13 @@ func (p *deviceIOPort) OptGetVideoSourceConfigurationOptions(args GetVideoSource
 
 	resp := GetVideoSourceConfigurationOptionsResponse{}
 
-	if err := p.cli.CallMethodUnmarshal(p.Endpoint, req, &resp); err != nil {
-		return nil, err
+	if fault := p.cli.CallMethodUnmarshal(p.Endpoint, req, &resp); fault != nil {
+		return nil, fault
 	}
 	return &resp, nil
 }
 
-func (p *deviceIOPort) OptGetVideoSources(args Get) (*GetResponse, error) {
+func (p *deviceIOPort) OptGetVideoSources(args Get) (*GetResponse, *common.Fault) {
 	req := struct {
 		XMLName string `xml:"tmd:GetVideoSources"`
 		Get     Get
@@ -689,13 +689,13 @@ func (p *deviceIOPort) OptGetVideoSources(args Get) (*GetResponse, error) {
 
 	resp := GetResponse{}
 
-	if err := p.cli.CallMethodUnmarshal(p.Endpoint, req, &resp); err != nil {
-		return nil, err
+	if fault := p.cli.CallMethodUnmarshal(p.Endpoint, req, &resp); fault != nil {
+		return nil, fault
 	}
 	return &resp, nil
 }
 
-func (p *deviceIOPort) OptSendReceiveSerialCommand(args SendReceiveSerialCommand) (*SendReceiveSerialCommandResponse, error) {
+func (p *deviceIOPort) OptSendReceiveSerialCommand(args SendReceiveSerialCommand) (*SendReceiveSerialCommandResponse, *common.Fault) {
 	req := struct {
 		XMLName                  string `xml:"tmd:SendReceiveSerialCommand"`
 		SendReceiveSerialCommand SendReceiveSerialCommand
@@ -705,13 +705,13 @@ func (p *deviceIOPort) OptSendReceiveSerialCommand(args SendReceiveSerialCommand
 
 	resp := SendReceiveSerialCommandResponse{}
 
-	if err := p.cli.CallMethodUnmarshal(p.Endpoint, req, &resp); err != nil {
-		return nil, err
+	if fault := p.cli.CallMethodUnmarshal(p.Endpoint, req, &resp); fault != nil {
+		return nil, fault
 	}
 	return &resp, nil
 }
 
-func (p *deviceIOPort) OptSetAudioOutputConfiguration(args SetAudioOutputConfiguration) (*SetAudioOutputConfigurationResponse, error) {
+func (p *deviceIOPort) OptSetAudioOutputConfiguration(args SetAudioOutputConfiguration) (*SetAudioOutputConfigurationResponse, *common.Fault) {
 	req := struct {
 		XMLName                     string `xml:"tmd:SetAudioOutputConfiguration"`
 		SetAudioOutputConfiguration SetAudioOutputConfiguration
@@ -721,13 +721,13 @@ func (p *deviceIOPort) OptSetAudioOutputConfiguration(args SetAudioOutputConfigu
 
 	resp := SetAudioOutputConfigurationResponse{}
 
-	if err := p.cli.CallMethodUnmarshal(p.Endpoint, req, &resp); err != nil {
-		return nil, err
+	if fault := p.cli.CallMethodUnmarshal(p.Endpoint, req, &resp); fault != nil {
+		return nil, fault
 	}
 	return &resp, nil
 }
 
-func (p *deviceIOPort) OptSetAudioSourceConfiguration(args SetAudioSourceConfiguration) (*SetAudioSourceConfigurationResponse, error) {
+func (p *deviceIOPort) OptSetAudioSourceConfiguration(args SetAudioSourceConfiguration) (*SetAudioSourceConfigurationResponse, *common.Fault) {
 	req := struct {
 		XMLName                     string `xml:"tmd:SetAudioSourceConfiguration"`
 		SetAudioSourceConfiguration SetAudioSourceConfiguration
@@ -737,13 +737,13 @@ func (p *deviceIOPort) OptSetAudioSourceConfiguration(args SetAudioSourceConfigu
 
 	resp := SetAudioSourceConfigurationResponse{}
 
-	if err := p.cli.CallMethodUnmarshal(p.Endpoint, req, &resp); err != nil {
-		return nil, err
+	if fault := p.cli.CallMethodUnmarshal(p.Endpoint, req, &resp); fault != nil {
+		return nil, fault
 	}
 	return &resp, nil
 }
 
-func (p *deviceIOPort) OptSetDigitalInputConfigurations(args SetDigitalInputConfigurations) (*SetDigitalInputConfigurationsResponse, error) {
+func (p *deviceIOPort) OptSetDigitalInputConfigurations(args SetDigitalInputConfigurations) (*SetDigitalInputConfigurationsResponse, *common.Fault) {
 	req := struct {
 		XMLName                       string `xml:"tmd:SetDigitalInputConfigurations"`
 		SetDigitalInputConfigurations SetDigitalInputConfigurations
@@ -753,13 +753,13 @@ func (p *deviceIOPort) OptSetDigitalInputConfigurations(args SetDigitalInputConf
 
 	resp := SetDigitalInputConfigurationsResponse{}
 
-	if err := p.cli.CallMethodUnmarshal(p.Endpoint, req, &resp); err != nil {
-		return nil, err
+	if fault := p.cli.CallMethodUnmarshal(p.Endpoint, req, &resp); fault != nil {
+		return nil, fault
 	}
 	return &resp, nil
 }
 
-func (p *deviceIOPort) OptSetRelayOutputSettings(args SetRelayOutputSettings) (*SetRelayOutputSettingsResponse, error) {
+func (p *deviceIOPort) OptSetRelayOutputSettings(args SetRelayOutputSettings) (*SetRelayOutputSettingsResponse, *common.Fault) {
 	req := struct {
 		XMLName                string `xml:"tmd:SetRelayOutputSettings"`
 		SetRelayOutputSettings SetRelayOutputSettings
@@ -769,13 +769,13 @@ func (p *deviceIOPort) OptSetRelayOutputSettings(args SetRelayOutputSettings) (*
 
 	resp := SetRelayOutputSettingsResponse{}
 
-	if err := p.cli.CallMethodUnmarshal(p.Endpoint, req, &resp); err != nil {
-		return nil, err
+	if fault := p.cli.CallMethodUnmarshal(p.Endpoint, req, &resp); fault != nil {
+		return nil, fault
 	}
 	return &resp, nil
 }
 
-func (p *deviceIOPort) OptSetRelayOutputState(args device.SetRelayOutputState) (*device.SetRelayOutputStateResponse, error) {
+func (p *deviceIOPort) OptSetRelayOutputState(args device.SetRelayOutputState) (*device.SetRelayOutputStateResponse, *common.Fault) {
 	req := struct {
 		XMLName             string `xml:"tmd:SetRelayOutputState"`
 		SetRelayOutputState device.SetRelayOutputState
@@ -785,13 +785,13 @@ func (p *deviceIOPort) OptSetRelayOutputState(args device.SetRelayOutputState) (
 
 	resp := device.SetRelayOutputStateResponse{}
 
-	if err := p.cli.CallMethodUnmarshal(p.Endpoint, req, &resp); err != nil {
-		return nil, err
+	if fault := p.cli.CallMethodUnmarshal(p.Endpoint, req, &resp); fault != nil {
+		return nil, fault
 	}
 	return &resp, nil
 }
 
-func (p *deviceIOPort) OptSetSerialPortConfiguration(args SetSerialPortConfiguration) (*SetSerialPortConfigurationResponse, error) {
+func (p *deviceIOPort) OptSetSerialPortConfiguration(args SetSerialPortConfiguration) (*SetSerialPortConfigurationResponse, *common.Fault) {
 	req := struct {
 		XMLName                    string `xml:"tmd:SetSerialPortConfiguration"`
 		SetSerialPortConfiguration SetSerialPortConfiguration
@@ -801,13 +801,13 @@ func (p *deviceIOPort) OptSetSerialPortConfiguration(args SetSerialPortConfigura
 
 	resp := SetSerialPortConfigurationResponse{}
 
-	if err := p.cli.CallMethodUnmarshal(p.Endpoint, req, &resp); err != nil {
-		return nil, err
+	if fault := p.cli.CallMethodUnmarshal(p.Endpoint, req, &resp); fault != nil {
+		return nil, fault
 	}
 	return &resp, nil
 }
 
-func (p *deviceIOPort) OptSetVideoOutputConfiguration(args SetVideoOutputConfiguration) (*SetVideoOutputConfigurationResponse, error) {
+func (p *deviceIOPort) OptSetVideoOutputConfiguration(args SetVideoOutputConfiguration) (*SetVideoOutputConfigurationResponse, *common.Fault) {
 	req := struct {
 		XMLName                     string `xml:"tmd:SetVideoOutputConfiguration"`
 		SetVideoOutputConfiguration SetVideoOutputConfiguration
@@ -817,13 +817,13 @@ func (p *deviceIOPort) OptSetVideoOutputConfiguration(args SetVideoOutputConfigu
 
 	resp := SetVideoOutputConfigurationResponse{}
 
-	if err := p.cli.CallMethodUnmarshal(p.Endpoint, req, &resp); err != nil {
-		return nil, err
+	if fault := p.cli.CallMethodUnmarshal(p.Endpoint, req, &resp); fault != nil {
+		return nil, fault
 	}
 	return &resp, nil
 }
 
-func (p *deviceIOPort) OptSetVideoSourceConfiguration(args SetVideoSourceConfiguration) (*SetVideoSourceConfigurationResponse, error) {
+func (p *deviceIOPort) OptSetVideoSourceConfiguration(args SetVideoSourceConfiguration) (*SetVideoSourceConfigurationResponse, *common.Fault) {
 	req := struct {
 		XMLName                     string `xml:"tmd:SetVideoSourceConfiguration"`
 		SetVideoSourceConfiguration SetVideoSourceConfiguration
@@ -833,8 +833,8 @@ func (p *deviceIOPort) OptSetVideoSourceConfiguration(args SetVideoSourceConfigu
 
 	resp := SetVideoSourceConfigurationResponse{}
 
-	if err := p.cli.CallMethodUnmarshal(p.Endpoint, req, &resp); err != nil {
-		return nil, err
+	if fault := p.cli.CallMethodUnmarshal(p.Endpoint, req, &resp); fault != nil {
+		return nil, fault
 	}
 	return &resp, nil
 }

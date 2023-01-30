@@ -16,53 +16,53 @@ func NewPACSPort(endpoint string, cli common.Client) PACSPort {
 // PACSPort was auto-generated from WSDL
 // and defines interface for the remote service. Useful for testing.
 type PACSPort interface {
-	OptCreateAccessPoint(CreateAccessPoint CreateAccessPoint) (*CreateAccessPointResponse, error)
+	OptCreateAccessPoint(CreateAccessPoint CreateAccessPoint) (*CreateAccessPointResponse, *common.Fault)
 
-	OptCreateArea(CreateArea CreateArea) (*CreateAreaResponse, error)
+	OptCreateArea(CreateArea CreateArea) (*CreateAreaResponse, *common.Fault)
 
-	OptDeleteAccessPoint(DeleteAccessPoint DeleteAccessPoint) (*DeleteAccessPointResponse, error)
+	OptDeleteAccessPoint(DeleteAccessPoint DeleteAccessPoint) (*DeleteAccessPointResponse, *common.Fault)
 
-	OptDeleteAccessPointAuthenticationProfile(DeleteAccessPointAuthenticationProfile DeleteAccessPointAuthenticationProfile) (*DeleteAccessPointAuthenticationProfileResponse, error)
+	OptDeleteAccessPointAuthenticationProfile(DeleteAccessPointAuthenticationProfile DeleteAccessPointAuthenticationProfile) (*DeleteAccessPointAuthenticationProfileResponse, *common.Fault)
 
-	OptDeleteArea(DeleteArea DeleteArea) (*DeleteAreaResponse, error)
+	OptDeleteArea(DeleteArea DeleteArea) (*DeleteAreaResponse, *common.Fault)
 
-	OptDisableAccessPoint(DisableAccessPoint DisableAccessPoint) (*DisableAccessPointResponse, error)
+	OptDisableAccessPoint(DisableAccessPoint DisableAccessPoint) (*DisableAccessPointResponse, *common.Fault)
 
-	OptEnableAccessPoint(EnableAccessPoint EnableAccessPoint) (*EnableAccessPointResponse, error)
+	OptEnableAccessPoint(EnableAccessPoint EnableAccessPoint) (*EnableAccessPointResponse, *common.Fault)
 
-	OptExternalAuthorization(ExternalAuthorization ExternalAuthorization) (*ExternalAuthorizationResponse, error)
+	OptExternalAuthorization(ExternalAuthorization ExternalAuthorization) (*ExternalAuthorizationResponse, *common.Fault)
 
-	OptFeedback(Feedback Feedback) (*FeedbackResponse, error)
+	OptFeedback(Feedback Feedback) (*FeedbackResponse, *common.Fault)
 
-	OptGetAccessPointInfo(GetAccessPointInfo GetAccessPointInfo) (*GetAccessPointInfoResponse, error)
+	OptGetAccessPointInfo(GetAccessPointInfo GetAccessPointInfo) (*GetAccessPointInfoResponse, *common.Fault)
 
-	OptGetAccessPointInfoList(GetAccessPointInfoList GetAccessPointInfoList) (*GetAccessPointInfoListResponse, error)
+	OptGetAccessPointInfoList(GetAccessPointInfoList GetAccessPointInfoList) (*GetAccessPointInfoListResponse, *common.Fault)
 
-	OptGetAccessPointList(GetAccessPointList GetAccessPointList) (*GetAccessPointListResponse, error)
+	OptGetAccessPointList(GetAccessPointList GetAccessPointList) (*GetAccessPointListResponse, *common.Fault)
 
-	OptGetAccessPointState(GetAccessPointState GetAccessPointState) (*GetAccessPointStateResponse, error)
+	OptGetAccessPointState(GetAccessPointState GetAccessPointState) (*GetAccessPointStateResponse, *common.Fault)
 
-	OptGetAccessPoints(GetAccessPoints GetAccessPoints) (*GetAccessPointsResponse, error)
+	OptGetAccessPoints(GetAccessPoints GetAccessPoints) (*GetAccessPointsResponse, *common.Fault)
 
-	OptGetAreaInfo(GetAreaInfo GetAreaInfo) (*GetAreaInfoResponse, error)
+	OptGetAreaInfo(GetAreaInfo GetAreaInfo) (*GetAreaInfoResponse, *common.Fault)
 
-	OptGetAreaInfoList(GetAreaInfoList GetAreaInfoList) (*GetAreaInfoListResponse, error)
+	OptGetAreaInfoList(GetAreaInfoList GetAreaInfoList) (*GetAreaInfoListResponse, *common.Fault)
 
-	OptGetAreaList(GetAreaList GetAreaList) (*GetAreaListResponse, error)
+	OptGetAreaList(GetAreaList GetAreaList) (*GetAreaListResponse, *common.Fault)
 
-	OptGetAreas(GetAreas GetAreas) (*GetAreasResponse, error)
+	OptGetAreas(GetAreas GetAreas) (*GetAreasResponse, *common.Fault)
 
-	OptGetServiceCapabilities(GetServiceCapabilities GetServiceCapabilities) (*GetServiceCapabilitiesResponse, error)
+	OptGetServiceCapabilities(GetServiceCapabilities GetServiceCapabilities) (*GetServiceCapabilitiesResponse, *common.Fault)
 
-	OptModifyAccessPoint(ModifyAccessPoint ModifyAccessPoint) (*ModifyAccessPointResponse, error)
+	OptModifyAccessPoint(ModifyAccessPoint ModifyAccessPoint) (*ModifyAccessPointResponse, *common.Fault)
 
-	OptModifyArea(ModifyArea ModifyArea) (*ModifyAreaResponse, error)
+	OptModifyArea(ModifyArea ModifyArea) (*ModifyAreaResponse, *common.Fault)
 
-	OptSetAccessPoint(SetAccessPoint SetAccessPoint) (*SetAccessPointResponse, error)
+	OptSetAccessPoint(SetAccessPoint SetAccessPoint) (*SetAccessPointResponse, *common.Fault)
 
-	OptSetAccessPointAuthenticationProfile(SetAccessPointAuthenticationProfile SetAccessPointAuthenticationProfile) (*SetAccessPointAuthenticationProfileResponse, error)
+	OptSetAccessPointAuthenticationProfile(SetAccessPointAuthenticationProfile SetAccessPointAuthenticationProfile) (*SetAccessPointAuthenticationProfileResponse, *common.Fault)
 
-	OptSetArea(SetArea SetArea) (*SetAreaResponse, error)
+	OptSetArea(SetArea SetArea) (*SetAreaResponse, *common.Fault)
 }
 type Decision string
 
@@ -504,7 +504,7 @@ type pACSPort struct {
 	Endpoint string
 }
 
-func (p *pACSPort) OptCreateAccessPoint(args CreateAccessPoint) (*CreateAccessPointResponse, error) {
+func (p *pACSPort) OptCreateAccessPoint(args CreateAccessPoint) (*CreateAccessPointResponse, *common.Fault) {
 	req := struct {
 		XMLName           string `xml:"tac:CreateAccessPoint"`
 		CreateAccessPoint CreateAccessPoint
@@ -514,13 +514,13 @@ func (p *pACSPort) OptCreateAccessPoint(args CreateAccessPoint) (*CreateAccessPo
 
 	resp := CreateAccessPointResponse{}
 
-	if err := p.cli.CallMethodUnmarshal(p.Endpoint, req, &resp); err != nil {
-		return nil, err
+	if fault := p.cli.CallMethodUnmarshal(p.Endpoint, req, &resp); fault != nil {
+		return nil, fault
 	}
 	return &resp, nil
 }
 
-func (p *pACSPort) OptCreateArea(args CreateArea) (*CreateAreaResponse, error) {
+func (p *pACSPort) OptCreateArea(args CreateArea) (*CreateAreaResponse, *common.Fault) {
 	req := struct {
 		XMLName    string `xml:"tac:CreateArea"`
 		CreateArea CreateArea
@@ -530,13 +530,13 @@ func (p *pACSPort) OptCreateArea(args CreateArea) (*CreateAreaResponse, error) {
 
 	resp := CreateAreaResponse{}
 
-	if err := p.cli.CallMethodUnmarshal(p.Endpoint, req, &resp); err != nil {
-		return nil, err
+	if fault := p.cli.CallMethodUnmarshal(p.Endpoint, req, &resp); fault != nil {
+		return nil, fault
 	}
 	return &resp, nil
 }
 
-func (p *pACSPort) OptDeleteAccessPoint(args DeleteAccessPoint) (*DeleteAccessPointResponse, error) {
+func (p *pACSPort) OptDeleteAccessPoint(args DeleteAccessPoint) (*DeleteAccessPointResponse, *common.Fault) {
 	req := struct {
 		XMLName           string `xml:"tac:DeleteAccessPoint"`
 		DeleteAccessPoint DeleteAccessPoint
@@ -546,13 +546,13 @@ func (p *pACSPort) OptDeleteAccessPoint(args DeleteAccessPoint) (*DeleteAccessPo
 
 	resp := DeleteAccessPointResponse{}
 
-	if err := p.cli.CallMethodUnmarshal(p.Endpoint, req, &resp); err != nil {
-		return nil, err
+	if fault := p.cli.CallMethodUnmarshal(p.Endpoint, req, &resp); fault != nil {
+		return nil, fault
 	}
 	return &resp, nil
 }
 
-func (p *pACSPort) OptDeleteAccessPointAuthenticationProfile(args DeleteAccessPointAuthenticationProfile) (*DeleteAccessPointAuthenticationProfileResponse, error) {
+func (p *pACSPort) OptDeleteAccessPointAuthenticationProfile(args DeleteAccessPointAuthenticationProfile) (*DeleteAccessPointAuthenticationProfileResponse, *common.Fault) {
 	req := struct {
 		XMLName                                string `xml:"tac:DeleteAccessPointAuthenticationProfile"`
 		DeleteAccessPointAuthenticationProfile DeleteAccessPointAuthenticationProfile
@@ -562,13 +562,13 @@ func (p *pACSPort) OptDeleteAccessPointAuthenticationProfile(args DeleteAccessPo
 
 	resp := DeleteAccessPointAuthenticationProfileResponse{}
 
-	if err := p.cli.CallMethodUnmarshal(p.Endpoint, req, &resp); err != nil {
-		return nil, err
+	if fault := p.cli.CallMethodUnmarshal(p.Endpoint, req, &resp); fault != nil {
+		return nil, fault
 	}
 	return &resp, nil
 }
 
-func (p *pACSPort) OptDeleteArea(args DeleteArea) (*DeleteAreaResponse, error) {
+func (p *pACSPort) OptDeleteArea(args DeleteArea) (*DeleteAreaResponse, *common.Fault) {
 	req := struct {
 		XMLName    string `xml:"tac:DeleteArea"`
 		DeleteArea DeleteArea
@@ -578,13 +578,13 @@ func (p *pACSPort) OptDeleteArea(args DeleteArea) (*DeleteAreaResponse, error) {
 
 	resp := DeleteAreaResponse{}
 
-	if err := p.cli.CallMethodUnmarshal(p.Endpoint, req, &resp); err != nil {
-		return nil, err
+	if fault := p.cli.CallMethodUnmarshal(p.Endpoint, req, &resp); fault != nil {
+		return nil, fault
 	}
 	return &resp, nil
 }
 
-func (p *pACSPort) OptDisableAccessPoint(args DisableAccessPoint) (*DisableAccessPointResponse, error) {
+func (p *pACSPort) OptDisableAccessPoint(args DisableAccessPoint) (*DisableAccessPointResponse, *common.Fault) {
 	req := struct {
 		XMLName            string `xml:"tac:DisableAccessPoint"`
 		DisableAccessPoint DisableAccessPoint
@@ -594,13 +594,13 @@ func (p *pACSPort) OptDisableAccessPoint(args DisableAccessPoint) (*DisableAcces
 
 	resp := DisableAccessPointResponse{}
 
-	if err := p.cli.CallMethodUnmarshal(p.Endpoint, req, &resp); err != nil {
-		return nil, err
+	if fault := p.cli.CallMethodUnmarshal(p.Endpoint, req, &resp); fault != nil {
+		return nil, fault
 	}
 	return &resp, nil
 }
 
-func (p *pACSPort) OptEnableAccessPoint(args EnableAccessPoint) (*EnableAccessPointResponse, error) {
+func (p *pACSPort) OptEnableAccessPoint(args EnableAccessPoint) (*EnableAccessPointResponse, *common.Fault) {
 	req := struct {
 		XMLName           string `xml:"tac:EnableAccessPoint"`
 		EnableAccessPoint EnableAccessPoint
@@ -610,13 +610,13 @@ func (p *pACSPort) OptEnableAccessPoint(args EnableAccessPoint) (*EnableAccessPo
 
 	resp := EnableAccessPointResponse{}
 
-	if err := p.cli.CallMethodUnmarshal(p.Endpoint, req, &resp); err != nil {
-		return nil, err
+	if fault := p.cli.CallMethodUnmarshal(p.Endpoint, req, &resp); fault != nil {
+		return nil, fault
 	}
 	return &resp, nil
 }
 
-func (p *pACSPort) OptExternalAuthorization(args ExternalAuthorization) (*ExternalAuthorizationResponse, error) {
+func (p *pACSPort) OptExternalAuthorization(args ExternalAuthorization) (*ExternalAuthorizationResponse, *common.Fault) {
 	req := struct {
 		XMLName               string `xml:"tac:ExternalAuthorization"`
 		ExternalAuthorization ExternalAuthorization
@@ -626,13 +626,13 @@ func (p *pACSPort) OptExternalAuthorization(args ExternalAuthorization) (*Extern
 
 	resp := ExternalAuthorizationResponse{}
 
-	if err := p.cli.CallMethodUnmarshal(p.Endpoint, req, &resp); err != nil {
-		return nil, err
+	if fault := p.cli.CallMethodUnmarshal(p.Endpoint, req, &resp); fault != nil {
+		return nil, fault
 	}
 	return &resp, nil
 }
 
-func (p *pACSPort) OptFeedback(args Feedback) (*FeedbackResponse, error) {
+func (p *pACSPort) OptFeedback(args Feedback) (*FeedbackResponse, *common.Fault) {
 	req := struct {
 		XMLName  string `xml:"tac:Feedback"`
 		Feedback Feedback
@@ -642,13 +642,13 @@ func (p *pACSPort) OptFeedback(args Feedback) (*FeedbackResponse, error) {
 
 	resp := FeedbackResponse{}
 
-	if err := p.cli.CallMethodUnmarshal(p.Endpoint, req, &resp); err != nil {
-		return nil, err
+	if fault := p.cli.CallMethodUnmarshal(p.Endpoint, req, &resp); fault != nil {
+		return nil, fault
 	}
 	return &resp, nil
 }
 
-func (p *pACSPort) OptGetAccessPointInfo(args GetAccessPointInfo) (*GetAccessPointInfoResponse, error) {
+func (p *pACSPort) OptGetAccessPointInfo(args GetAccessPointInfo) (*GetAccessPointInfoResponse, *common.Fault) {
 	req := struct {
 		XMLName            string `xml:"tac:GetAccessPointInfo"`
 		GetAccessPointInfo GetAccessPointInfo
@@ -658,13 +658,13 @@ func (p *pACSPort) OptGetAccessPointInfo(args GetAccessPointInfo) (*GetAccessPoi
 
 	resp := GetAccessPointInfoResponse{}
 
-	if err := p.cli.CallMethodUnmarshal(p.Endpoint, req, &resp); err != nil {
-		return nil, err
+	if fault := p.cli.CallMethodUnmarshal(p.Endpoint, req, &resp); fault != nil {
+		return nil, fault
 	}
 	return &resp, nil
 }
 
-func (p *pACSPort) OptGetAccessPointInfoList(args GetAccessPointInfoList) (*GetAccessPointInfoListResponse, error) {
+func (p *pACSPort) OptGetAccessPointInfoList(args GetAccessPointInfoList) (*GetAccessPointInfoListResponse, *common.Fault) {
 	req := struct {
 		XMLName                string `xml:"tac:GetAccessPointInfoList"`
 		GetAccessPointInfoList GetAccessPointInfoList
@@ -674,13 +674,13 @@ func (p *pACSPort) OptGetAccessPointInfoList(args GetAccessPointInfoList) (*GetA
 
 	resp := GetAccessPointInfoListResponse{}
 
-	if err := p.cli.CallMethodUnmarshal(p.Endpoint, req, &resp); err != nil {
-		return nil, err
+	if fault := p.cli.CallMethodUnmarshal(p.Endpoint, req, &resp); fault != nil {
+		return nil, fault
 	}
 	return &resp, nil
 }
 
-func (p *pACSPort) OptGetAccessPointList(args GetAccessPointList) (*GetAccessPointListResponse, error) {
+func (p *pACSPort) OptGetAccessPointList(args GetAccessPointList) (*GetAccessPointListResponse, *common.Fault) {
 	req := struct {
 		XMLName            string `xml:"tac:GetAccessPointList"`
 		GetAccessPointList GetAccessPointList
@@ -690,13 +690,13 @@ func (p *pACSPort) OptGetAccessPointList(args GetAccessPointList) (*GetAccessPoi
 
 	resp := GetAccessPointListResponse{}
 
-	if err := p.cli.CallMethodUnmarshal(p.Endpoint, req, &resp); err != nil {
-		return nil, err
+	if fault := p.cli.CallMethodUnmarshal(p.Endpoint, req, &resp); fault != nil {
+		return nil, fault
 	}
 	return &resp, nil
 }
 
-func (p *pACSPort) OptGetAccessPointState(args GetAccessPointState) (*GetAccessPointStateResponse, error) {
+func (p *pACSPort) OptGetAccessPointState(args GetAccessPointState) (*GetAccessPointStateResponse, *common.Fault) {
 	req := struct {
 		XMLName             string `xml:"tac:GetAccessPointState"`
 		GetAccessPointState GetAccessPointState
@@ -706,13 +706,13 @@ func (p *pACSPort) OptGetAccessPointState(args GetAccessPointState) (*GetAccessP
 
 	resp := GetAccessPointStateResponse{}
 
-	if err := p.cli.CallMethodUnmarshal(p.Endpoint, req, &resp); err != nil {
-		return nil, err
+	if fault := p.cli.CallMethodUnmarshal(p.Endpoint, req, &resp); fault != nil {
+		return nil, fault
 	}
 	return &resp, nil
 }
 
-func (p *pACSPort) OptGetAccessPoints(args GetAccessPoints) (*GetAccessPointsResponse, error) {
+func (p *pACSPort) OptGetAccessPoints(args GetAccessPoints) (*GetAccessPointsResponse, *common.Fault) {
 	req := struct {
 		XMLName         string `xml:"tac:GetAccessPoints"`
 		GetAccessPoints GetAccessPoints
@@ -722,13 +722,13 @@ func (p *pACSPort) OptGetAccessPoints(args GetAccessPoints) (*GetAccessPointsRes
 
 	resp := GetAccessPointsResponse{}
 
-	if err := p.cli.CallMethodUnmarshal(p.Endpoint, req, &resp); err != nil {
-		return nil, err
+	if fault := p.cli.CallMethodUnmarshal(p.Endpoint, req, &resp); fault != nil {
+		return nil, fault
 	}
 	return &resp, nil
 }
 
-func (p *pACSPort) OptGetAreaInfo(args GetAreaInfo) (*GetAreaInfoResponse, error) {
+func (p *pACSPort) OptGetAreaInfo(args GetAreaInfo) (*GetAreaInfoResponse, *common.Fault) {
 	req := struct {
 		XMLName     string `xml:"tac:GetAreaInfo"`
 		GetAreaInfo GetAreaInfo
@@ -738,13 +738,13 @@ func (p *pACSPort) OptGetAreaInfo(args GetAreaInfo) (*GetAreaInfoResponse, error
 
 	resp := GetAreaInfoResponse{}
 
-	if err := p.cli.CallMethodUnmarshal(p.Endpoint, req, &resp); err != nil {
-		return nil, err
+	if fault := p.cli.CallMethodUnmarshal(p.Endpoint, req, &resp); fault != nil {
+		return nil, fault
 	}
 	return &resp, nil
 }
 
-func (p *pACSPort) OptGetAreaInfoList(args GetAreaInfoList) (*GetAreaInfoListResponse, error) {
+func (p *pACSPort) OptGetAreaInfoList(args GetAreaInfoList) (*GetAreaInfoListResponse, *common.Fault) {
 	req := struct {
 		XMLName         string `xml:"tac:GetAreaInfoList"`
 		GetAreaInfoList GetAreaInfoList
@@ -754,13 +754,13 @@ func (p *pACSPort) OptGetAreaInfoList(args GetAreaInfoList) (*GetAreaInfoListRes
 
 	resp := GetAreaInfoListResponse{}
 
-	if err := p.cli.CallMethodUnmarshal(p.Endpoint, req, &resp); err != nil {
-		return nil, err
+	if fault := p.cli.CallMethodUnmarshal(p.Endpoint, req, &resp); fault != nil {
+		return nil, fault
 	}
 	return &resp, nil
 }
 
-func (p *pACSPort) OptGetAreaList(args GetAreaList) (*GetAreaListResponse, error) {
+func (p *pACSPort) OptGetAreaList(args GetAreaList) (*GetAreaListResponse, *common.Fault) {
 	req := struct {
 		XMLName     string `xml:"tac:GetAreaList"`
 		GetAreaList GetAreaList
@@ -770,13 +770,13 @@ func (p *pACSPort) OptGetAreaList(args GetAreaList) (*GetAreaListResponse, error
 
 	resp := GetAreaListResponse{}
 
-	if err := p.cli.CallMethodUnmarshal(p.Endpoint, req, &resp); err != nil {
-		return nil, err
+	if fault := p.cli.CallMethodUnmarshal(p.Endpoint, req, &resp); fault != nil {
+		return nil, fault
 	}
 	return &resp, nil
 }
 
-func (p *pACSPort) OptGetAreas(args GetAreas) (*GetAreasResponse, error) {
+func (p *pACSPort) OptGetAreas(args GetAreas) (*GetAreasResponse, *common.Fault) {
 	req := struct {
 		XMLName  string `xml:"tac:GetAreas"`
 		GetAreas GetAreas
@@ -786,13 +786,13 @@ func (p *pACSPort) OptGetAreas(args GetAreas) (*GetAreasResponse, error) {
 
 	resp := GetAreasResponse{}
 
-	if err := p.cli.CallMethodUnmarshal(p.Endpoint, req, &resp); err != nil {
-		return nil, err
+	if fault := p.cli.CallMethodUnmarshal(p.Endpoint, req, &resp); fault != nil {
+		return nil, fault
 	}
 	return &resp, nil
 }
 
-func (p *pACSPort) OptGetServiceCapabilities(args GetServiceCapabilities) (*GetServiceCapabilitiesResponse, error) {
+func (p *pACSPort) OptGetServiceCapabilities(args GetServiceCapabilities) (*GetServiceCapabilitiesResponse, *common.Fault) {
 	req := struct {
 		XMLName                string `xml:"tac:GetServiceCapabilities"`
 		GetServiceCapabilities GetServiceCapabilities
@@ -802,13 +802,13 @@ func (p *pACSPort) OptGetServiceCapabilities(args GetServiceCapabilities) (*GetS
 
 	resp := GetServiceCapabilitiesResponse{}
 
-	if err := p.cli.CallMethodUnmarshal(p.Endpoint, req, &resp); err != nil {
-		return nil, err
+	if fault := p.cli.CallMethodUnmarshal(p.Endpoint, req, &resp); fault != nil {
+		return nil, fault
 	}
 	return &resp, nil
 }
 
-func (p *pACSPort) OptModifyAccessPoint(args ModifyAccessPoint) (*ModifyAccessPointResponse, error) {
+func (p *pACSPort) OptModifyAccessPoint(args ModifyAccessPoint) (*ModifyAccessPointResponse, *common.Fault) {
 	req := struct {
 		XMLName           string `xml:"tac:ModifyAccessPoint"`
 		ModifyAccessPoint ModifyAccessPoint
@@ -818,13 +818,13 @@ func (p *pACSPort) OptModifyAccessPoint(args ModifyAccessPoint) (*ModifyAccessPo
 
 	resp := ModifyAccessPointResponse{}
 
-	if err := p.cli.CallMethodUnmarshal(p.Endpoint, req, &resp); err != nil {
-		return nil, err
+	if fault := p.cli.CallMethodUnmarshal(p.Endpoint, req, &resp); fault != nil {
+		return nil, fault
 	}
 	return &resp, nil
 }
 
-func (p *pACSPort) OptModifyArea(args ModifyArea) (*ModifyAreaResponse, error) {
+func (p *pACSPort) OptModifyArea(args ModifyArea) (*ModifyAreaResponse, *common.Fault) {
 	req := struct {
 		XMLName    string `xml:"tac:ModifyArea"`
 		ModifyArea ModifyArea
@@ -834,13 +834,13 @@ func (p *pACSPort) OptModifyArea(args ModifyArea) (*ModifyAreaResponse, error) {
 
 	resp := ModifyAreaResponse{}
 
-	if err := p.cli.CallMethodUnmarshal(p.Endpoint, req, &resp); err != nil {
-		return nil, err
+	if fault := p.cli.CallMethodUnmarshal(p.Endpoint, req, &resp); fault != nil {
+		return nil, fault
 	}
 	return &resp, nil
 }
 
-func (p *pACSPort) OptSetAccessPoint(args SetAccessPoint) (*SetAccessPointResponse, error) {
+func (p *pACSPort) OptSetAccessPoint(args SetAccessPoint) (*SetAccessPointResponse, *common.Fault) {
 	req := struct {
 		XMLName        string `xml:"tac:SetAccessPoint"`
 		SetAccessPoint SetAccessPoint
@@ -850,13 +850,13 @@ func (p *pACSPort) OptSetAccessPoint(args SetAccessPoint) (*SetAccessPointRespon
 
 	resp := SetAccessPointResponse{}
 
-	if err := p.cli.CallMethodUnmarshal(p.Endpoint, req, &resp); err != nil {
-		return nil, err
+	if fault := p.cli.CallMethodUnmarshal(p.Endpoint, req, &resp); fault != nil {
+		return nil, fault
 	}
 	return &resp, nil
 }
 
-func (p *pACSPort) OptSetAccessPointAuthenticationProfile(args SetAccessPointAuthenticationProfile) (*SetAccessPointAuthenticationProfileResponse, error) {
+func (p *pACSPort) OptSetAccessPointAuthenticationProfile(args SetAccessPointAuthenticationProfile) (*SetAccessPointAuthenticationProfileResponse, *common.Fault) {
 	req := struct {
 		XMLName                             string `xml:"tac:SetAccessPointAuthenticationProfile"`
 		SetAccessPointAuthenticationProfile SetAccessPointAuthenticationProfile
@@ -866,13 +866,13 @@ func (p *pACSPort) OptSetAccessPointAuthenticationProfile(args SetAccessPointAut
 
 	resp := SetAccessPointAuthenticationProfileResponse{}
 
-	if err := p.cli.CallMethodUnmarshal(p.Endpoint, req, &resp); err != nil {
-		return nil, err
+	if fault := p.cli.CallMethodUnmarshal(p.Endpoint, req, &resp); fault != nil {
+		return nil, fault
 	}
 	return &resp, nil
 }
 
-func (p *pACSPort) OptSetArea(args SetArea) (*SetAreaResponse, error) {
+func (p *pACSPort) OptSetArea(args SetArea) (*SetAreaResponse, *common.Fault) {
 	req := struct {
 		XMLName string `xml:"tac:SetArea"`
 		SetArea SetArea
@@ -882,8 +882,8 @@ func (p *pACSPort) OptSetArea(args SetArea) (*SetAreaResponse, error) {
 
 	resp := SetAreaResponse{}
 
-	if err := p.cli.CallMethodUnmarshal(p.Endpoint, req, &resp); err != nil {
-		return nil, err
+	if fault := p.cli.CallMethodUnmarshal(p.Endpoint, req, &resp); fault != nil {
+		return nil, fault
 	}
 	return &resp, nil
 }

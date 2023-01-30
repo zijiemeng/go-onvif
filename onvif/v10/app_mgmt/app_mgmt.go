@@ -16,21 +16,21 @@ func NewAppManagement(endpoint string, cli common.Client) AppManagement {
 // AppManagement was auto-generated from WSDL
 // and defines interface for the remote service. Useful for testing.
 type AppManagement interface {
-	OptActivate(Activate Activate) (*ActivateResponse, error)
+	OptActivate(Activate Activate) (*ActivateResponse, *common.Fault)
 
-	OptDeactivate(Deactivate Deactivate) (*DeactivateResponse, error)
+	OptDeactivate(Deactivate Deactivate) (*DeactivateResponse, *common.Fault)
 
-	OptGetAppsInfo(GetAppsInfo GetAppsInfo) (*GetAppsInfoResponse, error)
+	OptGetAppsInfo(GetAppsInfo GetAppsInfo) (*GetAppsInfoResponse, *common.Fault)
 
-	OptGetDeviceId(GetDeviceId GetDeviceId) (*GetDeviceIdResponse, error)
+	OptGetDeviceId(GetDeviceId GetDeviceId) (*GetDeviceIdResponse, *common.Fault)
 
-	OptGetInstalledApps(GetInstalledApps GetInstalledApps) (*GetInstalledAppsResponse, error)
+	OptGetInstalledApps(GetInstalledApps GetInstalledApps) (*GetInstalledAppsResponse, *common.Fault)
 
-	OptGetServiceCapabilities(GetServiceCapabilities GetServiceCapabilities) (*GetServiceCapabilitiesResponse, error)
+	OptGetServiceCapabilities(GetServiceCapabilities GetServiceCapabilities) (*GetServiceCapabilitiesResponse, *common.Fault)
 
-	OptInstallLicense(InstallLicense InstallLicense) (*InstallLicenseResponse, error)
+	OptInstallLicense(InstallLicense InstallLicense) (*InstallLicenseResponse, *common.Fault)
 
-	OptUninstall(Uninstall Uninstall) (*UninstallResponse, error)
+	OptUninstall(Uninstall Uninstall) (*UninstallResponse, *common.Fault)
 }
 type DateTime string
 
@@ -141,7 +141,7 @@ type appManagement struct {
 	Endpoint string
 }
 
-func (p *appManagement) OptActivate(args Activate) (*ActivateResponse, error) {
+func (p *appManagement) OptActivate(args Activate) (*ActivateResponse, *common.Fault) {
 	req := struct {
 		XMLName  string `xml:"ans:Activate"`
 		Activate Activate
@@ -151,13 +151,13 @@ func (p *appManagement) OptActivate(args Activate) (*ActivateResponse, error) {
 
 	resp := ActivateResponse{}
 
-	if err := p.cli.CallMethodUnmarshal(p.Endpoint, req, &resp); err != nil {
-		return nil, err
+	if fault := p.cli.CallMethodUnmarshal(p.Endpoint, req, &resp); fault != nil {
+		return nil, fault
 	}
 	return &resp, nil
 }
 
-func (p *appManagement) OptDeactivate(args Deactivate) (*DeactivateResponse, error) {
+func (p *appManagement) OptDeactivate(args Deactivate) (*DeactivateResponse, *common.Fault) {
 	req := struct {
 		XMLName    string `xml:"ans:Deactivate"`
 		Deactivate Deactivate
@@ -167,13 +167,13 @@ func (p *appManagement) OptDeactivate(args Deactivate) (*DeactivateResponse, err
 
 	resp := DeactivateResponse{}
 
-	if err := p.cli.CallMethodUnmarshal(p.Endpoint, req, &resp); err != nil {
-		return nil, err
+	if fault := p.cli.CallMethodUnmarshal(p.Endpoint, req, &resp); fault != nil {
+		return nil, fault
 	}
 	return &resp, nil
 }
 
-func (p *appManagement) OptGetAppsInfo(args GetAppsInfo) (*GetAppsInfoResponse, error) {
+func (p *appManagement) OptGetAppsInfo(args GetAppsInfo) (*GetAppsInfoResponse, *common.Fault) {
 	req := struct {
 		XMLName     string `xml:"ans:GetAppsInfo"`
 		GetAppsInfo GetAppsInfo
@@ -183,13 +183,13 @@ func (p *appManagement) OptGetAppsInfo(args GetAppsInfo) (*GetAppsInfoResponse, 
 
 	resp := GetAppsInfoResponse{}
 
-	if err := p.cli.CallMethodUnmarshal(p.Endpoint, req, &resp); err != nil {
-		return nil, err
+	if fault := p.cli.CallMethodUnmarshal(p.Endpoint, req, &resp); fault != nil {
+		return nil, fault
 	}
 	return &resp, nil
 }
 
-func (p *appManagement) OptGetDeviceId(args GetDeviceId) (*GetDeviceIdResponse, error) {
+func (p *appManagement) OptGetDeviceId(args GetDeviceId) (*GetDeviceIdResponse, *common.Fault) {
 	req := struct {
 		XMLName     string `xml:"ans:GetDeviceId"`
 		GetDeviceId GetDeviceId
@@ -199,13 +199,13 @@ func (p *appManagement) OptGetDeviceId(args GetDeviceId) (*GetDeviceIdResponse, 
 
 	resp := GetDeviceIdResponse{}
 
-	if err := p.cli.CallMethodUnmarshal(p.Endpoint, req, &resp); err != nil {
-		return nil, err
+	if fault := p.cli.CallMethodUnmarshal(p.Endpoint, req, &resp); fault != nil {
+		return nil, fault
 	}
 	return &resp, nil
 }
 
-func (p *appManagement) OptGetInstalledApps(args GetInstalledApps) (*GetInstalledAppsResponse, error) {
+func (p *appManagement) OptGetInstalledApps(args GetInstalledApps) (*GetInstalledAppsResponse, *common.Fault) {
 	req := struct {
 		XMLName          string `xml:"ans:GetInstalledApps"`
 		GetInstalledApps GetInstalledApps
@@ -215,13 +215,13 @@ func (p *appManagement) OptGetInstalledApps(args GetInstalledApps) (*GetInstalle
 
 	resp := GetInstalledAppsResponse{}
 
-	if err := p.cli.CallMethodUnmarshal(p.Endpoint, req, &resp); err != nil {
-		return nil, err
+	if fault := p.cli.CallMethodUnmarshal(p.Endpoint, req, &resp); fault != nil {
+		return nil, fault
 	}
 	return &resp, nil
 }
 
-func (p *appManagement) OptGetServiceCapabilities(args GetServiceCapabilities) (*GetServiceCapabilitiesResponse, error) {
+func (p *appManagement) OptGetServiceCapabilities(args GetServiceCapabilities) (*GetServiceCapabilitiesResponse, *common.Fault) {
 	req := struct {
 		XMLName                string `xml:"ans:GetServiceCapabilities"`
 		GetServiceCapabilities GetServiceCapabilities
@@ -231,13 +231,13 @@ func (p *appManagement) OptGetServiceCapabilities(args GetServiceCapabilities) (
 
 	resp := GetServiceCapabilitiesResponse{}
 
-	if err := p.cli.CallMethodUnmarshal(p.Endpoint, req, &resp); err != nil {
-		return nil, err
+	if fault := p.cli.CallMethodUnmarshal(p.Endpoint, req, &resp); fault != nil {
+		return nil, fault
 	}
 	return &resp, nil
 }
 
-func (p *appManagement) OptInstallLicense(args InstallLicense) (*InstallLicenseResponse, error) {
+func (p *appManagement) OptInstallLicense(args InstallLicense) (*InstallLicenseResponse, *common.Fault) {
 	req := struct {
 		XMLName        string `xml:"ans:InstallLicense"`
 		InstallLicense InstallLicense
@@ -247,13 +247,13 @@ func (p *appManagement) OptInstallLicense(args InstallLicense) (*InstallLicenseR
 
 	resp := InstallLicenseResponse{}
 
-	if err := p.cli.CallMethodUnmarshal(p.Endpoint, req, &resp); err != nil {
-		return nil, err
+	if fault := p.cli.CallMethodUnmarshal(p.Endpoint, req, &resp); fault != nil {
+		return nil, fault
 	}
 	return &resp, nil
 }
 
-func (p *appManagement) OptUninstall(args Uninstall) (*UninstallResponse, error) {
+func (p *appManagement) OptUninstall(args Uninstall) (*UninstallResponse, *common.Fault) {
 	req := struct {
 		XMLName   string `xml:"ans:Uninstall"`
 		Uninstall Uninstall
@@ -263,8 +263,8 @@ func (p *appManagement) OptUninstall(args Uninstall) (*UninstallResponse, error)
 
 	resp := UninstallResponse{}
 
-	if err := p.cli.CallMethodUnmarshal(p.Endpoint, req, &resp); err != nil {
-		return nil, err
+	if fault := p.cli.CallMethodUnmarshal(p.Endpoint, req, &resp); fault != nil {
+		return nil, fault
 	}
 	return &resp, nil
 }

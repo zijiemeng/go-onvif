@@ -14,15 +14,15 @@ func NewFederatedSearchPort(endpoint string, cli common.Client) FederatedSearchP
 // FederatedSearchPort was auto-generated from WSDL
 // and defines interface for the remote service. Useful for testing.
 type FederatedSearchPort interface {
-	OptGetSearchResults(GetSearchResults GetSearchResults) (*GetSearchResultsResponse, error)
+	OptGetSearchResults(GetSearchResults GetSearchResults) (*GetSearchResultsResponse, *common.Fault)
 
-	OptGetServiceCapabilities(GetServiceCapabilities GetServiceCapabilities) (*GetServiceCapabilitiesResponse, error)
+	OptGetServiceCapabilities(GetServiceCapabilities GetServiceCapabilities) (*GetServiceCapabilitiesResponse, *common.Fault)
 
-	OptGetServiceFeatures(GetServiceFeatures GetServiceFeatures) (*GetServiceFeaturesResponse, error)
+	OptGetServiceFeatures(GetServiceFeatures GetServiceFeatures) (*GetServiceFeaturesResponse, *common.Fault)
 
-	OptRegisterDatabase(RegisterDatabase RegisterDatabase) (*RegisterDatabaseResponse, error)
+	OptRegisterDatabase(RegisterDatabase RegisterDatabase) (*RegisterDatabaseResponse, *common.Fault)
 
-	OptSearch(Search Search) (*SearchResponse, error)
+	OptSearch(Search Search) (*SearchResponse, *common.Fault)
 }
 type DateTime string
 
@@ -1673,7 +1673,7 @@ type federatedSearchPort struct {
 	Endpoint string
 }
 
-func (p *federatedSearchPort) OptGetSearchResults(args GetSearchResults) (*GetSearchResultsResponse, error) {
+func (p *federatedSearchPort) OptGetSearchResults(args GetSearchResults) (*GetSearchResultsResponse, *common.Fault) {
 	req := struct {
 		XMLName          string `xml:"tfs:GetSearchResults"`
 		GetSearchResults GetSearchResults
@@ -1683,13 +1683,13 @@ func (p *federatedSearchPort) OptGetSearchResults(args GetSearchResults) (*GetSe
 
 	resp := GetSearchResultsResponse{}
 
-	if err := p.cli.CallMethodUnmarshal(p.Endpoint, req, &resp); err != nil {
-		return nil, err
+	if fault := p.cli.CallMethodUnmarshal(p.Endpoint, req, &resp); fault != nil {
+		return nil, fault
 	}
 	return &resp, nil
 }
 
-func (p *federatedSearchPort) OptGetServiceCapabilities(args GetServiceCapabilities) (*GetServiceCapabilitiesResponse, error) {
+func (p *federatedSearchPort) OptGetServiceCapabilities(args GetServiceCapabilities) (*GetServiceCapabilitiesResponse, *common.Fault) {
 	req := struct {
 		XMLName                string `xml:"tfs:GetServiceCapabilities"`
 		GetServiceCapabilities GetServiceCapabilities
@@ -1699,13 +1699,13 @@ func (p *federatedSearchPort) OptGetServiceCapabilities(args GetServiceCapabilit
 
 	resp := GetServiceCapabilitiesResponse{}
 
-	if err := p.cli.CallMethodUnmarshal(p.Endpoint, req, &resp); err != nil {
-		return nil, err
+	if fault := p.cli.CallMethodUnmarshal(p.Endpoint, req, &resp); fault != nil {
+		return nil, fault
 	}
 	return &resp, nil
 }
 
-func (p *federatedSearchPort) OptGetServiceFeatures(args GetServiceFeatures) (*GetServiceFeaturesResponse, error) {
+func (p *federatedSearchPort) OptGetServiceFeatures(args GetServiceFeatures) (*GetServiceFeaturesResponse, *common.Fault) {
 	req := struct {
 		XMLName            string `xml:"tfs:GetServiceFeatures"`
 		GetServiceFeatures GetServiceFeatures
@@ -1715,13 +1715,13 @@ func (p *federatedSearchPort) OptGetServiceFeatures(args GetServiceFeatures) (*G
 
 	resp := GetServiceFeaturesResponse{}
 
-	if err := p.cli.CallMethodUnmarshal(p.Endpoint, req, &resp); err != nil {
-		return nil, err
+	if fault := p.cli.CallMethodUnmarshal(p.Endpoint, req, &resp); fault != nil {
+		return nil, fault
 	}
 	return &resp, nil
 }
 
-func (p *federatedSearchPort) OptRegisterDatabase(args RegisterDatabase) (*RegisterDatabaseResponse, error) {
+func (p *federatedSearchPort) OptRegisterDatabase(args RegisterDatabase) (*RegisterDatabaseResponse, *common.Fault) {
 	req := struct {
 		XMLName          string `xml:"tfs:RegisterDatabase"`
 		RegisterDatabase RegisterDatabase
@@ -1731,13 +1731,13 @@ func (p *federatedSearchPort) OptRegisterDatabase(args RegisterDatabase) (*Regis
 
 	resp := RegisterDatabaseResponse{}
 
-	if err := p.cli.CallMethodUnmarshal(p.Endpoint, req, &resp); err != nil {
-		return nil, err
+	if fault := p.cli.CallMethodUnmarshal(p.Endpoint, req, &resp); fault != nil {
+		return nil, fault
 	}
 	return &resp, nil
 }
 
-func (p *federatedSearchPort) OptSearch(args Search) (*SearchResponse, error) {
+func (p *federatedSearchPort) OptSearch(args Search) (*SearchResponse, *common.Fault) {
 	req := struct {
 		XMLName string `xml:"tfs:Search"`
 		Search  Search
@@ -1747,8 +1747,8 @@ func (p *federatedSearchPort) OptSearch(args Search) (*SearchResponse, error) {
 
 	resp := SearchResponse{}
 
-	if err := p.cli.CallMethodUnmarshal(p.Endpoint, req, &resp); err != nil {
-		return nil, err
+	if fault := p.cli.CallMethodUnmarshal(p.Endpoint, req, &resp); fault != nil {
+		return nil, fault
 	}
 	return &resp, nil
 }

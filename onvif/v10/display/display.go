@@ -14,23 +14,23 @@ func NewDisplayPort(endpoint string, cli common.Client) DisplayPort {
 // DisplayPort was auto-generated from WSDL
 // and defines interface for the remote service. Useful for testing.
 type DisplayPort interface {
-	OptCreatePaneConfiguration(CreatePaneConfiguration CreatePaneConfiguration) (*CreatePaneConfigurationResponse, error)
+	OptCreatePaneConfiguration(CreatePaneConfiguration CreatePaneConfiguration) (*CreatePaneConfigurationResponse, *common.Fault)
 
-	OptDeletePaneConfiguration(DeletePaneConfiguration DeletePaneConfiguration) (*DeletePaneConfigurationResponse, error)
+	OptDeletePaneConfiguration(DeletePaneConfiguration DeletePaneConfiguration) (*DeletePaneConfigurationResponse, *common.Fault)
 
-	OptGetDisplayOptions(GetDisplayOptions GetDisplayOptions) (*GetDisplayOptionsResponse, error)
+	OptGetDisplayOptions(GetDisplayOptions GetDisplayOptions) (*GetDisplayOptionsResponse, *common.Fault)
 
-	OptGetLayout(GetLayout GetLayout) (*GetLayoutResponse, error)
+	OptGetLayout(GetLayout GetLayout) (*GetLayoutResponse, *common.Fault)
 
-	OptGetPaneConfiguration(GetPaneConfiguration GetPaneConfiguration) (*GetPaneConfigurationResponse, error)
+	OptGetPaneConfiguration(GetPaneConfiguration GetPaneConfiguration) (*GetPaneConfigurationResponse, *common.Fault)
 
-	OptGetPaneConfigurations(GetPaneConfigurations GetPaneConfigurations) (*GetPaneConfigurationsResponse, error)
+	OptGetPaneConfigurations(GetPaneConfigurations GetPaneConfigurations) (*GetPaneConfigurationsResponse, *common.Fault)
 
-	OptSetLayout(SetLayout SetLayout) (*SetLayoutResponse, error)
+	OptSetLayout(SetLayout SetLayout) (*SetLayoutResponse, *common.Fault)
 
-	OptSetPaneConfiguration(SetPaneConfiguration SetPaneConfiguration) (*SetPaneConfigurationResponse, error)
+	OptSetPaneConfiguration(SetPaneConfiguration SetPaneConfiguration) (*SetPaneConfigurationResponse, *common.Fault)
 
-	OptSetPaneConfigurations(SetPaneConfigurations SetPaneConfigurations) (*SetPaneConfigurationsResponse, error)
+	OptSetPaneConfigurations(SetPaneConfigurations SetPaneConfigurations) (*SetPaneConfigurationsResponse, *common.Fault)
 }
 type CreatePaneConfiguration struct {
 	VideoOutput       *common.ReferenceToken    `xml:"VideoOutput,omitempty" json:"VideoOutput,omitempty" yaml:"VideoOutput,omitempty"`
@@ -107,7 +107,7 @@ type displayPort struct {
 	Endpoint string
 }
 
-func (p *displayPort) OptCreatePaneConfiguration(args CreatePaneConfiguration) (*CreatePaneConfigurationResponse, error) {
+func (p *displayPort) OptCreatePaneConfiguration(args CreatePaneConfiguration) (*CreatePaneConfigurationResponse, *common.Fault) {
 	req := struct {
 		XMLName                 string `xml:"tls:CreatePaneConfiguration"`
 		CreatePaneConfiguration CreatePaneConfiguration
@@ -117,13 +117,13 @@ func (p *displayPort) OptCreatePaneConfiguration(args CreatePaneConfiguration) (
 
 	resp := CreatePaneConfigurationResponse{}
 
-	if err := p.cli.CallMethodUnmarshal(p.Endpoint, req, &resp); err != nil {
-		return nil, err
+	if fault := p.cli.CallMethodUnmarshal(p.Endpoint, req, &resp); fault != nil {
+		return nil, fault
 	}
 	return &resp, nil
 }
 
-func (p *displayPort) OptDeletePaneConfiguration(args DeletePaneConfiguration) (*DeletePaneConfigurationResponse, error) {
+func (p *displayPort) OptDeletePaneConfiguration(args DeletePaneConfiguration) (*DeletePaneConfigurationResponse, *common.Fault) {
 	req := struct {
 		XMLName                 string `xml:"tls:DeletePaneConfiguration"`
 		DeletePaneConfiguration DeletePaneConfiguration
@@ -133,13 +133,13 @@ func (p *displayPort) OptDeletePaneConfiguration(args DeletePaneConfiguration) (
 
 	resp := DeletePaneConfigurationResponse{}
 
-	if err := p.cli.CallMethodUnmarshal(p.Endpoint, req, &resp); err != nil {
-		return nil, err
+	if fault := p.cli.CallMethodUnmarshal(p.Endpoint, req, &resp); fault != nil {
+		return nil, fault
 	}
 	return &resp, nil
 }
 
-func (p *displayPort) OptGetDisplayOptions(args GetDisplayOptions) (*GetDisplayOptionsResponse, error) {
+func (p *displayPort) OptGetDisplayOptions(args GetDisplayOptions) (*GetDisplayOptionsResponse, *common.Fault) {
 	req := struct {
 		XMLName           string `xml:"tls:GetDisplayOptions"`
 		GetDisplayOptions GetDisplayOptions
@@ -149,13 +149,13 @@ func (p *displayPort) OptGetDisplayOptions(args GetDisplayOptions) (*GetDisplayO
 
 	resp := GetDisplayOptionsResponse{}
 
-	if err := p.cli.CallMethodUnmarshal(p.Endpoint, req, &resp); err != nil {
-		return nil, err
+	if fault := p.cli.CallMethodUnmarshal(p.Endpoint, req, &resp); fault != nil {
+		return nil, fault
 	}
 	return &resp, nil
 }
 
-func (p *displayPort) OptGetLayout(args GetLayout) (*GetLayoutResponse, error) {
+func (p *displayPort) OptGetLayout(args GetLayout) (*GetLayoutResponse, *common.Fault) {
 	req := struct {
 		XMLName   string `xml:"tls:GetLayout"`
 		GetLayout GetLayout
@@ -165,13 +165,13 @@ func (p *displayPort) OptGetLayout(args GetLayout) (*GetLayoutResponse, error) {
 
 	resp := GetLayoutResponse{}
 
-	if err := p.cli.CallMethodUnmarshal(p.Endpoint, req, &resp); err != nil {
-		return nil, err
+	if fault := p.cli.CallMethodUnmarshal(p.Endpoint, req, &resp); fault != nil {
+		return nil, fault
 	}
 	return &resp, nil
 }
 
-func (p *displayPort) OptGetPaneConfiguration(args GetPaneConfiguration) (*GetPaneConfigurationResponse, error) {
+func (p *displayPort) OptGetPaneConfiguration(args GetPaneConfiguration) (*GetPaneConfigurationResponse, *common.Fault) {
 	req := struct {
 		XMLName              string `xml:"tls:GetPaneConfiguration"`
 		GetPaneConfiguration GetPaneConfiguration
@@ -181,13 +181,13 @@ func (p *displayPort) OptGetPaneConfiguration(args GetPaneConfiguration) (*GetPa
 
 	resp := GetPaneConfigurationResponse{}
 
-	if err := p.cli.CallMethodUnmarshal(p.Endpoint, req, &resp); err != nil {
-		return nil, err
+	if fault := p.cli.CallMethodUnmarshal(p.Endpoint, req, &resp); fault != nil {
+		return nil, fault
 	}
 	return &resp, nil
 }
 
-func (p *displayPort) OptGetPaneConfigurations(args GetPaneConfigurations) (*GetPaneConfigurationsResponse, error) {
+func (p *displayPort) OptGetPaneConfigurations(args GetPaneConfigurations) (*GetPaneConfigurationsResponse, *common.Fault) {
 	req := struct {
 		XMLName               string `xml:"tls:GetPaneConfigurations"`
 		GetPaneConfigurations GetPaneConfigurations
@@ -197,13 +197,13 @@ func (p *displayPort) OptGetPaneConfigurations(args GetPaneConfigurations) (*Get
 
 	resp := GetPaneConfigurationsResponse{}
 
-	if err := p.cli.CallMethodUnmarshal(p.Endpoint, req, &resp); err != nil {
-		return nil, err
+	if fault := p.cli.CallMethodUnmarshal(p.Endpoint, req, &resp); fault != nil {
+		return nil, fault
 	}
 	return &resp, nil
 }
 
-func (p *displayPort) OptSetLayout(args SetLayout) (*SetLayoutResponse, error) {
+func (p *displayPort) OptSetLayout(args SetLayout) (*SetLayoutResponse, *common.Fault) {
 	req := struct {
 		XMLName   string `xml:"tls:SetLayout"`
 		SetLayout SetLayout
@@ -213,13 +213,13 @@ func (p *displayPort) OptSetLayout(args SetLayout) (*SetLayoutResponse, error) {
 
 	resp := SetLayoutResponse{}
 
-	if err := p.cli.CallMethodUnmarshal(p.Endpoint, req, &resp); err != nil {
-		return nil, err
+	if fault := p.cli.CallMethodUnmarshal(p.Endpoint, req, &resp); fault != nil {
+		return nil, fault
 	}
 	return &resp, nil
 }
 
-func (p *displayPort) OptSetPaneConfiguration(args SetPaneConfiguration) (*SetPaneConfigurationResponse, error) {
+func (p *displayPort) OptSetPaneConfiguration(args SetPaneConfiguration) (*SetPaneConfigurationResponse, *common.Fault) {
 	req := struct {
 		XMLName              string `xml:"tls:SetPaneConfiguration"`
 		SetPaneConfiguration SetPaneConfiguration
@@ -229,13 +229,13 @@ func (p *displayPort) OptSetPaneConfiguration(args SetPaneConfiguration) (*SetPa
 
 	resp := SetPaneConfigurationResponse{}
 
-	if err := p.cli.CallMethodUnmarshal(p.Endpoint, req, &resp); err != nil {
-		return nil, err
+	if fault := p.cli.CallMethodUnmarshal(p.Endpoint, req, &resp); fault != nil {
+		return nil, fault
 	}
 	return &resp, nil
 }
 
-func (p *displayPort) OptSetPaneConfigurations(args SetPaneConfigurations) (*SetPaneConfigurationsResponse, error) {
+func (p *displayPort) OptSetPaneConfigurations(args SetPaneConfigurations) (*SetPaneConfigurationsResponse, *common.Fault) {
 	req := struct {
 		XMLName               string `xml:"tls:SetPaneConfigurations"`
 		SetPaneConfigurations SetPaneConfigurations
@@ -245,8 +245,8 @@ func (p *displayPort) OptSetPaneConfigurations(args SetPaneConfigurations) (*Set
 
 	resp := SetPaneConfigurationsResponse{}
 
-	if err := p.cli.CallMethodUnmarshal(p.Endpoint, req, &resp); err != nil {
-		return nil, err
+	if fault := p.cli.CallMethodUnmarshal(p.Endpoint, req, &resp); fault != nil {
+		return nil, fault
 	}
 	return &resp, nil
 }

@@ -16,21 +16,21 @@ func NewProvisioningService(endpoint string, cli common.Client) ProvisioningServ
 // ProvisioningService was auto-generated from WSDL
 // and defines interface for the remote service. Useful for testing.
 type ProvisioningService interface {
-	OptFocusMove(FocusMove FocusMove) (*FocusMoveResponse, error)
+	OptFocusMove(FocusMove FocusMove) (*FocusMoveResponse, *common.Fault)
 
-	OptGetServiceCapabilities(GetServiceCapabilities GetServiceCapabilities) (*GetServiceCapabilitiesResponse, error)
+	OptGetServiceCapabilities(GetServiceCapabilities GetServiceCapabilities) (*GetServiceCapabilitiesResponse, *common.Fault)
 
-	OptGetUsage(GetUsage GetUsage) (*GetUsageResponse, error)
+	OptGetUsage(GetUsage GetUsage) (*GetUsageResponse, *common.Fault)
 
-	OptPanMove(PanMove PanMove) (*PanMoveResponse, error)
+	OptPanMove(PanMove PanMove) (*PanMoveResponse, *common.Fault)
 
-	OptRollMove(RollMove RollMove) (*RollMoveResponse, error)
+	OptRollMove(RollMove RollMove) (*RollMoveResponse, *common.Fault)
 
-	OptStop(Stop Stop) (*StopResponse, error)
+	OptStop(Stop Stop) (*StopResponse, *common.Fault)
 
-	OptTiltMove(TiltMove TiltMove) (*TiltMoveResponse, error)
+	OptTiltMove(TiltMove TiltMove) (*TiltMoveResponse, *common.Fault)
 
-	OptZoomMove(ZoomMove ZoomMove) (*ZoomMoveResponse, error)
+	OptZoomMove(ZoomMove ZoomMove) (*ZoomMoveResponse, *common.Fault)
 }
 type Duration string
 
@@ -194,7 +194,7 @@ type provisioningService struct {
 	Endpoint string
 }
 
-func (p *provisioningService) OptFocusMove(args FocusMove) (*FocusMoveResponse, error) {
+func (p *provisioningService) OptFocusMove(args FocusMove) (*FocusMoveResponse, *common.Fault) {
 	req := struct {
 		XMLName   string `xml:"tpv:FocusMove"`
 		FocusMove FocusMove
@@ -204,13 +204,13 @@ func (p *provisioningService) OptFocusMove(args FocusMove) (*FocusMoveResponse, 
 
 	resp := FocusMoveResponse{}
 
-	if err := p.cli.CallMethodUnmarshal(p.Endpoint, req, &resp); err != nil {
-		return nil, err
+	if fault := p.cli.CallMethodUnmarshal(p.Endpoint, req, &resp); fault != nil {
+		return nil, fault
 	}
 	return &resp, nil
 }
 
-func (p *provisioningService) OptGetServiceCapabilities(args GetServiceCapabilities) (*GetServiceCapabilitiesResponse, error) {
+func (p *provisioningService) OptGetServiceCapabilities(args GetServiceCapabilities) (*GetServiceCapabilitiesResponse, *common.Fault) {
 	req := struct {
 		XMLName                string `xml:"tpv:GetServiceCapabilities"`
 		GetServiceCapabilities GetServiceCapabilities
@@ -220,13 +220,13 @@ func (p *provisioningService) OptGetServiceCapabilities(args GetServiceCapabilit
 
 	resp := GetServiceCapabilitiesResponse{}
 
-	if err := p.cli.CallMethodUnmarshal(p.Endpoint, req, &resp); err != nil {
-		return nil, err
+	if fault := p.cli.CallMethodUnmarshal(p.Endpoint, req, &resp); fault != nil {
+		return nil, fault
 	}
 	return &resp, nil
 }
 
-func (p *provisioningService) OptGetUsage(args GetUsage) (*GetUsageResponse, error) {
+func (p *provisioningService) OptGetUsage(args GetUsage) (*GetUsageResponse, *common.Fault) {
 	req := struct {
 		XMLName  string `xml:"tpv:GetUsage"`
 		GetUsage GetUsage
@@ -236,13 +236,13 @@ func (p *provisioningService) OptGetUsage(args GetUsage) (*GetUsageResponse, err
 
 	resp := GetUsageResponse{}
 
-	if err := p.cli.CallMethodUnmarshal(p.Endpoint, req, &resp); err != nil {
-		return nil, err
+	if fault := p.cli.CallMethodUnmarshal(p.Endpoint, req, &resp); fault != nil {
+		return nil, fault
 	}
 	return &resp, nil
 }
 
-func (p *provisioningService) OptPanMove(args PanMove) (*PanMoveResponse, error) {
+func (p *provisioningService) OptPanMove(args PanMove) (*PanMoveResponse, *common.Fault) {
 	req := struct {
 		XMLName string `xml:"tpv:PanMove"`
 		PanMove PanMove
@@ -252,13 +252,13 @@ func (p *provisioningService) OptPanMove(args PanMove) (*PanMoveResponse, error)
 
 	resp := PanMoveResponse{}
 
-	if err := p.cli.CallMethodUnmarshal(p.Endpoint, req, &resp); err != nil {
-		return nil, err
+	if fault := p.cli.CallMethodUnmarshal(p.Endpoint, req, &resp); fault != nil {
+		return nil, fault
 	}
 	return &resp, nil
 }
 
-func (p *provisioningService) OptRollMove(args RollMove) (*RollMoveResponse, error) {
+func (p *provisioningService) OptRollMove(args RollMove) (*RollMoveResponse, *common.Fault) {
 	req := struct {
 		XMLName  string `xml:"tpv:RollMove"`
 		RollMove RollMove
@@ -268,13 +268,13 @@ func (p *provisioningService) OptRollMove(args RollMove) (*RollMoveResponse, err
 
 	resp := RollMoveResponse{}
 
-	if err := p.cli.CallMethodUnmarshal(p.Endpoint, req, &resp); err != nil {
-		return nil, err
+	if fault := p.cli.CallMethodUnmarshal(p.Endpoint, req, &resp); fault != nil {
+		return nil, fault
 	}
 	return &resp, nil
 }
 
-func (p *provisioningService) OptStop(args Stop) (*StopResponse, error) {
+func (p *provisioningService) OptStop(args Stop) (*StopResponse, *common.Fault) {
 	req := struct {
 		XMLName string `xml:"tpv:Stop"`
 		Stop    Stop
@@ -284,13 +284,13 @@ func (p *provisioningService) OptStop(args Stop) (*StopResponse, error) {
 
 	resp := StopResponse{}
 
-	if err := p.cli.CallMethodUnmarshal(p.Endpoint, req, &resp); err != nil {
-		return nil, err
+	if fault := p.cli.CallMethodUnmarshal(p.Endpoint, req, &resp); fault != nil {
+		return nil, fault
 	}
 	return &resp, nil
 }
 
-func (p *provisioningService) OptTiltMove(args TiltMove) (*TiltMoveResponse, error) {
+func (p *provisioningService) OptTiltMove(args TiltMove) (*TiltMoveResponse, *common.Fault) {
 	req := struct {
 		XMLName  string `xml:"tpv:TiltMove"`
 		TiltMove TiltMove
@@ -300,13 +300,13 @@ func (p *provisioningService) OptTiltMove(args TiltMove) (*TiltMoveResponse, err
 
 	resp := TiltMoveResponse{}
 
-	if err := p.cli.CallMethodUnmarshal(p.Endpoint, req, &resp); err != nil {
-		return nil, err
+	if fault := p.cli.CallMethodUnmarshal(p.Endpoint, req, &resp); fault != nil {
+		return nil, fault
 	}
 	return &resp, nil
 }
 
-func (p *provisioningService) OptZoomMove(args ZoomMove) (*ZoomMoveResponse, error) {
+func (p *provisioningService) OptZoomMove(args ZoomMove) (*ZoomMoveResponse, *common.Fault) {
 	req := struct {
 		XMLName  string `xml:"tpv:ZoomMove"`
 		ZoomMove ZoomMove
@@ -316,8 +316,8 @@ func (p *provisioningService) OptZoomMove(args ZoomMove) (*ZoomMoveResponse, err
 
 	resp := ZoomMoveResponse{}
 
-	if err := p.cli.CallMethodUnmarshal(p.Endpoint, req, &resp); err != nil {
-		return nil, err
+	if fault := p.cli.CallMethodUnmarshal(p.Endpoint, req, &resp); fault != nil {
+		return nil, fault
 	}
 	return &resp, nil
 }

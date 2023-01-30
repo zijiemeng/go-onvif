@@ -16,25 +16,25 @@ func NewActionEnginePort(endpoint string, cli common.Client) ActionEnginePort {
 // ActionEnginePort was auto-generated from WSDL
 // and defines interface for the remote service. Useful for testing.
 type ActionEnginePort interface {
-	OptCreateActionTriggers(CreateActionTriggers CreateActionTriggers) (*CreateActionTriggersResponse, error)
+	OptCreateActionTriggers(CreateActionTriggers CreateActionTriggers) (*CreateActionTriggersResponse, *common.Fault)
 
-	OptCreateActions(CreateActions CreateActions) (*CreateActionsResponse, error)
+	OptCreateActions(CreateActions CreateActions) (*CreateActionsResponse, *common.Fault)
 
-	OptDeleteActionTriggers(DeleteActionTriggers DeleteActionTriggers) (*DeleteActionTriggersResponse, error)
+	OptDeleteActionTriggers(DeleteActionTriggers DeleteActionTriggers) (*DeleteActionTriggersResponse, *common.Fault)
 
-	OptDeleteActions(DeleteActions DeleteActions) (*DeleteActionsResponse, error)
+	OptDeleteActions(DeleteActions DeleteActions) (*DeleteActionsResponse, *common.Fault)
 
-	OptGetActionTriggers(GetActionTriggers GetActionTriggers) (*GetActionTriggersResponse, error)
+	OptGetActionTriggers(GetActionTriggers GetActionTriggers) (*GetActionTriggersResponse, *common.Fault)
 
-	OptGetActions(GetActions GetActions) (*GetActionsResponse, error)
+	OptGetActions(GetActions GetActions) (*GetActionsResponse, *common.Fault)
 
-	OptGetServiceCapabilities(GetServiceCapabilities GetServiceCapabilities) (*GetServiceCapabilitiesResponse, error)
+	OptGetServiceCapabilities(GetServiceCapabilities GetServiceCapabilities) (*GetServiceCapabilitiesResponse, *common.Fault)
 
-	OptGetSupportedActions(GetSupportedActions GetSupportedActions) (*GetSupportedActionsResponse, error)
+	OptGetSupportedActions(GetSupportedActions GetSupportedActions) (*GetSupportedActionsResponse, *common.Fault)
 
-	OptModifyActionTriggers(ModifyActionTriggers ModifyActionTriggers) (*ModifyActionTriggersResponse, error)
+	OptModifyActionTriggers(ModifyActionTriggers ModifyActionTriggers) (*ModifyActionTriggersResponse, *common.Fault)
 
-	OptModifyActions(ModifyActions ModifyActions) (*ModifyActionsResponse, error)
+	OptModifyActions(ModifyActions ModifyActions) (*ModifyActionsResponse, *common.Fault)
 }
 type Duration string
 
@@ -413,7 +413,7 @@ type actionEnginePort struct {
 	Endpoint string
 }
 
-func (p *actionEnginePort) OptCreateActionTriggers(args CreateActionTriggers) (*CreateActionTriggersResponse, error) {
+func (p *actionEnginePort) OptCreateActionTriggers(args CreateActionTriggers) (*CreateActionTriggersResponse, *common.Fault) {
 	req := struct {
 		XMLName              string `xml:"tae:CreateActionTriggers"`
 		CreateActionTriggers CreateActionTriggers
@@ -423,13 +423,13 @@ func (p *actionEnginePort) OptCreateActionTriggers(args CreateActionTriggers) (*
 
 	resp := CreateActionTriggersResponse{}
 
-	if err := p.cli.CallMethodUnmarshal(p.Endpoint, req, &resp); err != nil {
-		return nil, err
+	if fault := p.cli.CallMethodUnmarshal(p.Endpoint, req, &resp); fault != nil {
+		return nil, fault
 	}
 	return &resp, nil
 }
 
-func (p *actionEnginePort) OptCreateActions(args CreateActions) (*CreateActionsResponse, error) {
+func (p *actionEnginePort) OptCreateActions(args CreateActions) (*CreateActionsResponse, *common.Fault) {
 	req := struct {
 		XMLName       string `xml:"tae:CreateActions"`
 		CreateActions CreateActions
@@ -439,13 +439,13 @@ func (p *actionEnginePort) OptCreateActions(args CreateActions) (*CreateActionsR
 
 	resp := CreateActionsResponse{}
 
-	if err := p.cli.CallMethodUnmarshal(p.Endpoint, req, &resp); err != nil {
-		return nil, err
+	if fault := p.cli.CallMethodUnmarshal(p.Endpoint, req, &resp); fault != nil {
+		return nil, fault
 	}
 	return &resp, nil
 }
 
-func (p *actionEnginePort) OptDeleteActionTriggers(args DeleteActionTriggers) (*DeleteActionTriggersResponse, error) {
+func (p *actionEnginePort) OptDeleteActionTriggers(args DeleteActionTriggers) (*DeleteActionTriggersResponse, *common.Fault) {
 	req := struct {
 		XMLName              string `xml:"tae:DeleteActionTriggers"`
 		DeleteActionTriggers DeleteActionTriggers
@@ -455,13 +455,13 @@ func (p *actionEnginePort) OptDeleteActionTriggers(args DeleteActionTriggers) (*
 
 	resp := DeleteActionTriggersResponse{}
 
-	if err := p.cli.CallMethodUnmarshal(p.Endpoint, req, &resp); err != nil {
-		return nil, err
+	if fault := p.cli.CallMethodUnmarshal(p.Endpoint, req, &resp); fault != nil {
+		return nil, fault
 	}
 	return &resp, nil
 }
 
-func (p *actionEnginePort) OptDeleteActions(args DeleteActions) (*DeleteActionsResponse, error) {
+func (p *actionEnginePort) OptDeleteActions(args DeleteActions) (*DeleteActionsResponse, *common.Fault) {
 	req := struct {
 		XMLName       string `xml:"tae:DeleteActions"`
 		DeleteActions DeleteActions
@@ -471,13 +471,13 @@ func (p *actionEnginePort) OptDeleteActions(args DeleteActions) (*DeleteActionsR
 
 	resp := DeleteActionsResponse{}
 
-	if err := p.cli.CallMethodUnmarshal(p.Endpoint, req, &resp); err != nil {
-		return nil, err
+	if fault := p.cli.CallMethodUnmarshal(p.Endpoint, req, &resp); fault != nil {
+		return nil, fault
 	}
 	return &resp, nil
 }
 
-func (p *actionEnginePort) OptGetActionTriggers(args GetActionTriggers) (*GetActionTriggersResponse, error) {
+func (p *actionEnginePort) OptGetActionTriggers(args GetActionTriggers) (*GetActionTriggersResponse, *common.Fault) {
 	req := struct {
 		XMLName           string `xml:"tae:GetActionTriggers"`
 		GetActionTriggers GetActionTriggers
@@ -487,13 +487,13 @@ func (p *actionEnginePort) OptGetActionTriggers(args GetActionTriggers) (*GetAct
 
 	resp := GetActionTriggersResponse{}
 
-	if err := p.cli.CallMethodUnmarshal(p.Endpoint, req, &resp); err != nil {
-		return nil, err
+	if fault := p.cli.CallMethodUnmarshal(p.Endpoint, req, &resp); fault != nil {
+		return nil, fault
 	}
 	return &resp, nil
 }
 
-func (p *actionEnginePort) OptGetActions(args GetActions) (*GetActionsResponse, error) {
+func (p *actionEnginePort) OptGetActions(args GetActions) (*GetActionsResponse, *common.Fault) {
 	req := struct {
 		XMLName    string `xml:"tae:GetActions"`
 		GetActions GetActions
@@ -503,13 +503,13 @@ func (p *actionEnginePort) OptGetActions(args GetActions) (*GetActionsResponse, 
 
 	resp := GetActionsResponse{}
 
-	if err := p.cli.CallMethodUnmarshal(p.Endpoint, req, &resp); err != nil {
-		return nil, err
+	if fault := p.cli.CallMethodUnmarshal(p.Endpoint, req, &resp); fault != nil {
+		return nil, fault
 	}
 	return &resp, nil
 }
 
-func (p *actionEnginePort) OptGetServiceCapabilities(args GetServiceCapabilities) (*GetServiceCapabilitiesResponse, error) {
+func (p *actionEnginePort) OptGetServiceCapabilities(args GetServiceCapabilities) (*GetServiceCapabilitiesResponse, *common.Fault) {
 	req := struct {
 		XMLName                string `xml:"tae:GetServiceCapabilities"`
 		GetServiceCapabilities GetServiceCapabilities
@@ -519,13 +519,13 @@ func (p *actionEnginePort) OptGetServiceCapabilities(args GetServiceCapabilities
 
 	resp := GetServiceCapabilitiesResponse{}
 
-	if err := p.cli.CallMethodUnmarshal(p.Endpoint, req, &resp); err != nil {
-		return nil, err
+	if fault := p.cli.CallMethodUnmarshal(p.Endpoint, req, &resp); fault != nil {
+		return nil, fault
 	}
 	return &resp, nil
 }
 
-func (p *actionEnginePort) OptGetSupportedActions(args GetSupportedActions) (*GetSupportedActionsResponse, error) {
+func (p *actionEnginePort) OptGetSupportedActions(args GetSupportedActions) (*GetSupportedActionsResponse, *common.Fault) {
 	req := struct {
 		XMLName             string `xml:"tae:GetSupportedActions"`
 		GetSupportedActions GetSupportedActions
@@ -535,13 +535,13 @@ func (p *actionEnginePort) OptGetSupportedActions(args GetSupportedActions) (*Ge
 
 	resp := GetSupportedActionsResponse{}
 
-	if err := p.cli.CallMethodUnmarshal(p.Endpoint, req, &resp); err != nil {
-		return nil, err
+	if fault := p.cli.CallMethodUnmarshal(p.Endpoint, req, &resp); fault != nil {
+		return nil, fault
 	}
 	return &resp, nil
 }
 
-func (p *actionEnginePort) OptModifyActionTriggers(args ModifyActionTriggers) (*ModifyActionTriggersResponse, error) {
+func (p *actionEnginePort) OptModifyActionTriggers(args ModifyActionTriggers) (*ModifyActionTriggersResponse, *common.Fault) {
 	req := struct {
 		XMLName              string `xml:"tae:ModifyActionTriggers"`
 		ModifyActionTriggers ModifyActionTriggers
@@ -551,13 +551,13 @@ func (p *actionEnginePort) OptModifyActionTriggers(args ModifyActionTriggers) (*
 
 	resp := ModifyActionTriggersResponse{}
 
-	if err := p.cli.CallMethodUnmarshal(p.Endpoint, req, &resp); err != nil {
-		return nil, err
+	if fault := p.cli.CallMethodUnmarshal(p.Endpoint, req, &resp); fault != nil {
+		return nil, fault
 	}
 	return &resp, nil
 }
 
-func (p *actionEnginePort) OptModifyActions(args ModifyActions) (*ModifyActionsResponse, error) {
+func (p *actionEnginePort) OptModifyActions(args ModifyActions) (*ModifyActionsResponse, *common.Fault) {
 	req := struct {
 		XMLName       string `xml:"tae:ModifyActions"`
 		ModifyActions ModifyActions
@@ -567,8 +567,8 @@ func (p *actionEnginePort) OptModifyActions(args ModifyActions) (*ModifyActionsR
 
 	resp := ModifyActionsResponse{}
 
-	if err := p.cli.CallMethodUnmarshal(p.Endpoint, req, &resp); err != nil {
-		return nil, err
+	if fault := p.cli.CallMethodUnmarshal(p.Endpoint, req, &resp); fault != nil {
+		return nil, fault
 	}
 	return &resp, nil
 }

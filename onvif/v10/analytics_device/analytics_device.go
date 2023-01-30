@@ -14,39 +14,39 @@ func NewAnalyticsDevicePort(endpoint string, cli common.Client) AnalyticsDeviceP
 // AnalyticsDevicePort was auto-generated from WSDL
 // and defines interface for the remote service. Useful for testing.
 type AnalyticsDevicePort interface {
-	OptCreateAnalyticsEngineControl(CreateAnalyticsEngineControl CreateAnalyticsEngineControl) (*CreateAnalyticsEngineControlResponse, error)
+	OptCreateAnalyticsEngineControl(CreateAnalyticsEngineControl CreateAnalyticsEngineControl) (*CreateAnalyticsEngineControlResponse, *common.Fault)
 
-	OptCreateAnalyticsEngineInputs(CreateAnalyticsEngineInputs CreateAnalyticsEngineInputs) (*CreateAnalyticsEngineInputsResponse, error)
+	OptCreateAnalyticsEngineInputs(CreateAnalyticsEngineInputs CreateAnalyticsEngineInputs) (*CreateAnalyticsEngineInputsResponse, *common.Fault)
 
-	OptDeleteAnalyticsEngineControl(DeleteAnalyticsEngineControl DeleteAnalyticsEngineControl) (*DeleteAnalyticsEngineControlResponse, error)
+	OptDeleteAnalyticsEngineControl(DeleteAnalyticsEngineControl DeleteAnalyticsEngineControl) (*DeleteAnalyticsEngineControlResponse, *common.Fault)
 
-	OptDeleteAnalyticsEngineInputs(DeleteAnalyticsEngineInputs DeleteAnalyticsEngineInputs) (*DeleteAnalyticsEngineInputsResponse, error)
+	OptDeleteAnalyticsEngineInputs(DeleteAnalyticsEngineInputs DeleteAnalyticsEngineInputs) (*DeleteAnalyticsEngineInputsResponse, *common.Fault)
 
-	OptGetAnalyticsDeviceStreamUri(GetAnalyticsDeviceStreamUri GetAnalyticsDeviceStreamUri) (*GetAnalyticsDeviceStreamUriResponse, error)
+	OptGetAnalyticsDeviceStreamUri(GetAnalyticsDeviceStreamUri GetAnalyticsDeviceStreamUri) (*GetAnalyticsDeviceStreamUriResponse, *common.Fault)
 
-	OptGetAnalyticsEngine(GetAnalyticsEngine GetAnalyticsEngine) (*GetAnalyticsEngineResponse, error)
+	OptGetAnalyticsEngine(GetAnalyticsEngine GetAnalyticsEngine) (*GetAnalyticsEngineResponse, *common.Fault)
 
-	OptGetAnalyticsEngineControl(GetAnalyticsEngineControl GetAnalyticsEngineControl) (*GetAnalyticsEngineControlResponse, error)
+	OptGetAnalyticsEngineControl(GetAnalyticsEngineControl GetAnalyticsEngineControl) (*GetAnalyticsEngineControlResponse, *common.Fault)
 
-	OptGetAnalyticsEngineControls(GetAnalyticsEngineControls GetAnalyticsEngineControls) (*GetAnalyticsEngineControlsResponse, error)
+	OptGetAnalyticsEngineControls(GetAnalyticsEngineControls GetAnalyticsEngineControls) (*GetAnalyticsEngineControlsResponse, *common.Fault)
 
-	OptGetAnalyticsEngineInput(GetAnalyticsEngineInput GetAnalyticsEngineInput) (*GetAnalyticsEngineInputResponse, error)
+	OptGetAnalyticsEngineInput(GetAnalyticsEngineInput GetAnalyticsEngineInput) (*GetAnalyticsEngineInputResponse, *common.Fault)
 
-	OptGetAnalyticsEngineInputs(GetAnalyticsEngineInputs GetAnalyticsEngineInputs) (*GetAnalyticsEngineInputsResponse, error)
+	OptGetAnalyticsEngineInputs(GetAnalyticsEngineInputs GetAnalyticsEngineInputs) (*GetAnalyticsEngineInputsResponse, *common.Fault)
 
-	OptGetAnalyticsEngines(GetAnalyticsEngines GetAnalyticsEngines) (*GetAnalyticsEnginesResponse, error)
+	OptGetAnalyticsEngines(GetAnalyticsEngines GetAnalyticsEngines) (*GetAnalyticsEnginesResponse, *common.Fault)
 
-	OptGetAnalyticsState(GetAnalyticsState GetAnalyticsState) (*GetAnalyticsStateResponse, error)
+	OptGetAnalyticsState(GetAnalyticsState GetAnalyticsState) (*GetAnalyticsStateResponse, *common.Fault)
 
-	OptGetServiceCapabilities(GetServiceCapabilities GetServiceCapabilities) (*GetServiceCapabilitiesResponse, error)
+	OptGetServiceCapabilities(GetServiceCapabilities GetServiceCapabilities) (*GetServiceCapabilitiesResponse, *common.Fault)
 
-	OptGetVideoAnalyticsConfiguration(GetVideoAnalyticsConfiguration GetVideoAnalyticsConfiguration) (*GetVideoAnalyticsConfigurationResponse, error)
+	OptGetVideoAnalyticsConfiguration(GetVideoAnalyticsConfiguration GetVideoAnalyticsConfiguration) (*GetVideoAnalyticsConfigurationResponse, *common.Fault)
 
-	OptSetAnalyticsEngineControl(SetAnalyticsEngineControl SetAnalyticsEngineControl) (*SetAnalyticsEngineControlResponse, error)
+	OptSetAnalyticsEngineControl(SetAnalyticsEngineControl SetAnalyticsEngineControl) (*SetAnalyticsEngineControlResponse, *common.Fault)
 
-	OptSetAnalyticsEngineInput(SetAnalyticsEngineInput SetAnalyticsEngineInput) (*SetAnalyticsEngineInputResponse, error)
+	OptSetAnalyticsEngineInput(SetAnalyticsEngineInput SetAnalyticsEngineInput) (*SetAnalyticsEngineInputResponse, *common.Fault)
 
-	OptSetVideoAnalyticsConfiguration(SetVideoAnalyticsConfiguration SetVideoAnalyticsConfiguration) (*SetVideoAnalyticsConfigurationResponse, error)
+	OptSetVideoAnalyticsConfiguration(SetVideoAnalyticsConfiguration SetVideoAnalyticsConfiguration) (*SetVideoAnalyticsConfigurationResponse, *common.Fault)
 }
 type Capabilities []interface{}
 
@@ -188,7 +188,7 @@ type analyticsDevicePort struct {
 	Endpoint string
 }
 
-func (p *analyticsDevicePort) OptCreateAnalyticsEngineControl(args CreateAnalyticsEngineControl) (*CreateAnalyticsEngineControlResponse, error) {
+func (p *analyticsDevicePort) OptCreateAnalyticsEngineControl(args CreateAnalyticsEngineControl) (*CreateAnalyticsEngineControlResponse, *common.Fault) {
 	req := struct {
 		XMLName                      string `xml:"tad:CreateAnalyticsEngineControl"`
 		CreateAnalyticsEngineControl CreateAnalyticsEngineControl
@@ -198,13 +198,13 @@ func (p *analyticsDevicePort) OptCreateAnalyticsEngineControl(args CreateAnalyti
 
 	resp := CreateAnalyticsEngineControlResponse{}
 
-	if err := p.cli.CallMethodUnmarshal(p.Endpoint, req, &resp); err != nil {
-		return nil, err
+	if fault := p.cli.CallMethodUnmarshal(p.Endpoint, req, &resp); fault != nil {
+		return nil, fault
 	}
 	return &resp, nil
 }
 
-func (p *analyticsDevicePort) OptCreateAnalyticsEngineInputs(args CreateAnalyticsEngineInputs) (*CreateAnalyticsEngineInputsResponse, error) {
+func (p *analyticsDevicePort) OptCreateAnalyticsEngineInputs(args CreateAnalyticsEngineInputs) (*CreateAnalyticsEngineInputsResponse, *common.Fault) {
 	req := struct {
 		XMLName                     string `xml:"tad:CreateAnalyticsEngineInputs"`
 		CreateAnalyticsEngineInputs CreateAnalyticsEngineInputs
@@ -214,13 +214,13 @@ func (p *analyticsDevicePort) OptCreateAnalyticsEngineInputs(args CreateAnalytic
 
 	resp := CreateAnalyticsEngineInputsResponse{}
 
-	if err := p.cli.CallMethodUnmarshal(p.Endpoint, req, &resp); err != nil {
-		return nil, err
+	if fault := p.cli.CallMethodUnmarshal(p.Endpoint, req, &resp); fault != nil {
+		return nil, fault
 	}
 	return &resp, nil
 }
 
-func (p *analyticsDevicePort) OptDeleteAnalyticsEngineControl(args DeleteAnalyticsEngineControl) (*DeleteAnalyticsEngineControlResponse, error) {
+func (p *analyticsDevicePort) OptDeleteAnalyticsEngineControl(args DeleteAnalyticsEngineControl) (*DeleteAnalyticsEngineControlResponse, *common.Fault) {
 	req := struct {
 		XMLName                      string `xml:"tad:DeleteAnalyticsEngineControl"`
 		DeleteAnalyticsEngineControl DeleteAnalyticsEngineControl
@@ -230,13 +230,13 @@ func (p *analyticsDevicePort) OptDeleteAnalyticsEngineControl(args DeleteAnalyti
 
 	resp := DeleteAnalyticsEngineControlResponse{}
 
-	if err := p.cli.CallMethodUnmarshal(p.Endpoint, req, &resp); err != nil {
-		return nil, err
+	if fault := p.cli.CallMethodUnmarshal(p.Endpoint, req, &resp); fault != nil {
+		return nil, fault
 	}
 	return &resp, nil
 }
 
-func (p *analyticsDevicePort) OptDeleteAnalyticsEngineInputs(args DeleteAnalyticsEngineInputs) (*DeleteAnalyticsEngineInputsResponse, error) {
+func (p *analyticsDevicePort) OptDeleteAnalyticsEngineInputs(args DeleteAnalyticsEngineInputs) (*DeleteAnalyticsEngineInputsResponse, *common.Fault) {
 	req := struct {
 		XMLName                     string `xml:"tad:DeleteAnalyticsEngineInputs"`
 		DeleteAnalyticsEngineInputs DeleteAnalyticsEngineInputs
@@ -246,13 +246,13 @@ func (p *analyticsDevicePort) OptDeleteAnalyticsEngineInputs(args DeleteAnalytic
 
 	resp := DeleteAnalyticsEngineInputsResponse{}
 
-	if err := p.cli.CallMethodUnmarshal(p.Endpoint, req, &resp); err != nil {
-		return nil, err
+	if fault := p.cli.CallMethodUnmarshal(p.Endpoint, req, &resp); fault != nil {
+		return nil, fault
 	}
 	return &resp, nil
 }
 
-func (p *analyticsDevicePort) OptGetAnalyticsDeviceStreamUri(args GetAnalyticsDeviceStreamUri) (*GetAnalyticsDeviceStreamUriResponse, error) {
+func (p *analyticsDevicePort) OptGetAnalyticsDeviceStreamUri(args GetAnalyticsDeviceStreamUri) (*GetAnalyticsDeviceStreamUriResponse, *common.Fault) {
 	req := struct {
 		XMLName                     string `xml:"tad:GetAnalyticsDeviceStreamUri"`
 		GetAnalyticsDeviceStreamUri GetAnalyticsDeviceStreamUri
@@ -262,13 +262,13 @@ func (p *analyticsDevicePort) OptGetAnalyticsDeviceStreamUri(args GetAnalyticsDe
 
 	resp := GetAnalyticsDeviceStreamUriResponse{}
 
-	if err := p.cli.CallMethodUnmarshal(p.Endpoint, req, &resp); err != nil {
-		return nil, err
+	if fault := p.cli.CallMethodUnmarshal(p.Endpoint, req, &resp); fault != nil {
+		return nil, fault
 	}
 	return &resp, nil
 }
 
-func (p *analyticsDevicePort) OptGetAnalyticsEngine(args GetAnalyticsEngine) (*GetAnalyticsEngineResponse, error) {
+func (p *analyticsDevicePort) OptGetAnalyticsEngine(args GetAnalyticsEngine) (*GetAnalyticsEngineResponse, *common.Fault) {
 	req := struct {
 		XMLName            string `xml:"tad:GetAnalyticsEngine"`
 		GetAnalyticsEngine GetAnalyticsEngine
@@ -278,13 +278,13 @@ func (p *analyticsDevicePort) OptGetAnalyticsEngine(args GetAnalyticsEngine) (*G
 
 	resp := GetAnalyticsEngineResponse{}
 
-	if err := p.cli.CallMethodUnmarshal(p.Endpoint, req, &resp); err != nil {
-		return nil, err
+	if fault := p.cli.CallMethodUnmarshal(p.Endpoint, req, &resp); fault != nil {
+		return nil, fault
 	}
 	return &resp, nil
 }
 
-func (p *analyticsDevicePort) OptGetAnalyticsEngineControl(args GetAnalyticsEngineControl) (*GetAnalyticsEngineControlResponse, error) {
+func (p *analyticsDevicePort) OptGetAnalyticsEngineControl(args GetAnalyticsEngineControl) (*GetAnalyticsEngineControlResponse, *common.Fault) {
 	req := struct {
 		XMLName                   string `xml:"tad:GetAnalyticsEngineControl"`
 		GetAnalyticsEngineControl GetAnalyticsEngineControl
@@ -294,13 +294,13 @@ func (p *analyticsDevicePort) OptGetAnalyticsEngineControl(args GetAnalyticsEngi
 
 	resp := GetAnalyticsEngineControlResponse{}
 
-	if err := p.cli.CallMethodUnmarshal(p.Endpoint, req, &resp); err != nil {
-		return nil, err
+	if fault := p.cli.CallMethodUnmarshal(p.Endpoint, req, &resp); fault != nil {
+		return nil, fault
 	}
 	return &resp, nil
 }
 
-func (p *analyticsDevicePort) OptGetAnalyticsEngineControls(args GetAnalyticsEngineControls) (*GetAnalyticsEngineControlsResponse, error) {
+func (p *analyticsDevicePort) OptGetAnalyticsEngineControls(args GetAnalyticsEngineControls) (*GetAnalyticsEngineControlsResponse, *common.Fault) {
 	req := struct {
 		XMLName                    string `xml:"tad:GetAnalyticsEngineControls"`
 		GetAnalyticsEngineControls GetAnalyticsEngineControls
@@ -310,13 +310,13 @@ func (p *analyticsDevicePort) OptGetAnalyticsEngineControls(args GetAnalyticsEng
 
 	resp := GetAnalyticsEngineControlsResponse{}
 
-	if err := p.cli.CallMethodUnmarshal(p.Endpoint, req, &resp); err != nil {
-		return nil, err
+	if fault := p.cli.CallMethodUnmarshal(p.Endpoint, req, &resp); fault != nil {
+		return nil, fault
 	}
 	return &resp, nil
 }
 
-func (p *analyticsDevicePort) OptGetAnalyticsEngineInput(args GetAnalyticsEngineInput) (*GetAnalyticsEngineInputResponse, error) {
+func (p *analyticsDevicePort) OptGetAnalyticsEngineInput(args GetAnalyticsEngineInput) (*GetAnalyticsEngineInputResponse, *common.Fault) {
 	req := struct {
 		XMLName                 string `xml:"tad:GetAnalyticsEngineInput"`
 		GetAnalyticsEngineInput GetAnalyticsEngineInput
@@ -326,13 +326,13 @@ func (p *analyticsDevicePort) OptGetAnalyticsEngineInput(args GetAnalyticsEngine
 
 	resp := GetAnalyticsEngineInputResponse{}
 
-	if err := p.cli.CallMethodUnmarshal(p.Endpoint, req, &resp); err != nil {
-		return nil, err
+	if fault := p.cli.CallMethodUnmarshal(p.Endpoint, req, &resp); fault != nil {
+		return nil, fault
 	}
 	return &resp, nil
 }
 
-func (p *analyticsDevicePort) OptGetAnalyticsEngineInputs(args GetAnalyticsEngineInputs) (*GetAnalyticsEngineInputsResponse, error) {
+func (p *analyticsDevicePort) OptGetAnalyticsEngineInputs(args GetAnalyticsEngineInputs) (*GetAnalyticsEngineInputsResponse, *common.Fault) {
 	req := struct {
 		XMLName                  string `xml:"tad:GetAnalyticsEngineInputs"`
 		GetAnalyticsEngineInputs GetAnalyticsEngineInputs
@@ -342,13 +342,13 @@ func (p *analyticsDevicePort) OptGetAnalyticsEngineInputs(args GetAnalyticsEngin
 
 	resp := GetAnalyticsEngineInputsResponse{}
 
-	if err := p.cli.CallMethodUnmarshal(p.Endpoint, req, &resp); err != nil {
-		return nil, err
+	if fault := p.cli.CallMethodUnmarshal(p.Endpoint, req, &resp); fault != nil {
+		return nil, fault
 	}
 	return &resp, nil
 }
 
-func (p *analyticsDevicePort) OptGetAnalyticsEngines(args GetAnalyticsEngines) (*GetAnalyticsEnginesResponse, error) {
+func (p *analyticsDevicePort) OptGetAnalyticsEngines(args GetAnalyticsEngines) (*GetAnalyticsEnginesResponse, *common.Fault) {
 	req := struct {
 		XMLName             string `xml:"tad:GetAnalyticsEngines"`
 		GetAnalyticsEngines GetAnalyticsEngines
@@ -358,13 +358,13 @@ func (p *analyticsDevicePort) OptGetAnalyticsEngines(args GetAnalyticsEngines) (
 
 	resp := GetAnalyticsEnginesResponse{}
 
-	if err := p.cli.CallMethodUnmarshal(p.Endpoint, req, &resp); err != nil {
-		return nil, err
+	if fault := p.cli.CallMethodUnmarshal(p.Endpoint, req, &resp); fault != nil {
+		return nil, fault
 	}
 	return &resp, nil
 }
 
-func (p *analyticsDevicePort) OptGetAnalyticsState(args GetAnalyticsState) (*GetAnalyticsStateResponse, error) {
+func (p *analyticsDevicePort) OptGetAnalyticsState(args GetAnalyticsState) (*GetAnalyticsStateResponse, *common.Fault) {
 	req := struct {
 		XMLName           string `xml:"tad:GetAnalyticsState"`
 		GetAnalyticsState GetAnalyticsState
@@ -374,13 +374,13 @@ func (p *analyticsDevicePort) OptGetAnalyticsState(args GetAnalyticsState) (*Get
 
 	resp := GetAnalyticsStateResponse{}
 
-	if err := p.cli.CallMethodUnmarshal(p.Endpoint, req, &resp); err != nil {
-		return nil, err
+	if fault := p.cli.CallMethodUnmarshal(p.Endpoint, req, &resp); fault != nil {
+		return nil, fault
 	}
 	return &resp, nil
 }
 
-func (p *analyticsDevicePort) OptGetServiceCapabilities(args GetServiceCapabilities) (*GetServiceCapabilitiesResponse, error) {
+func (p *analyticsDevicePort) OptGetServiceCapabilities(args GetServiceCapabilities) (*GetServiceCapabilitiesResponse, *common.Fault) {
 	req := struct {
 		XMLName                string `xml:"tad:GetServiceCapabilities"`
 		GetServiceCapabilities GetServiceCapabilities
@@ -390,13 +390,13 @@ func (p *analyticsDevicePort) OptGetServiceCapabilities(args GetServiceCapabilit
 
 	resp := GetServiceCapabilitiesResponse{}
 
-	if err := p.cli.CallMethodUnmarshal(p.Endpoint, req, &resp); err != nil {
-		return nil, err
+	if fault := p.cli.CallMethodUnmarshal(p.Endpoint, req, &resp); fault != nil {
+		return nil, fault
 	}
 	return &resp, nil
 }
 
-func (p *analyticsDevicePort) OptGetVideoAnalyticsConfiguration(args GetVideoAnalyticsConfiguration) (*GetVideoAnalyticsConfigurationResponse, error) {
+func (p *analyticsDevicePort) OptGetVideoAnalyticsConfiguration(args GetVideoAnalyticsConfiguration) (*GetVideoAnalyticsConfigurationResponse, *common.Fault) {
 	req := struct {
 		XMLName                        string `xml:"tad:GetVideoAnalyticsConfiguration"`
 		GetVideoAnalyticsConfiguration GetVideoAnalyticsConfiguration
@@ -406,13 +406,13 @@ func (p *analyticsDevicePort) OptGetVideoAnalyticsConfiguration(args GetVideoAna
 
 	resp := GetVideoAnalyticsConfigurationResponse{}
 
-	if err := p.cli.CallMethodUnmarshal(p.Endpoint, req, &resp); err != nil {
-		return nil, err
+	if fault := p.cli.CallMethodUnmarshal(p.Endpoint, req, &resp); fault != nil {
+		return nil, fault
 	}
 	return &resp, nil
 }
 
-func (p *analyticsDevicePort) OptSetAnalyticsEngineControl(args SetAnalyticsEngineControl) (*SetAnalyticsEngineControlResponse, error) {
+func (p *analyticsDevicePort) OptSetAnalyticsEngineControl(args SetAnalyticsEngineControl) (*SetAnalyticsEngineControlResponse, *common.Fault) {
 	req := struct {
 		XMLName                   string `xml:"tad:SetAnalyticsEngineControl"`
 		SetAnalyticsEngineControl SetAnalyticsEngineControl
@@ -422,13 +422,13 @@ func (p *analyticsDevicePort) OptSetAnalyticsEngineControl(args SetAnalyticsEngi
 
 	resp := SetAnalyticsEngineControlResponse{}
 
-	if err := p.cli.CallMethodUnmarshal(p.Endpoint, req, &resp); err != nil {
-		return nil, err
+	if fault := p.cli.CallMethodUnmarshal(p.Endpoint, req, &resp); fault != nil {
+		return nil, fault
 	}
 	return &resp, nil
 }
 
-func (p *analyticsDevicePort) OptSetAnalyticsEngineInput(args SetAnalyticsEngineInput) (*SetAnalyticsEngineInputResponse, error) {
+func (p *analyticsDevicePort) OptSetAnalyticsEngineInput(args SetAnalyticsEngineInput) (*SetAnalyticsEngineInputResponse, *common.Fault) {
 	req := struct {
 		XMLName                 string `xml:"tad:SetAnalyticsEngineInput"`
 		SetAnalyticsEngineInput SetAnalyticsEngineInput
@@ -438,13 +438,13 @@ func (p *analyticsDevicePort) OptSetAnalyticsEngineInput(args SetAnalyticsEngine
 
 	resp := SetAnalyticsEngineInputResponse{}
 
-	if err := p.cli.CallMethodUnmarshal(p.Endpoint, req, &resp); err != nil {
-		return nil, err
+	if fault := p.cli.CallMethodUnmarshal(p.Endpoint, req, &resp); fault != nil {
+		return nil, fault
 	}
 	return &resp, nil
 }
 
-func (p *analyticsDevicePort) OptSetVideoAnalyticsConfiguration(args SetVideoAnalyticsConfiguration) (*SetVideoAnalyticsConfigurationResponse, error) {
+func (p *analyticsDevicePort) OptSetVideoAnalyticsConfiguration(args SetVideoAnalyticsConfiguration) (*SetVideoAnalyticsConfigurationResponse, *common.Fault) {
 	req := struct {
 		XMLName                        string `xml:"tad:SetVideoAnalyticsConfiguration"`
 		SetVideoAnalyticsConfiguration SetVideoAnalyticsConfiguration
@@ -454,8 +454,8 @@ func (p *analyticsDevicePort) OptSetVideoAnalyticsConfiguration(args SetVideoAna
 
 	resp := SetVideoAnalyticsConfigurationResponse{}
 
-	if err := p.cli.CallMethodUnmarshal(p.Endpoint, req, &resp); err != nil {
-		return nil, err
+	if fault := p.cli.CallMethodUnmarshal(p.Endpoint, req, &resp); fault != nil {
+		return nil, fault
 	}
 	return &resp, nil
 }

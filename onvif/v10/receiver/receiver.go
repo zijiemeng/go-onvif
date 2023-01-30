@@ -14,21 +14,21 @@ func NewReceiverPort(endpoint string, cli common.Client) ReceiverPort {
 // ReceiverPort was auto-generated from WSDL
 // and defines interface for the remote service. Useful for testing.
 type ReceiverPort interface {
-	OptConfigureReceiver(ConfigureReceiver ConfigureReceiver) (*ConfigureReceiverResponse, error)
+	OptConfigureReceiver(ConfigureReceiver ConfigureReceiver) (*ConfigureReceiverResponse, *common.Fault)
 
-	OptCreateReceiver(CreateReceiver CreateReceiver) (*CreateReceiverResponse, error)
+	OptCreateReceiver(CreateReceiver CreateReceiver) (*CreateReceiverResponse, *common.Fault)
 
-	OptDeleteReceiver(DeleteReceiver DeleteReceiver) (*DeleteReceiverResponse, error)
+	OptDeleteReceiver(DeleteReceiver DeleteReceiver) (*DeleteReceiverResponse, *common.Fault)
 
-	OptGetReceiver(GetReceiver GetReceiver) (*GetReceiverResponse, error)
+	OptGetReceiver(GetReceiver GetReceiver) (*GetReceiverResponse, *common.Fault)
 
-	OptGetReceiverState(GetReceiverState GetReceiverState) (*GetReceiverStateResponse, error)
+	OptGetReceiverState(GetReceiverState GetReceiverState) (*GetReceiverStateResponse, *common.Fault)
 
-	OptGetReceivers(GetReceivers GetReceivers) (*GetReceiversResponse, error)
+	OptGetReceivers(GetReceivers GetReceivers) (*GetReceiversResponse, *common.Fault)
 
-	OptGetServiceCapabilities(GetServiceCapabilities GetServiceCapabilities) (*GetServiceCapabilitiesResponse, error)
+	OptGetServiceCapabilities(GetServiceCapabilities GetServiceCapabilities) (*GetServiceCapabilitiesResponse, *common.Fault)
 
-	OptSetReceiverMode(SetReceiverMode SetReceiverMode) (*SetReceiverModeResponse, error)
+	OptSetReceiverMode(SetReceiverMode SetReceiverMode) (*SetReceiverModeResponse, *common.Fault)
 }
 type Capabilities []interface{}
 
@@ -99,7 +99,7 @@ type receiverPort struct {
 	Endpoint string
 }
 
-func (p *receiverPort) OptConfigureReceiver(args ConfigureReceiver) (*ConfigureReceiverResponse, error) {
+func (p *receiverPort) OptConfigureReceiver(args ConfigureReceiver) (*ConfigureReceiverResponse, *common.Fault) {
 	req := struct {
 		XMLName           string `xml:"trv:ConfigureReceiver"`
 		ConfigureReceiver ConfigureReceiver
@@ -109,13 +109,13 @@ func (p *receiverPort) OptConfigureReceiver(args ConfigureReceiver) (*ConfigureR
 
 	resp := ConfigureReceiverResponse{}
 
-	if err := p.cli.CallMethodUnmarshal(p.Endpoint, req, &resp); err != nil {
-		return nil, err
+	if fault := p.cli.CallMethodUnmarshal(p.Endpoint, req, &resp); fault != nil {
+		return nil, fault
 	}
 	return &resp, nil
 }
 
-func (p *receiverPort) OptCreateReceiver(args CreateReceiver) (*CreateReceiverResponse, error) {
+func (p *receiverPort) OptCreateReceiver(args CreateReceiver) (*CreateReceiverResponse, *common.Fault) {
 	req := struct {
 		XMLName        string `xml:"trv:CreateReceiver"`
 		CreateReceiver CreateReceiver
@@ -125,13 +125,13 @@ func (p *receiverPort) OptCreateReceiver(args CreateReceiver) (*CreateReceiverRe
 
 	resp := CreateReceiverResponse{}
 
-	if err := p.cli.CallMethodUnmarshal(p.Endpoint, req, &resp); err != nil {
-		return nil, err
+	if fault := p.cli.CallMethodUnmarshal(p.Endpoint, req, &resp); fault != nil {
+		return nil, fault
 	}
 	return &resp, nil
 }
 
-func (p *receiverPort) OptDeleteReceiver(args DeleteReceiver) (*DeleteReceiverResponse, error) {
+func (p *receiverPort) OptDeleteReceiver(args DeleteReceiver) (*DeleteReceiverResponse, *common.Fault) {
 	req := struct {
 		XMLName        string `xml:"trv:DeleteReceiver"`
 		DeleteReceiver DeleteReceiver
@@ -141,13 +141,13 @@ func (p *receiverPort) OptDeleteReceiver(args DeleteReceiver) (*DeleteReceiverRe
 
 	resp := DeleteReceiverResponse{}
 
-	if err := p.cli.CallMethodUnmarshal(p.Endpoint, req, &resp); err != nil {
-		return nil, err
+	if fault := p.cli.CallMethodUnmarshal(p.Endpoint, req, &resp); fault != nil {
+		return nil, fault
 	}
 	return &resp, nil
 }
 
-func (p *receiverPort) OptGetReceiver(args GetReceiver) (*GetReceiverResponse, error) {
+func (p *receiverPort) OptGetReceiver(args GetReceiver) (*GetReceiverResponse, *common.Fault) {
 	req := struct {
 		XMLName     string `xml:"trv:GetReceiver"`
 		GetReceiver GetReceiver
@@ -157,13 +157,13 @@ func (p *receiverPort) OptGetReceiver(args GetReceiver) (*GetReceiverResponse, e
 
 	resp := GetReceiverResponse{}
 
-	if err := p.cli.CallMethodUnmarshal(p.Endpoint, req, &resp); err != nil {
-		return nil, err
+	if fault := p.cli.CallMethodUnmarshal(p.Endpoint, req, &resp); fault != nil {
+		return nil, fault
 	}
 	return &resp, nil
 }
 
-func (p *receiverPort) OptGetReceiverState(args GetReceiverState) (*GetReceiverStateResponse, error) {
+func (p *receiverPort) OptGetReceiverState(args GetReceiverState) (*GetReceiverStateResponse, *common.Fault) {
 	req := struct {
 		XMLName          string `xml:"trv:GetReceiverState"`
 		GetReceiverState GetReceiverState
@@ -173,13 +173,13 @@ func (p *receiverPort) OptGetReceiverState(args GetReceiverState) (*GetReceiverS
 
 	resp := GetReceiverStateResponse{}
 
-	if err := p.cli.CallMethodUnmarshal(p.Endpoint, req, &resp); err != nil {
-		return nil, err
+	if fault := p.cli.CallMethodUnmarshal(p.Endpoint, req, &resp); fault != nil {
+		return nil, fault
 	}
 	return &resp, nil
 }
 
-func (p *receiverPort) OptGetReceivers(args GetReceivers) (*GetReceiversResponse, error) {
+func (p *receiverPort) OptGetReceivers(args GetReceivers) (*GetReceiversResponse, *common.Fault) {
 	req := struct {
 		XMLName      string `xml:"trv:GetReceivers"`
 		GetReceivers GetReceivers
@@ -189,13 +189,13 @@ func (p *receiverPort) OptGetReceivers(args GetReceivers) (*GetReceiversResponse
 
 	resp := GetReceiversResponse{}
 
-	if err := p.cli.CallMethodUnmarshal(p.Endpoint, req, &resp); err != nil {
-		return nil, err
+	if fault := p.cli.CallMethodUnmarshal(p.Endpoint, req, &resp); fault != nil {
+		return nil, fault
 	}
 	return &resp, nil
 }
 
-func (p *receiverPort) OptGetServiceCapabilities(args GetServiceCapabilities) (*GetServiceCapabilitiesResponse, error) {
+func (p *receiverPort) OptGetServiceCapabilities(args GetServiceCapabilities) (*GetServiceCapabilitiesResponse, *common.Fault) {
 	req := struct {
 		XMLName                string `xml:"trv:GetServiceCapabilities"`
 		GetServiceCapabilities GetServiceCapabilities
@@ -205,13 +205,13 @@ func (p *receiverPort) OptGetServiceCapabilities(args GetServiceCapabilities) (*
 
 	resp := GetServiceCapabilitiesResponse{}
 
-	if err := p.cli.CallMethodUnmarshal(p.Endpoint, req, &resp); err != nil {
-		return nil, err
+	if fault := p.cli.CallMethodUnmarshal(p.Endpoint, req, &resp); fault != nil {
+		return nil, fault
 	}
 	return &resp, nil
 }
 
-func (p *receiverPort) OptSetReceiverMode(args SetReceiverMode) (*SetReceiverModeResponse, error) {
+func (p *receiverPort) OptSetReceiverMode(args SetReceiverMode) (*SetReceiverModeResponse, *common.Fault) {
 	req := struct {
 		XMLName         string `xml:"trv:SetReceiverMode"`
 		SetReceiverMode SetReceiverMode
@@ -221,8 +221,8 @@ func (p *receiverPort) OptSetReceiverMode(args SetReceiverMode) (*SetReceiverMod
 
 	resp := SetReceiverModeResponse{}
 
-	if err := p.cli.CallMethodUnmarshal(p.Endpoint, req, &resp); err != nil {
-		return nil, err
+	if fault := p.cli.CallMethodUnmarshal(p.Endpoint, req, &resp); fault != nil {
+		return nil, fault
 	}
 	return &resp, nil
 }

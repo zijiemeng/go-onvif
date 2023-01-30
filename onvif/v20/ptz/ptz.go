@@ -14,63 +14,63 @@ func NewPTZ(endpoint string, cli common.Client) PTZ {
 // PTZ was auto-generated from WSDL
 // and defines interface for the remote service. Useful for testing.
 type PTZ interface {
-	OptAbsoluteMove(AbsoluteMove AbsoluteMove) (*AbsoluteMoveResponse, error)
+	OptAbsoluteMove(AbsoluteMove AbsoluteMove) (*AbsoluteMoveResponse, *common.Fault)
 
-	OptContinuousMove(ContinuousMove ContinuousMove) (*ContinuousMoveResponse, error)
+	OptContinuousMove(ContinuousMove ContinuousMove) (*ContinuousMoveResponse, *common.Fault)
 
-	OptCreatePresetTour(CreatePresetTour CreatePresetTour) (*CreatePresetTourResponse, error)
+	OptCreatePresetTour(CreatePresetTour CreatePresetTour) (*CreatePresetTourResponse, *common.Fault)
 
-	OptGeoMove(GeoMove GeoMove) (*GeoMoveResponse, error)
+	OptGeoMove(GeoMove GeoMove) (*GeoMoveResponse, *common.Fault)
 
-	OptGetCompatibleConfigurations(GetCompatibleConfigurations GetCompatibleConfigurations) (*GetCompatibleConfigurationsResponse, error)
+	OptGetCompatibleConfigurations(GetCompatibleConfigurations GetCompatibleConfigurations) (*GetCompatibleConfigurationsResponse, *common.Fault)
 
-	OptGetConfiguration(GetConfiguration GetConfiguration) (*GetConfigurationResponse, error)
+	OptGetConfiguration(GetConfiguration GetConfiguration) (*GetConfigurationResponse, *common.Fault)
 
-	OptGetConfigurationOptions(GetConfigurationOptions GetConfigurationOptions) (*GetConfigurationOptionsResponse, error)
+	OptGetConfigurationOptions(GetConfigurationOptions GetConfigurationOptions) (*GetConfigurationOptionsResponse, *common.Fault)
 
-	OptGetConfigurations(GetConfigurations GetConfigurations) (*GetConfigurationsResponse, error)
+	OptGetConfigurations(GetConfigurations GetConfigurations) (*GetConfigurationsResponse, *common.Fault)
 
-	OptGetNode(GetNode GetNode) (*GetNodeResponse, error)
+	OptGetNode(GetNode GetNode) (*GetNodeResponse, *common.Fault)
 
-	OptGetNodes(GetNodes GetNodes) (*GetNodesResponse, error)
+	OptGetNodes(GetNodes GetNodes) (*GetNodesResponse, *common.Fault)
 
-	OptGetPresetTour(GetPresetTour GetPresetTour) (*GetPresetTourResponse, error)
+	OptGetPresetTour(GetPresetTour GetPresetTour) (*GetPresetTourResponse, *common.Fault)
 
-	OptGetPresetTourOptions(GetPresetTourOptions GetPresetTourOptions) (*GetPresetTourOptionsResponse, error)
+	OptGetPresetTourOptions(GetPresetTourOptions GetPresetTourOptions) (*GetPresetTourOptionsResponse, *common.Fault)
 
-	OptGetPresetTours(GetPresetTours GetPresetTours) (*GetPresetToursResponse, error)
+	OptGetPresetTours(GetPresetTours GetPresetTours) (*GetPresetToursResponse, *common.Fault)
 
-	OptGetPresets(GetPresets GetPresets) (*GetPresetsResponse, error)
+	OptGetPresets(GetPresets GetPresets) (*GetPresetsResponse, *common.Fault)
 
-	OptGetServiceCapabilities(GetServiceCapabilities GetServiceCapabilities) (*GetServiceCapabilitiesResponse, error)
+	OptGetServiceCapabilities(GetServiceCapabilities GetServiceCapabilities) (*GetServiceCapabilitiesResponse, *common.Fault)
 
-	OptGetStatus(GetStatus GetStatus) (*GetStatusResponse, error)
+	OptGetStatus(GetStatus GetStatus) (*GetStatusResponse, *common.Fault)
 
-	OptGotoHomePosition(GotoHomePosition GotoHomePosition) (*GotoHomePositionResponse, error)
+	OptGotoHomePosition(GotoHomePosition GotoHomePosition) (*GotoHomePositionResponse, *common.Fault)
 
-	OptGotoPreset(GotoPreset GotoPreset) (*GotoPresetResponse, error)
+	OptGotoPreset(GotoPreset GotoPreset) (*GotoPresetResponse, *common.Fault)
 
-	OptModifyPresetTour(ModifyPresetTour ModifyPresetTour) (*ModifyPresetTourResponse, error)
+	OptModifyPresetTour(ModifyPresetTour ModifyPresetTour) (*ModifyPresetTourResponse, *common.Fault)
 
-	OptMoveAndStartTracking(MoveAndStartTracking MoveAndStartTracking) (*MoveAndStartTrackingResponse, error)
+	OptMoveAndStartTracking(MoveAndStartTracking MoveAndStartTracking) (*MoveAndStartTrackingResponse, *common.Fault)
 
-	OptOperatePresetTour(OperatePresetTour OperatePresetTour) (*OperatePresetTourResponse, error)
+	OptOperatePresetTour(OperatePresetTour OperatePresetTour) (*OperatePresetTourResponse, *common.Fault)
 
-	OptRelativeMove(RelativeMove RelativeMove) (*RelativeMoveResponse, error)
+	OptRelativeMove(RelativeMove RelativeMove) (*RelativeMoveResponse, *common.Fault)
 
-	OptRemovePreset(RemovePreset RemovePreset) (*RemovePresetResponse, error)
+	OptRemovePreset(RemovePreset RemovePreset) (*RemovePresetResponse, *common.Fault)
 
-	OptRemovePresetTour(RemovePresetTour RemovePresetTour) (*RemovePresetTourResponse, error)
+	OptRemovePresetTour(RemovePresetTour RemovePresetTour) (*RemovePresetTourResponse, *common.Fault)
 
-	OptSendAuxiliaryCommand(SendAuxiliaryCommand SendAuxiliaryCommand) (*SendAuxiliaryCommandResponse, error)
+	OptSendAuxiliaryCommand(SendAuxiliaryCommand SendAuxiliaryCommand) (*SendAuxiliaryCommandResponse, *common.Fault)
 
-	OptSetConfiguration(SetConfiguration SetConfiguration) (*SetConfigurationResponse, error)
+	OptSetConfiguration(SetConfiguration SetConfiguration) (*SetConfigurationResponse, *common.Fault)
 
-	OptSetHomePosition(SetHomePosition SetHomePosition) (*SetHomePositionResponse, error)
+	OptSetHomePosition(SetHomePosition SetHomePosition) (*SetHomePositionResponse, *common.Fault)
 
-	OptSetPreset(SetPreset SetPreset) (*SetPresetResponse, error)
+	OptSetPreset(SetPreset SetPreset) (*SetPresetResponse, *common.Fault)
 
-	OptStop(Stop Stop) (*StopResponse, error)
+	OptStop(Stop Stop) (*StopResponse, *common.Fault)
 }
 type Duration string
 
@@ -328,7 +328,7 @@ type ptz struct {
 	Endpoint string
 }
 
-func (p *ptz) OptAbsoluteMove(args AbsoluteMove) (*AbsoluteMoveResponse, error) {
+func (p *ptz) OptAbsoluteMove(args AbsoluteMove) (*AbsoluteMoveResponse, *common.Fault) {
 	req := struct {
 		XMLName      string `xml:"tptz:AbsoluteMove"`
 		AbsoluteMove AbsoluteMove
@@ -338,13 +338,13 @@ func (p *ptz) OptAbsoluteMove(args AbsoluteMove) (*AbsoluteMoveResponse, error) 
 
 	resp := AbsoluteMoveResponse{}
 
-	if err := p.cli.CallMethodUnmarshal(p.Endpoint, req, &resp); err != nil {
-		return nil, err
+	if fault := p.cli.CallMethodUnmarshal(p.Endpoint, req, &resp); fault != nil {
+		return nil, fault
 	}
 	return &resp, nil
 }
 
-func (p *ptz) OptContinuousMove(args ContinuousMove) (*ContinuousMoveResponse, error) {
+func (p *ptz) OptContinuousMove(args ContinuousMove) (*ContinuousMoveResponse, *common.Fault) {
 	req := struct {
 		XMLName        string `xml:"tptz:ContinuousMove"`
 		ContinuousMove ContinuousMove
@@ -354,13 +354,13 @@ func (p *ptz) OptContinuousMove(args ContinuousMove) (*ContinuousMoveResponse, e
 
 	resp := ContinuousMoveResponse{}
 
-	if err := p.cli.CallMethodUnmarshal(p.Endpoint, req, &resp); err != nil {
-		return nil, err
+	if fault := p.cli.CallMethodUnmarshal(p.Endpoint, req, &resp); fault != nil {
+		return nil, fault
 	}
 	return &resp, nil
 }
 
-func (p *ptz) OptCreatePresetTour(args CreatePresetTour) (*CreatePresetTourResponse, error) {
+func (p *ptz) OptCreatePresetTour(args CreatePresetTour) (*CreatePresetTourResponse, *common.Fault) {
 	req := struct {
 		XMLName          string `xml:"tptz:CreatePresetTour"`
 		CreatePresetTour CreatePresetTour
@@ -370,13 +370,13 @@ func (p *ptz) OptCreatePresetTour(args CreatePresetTour) (*CreatePresetTourRespo
 
 	resp := CreatePresetTourResponse{}
 
-	if err := p.cli.CallMethodUnmarshal(p.Endpoint, req, &resp); err != nil {
-		return nil, err
+	if fault := p.cli.CallMethodUnmarshal(p.Endpoint, req, &resp); fault != nil {
+		return nil, fault
 	}
 	return &resp, nil
 }
 
-func (p *ptz) OptGeoMove(args GeoMove) (*GeoMoveResponse, error) {
+func (p *ptz) OptGeoMove(args GeoMove) (*GeoMoveResponse, *common.Fault) {
 	req := struct {
 		XMLName string `xml:"tptz:GeoMove"`
 		GeoMove GeoMove
@@ -386,13 +386,13 @@ func (p *ptz) OptGeoMove(args GeoMove) (*GeoMoveResponse, error) {
 
 	resp := GeoMoveResponse{}
 
-	if err := p.cli.CallMethodUnmarshal(p.Endpoint, req, &resp); err != nil {
-		return nil, err
+	if fault := p.cli.CallMethodUnmarshal(p.Endpoint, req, &resp); fault != nil {
+		return nil, fault
 	}
 	return &resp, nil
 }
 
-func (p *ptz) OptGetCompatibleConfigurations(args GetCompatibleConfigurations) (*GetCompatibleConfigurationsResponse, error) {
+func (p *ptz) OptGetCompatibleConfigurations(args GetCompatibleConfigurations) (*GetCompatibleConfigurationsResponse, *common.Fault) {
 	req := struct {
 		XMLName                     string `xml:"tptz:GetCompatibleConfigurations"`
 		GetCompatibleConfigurations GetCompatibleConfigurations
@@ -402,13 +402,13 @@ func (p *ptz) OptGetCompatibleConfigurations(args GetCompatibleConfigurations) (
 
 	resp := GetCompatibleConfigurationsResponse{}
 
-	if err := p.cli.CallMethodUnmarshal(p.Endpoint, req, &resp); err != nil {
-		return nil, err
+	if fault := p.cli.CallMethodUnmarshal(p.Endpoint, req, &resp); fault != nil {
+		return nil, fault
 	}
 	return &resp, nil
 }
 
-func (p *ptz) OptGetConfiguration(args GetConfiguration) (*GetConfigurationResponse, error) {
+func (p *ptz) OptGetConfiguration(args GetConfiguration) (*GetConfigurationResponse, *common.Fault) {
 	req := struct {
 		XMLName          string `xml:"tptz:GetConfiguration"`
 		GetConfiguration GetConfiguration
@@ -418,13 +418,13 @@ func (p *ptz) OptGetConfiguration(args GetConfiguration) (*GetConfigurationRespo
 
 	resp := GetConfigurationResponse{}
 
-	if err := p.cli.CallMethodUnmarshal(p.Endpoint, req, &resp); err != nil {
-		return nil, err
+	if fault := p.cli.CallMethodUnmarshal(p.Endpoint, req, &resp); fault != nil {
+		return nil, fault
 	}
 	return &resp, nil
 }
 
-func (p *ptz) OptGetConfigurationOptions(args GetConfigurationOptions) (*GetConfigurationOptionsResponse, error) {
+func (p *ptz) OptGetConfigurationOptions(args GetConfigurationOptions) (*GetConfigurationOptionsResponse, *common.Fault) {
 	req := struct {
 		XMLName                 string `xml:"tptz:GetConfigurationOptions"`
 		GetConfigurationOptions GetConfigurationOptions
@@ -434,13 +434,13 @@ func (p *ptz) OptGetConfigurationOptions(args GetConfigurationOptions) (*GetConf
 
 	resp := GetConfigurationOptionsResponse{}
 
-	if err := p.cli.CallMethodUnmarshal(p.Endpoint, req, &resp); err != nil {
-		return nil, err
+	if fault := p.cli.CallMethodUnmarshal(p.Endpoint, req, &resp); fault != nil {
+		return nil, fault
 	}
 	return &resp, nil
 }
 
-func (p *ptz) OptGetConfigurations(args GetConfigurations) (*GetConfigurationsResponse, error) {
+func (p *ptz) OptGetConfigurations(args GetConfigurations) (*GetConfigurationsResponse, *common.Fault) {
 	req := struct {
 		XMLName           string `xml:"tptz:GetConfigurations"`
 		GetConfigurations GetConfigurations
@@ -450,13 +450,13 @@ func (p *ptz) OptGetConfigurations(args GetConfigurations) (*GetConfigurationsRe
 
 	resp := GetConfigurationsResponse{}
 
-	if err := p.cli.CallMethodUnmarshal(p.Endpoint, req, &resp); err != nil {
-		return nil, err
+	if fault := p.cli.CallMethodUnmarshal(p.Endpoint, req, &resp); fault != nil {
+		return nil, fault
 	}
 	return &resp, nil
 }
 
-func (p *ptz) OptGetNode(args GetNode) (*GetNodeResponse, error) {
+func (p *ptz) OptGetNode(args GetNode) (*GetNodeResponse, *common.Fault) {
 	req := struct {
 		XMLName string `xml:"tptz:GetNode"`
 		GetNode GetNode
@@ -466,13 +466,13 @@ func (p *ptz) OptGetNode(args GetNode) (*GetNodeResponse, error) {
 
 	resp := GetNodeResponse{}
 
-	if err := p.cli.CallMethodUnmarshal(p.Endpoint, req, &resp); err != nil {
-		return nil, err
+	if fault := p.cli.CallMethodUnmarshal(p.Endpoint, req, &resp); fault != nil {
+		return nil, fault
 	}
 	return &resp, nil
 }
 
-func (p *ptz) OptGetNodes(args GetNodes) (*GetNodesResponse, error) {
+func (p *ptz) OptGetNodes(args GetNodes) (*GetNodesResponse, *common.Fault) {
 	req := struct {
 		XMLName  string `xml:"tptz:GetNodes"`
 		GetNodes GetNodes
@@ -482,13 +482,13 @@ func (p *ptz) OptGetNodes(args GetNodes) (*GetNodesResponse, error) {
 
 	resp := GetNodesResponse{}
 
-	if err := p.cli.CallMethodUnmarshal(p.Endpoint, req, &resp); err != nil {
-		return nil, err
+	if fault := p.cli.CallMethodUnmarshal(p.Endpoint, req, &resp); fault != nil {
+		return nil, fault
 	}
 	return &resp, nil
 }
 
-func (p *ptz) OptGetPresetTour(args GetPresetTour) (*GetPresetTourResponse, error) {
+func (p *ptz) OptGetPresetTour(args GetPresetTour) (*GetPresetTourResponse, *common.Fault) {
 	req := struct {
 		XMLName       string `xml:"tptz:GetPresetTour"`
 		GetPresetTour GetPresetTour
@@ -498,13 +498,13 @@ func (p *ptz) OptGetPresetTour(args GetPresetTour) (*GetPresetTourResponse, erro
 
 	resp := GetPresetTourResponse{}
 
-	if err := p.cli.CallMethodUnmarshal(p.Endpoint, req, &resp); err != nil {
-		return nil, err
+	if fault := p.cli.CallMethodUnmarshal(p.Endpoint, req, &resp); fault != nil {
+		return nil, fault
 	}
 	return &resp, nil
 }
 
-func (p *ptz) OptGetPresetTourOptions(args GetPresetTourOptions) (*GetPresetTourOptionsResponse, error) {
+func (p *ptz) OptGetPresetTourOptions(args GetPresetTourOptions) (*GetPresetTourOptionsResponse, *common.Fault) {
 	req := struct {
 		XMLName              string `xml:"tptz:GetPresetTourOptions"`
 		GetPresetTourOptions GetPresetTourOptions
@@ -514,13 +514,13 @@ func (p *ptz) OptGetPresetTourOptions(args GetPresetTourOptions) (*GetPresetTour
 
 	resp := GetPresetTourOptionsResponse{}
 
-	if err := p.cli.CallMethodUnmarshal(p.Endpoint, req, &resp); err != nil {
-		return nil, err
+	if fault := p.cli.CallMethodUnmarshal(p.Endpoint, req, &resp); fault != nil {
+		return nil, fault
 	}
 	return &resp, nil
 }
 
-func (p *ptz) OptGetPresetTours(args GetPresetTours) (*GetPresetToursResponse, error) {
+func (p *ptz) OptGetPresetTours(args GetPresetTours) (*GetPresetToursResponse, *common.Fault) {
 	req := struct {
 		XMLName        string `xml:"tptz:GetPresetTours"`
 		GetPresetTours GetPresetTours
@@ -530,13 +530,13 @@ func (p *ptz) OptGetPresetTours(args GetPresetTours) (*GetPresetToursResponse, e
 
 	resp := GetPresetToursResponse{}
 
-	if err := p.cli.CallMethodUnmarshal(p.Endpoint, req, &resp); err != nil {
-		return nil, err
+	if fault := p.cli.CallMethodUnmarshal(p.Endpoint, req, &resp); fault != nil {
+		return nil, fault
 	}
 	return &resp, nil
 }
 
-func (p *ptz) OptGetPresets(args GetPresets) (*GetPresetsResponse, error) {
+func (p *ptz) OptGetPresets(args GetPresets) (*GetPresetsResponse, *common.Fault) {
 	req := struct {
 		XMLName    string `xml:"tptz:GetPresets"`
 		GetPresets GetPresets
@@ -546,13 +546,13 @@ func (p *ptz) OptGetPresets(args GetPresets) (*GetPresetsResponse, error) {
 
 	resp := GetPresetsResponse{}
 
-	if err := p.cli.CallMethodUnmarshal(p.Endpoint, req, &resp); err != nil {
-		return nil, err
+	if fault := p.cli.CallMethodUnmarshal(p.Endpoint, req, &resp); fault != nil {
+		return nil, fault
 	}
 	return &resp, nil
 }
 
-func (p *ptz) OptGetServiceCapabilities(args GetServiceCapabilities) (*GetServiceCapabilitiesResponse, error) {
+func (p *ptz) OptGetServiceCapabilities(args GetServiceCapabilities) (*GetServiceCapabilitiesResponse, *common.Fault) {
 	req := struct {
 		XMLName                string `xml:"tptz:GetServiceCapabilities"`
 		GetServiceCapabilities GetServiceCapabilities
@@ -562,13 +562,13 @@ func (p *ptz) OptGetServiceCapabilities(args GetServiceCapabilities) (*GetServic
 
 	resp := GetServiceCapabilitiesResponse{}
 
-	if err := p.cli.CallMethodUnmarshal(p.Endpoint, req, &resp); err != nil {
-		return nil, err
+	if fault := p.cli.CallMethodUnmarshal(p.Endpoint, req, &resp); fault != nil {
+		return nil, fault
 	}
 	return &resp, nil
 }
 
-func (p *ptz) OptGetStatus(args GetStatus) (*GetStatusResponse, error) {
+func (p *ptz) OptGetStatus(args GetStatus) (*GetStatusResponse, *common.Fault) {
 	req := struct {
 		XMLName   string `xml:"tptz:GetStatus"`
 		GetStatus GetStatus
@@ -578,13 +578,13 @@ func (p *ptz) OptGetStatus(args GetStatus) (*GetStatusResponse, error) {
 
 	resp := GetStatusResponse{}
 
-	if err := p.cli.CallMethodUnmarshal(p.Endpoint, req, &resp); err != nil {
-		return nil, err
+	if fault := p.cli.CallMethodUnmarshal(p.Endpoint, req, &resp); fault != nil {
+		return nil, fault
 	}
 	return &resp, nil
 }
 
-func (p *ptz) OptGotoHomePosition(args GotoHomePosition) (*GotoHomePositionResponse, error) {
+func (p *ptz) OptGotoHomePosition(args GotoHomePosition) (*GotoHomePositionResponse, *common.Fault) {
 	req := struct {
 		XMLName          string `xml:"tptz:GotoHomePosition"`
 		GotoHomePosition GotoHomePosition
@@ -594,13 +594,13 @@ func (p *ptz) OptGotoHomePosition(args GotoHomePosition) (*GotoHomePositionRespo
 
 	resp := GotoHomePositionResponse{}
 
-	if err := p.cli.CallMethodUnmarshal(p.Endpoint, req, &resp); err != nil {
-		return nil, err
+	if fault := p.cli.CallMethodUnmarshal(p.Endpoint, req, &resp); fault != nil {
+		return nil, fault
 	}
 	return &resp, nil
 }
 
-func (p *ptz) OptGotoPreset(args GotoPreset) (*GotoPresetResponse, error) {
+func (p *ptz) OptGotoPreset(args GotoPreset) (*GotoPresetResponse, *common.Fault) {
 	req := struct {
 		XMLName    string `xml:"tptz:GotoPreset"`
 		GotoPreset GotoPreset
@@ -610,13 +610,13 @@ func (p *ptz) OptGotoPreset(args GotoPreset) (*GotoPresetResponse, error) {
 
 	resp := GotoPresetResponse{}
 
-	if err := p.cli.CallMethodUnmarshal(p.Endpoint, req, &resp); err != nil {
-		return nil, err
+	if fault := p.cli.CallMethodUnmarshal(p.Endpoint, req, &resp); fault != nil {
+		return nil, fault
 	}
 	return &resp, nil
 }
 
-func (p *ptz) OptModifyPresetTour(args ModifyPresetTour) (*ModifyPresetTourResponse, error) {
+func (p *ptz) OptModifyPresetTour(args ModifyPresetTour) (*ModifyPresetTourResponse, *common.Fault) {
 	req := struct {
 		XMLName          string `xml:"tptz:ModifyPresetTour"`
 		ModifyPresetTour ModifyPresetTour
@@ -626,13 +626,13 @@ func (p *ptz) OptModifyPresetTour(args ModifyPresetTour) (*ModifyPresetTourRespo
 
 	resp := ModifyPresetTourResponse{}
 
-	if err := p.cli.CallMethodUnmarshal(p.Endpoint, req, &resp); err != nil {
-		return nil, err
+	if fault := p.cli.CallMethodUnmarshal(p.Endpoint, req, &resp); fault != nil {
+		return nil, fault
 	}
 	return &resp, nil
 }
 
-func (p *ptz) OptMoveAndStartTracking(args MoveAndStartTracking) (*MoveAndStartTrackingResponse, error) {
+func (p *ptz) OptMoveAndStartTracking(args MoveAndStartTracking) (*MoveAndStartTrackingResponse, *common.Fault) {
 	req := struct {
 		XMLName              string `xml:"tptz:MoveAndStartTracking"`
 		MoveAndStartTracking MoveAndStartTracking
@@ -642,13 +642,13 @@ func (p *ptz) OptMoveAndStartTracking(args MoveAndStartTracking) (*MoveAndStartT
 
 	resp := MoveAndStartTrackingResponse{}
 
-	if err := p.cli.CallMethodUnmarshal(p.Endpoint, req, &resp); err != nil {
-		return nil, err
+	if fault := p.cli.CallMethodUnmarshal(p.Endpoint, req, &resp); fault != nil {
+		return nil, fault
 	}
 	return &resp, nil
 }
 
-func (p *ptz) OptOperatePresetTour(args OperatePresetTour) (*OperatePresetTourResponse, error) {
+func (p *ptz) OptOperatePresetTour(args OperatePresetTour) (*OperatePresetTourResponse, *common.Fault) {
 	req := struct {
 		XMLName           string `xml:"tptz:OperatePresetTour"`
 		OperatePresetTour OperatePresetTour
@@ -658,13 +658,13 @@ func (p *ptz) OptOperatePresetTour(args OperatePresetTour) (*OperatePresetTourRe
 
 	resp := OperatePresetTourResponse{}
 
-	if err := p.cli.CallMethodUnmarshal(p.Endpoint, req, &resp); err != nil {
-		return nil, err
+	if fault := p.cli.CallMethodUnmarshal(p.Endpoint, req, &resp); fault != nil {
+		return nil, fault
 	}
 	return &resp, nil
 }
 
-func (p *ptz) OptRelativeMove(args RelativeMove) (*RelativeMoveResponse, error) {
+func (p *ptz) OptRelativeMove(args RelativeMove) (*RelativeMoveResponse, *common.Fault) {
 	req := struct {
 		XMLName      string `xml:"tptz:RelativeMove"`
 		RelativeMove RelativeMove
@@ -674,13 +674,13 @@ func (p *ptz) OptRelativeMove(args RelativeMove) (*RelativeMoveResponse, error) 
 
 	resp := RelativeMoveResponse{}
 
-	if err := p.cli.CallMethodUnmarshal(p.Endpoint, req, &resp); err != nil {
-		return nil, err
+	if fault := p.cli.CallMethodUnmarshal(p.Endpoint, req, &resp); fault != nil {
+		return nil, fault
 	}
 	return &resp, nil
 }
 
-func (p *ptz) OptRemovePreset(args RemovePreset) (*RemovePresetResponse, error) {
+func (p *ptz) OptRemovePreset(args RemovePreset) (*RemovePresetResponse, *common.Fault) {
 	req := struct {
 		XMLName      string `xml:"tptz:RemovePreset"`
 		RemovePreset RemovePreset
@@ -690,13 +690,13 @@ func (p *ptz) OptRemovePreset(args RemovePreset) (*RemovePresetResponse, error) 
 
 	resp := RemovePresetResponse{}
 
-	if err := p.cli.CallMethodUnmarshal(p.Endpoint, req, &resp); err != nil {
-		return nil, err
+	if fault := p.cli.CallMethodUnmarshal(p.Endpoint, req, &resp); fault != nil {
+		return nil, fault
 	}
 	return &resp, nil
 }
 
-func (p *ptz) OptRemovePresetTour(args RemovePresetTour) (*RemovePresetTourResponse, error) {
+func (p *ptz) OptRemovePresetTour(args RemovePresetTour) (*RemovePresetTourResponse, *common.Fault) {
 	req := struct {
 		XMLName          string `xml:"tptz:RemovePresetTour"`
 		RemovePresetTour RemovePresetTour
@@ -706,13 +706,13 @@ func (p *ptz) OptRemovePresetTour(args RemovePresetTour) (*RemovePresetTourRespo
 
 	resp := RemovePresetTourResponse{}
 
-	if err := p.cli.CallMethodUnmarshal(p.Endpoint, req, &resp); err != nil {
-		return nil, err
+	if fault := p.cli.CallMethodUnmarshal(p.Endpoint, req, &resp); fault != nil {
+		return nil, fault
 	}
 	return &resp, nil
 }
 
-func (p *ptz) OptSendAuxiliaryCommand(args SendAuxiliaryCommand) (*SendAuxiliaryCommandResponse, error) {
+func (p *ptz) OptSendAuxiliaryCommand(args SendAuxiliaryCommand) (*SendAuxiliaryCommandResponse, *common.Fault) {
 	req := struct {
 		XMLName              string `xml:"tptz:SendAuxiliaryCommand"`
 		SendAuxiliaryCommand SendAuxiliaryCommand
@@ -722,13 +722,13 @@ func (p *ptz) OptSendAuxiliaryCommand(args SendAuxiliaryCommand) (*SendAuxiliary
 
 	resp := SendAuxiliaryCommandResponse{}
 
-	if err := p.cli.CallMethodUnmarshal(p.Endpoint, req, &resp); err != nil {
-		return nil, err
+	if fault := p.cli.CallMethodUnmarshal(p.Endpoint, req, &resp); fault != nil {
+		return nil, fault
 	}
 	return &resp, nil
 }
 
-func (p *ptz) OptSetConfiguration(args SetConfiguration) (*SetConfigurationResponse, error) {
+func (p *ptz) OptSetConfiguration(args SetConfiguration) (*SetConfigurationResponse, *common.Fault) {
 	req := struct {
 		XMLName          string `xml:"tptz:SetConfiguration"`
 		SetConfiguration SetConfiguration
@@ -738,13 +738,13 @@ func (p *ptz) OptSetConfiguration(args SetConfiguration) (*SetConfigurationRespo
 
 	resp := SetConfigurationResponse{}
 
-	if err := p.cli.CallMethodUnmarshal(p.Endpoint, req, &resp); err != nil {
-		return nil, err
+	if fault := p.cli.CallMethodUnmarshal(p.Endpoint, req, &resp); fault != nil {
+		return nil, fault
 	}
 	return &resp, nil
 }
 
-func (p *ptz) OptSetHomePosition(args SetHomePosition) (*SetHomePositionResponse, error) {
+func (p *ptz) OptSetHomePosition(args SetHomePosition) (*SetHomePositionResponse, *common.Fault) {
 	req := struct {
 		XMLName         string `xml:"tptz:SetHomePosition"`
 		SetHomePosition SetHomePosition
@@ -754,13 +754,13 @@ func (p *ptz) OptSetHomePosition(args SetHomePosition) (*SetHomePositionResponse
 
 	resp := SetHomePositionResponse{}
 
-	if err := p.cli.CallMethodUnmarshal(p.Endpoint, req, &resp); err != nil {
-		return nil, err
+	if fault := p.cli.CallMethodUnmarshal(p.Endpoint, req, &resp); fault != nil {
+		return nil, fault
 	}
 	return &resp, nil
 }
 
-func (p *ptz) OptSetPreset(args SetPreset) (*SetPresetResponse, error) {
+func (p *ptz) OptSetPreset(args SetPreset) (*SetPresetResponse, *common.Fault) {
 	req := struct {
 		XMLName   string `xml:"tptz:SetPreset"`
 		SetPreset SetPreset
@@ -770,13 +770,13 @@ func (p *ptz) OptSetPreset(args SetPreset) (*SetPresetResponse, error) {
 
 	resp := SetPresetResponse{}
 
-	if err := p.cli.CallMethodUnmarshal(p.Endpoint, req, &resp); err != nil {
-		return nil, err
+	if fault := p.cli.CallMethodUnmarshal(p.Endpoint, req, &resp); fault != nil {
+		return nil, fault
 	}
 	return &resp, nil
 }
 
-func (p *ptz) OptStop(args Stop) (*StopResponse, error) {
+func (p *ptz) OptStop(args Stop) (*StopResponse, *common.Fault) {
 	req := struct {
 		XMLName string `xml:"tptz:Stop"`
 		Stop    Stop
@@ -786,8 +786,8 @@ func (p *ptz) OptStop(args Stop) (*StopResponse, error) {
 
 	resp := StopResponse{}
 
-	if err := p.cli.CallMethodUnmarshal(p.Endpoint, req, &resp); err != nil {
-		return nil, err
+	if fault := p.cli.CallMethodUnmarshal(p.Endpoint, req, &resp); fault != nil {
+		return nil, fault
 	}
 	return &resp, nil
 }

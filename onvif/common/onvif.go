@@ -1,6 +1,8 @@
 package common
 
 import (
+	"encoding/json"
+	"fmt"
 	"reflect"
 )
 
@@ -2153,11 +2155,34 @@ type ExtensibleDocumented interface{}
 
 // 	    Fault reporting structure
 type Fault struct {
+	error
+	Action string       `xml:"-" json:"Action,omitempty" yaml:"Action,omitempty"`
 	Code   *Faultcode   `xml:"Code,omitempty" json:"Code,omitempty" yaml:"Code,omitempty"`
 	Reason *Faultreason `xml:"Reason,omitempty" json:"Reason,omitempty" yaml:"Reason,omitempty"`
 	Node   *string      `xml:"Node,omitempty" json:"Node,omitempty" yaml:"Node,omitempty"`
 	Role   *string      `xml:"Role,omitempty" json:"Role,omitempty" yaml:"Role,omitempty"`
 	Detail *Detail      `xml:"Detail,omitempty" json:"Detail,omitempty" yaml:"Detail,omitempty"`
+}
+
+func (fault *Fault) Error() string {
+	b, _ := json.Marshal(fault)
+	errStr := ""
+	if fault.error != nil {
+		errStr = fault.error.Error()
+	} else {
+		errStr = "nil"
+	}
+	return fmt.Sprintf("error: %s, info: %s", errStr, string(b))
+}
+
+func (fault *Fault) SetErr(err error) {
+	fault.error = err
+}
+
+func NewFault(err error) *Fault {
+	return &Fault{
+		error: err,
+	}
 }
 
 type FileProgress struct {

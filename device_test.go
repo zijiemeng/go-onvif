@@ -5,6 +5,7 @@ import (
 	"code.byted.org/videoarch/go-onvif/onvif/v10/media"
 	"encoding/json"
 	"fmt"
+	"github.com/stretchr/testify/assert"
 	"github.com/stretchr/testify/require"
 	"net/http"
 	"testing"
@@ -30,20 +31,20 @@ func TestOnvif(t *testing.T) {
 	eptDevice := mgr.Device
 	require.NotNil(t, eptDevice)
 
-	capabilities, err := eptDevice.OptGetCapabilities(device.GetCapabilities{})
-	require.NoError(t, err)
+	capabilities, fault := eptDevice.OptGetCapabilities(device.GetCapabilities{})
+	require.Nil(t, fault)
 	require.NotNil(t, capabilities)
 	printJson(capabilities)
 
-	ntp, err := eptDevice.OptGetNTP(device.GetNTP{})
-	require.NoError(t, err)
+	ntp, fault := eptDevice.OptGetNTP(device.GetNTP{})
+	require.Nil(t, fault)
 	require.NotNil(t, ntp)
 	printJson(ntp)
 
 	eptMedia := mgr.Media
 	if eptMedia != nil {
-		capabilities, err := eptMedia.Media.OptGetServiceCapabilities(media.GetServiceCapabilities{})
-		require.NoError(t, err)
+		capabilities, fault := eptMedia.Media.OptGetServiceCapabilities(media.GetServiceCapabilities{})
+		require.Nil(t, fault)
 		require.NotNil(t, capabilities)
 		printJson(capabilities)
 	}
@@ -52,4 +53,39 @@ func TestOnvif(t *testing.T) {
 func printJson(source interface{}) {
 	b, _ := json.Marshal(source)
 	fmt.Println(string(b))
+}
+
+type AItf interface {
+}
+
+type A struct {
+	AItf
+}
+
+func AssertAItf(t *testing.T, a AItf, b AItf) {
+	assert.True(t, a == b)
+}
+
+func TestEqual(t *testing.T) {
+	var aItf AItf
+	var a *A
+
+	var b = AItf(a)
+	var c AItf
+	c = AItf(a)
+
+	//aItf = c
+	t.Logf("a %#v %#v", a, &a)
+	t.Logf("b %#v %#v", b, &b)
+	t.Logf("c %#v %#v", c, &c)
+	t.Logf("aitf %#v %#v", aItf, &aItf)
+	t.Log("=======")
+
+	AssertAItf(t, aItf, a)
+	t.Logf("aitf b")
+	AssertAItf(t, aItf, b)
+	t.Logf("aitf c")
+	AssertAItf(t, c, aItf)
+	t.Logf("b c")
+	AssertAItf(t, c, b)
 }

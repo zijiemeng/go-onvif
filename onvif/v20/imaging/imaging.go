@@ -16,27 +16,27 @@ func NewImagingPort(endpoint string, cli common.Client) ImagingPort {
 // ImagingPort was auto-generated from WSDL
 // and defines interface for the remote service. Useful for testing.
 type ImagingPort interface {
-	OptGetCurrentPreset(GetCurrentPreset GetCurrentPreset) (*GetCurrentPresetResponse, error)
+	OptGetCurrentPreset(GetCurrentPreset GetCurrentPreset) (*GetCurrentPresetResponse, *common.Fault)
 
-	OptGetImagingSettings(GetImagingSettings GetImagingSettings) (*GetImagingSettingsResponse, error)
+	OptGetImagingSettings(GetImagingSettings GetImagingSettings) (*GetImagingSettingsResponse, *common.Fault)
 
-	OptGetMoveOptions(GetMoveOptions GetMoveOptions) (*GetMoveOptionsResponse, error)
+	OptGetMoveOptions(GetMoveOptions GetMoveOptions) (*GetMoveOptionsResponse, *common.Fault)
 
-	OptGetOptions(GetOptions GetOptions) (*GetOptionsResponse, error)
+	OptGetOptions(GetOptions GetOptions) (*GetOptionsResponse, *common.Fault)
 
-	OptGetPresets(GetPresets GetPresets) (*GetPresetsResponse, error)
+	OptGetPresets(GetPresets GetPresets) (*GetPresetsResponse, *common.Fault)
 
-	OptGetServiceCapabilities(GetServiceCapabilities GetServiceCapabilities) (*GetServiceCapabilitiesResponse, error)
+	OptGetServiceCapabilities(GetServiceCapabilities GetServiceCapabilities) (*GetServiceCapabilitiesResponse, *common.Fault)
 
-	OptGetStatus(GetStatus GetStatus) (*GetStatusResponse, error)
+	OptGetStatus(GetStatus GetStatus) (*GetStatusResponse, *common.Fault)
 
-	OptMove(Move Move) (*MoveResponse, error)
+	OptMove(Move Move) (*MoveResponse, *common.Fault)
 
-	OptSetCurrentPreset(SetCurrentPreset SetCurrentPreset) (*SetCurrentPresetResponse, error)
+	OptSetCurrentPreset(SetCurrentPreset SetCurrentPreset) (*SetCurrentPresetResponse, *common.Fault)
 
-	OptSetImagingSettings(SetImagingSettings SetImagingSettings) (*SetImagingSettingsResponse, error)
+	OptSetImagingSettings(SetImagingSettings SetImagingSettings) (*SetImagingSettingsResponse, *common.Fault)
 
-	OptStop(Stop Stop) (*StopResponse, error)
+	OptStop(Stop Stop) (*StopResponse, *common.Fault)
 }
 type ImagingPresetType string
 
@@ -174,7 +174,7 @@ type imagingPort struct {
 	Endpoint string
 }
 
-func (p *imagingPort) OptGetCurrentPreset(args GetCurrentPreset) (*GetCurrentPresetResponse, error) {
+func (p *imagingPort) OptGetCurrentPreset(args GetCurrentPreset) (*GetCurrentPresetResponse, *common.Fault) {
 	req := struct {
 		XMLName          string `xml:"timg:GetCurrentPreset"`
 		GetCurrentPreset GetCurrentPreset
@@ -184,13 +184,13 @@ func (p *imagingPort) OptGetCurrentPreset(args GetCurrentPreset) (*GetCurrentPre
 
 	resp := GetCurrentPresetResponse{}
 
-	if err := p.cli.CallMethodUnmarshal(p.Endpoint, req, &resp); err != nil {
-		return nil, err
+	if fault := p.cli.CallMethodUnmarshal(p.Endpoint, req, &resp); fault != nil {
+		return nil, fault
 	}
 	return &resp, nil
 }
 
-func (p *imagingPort) OptGetImagingSettings(args GetImagingSettings) (*GetImagingSettingsResponse, error) {
+func (p *imagingPort) OptGetImagingSettings(args GetImagingSettings) (*GetImagingSettingsResponse, *common.Fault) {
 	req := struct {
 		XMLName            string `xml:"timg:GetImagingSettings"`
 		GetImagingSettings GetImagingSettings
@@ -200,13 +200,13 @@ func (p *imagingPort) OptGetImagingSettings(args GetImagingSettings) (*GetImagin
 
 	resp := GetImagingSettingsResponse{}
 
-	if err := p.cli.CallMethodUnmarshal(p.Endpoint, req, &resp); err != nil {
-		return nil, err
+	if fault := p.cli.CallMethodUnmarshal(p.Endpoint, req, &resp); fault != nil {
+		return nil, fault
 	}
 	return &resp, nil
 }
 
-func (p *imagingPort) OptGetMoveOptions(args GetMoveOptions) (*GetMoveOptionsResponse, error) {
+func (p *imagingPort) OptGetMoveOptions(args GetMoveOptions) (*GetMoveOptionsResponse, *common.Fault) {
 	req := struct {
 		XMLName        string `xml:"timg:GetMoveOptions"`
 		GetMoveOptions GetMoveOptions
@@ -216,13 +216,13 @@ func (p *imagingPort) OptGetMoveOptions(args GetMoveOptions) (*GetMoveOptionsRes
 
 	resp := GetMoveOptionsResponse{}
 
-	if err := p.cli.CallMethodUnmarshal(p.Endpoint, req, &resp); err != nil {
-		return nil, err
+	if fault := p.cli.CallMethodUnmarshal(p.Endpoint, req, &resp); fault != nil {
+		return nil, fault
 	}
 	return &resp, nil
 }
 
-func (p *imagingPort) OptGetOptions(args GetOptions) (*GetOptionsResponse, error) {
+func (p *imagingPort) OptGetOptions(args GetOptions) (*GetOptionsResponse, *common.Fault) {
 	req := struct {
 		XMLName    string `xml:"timg:GetOptions"`
 		GetOptions GetOptions
@@ -232,13 +232,13 @@ func (p *imagingPort) OptGetOptions(args GetOptions) (*GetOptionsResponse, error
 
 	resp := GetOptionsResponse{}
 
-	if err := p.cli.CallMethodUnmarshal(p.Endpoint, req, &resp); err != nil {
-		return nil, err
+	if fault := p.cli.CallMethodUnmarshal(p.Endpoint, req, &resp); fault != nil {
+		return nil, fault
 	}
 	return &resp, nil
 }
 
-func (p *imagingPort) OptGetPresets(args GetPresets) (*GetPresetsResponse, error) {
+func (p *imagingPort) OptGetPresets(args GetPresets) (*GetPresetsResponse, *common.Fault) {
 	req := struct {
 		XMLName    string `xml:"timg:GetPresets"`
 		GetPresets GetPresets
@@ -248,13 +248,13 @@ func (p *imagingPort) OptGetPresets(args GetPresets) (*GetPresetsResponse, error
 
 	resp := GetPresetsResponse{}
 
-	if err := p.cli.CallMethodUnmarshal(p.Endpoint, req, &resp); err != nil {
-		return nil, err
+	if fault := p.cli.CallMethodUnmarshal(p.Endpoint, req, &resp); fault != nil {
+		return nil, fault
 	}
 	return &resp, nil
 }
 
-func (p *imagingPort) OptGetServiceCapabilities(args GetServiceCapabilities) (*GetServiceCapabilitiesResponse, error) {
+func (p *imagingPort) OptGetServiceCapabilities(args GetServiceCapabilities) (*GetServiceCapabilitiesResponse, *common.Fault) {
 	req := struct {
 		XMLName                string `xml:"timg:GetServiceCapabilities"`
 		GetServiceCapabilities GetServiceCapabilities
@@ -264,13 +264,13 @@ func (p *imagingPort) OptGetServiceCapabilities(args GetServiceCapabilities) (*G
 
 	resp := GetServiceCapabilitiesResponse{}
 
-	if err := p.cli.CallMethodUnmarshal(p.Endpoint, req, &resp); err != nil {
-		return nil, err
+	if fault := p.cli.CallMethodUnmarshal(p.Endpoint, req, &resp); fault != nil {
+		return nil, fault
 	}
 	return &resp, nil
 }
 
-func (p *imagingPort) OptGetStatus(args GetStatus) (*GetStatusResponse, error) {
+func (p *imagingPort) OptGetStatus(args GetStatus) (*GetStatusResponse, *common.Fault) {
 	req := struct {
 		XMLName   string `xml:"timg:GetStatus"`
 		GetStatus GetStatus
@@ -280,13 +280,13 @@ func (p *imagingPort) OptGetStatus(args GetStatus) (*GetStatusResponse, error) {
 
 	resp := GetStatusResponse{}
 
-	if err := p.cli.CallMethodUnmarshal(p.Endpoint, req, &resp); err != nil {
-		return nil, err
+	if fault := p.cli.CallMethodUnmarshal(p.Endpoint, req, &resp); fault != nil {
+		return nil, fault
 	}
 	return &resp, nil
 }
 
-func (p *imagingPort) OptMove(args Move) (*MoveResponse, error) {
+func (p *imagingPort) OptMove(args Move) (*MoveResponse, *common.Fault) {
 	req := struct {
 		XMLName string `xml:"timg:Move"`
 		Move    Move
@@ -296,13 +296,13 @@ func (p *imagingPort) OptMove(args Move) (*MoveResponse, error) {
 
 	resp := MoveResponse{}
 
-	if err := p.cli.CallMethodUnmarshal(p.Endpoint, req, &resp); err != nil {
-		return nil, err
+	if fault := p.cli.CallMethodUnmarshal(p.Endpoint, req, &resp); fault != nil {
+		return nil, fault
 	}
 	return &resp, nil
 }
 
-func (p *imagingPort) OptSetCurrentPreset(args SetCurrentPreset) (*SetCurrentPresetResponse, error) {
+func (p *imagingPort) OptSetCurrentPreset(args SetCurrentPreset) (*SetCurrentPresetResponse, *common.Fault) {
 	req := struct {
 		XMLName          string `xml:"timg:SetCurrentPreset"`
 		SetCurrentPreset SetCurrentPreset
@@ -312,13 +312,13 @@ func (p *imagingPort) OptSetCurrentPreset(args SetCurrentPreset) (*SetCurrentPre
 
 	resp := SetCurrentPresetResponse{}
 
-	if err := p.cli.CallMethodUnmarshal(p.Endpoint, req, &resp); err != nil {
-		return nil, err
+	if fault := p.cli.CallMethodUnmarshal(p.Endpoint, req, &resp); fault != nil {
+		return nil, fault
 	}
 	return &resp, nil
 }
 
-func (p *imagingPort) OptSetImagingSettings(args SetImagingSettings) (*SetImagingSettingsResponse, error) {
+func (p *imagingPort) OptSetImagingSettings(args SetImagingSettings) (*SetImagingSettingsResponse, *common.Fault) {
 	req := struct {
 		XMLName            string `xml:"timg:SetImagingSettings"`
 		SetImagingSettings SetImagingSettings
@@ -328,13 +328,13 @@ func (p *imagingPort) OptSetImagingSettings(args SetImagingSettings) (*SetImagin
 
 	resp := SetImagingSettingsResponse{}
 
-	if err := p.cli.CallMethodUnmarshal(p.Endpoint, req, &resp); err != nil {
-		return nil, err
+	if fault := p.cli.CallMethodUnmarshal(p.Endpoint, req, &resp); fault != nil {
+		return nil, fault
 	}
 	return &resp, nil
 }
 
-func (p *imagingPort) OptStop(args Stop) (*StopResponse, error) {
+func (p *imagingPort) OptStop(args Stop) (*StopResponse, *common.Fault) {
 	req := struct {
 		XMLName string `xml:"timg:Stop"`
 		Stop    Stop
@@ -344,8 +344,8 @@ func (p *imagingPort) OptStop(args Stop) (*StopResponse, error) {
 
 	resp := StopResponse{}
 
-	if err := p.cli.CallMethodUnmarshal(p.Endpoint, req, &resp); err != nil {
-		return nil, err
+	if fault := p.cli.CallMethodUnmarshal(p.Endpoint, req, &resp); fault != nil {
+		return nil, fault
 	}
 	return &resp, nil
 }
