@@ -79,7 +79,7 @@ func (devType DeviceType) String() string {
 //It contains methods, which helps to communicate with ONVIF device
 type Device struct {
 	params    DeviceParams
-	endpoints map[string]string
+	Endpoints map[string]string
 	info      common.DeviceInfo
 	*onvif.EndpointManager
 }
@@ -93,7 +93,7 @@ type DeviceParams struct {
 
 //GetServices return available endpoints
 func (dev *Device) GetServices() map[string]string {
-	return dev.endpoints
+	return dev.Endpoints
 }
 
 //GetServices return available endpoints
@@ -179,7 +179,7 @@ func (dev *Device) getSupportedServices(resp *http.Response) {
 func NewDevice(params DeviceParams) (*Device, error) {
 	dev := new(Device)
 	dev.params = params
-	dev.endpoints = make(map[string]string)
+	dev.Endpoints = make(map[string]string)
 	url := "http://" + dev.params.Xaddr + "/onvif/device_service"
 	dev.addEndpoint("Device", url)
 
@@ -226,7 +226,7 @@ func NewDevice(params DeviceParams) (*Device, error) {
 		SerialNumber:    data.SerialNumber,
 		HardwareId:      data.HardwareId,
 	}
-	dev.EndpointManager = onvif.NewEndpointManager(dev.endpoints, dev)
+	dev.EndpointManager = onvif.NewEndpointManager(dev.Endpoints, dev)
 	return dev, nil
 }
 
@@ -241,12 +241,12 @@ func (dev *Device) addEndpoint(Key, Value string) {
 		Value = u.String()
 	}
 
-	dev.endpoints[lowCaseKey] = Value
+	dev.Endpoints[lowCaseKey] = Value
 }
 
 //GetEndpoint returns specific ONVIF service endpoint address
 func (dev *Device) GetEndpoint(name string) string {
-	return dev.endpoints[name]
+	return dev.Endpoints[name]
 }
 
 func (dev Device) buildMethodSOAP(msg string) (gosoap.SoapMessage, error) {
@@ -268,7 +268,7 @@ func (dev Device) buildMethodSOAP(msg string) (gosoap.SoapMessage, error) {
 func (dev Device) getEndpoint(endpoint string) (string, error) {
 
 	// common condition, endpointMark in map we use this.
-	if endpointURL, bFound := dev.endpoints[endpoint]; bFound {
+	if endpointURL, bFound := dev.Endpoints[endpoint]; bFound {
 		return endpointURL, nil
 	}
 
@@ -276,9 +276,9 @@ func (dev Device) getEndpoint(endpoint string) (string, error) {
 	//and sametime the Targetkey like : events、analytics
 	//we use fuzzy way to find the best match url
 	var endpointURL string
-	for targetKey := range dev.endpoints {
+	for targetKey := range dev.Endpoints {
 		if strings.Contains(targetKey, endpoint) {
-			endpointURL = dev.endpoints[targetKey]
+			endpointURL = dev.Endpoints[targetKey]
 			return endpointURL, nil
 		}
 	}
@@ -314,7 +314,7 @@ func (dev Device) CallMethodUnmarshal(endpoint string, method interface{}, resul
 		resultKind != reflect.Ptr || result == nil {
 		return common.NewFault(endpoint, fmt.Errorf("param error, method: %#v, response: %#v", method, result))
 	}
-	response, err := dev.callMethodDo(dev.endpoints[endpoint], method)
+	response, err := dev.callMethodDo(dev.Endpoints[endpoint], method)
 	if err != nil {
 		return common.NewFault(endpoint, err)
 	}
