@@ -159,3 +159,12 @@ type FloatList struct {
 type StringList struct {
 	Items []StringList
 }
+
+//DeviceInfo struct contains general information about ONVIF device
+type DeviceInfo struct {
+	Manufacturer    string
+	Model           string
+	FirmwareVersion string
+	SerialNumber    string
+	HardwareId      string
+}

@@ -3768,6 +3768,7 @@ type ProblemActionType struct {
 // configurations can be created by the NVT depending on
 //                   current available encoding resources.
 type Profile struct {
+	Token                       ReferenceToken               `xml:"token,attr,omitempty" json:"Token,attr,omitempty" yaml:"Token,attr,omitempty"`
 	Name                        *Name                        `xml:"Name,omitempty" json:"Name,omitempty" yaml:"Name,omitempty"`
 	VideoSourceConfiguration    *VideoSourceConfiguration    `xml:"VideoSourceConfiguration,omitempty" json:"VideoSourceConfiguration,omitempty" yaml:"VideoSourceConfiguration,omitempty"`
 	AudioSourceConfiguration    *AudioSourceConfiguration    `xml:"AudioSourceConfiguration,omitempty" json:"AudioSourceConfiguration,omitempty" yaml:"AudioSourceConfiguration,omitempty"`
@@ -3777,8 +3778,7 @@ type Profile struct {
 	PTZConfiguration            *PTZConfiguration            `xml:"PTZConfiguration,omitempty" json:"PTZConfiguration,omitempty" yaml:"PTZConfiguration,omitempty"`
 	MetadataConfiguration       *MetadataConfiguration       `xml:"MetadataConfiguration,omitempty" json:"MetadataConfiguration,omitempty" yaml:"MetadataConfiguration,omitempty"`
 	Extension                   *ProfileExtension            `xml:"Extension,omitempty" json:"Extension,omitempty" yaml:"Extension,omitempty"`
-	Token                       ReferenceToken               `xml:"token,attr,omitempty" json:"token,attr,omitempty" yaml:"token,attr,omitempty"`
-	Fixed                       bool                         `xml:"fixed,attr,omitempty" json:"fixed,attr,omitempty" yaml:"fixed,attr,omitempty"`
+	Fixed                       bool                         `xml:"fixed,attr,omitempty" json:"Fixed,attr,omitempty" yaml:"Fixed,attr,omitempty"`
 }
 
 type ProfileCapabilities struct {

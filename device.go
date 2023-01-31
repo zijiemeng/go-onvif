@@ -74,22 +74,13 @@ func (devType DeviceType) String() string {
 	}
 }
 
-//DeviceInfo struct contains general information about ONVIF device
-type DeviceInfo struct {
-	Manufacturer    string
-	Model           string
-	FirmwareVersion string
-	SerialNumber    string
-	HardwareId      string
-}
-
 //Device for a new device of onvif and DeviceInfo
 //struct represents an abstract ONVIF device.
 //It contains methods, which helps to communicate with ONVIF device
 type Device struct {
 	params    DeviceParams
 	endpoints map[string]string
-	info      DeviceInfo
+	info      common.DeviceInfo
 	*onvif.EndpointManager
 }
 
@@ -106,7 +97,7 @@ func (dev *Device) GetServices() map[string]string {
 }
 
 //GetServices return available endpoints
-func (dev *Device) GetDeviceInfo() DeviceInfo {
+func (dev *Device) GetDeviceInfo() common.DeviceInfo {
 	return dev.info
 }
 
@@ -228,7 +219,7 @@ func NewDevice(params DeviceParams) (*Device, error) {
 	if err != nil {
 		return nil, fmt.Errorf("unmarshal device: %s info: %s err: %v", params.Xaddr, soap.Body(), err)
 	}
-	dev.info = DeviceInfo{
+	dev.info = common.DeviceInfo{
 		Manufacturer:    data.Manufacturer,
 		Model:           data.Model,
 		FirmwareVersion: data.FirmwareVersion,
