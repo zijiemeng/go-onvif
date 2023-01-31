@@ -2180,9 +2180,10 @@ func (fault *Fault) SetErr(err error) {
 	fault.error = err
 }
 
-func NewFault(err error) *Fault {
+func NewFault(action string, err error) *Fault {
 	fault := &Fault{
-		error: err,
+		Action: action,
+		error:  err,
 	}
 	if err != nil {
 		fault.ErrStr = err.Error()
