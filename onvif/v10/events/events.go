@@ -3,7 +3,7 @@ package events
 import (
 	"reflect"
 
-	"code.byted.org/videoarch/go-onvif/onvif/common"
+	"github.com/zijiemeng/go-onvif/onvif/common"
 )
 
 var Namespace = "http://docs.oasis-open.org/wsrf/rw-2"

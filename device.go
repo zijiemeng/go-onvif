@@ -1,12 +1,12 @@
 package onvif
 
 import (
-	"code.byted.org/videoarch/go-onvif/onvif"
-	"code.byted.org/videoarch/go-onvif/onvif/common"
-	"code.byted.org/videoarch/go-onvif/onvif/v10/device"
 	"encoding/xml"
 	"errors"
 	"fmt"
+	"github.com/zijiemeng/go-onvif/onvif"
+	"github.com/zijiemeng/go-onvif/onvif/common"
+	"github.com/zijiemeng/go-onvif/onvif/v10/device"
 	"io"
 	"io/ioutil"
 	"net/http"
@@ -16,10 +16,10 @@ import (
 	"strings"
 	"time"
 
-	"code.byted.org/videoarch/go-onvif/gosoap"
-	"code.byted.org/videoarch/go-onvif/networking"
-	wsdiscovery "code.byted.org/videoarch/go-onvif/ws-discovery"
 	"github.com/beevik/etree"
+	"github.com/zijiemeng/go-onvif/gosoap"
+	"github.com/zijiemeng/go-onvif/networking"
+	wsdiscovery "github.com/zijiemeng/go-onvif/ws-discovery"
 )
 
 //Xlmns XML Scheam

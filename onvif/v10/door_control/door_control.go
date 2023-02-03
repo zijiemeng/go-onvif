@@ -3,7 +3,7 @@ package door_control
 import (
 	"reflect"
 
-	"code.byted.org/videoarch/go-onvif/onvif/common"
+	"github.com/zijiemeng/go-onvif/onvif/common"
 )
 
 var Namespace = "http://www.onvif.org/ver10/doorcontrol/wsdl"

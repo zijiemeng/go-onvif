@@ -2,7 +2,7 @@
 
 # 使用方法
 ```shell
-go get code.byted.org/videoarch/go-onvif
+go get github.com/zijiemeng/go-onvif
 ```
 
 # 支持协议

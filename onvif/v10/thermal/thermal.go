@@ -3,7 +3,7 @@ package thermal
 import (
 	"reflect"
 
-	"code.byted.org/videoarch/go-onvif/onvif/common"
+	"github.com/zijiemeng/go-onvif/onvif/common"
 )
 
 var Namespace = "http://www.onvif.org/ver10/thermal/wsdl"

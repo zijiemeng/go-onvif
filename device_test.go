@@ -1,12 +1,12 @@
 package onvif
 
 import (
-	"code.byted.org/videoarch/go-onvif/onvif/v10/device"
-	"code.byted.org/videoarch/go-onvif/onvif/v10/media"
 	"encoding/json"
 	"fmt"
 	"github.com/stretchr/testify/assert"
 	"github.com/stretchr/testify/require"
+	"github.com/zijiemeng/go-onvif/onvif/v10/device"
+	"github.com/zijiemeng/go-onvif/onvif/v10/media"
 	"net/http"
 	"testing"
 	"time"

@@ -1,35 +1,35 @@
 package onvif
 
 import (
-	"code.byted.org/videoarch/go-onvif/onvif/common"
-	"code.byted.org/videoarch/go-onvif/onvif/v10/access_control"
-	"code.byted.org/videoarch/go-onvif/onvif/v10/access_rules"
-	"code.byted.org/videoarch/go-onvif/onvif/v10/action_engine"
-	"code.byted.org/videoarch/go-onvif/onvif/v10/analytics_device"
-	"code.byted.org/videoarch/go-onvif/onvif/v10/app_mgmt"
-	"code.byted.org/videoarch/go-onvif/onvif/v10/authentication_behavior"
-	"code.byted.org/videoarch/go-onvif/onvif/v10/credential"
-	"code.byted.org/videoarch/go-onvif/onvif/v10/device"
-	"code.byted.org/videoarch/go-onvif/onvif/v10/device_io"
-	"code.byted.org/videoarch/go-onvif/onvif/v10/display"
-	"code.byted.org/videoarch/go-onvif/onvif/v10/door_control"
-	"code.byted.org/videoarch/go-onvif/onvif/v10/events"
-	"code.byted.org/videoarch/go-onvif/onvif/v10/federated_search"
-	"code.byted.org/videoarch/go-onvif/onvif/v10/media"
-	"code.byted.org/videoarch/go-onvif/onvif/v10/provisioning"
-	"code.byted.org/videoarch/go-onvif/onvif/v10/receiver"
-	"code.byted.org/videoarch/go-onvif/onvif/v10/recording"
-	"code.byted.org/videoarch/go-onvif/onvif/v10/replay"
-	"code.byted.org/videoarch/go-onvif/onvif/v10/schedule"
-	"code.byted.org/videoarch/go-onvif/onvif/v10/search"
-	"code.byted.org/videoarch/go-onvif/onvif/v10/security"
-	"code.byted.org/videoarch/go-onvif/onvif/v10/thermal"
-	"code.byted.org/videoarch/go-onvif/onvif/v10/uplink"
-	"code.byted.org/videoarch/go-onvif/onvif/v20/analytics"
-	"code.byted.org/videoarch/go-onvif/onvif/v20/imaging"
-	media2 "code.byted.org/videoarch/go-onvif/onvif/v20/media"
-	"code.byted.org/videoarch/go-onvif/onvif/v20/ptz"
 	"fmt"
+	"github.com/zijiemeng/go-onvif/onvif/common"
+	"github.com/zijiemeng/go-onvif/onvif/v10/access_control"
+	"github.com/zijiemeng/go-onvif/onvif/v10/access_rules"
+	"github.com/zijiemeng/go-onvif/onvif/v10/action_engine"
+	"github.com/zijiemeng/go-onvif/onvif/v10/analytics_device"
+	"github.com/zijiemeng/go-onvif/onvif/v10/app_mgmt"
+	"github.com/zijiemeng/go-onvif/onvif/v10/authentication_behavior"
+	"github.com/zijiemeng/go-onvif/onvif/v10/credential"
+	"github.com/zijiemeng/go-onvif/onvif/v10/device"
+	"github.com/zijiemeng/go-onvif/onvif/v10/device_io"
+	"github.com/zijiemeng/go-onvif/onvif/v10/display"
+	"github.com/zijiemeng/go-onvif/onvif/v10/door_control"
+	"github.com/zijiemeng/go-onvif/onvif/v10/events"
+	"github.com/zijiemeng/go-onvif/onvif/v10/federated_search"
+	"github.com/zijiemeng/go-onvif/onvif/v10/media"
+	"github.com/zijiemeng/go-onvif/onvif/v10/provisioning"
+	"github.com/zijiemeng/go-onvif/onvif/v10/receiver"
+	"github.com/zijiemeng/go-onvif/onvif/v10/recording"
+	"github.com/zijiemeng/go-onvif/onvif/v10/replay"
+	"github.com/zijiemeng/go-onvif/onvif/v10/schedule"
+	"github.com/zijiemeng/go-onvif/onvif/v10/search"
+	"github.com/zijiemeng/go-onvif/onvif/v10/security"
+	"github.com/zijiemeng/go-onvif/onvif/v10/thermal"
+	"github.com/zijiemeng/go-onvif/onvif/v10/uplink"
+	"github.com/zijiemeng/go-onvif/onvif/v20/analytics"
+	"github.com/zijiemeng/go-onvif/onvif/v20/imaging"
+	media2 "github.com/zijiemeng/go-onvif/onvif/v20/media"
+	"github.com/zijiemeng/go-onvif/onvif/v20/ptz"
 	"strings"
 )
 
@@ -72,115 +72,115 @@ func NewEndpointManager(endpoints map[string]string, client Client) *EndpointMan
 	mgr := &EndpointManager{
 		endpoints: endpoints,
 	}
-	for k, v := range endpoints {
+	for k, _ := range endpoints {
 		switch strings.ToLower(k) {
 		case "accesscontrol":
 			mgr.AccessControl = &EptAccessControl{
-				access_control.NewPACSPort(v, client),
+				access_control.NewPACSPort(k, client),
 			}
 		case "accessrules":
 			mgr.AccessRules = &EptAccessRules{
-				access_rules.NewAccessRulesPort(v, client),
+				access_rules.NewAccessRulesPort(k, client),
 			}
 		case "actionengine":
 			mgr.ActionEngine = &EptActionEngine{
-				action_engine.NewActionEnginePort(v, client),
+				action_engine.NewActionEnginePort(k, client),
 			}
 		case "analyticsdevice":
 			mgr.AnalyticsDevice = &EptAnalyticsDevice{
-				analytics_device.NewAnalyticsDevicePort(v, client),
+				analytics_device.NewAnalyticsDevicePort(k, client),
 			}
 		case "appmgmt":
 			mgr.AppMgmt = &EptAppMgmt{
-				app_mgmt.NewAppManagement(v, client),
+				app_mgmt.NewAppManagement(k, client),
 			}
 		case "authenticationbehavior":
 			mgr.AuthenticationBehavior = &EptAuthenticationBehavior{
-				authentication_behavior.NewAuthenticationBehaviorPort(v, client),
+				authentication_behavior.NewAuthenticationBehaviorPort(k, client),
 			}
 		case "credential":
 			mgr.Credential = &EptCredential{
-				credential.NewCredentialPort(v, client),
+				credential.NewCredentialPort(k, client),
 			}
 		case "device":
 			mgr.Device = &EptDevice{
-				device.NewDevice(v, client),
+				device.NewDevice(k, client),
 			}
 		case "deviceio":
 			mgr.DeviceIO = &EptDeviceIO{
-				device_io.NewDeviceIOPort(v, client),
+				device_io.NewDeviceIOPort(k, client),
 			}
 		case "display":
 			mgr.Display = &EptDisplay{
-				display.NewDisplayPort(v, client),
+				display.NewDisplayPort(k, client),
 			}
 		case "doorcontrol":
 			mgr.DoorControl = &EptDoorControl{
-				door_control.NewDoorControlPort(v, client),
+				door_control.NewDoorControlPort(k, client),
 			}
 		case "events":
 			mgr.Event = &EptEvent{
-				events.NewPort(v, client),
+				events.NewPort(k, client),
 			}
 		case "federatedsearch":
 			mgr.FederatedSearch = &EptFederateSearch{
-				federated_search.NewFederatedSearchPort(v, client),
+				federated_search.NewFederatedSearchPort(k, client),
 			}
 		case "media":
 			mgr.Media = &EptMedia{
-				Media:  media.NewMedia(v, client),
-				Media2: media2.NewMedia2(v, client),
+				Media:  media.NewMedia(k, client),
+				Media2: media2.NewMedia2(k, client),
 			}
 		case "provisioning":
 			mgr.Provisioning = &EptProvision{
-				provisioning.NewProvisioningService(v, client),
+				provisioning.NewProvisioningService(k, client),
 			}
 		case "receiver":
 			mgr.Receiver = &EptReceiver{
-				receiver.NewReceiverPort(v, client),
+				receiver.NewReceiverPort(k, client),
 			}
 		case "recording":
 			mgr.Recording = &EptRecord{
-				recording.NewRecordingPort(v, client),
+				recording.NewRecordingPort(k, client),
 			}
 		case "replay":
 			mgr.Replay = &EptReplay{
-				replay.NewReplayPort(v, client),
+				replay.NewReplayPort(k, client),
 			}
 		case "schedule":
 			mgr.Schedule = &EptSchedule{
-				schedule.NewSchedulePort(v, client),
+				schedule.NewSchedulePort(k, client),
 			}
 		case "search":
 			mgr.Search = &EptSearch{
-				search.NewSearchPort(v, client),
+				search.NewSearchPort(k, client),
 			}
 		case "security":
 			mgr.Security = &EptSecurity{
-				security.NewDot1X(v, client),
+				security.NewDot1X(k, client),
 			}
 		case "thermal":
 			mgr.Thermal = &EptThermal{
-				thermal.NewThermalPort(v, client),
+				thermal.NewThermalPort(k, client),
 			}
 		case "uplink":
 			mgr.Uplink = &EptUplink{
-				uplink.NewUplinkPort(v, client),
+				uplink.NewUplinkPort(k, client),
 			}
 		case "analytics":
 			mgr.Analytics = &EptAnalytics{
-				analytics.NewAnalyticsEnginePort(v, client),
+				analytics.NewAnalyticsEnginePort(k, client),
 			}
 		case "imaging":
 			mgr.Imaging = &EptImaging{
-				imaging.NewImagingPort(v, client),
+				imaging.NewImagingPort(k, client),
 			}
 		case "ptz":
 			mgr.PTZ = &EptPTZ{
-				ptz.NewPTZ(v, client),
+				ptz.NewPTZ(k, client),
 			}
 		default:
-			fmt.Printf("[Endpoint] Unsupported endpoint: [%s : %s]\n", k, v)
+			fmt.Printf("[Endpoint] Unsupported endpoint: [%s : %s]\n", k, k)
 		}
 	}
 	return mgr

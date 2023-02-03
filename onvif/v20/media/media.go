@@ -3,7 +3,7 @@ package media
 import (
 	"reflect"
 
-	"code.byted.org/videoarch/go-onvif/onvif/common"
+	"github.com/zijiemeng/go-onvif/onvif/common"
 )
 
 var Namespace = "http://www.onvif.org/ver20/media/wsdl"
@@ -1257,7 +1257,7 @@ func (p *media2) OptStartMulticastStreaming(args StartStopMulticastStreaming) (*
 
 func (p *media2) OptStopMulticastStreaming(args StartStopMulticastStreaming) (*SetConfigurationResponse, *common.Fault) {
 	req := struct {
-		XMLName string `xml:"tr2:StopMulticastStreaming"`
+		XMLName                     string `xml:"tr2:StopMulticastStreaming"`
 		StartStopMulticastStreaming StartStopMulticastStreaming
 	}{
 		StartStopMulticastStreaming: args,

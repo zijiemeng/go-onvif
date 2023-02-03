@@ -1,10 +1,10 @@
 package device_io
 
 import (
-	"code.byted.org/videoarch/go-onvif/onvif/v10/device"
+	"github.com/zijiemeng/go-onvif/onvif/v10/device"
 	"reflect"
 
-	"code.byted.org/videoarch/go-onvif/onvif/common"
+	"github.com/zijiemeng/go-onvif/onvif/common"
 )
 
 var Namespace = "http://www.onvif.org/ver10/deviceIO/wsdl"
